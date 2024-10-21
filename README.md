@@ -1,3 +1,1 @@
-Python programa, iš pateikiamų Vilniaus visuomeninio transporto GTFS duomenų pateikianti įvestos stotelės išvykimo laikus formatu HH:MM:SS ir atnaujinanti juos kas 10 sekundžių.
-Nurodomas tikslus autobuso modelis ir garažinis nr., taip pat oficialiai į sistemą pridėtos autobuso savybės.
-Daugiau informacijos rasite komentaruose pateikiamame faile.
+Python programa, iš oficialių Vilniaus visuomeninio transporto GTFS duomenų pateikianti išvykimo laikus tiksliau nei visur kitur (stops.lt front-end'as, Trafi, Google Maps). Išvykimo laikai prognozuojami stops.lt sistemos, tačiau pateikiami tiksliu HH:MM:SS formatu, atnaujinami kas 10 sekundžių. Be to, nurodomas kiekvienos išvykstančios transporto priemonės vėlavimas (toje vietoje, kurioje jis būna važiuodamas link pasirinktos stotelės), modelis ir tikslus garažinis nr., taip pat oficialiai į sistemą pridėtos autobuso savybės. Daugiau informacijos rasite komentaruose pateikiamame faile.
