@@ -3177,5 +3177,5 @@ while True:
 
     # Laikai naujinami kas 10 sekundžių
     
-    time.sleep(10)
+    time.sleep(45)
     print(st)
