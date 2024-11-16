@@ -1,10 +1,8 @@
-# stops v1.1-pre1
+# stops v1.1
 
 import requests
 import re
 import datetime
-import pytz
-import time
 from bs4 import BeautifulSoup
 
 while True:
@@ -14,22 +12,21 @@ while True:
         # Stotelės įvedimui, kodai iš GTFS stops.lt duomenų
 
         # Jei stotelė dvipusė, įvedama:
-        #   A-B
+        #   AB
         
         # Jei stotelė vienpusė, pakanka įvesti
         #   A
 
-        # Visur išmetamas trumpinys
+        # Neatsižvelgiama į dalykus įvestyje:
+        #   " " (tarpai)
+        #   . (taškai)
+        #   - (brūkšniai)
         #   st.
+        #   DIDŽIOSIOS/mažosios raidės
+        #   Lietuviškos/nelietuviskos raidės
 
-        # Vardai nerašomi
-        # Išskyrus stoteles, kur rašomi tik vardai:
-        #   PETROIRPOVILOBAZNYCIA
-        #   HERKAUSMANTO
-        #   BARBOROSRADVILAITES
-
-
-
+        # Vardai, pateikiami kartu su pavardėmis, nerašomi
+        
         # Sąraše pateikiamos ir nenaudojamos stotelės (kadangi stotelė gali būti vėl panaudota ateityje)
         # Jas ir kitas specialias stoteles įvesti naudojami terminai
         #   išlaipinimas
@@ -38,10 +35,9 @@ while True:
         #   panaikinta
         # Ir kiti, žiūrėti sąrašą
 
-        # Pateikiamos stotelių pavadinimų alternatyvios versijos ir asmeniniai trumpiniai, žiūrėti sąrašą
+        # Pateikiamos stotelių pavadinimų alternatyvios versijos ir asmeniškai prisitaikyti trumpiniai, žiūrėti sąrašą
 
         # Naujausių ar laikinų stotelių gali trūkti
-
 
         'ZALIASISTILTASKALVARIJUTURGUS':101,
         'ZALIASISTILTASEUROPOSAIKSTE':101,
@@ -508,6 +504,9 @@ while True:
         'SIAURESMIESTELISLUKSIOKITI':922,
         'SIAURESMIESTELISGALVYDZIO':924,
         'SIAURESMIESTELISLUKSIOAUTOBUSAI':925,
+        'SIAURESMIESTELISLUKSIO30IR33':925,
+        'SIAURESMIESTELISLUKSIO30':925,
+        'SIAURESMIESTELISLUKSIO33':925,
         'GALVYDZIOULONU':926,
         'GALVYDZIO':926,
         'ULONUSIAURESMIESTELIS':927,
@@ -607,9 +606,12 @@ while True:
         'SILOTILTASKLINIKU':1108,
         'KLINIKUSILOTILTAS':1109,
         'KLINIKUTVERECIAUSKITI':1110,
+        'KLINIKUTVERECIAUSANTAKALNIO':1110,
+        'KLINIKUTVERECIAUSTROLEIBUSAI':1110,
         'KLINIKUNEMENCINESPLENTAS':1110,
         'KLINIKUVIEVERSIU':1111,
         'KLINIKUTVERECIAUSAUTOBUSAI':1112,
+        'KLINIKUTVERECIAUSZOLYNO':1112,
         'TVERECIAUSANTAKALNIS':1113,
         'TVERECIAUSKLINIKU':1114,
         'ANTAKALNISTVERECIAUS':1115,
@@ -652,6 +654,9 @@ while True:
         'SAULESSLENISSILO':1143,
         'SAULESSLENISVIRSUPIS':1143,
         'SAULESSLENISGRYBO':1145,
+        'ELEKTRODEPASA':1146,
+        'ELEKTRODEPASB':1147,
+        'ELEKTRODEPASC':1148,
         'ZARASUVILNELES':1201,
         'ZARASUSUBACIAUS':1202,
         'ZARASUGERVECIU':1202,
@@ -730,11 +735,14 @@ while True:
         'ALEJAITRAUKTIESCENTRAS':1413,
         'ALEJASTRELCIUKAI':1414,
         'ALEJASTRIELCIUKAI':1414,
+        'ALEJASTRELCIUKAI':1414,
         'STRELCIUKAIALEJA':1415,
         'STRIELCIUKAIALEJA':1415,
+        'STRELCIUKAIALEJA':1415,
         'SA':1415,
         'STRELCIUKAIGRIGAICIAI':1416,
         'STRIELCIUKAIGRIGAICIAI':1416,
+        'STRELCIUKAIGRIGAICIAI':1416,
         'SG':1416,
         'KINOLOGIJOSCENTRASZIRNIU':1417,
         'MINSKOPLENTASKINOLOGIJOSCENTRAS':1418,
@@ -1076,8 +1084,10 @@ while True:
         'INDRILIUNOVISORIUSODAI':2025,
         'INDRILIUNOMOKSLININKU':2026,
         'SLEZEVICIAUSROMERIOUNIVERSITETAS':2027,
+        'SLEZEVICIAUSMYKOLOROMERIOUNIVERSITETAS':2027,
         'SLEZEVICIAUSVISORIUSODAI':2028,
         'ATEITIESROMERIOUNIVERSITETAS':2101,
+        'ATEITIESMYKOLOROMERIOUNIVERSITETAS':2101,
         'ATEITIESMAUMEDZIU':2102,
         'MOKYKLOSMAUMEDZIU':2103,
         'MOKYKLOSAKADEMIJOS':2104,
@@ -1118,6 +1128,7 @@ while True:
         'VERKIURUMAIBAUBLIO':2128,
         'VERKIURUMAIEZERELIAI':2129,
         'EZERELIAIKURKLIU':2130,
+        'EZERELIAIVERKIUBENDRUOMENESNAMAI':2130,
         'EZERELIAIGULBINELIU':2130,
         'MAUMEDZIUATEITIES':2131,
         'MAUMEDZIUMOKYKLOS':2132,
@@ -1179,10 +1190,14 @@ while True:
         'KREMPLIUPOPIERIAUS':2207,
         'POPIERIAUSKREMPLIU':2208,
         'POPIERIAUSKURKLIU':2209,
+        'POPIERIAUSVERKIUBENDRUOMENESNAMAI':2209,
         'POPIERIAUSVERKIURIESE':2209,
         'KURKLIUEZERELIAI':2210,
+        'VERKIUBENDRUOMENESNAMAIEZERELIAI':2210,
         'KURKLIUVERKIURIESE':2211,
+        'VERKIUBENDRUOMENESNAMAIVERKIURIESE':2211,
         'VERKIURIESEKURKLIU':2212,
+        'VERKIURIESEVERKIUBENDRUOMENESNAMAI':2212,
         'VERKIURIESEPOPIERIAUS':2212,
         'VERKIURIESEZALIOJOVISALAUKIO':2213,
         'STAVISKESNAUJOJI':2214,
@@ -1335,6 +1350,7 @@ while True:
         'GENIUPSICHIATRIJOSLIGONINE':2349,
         'GP':2349,
         'GRIGAICIAISTRELCIUKAI':2350,
+        'GRIGAICIAISTRIELCIUKAI':2350,
         'GS':2350,
         'GRIGAICIAIGENIU':2351,
         'RESPUBLIKINEPSICHIATRIJOSLIGONINEGENIU':2352,
@@ -1439,8 +1455,10 @@ while True:
         'VEJO':2502,
         'EISISKIUPLENTASMETALO':2601,
         'EISISKIUPLENTASNAUJININKAIKITI':2602,
+        'EISISKIUPLENTASNAUJININKAIDARIAUSIRGIRENO':2602,
         'EISISKIUPLENTASDARIAUSIRGIRENO':2603,
         'EISISKIUPLENTASNAUJININKAIGREITIEJI':2604,
+        'EISISKIUPLENTASNAUJININKAIEISISKIU':2604,
         'METALOHIDROGEOLOGIJOS':2605,
         'METALOEISISKIUPLENTAS':2606,
         'DARIAUSIRGIRENOVAITKAUS':2607,
@@ -1668,6 +1686,7 @@ while True:
         'VILIJOSAUKSTIEJIPANERIAI':2951,
         'ELEKTRINESLAIKINOJI':2952,
         'GARIUNULAIKINOJI':2953,
+        'LENTVARISPANAIKINTA':2999,
         'KILIMUFABRIKASNAUJASISLENTVARIS':3000,
         'NAUJASISLENTVARISZALIOJI':3001,
         'NAUJASISLENTVARISVANDENU':3002,
@@ -1682,7 +1701,11 @@ while True:
         'LENTVARISZIEDAS':3006,
         'LENTVARISKILIMUFABRIKAS':3006,
         'LENTVARISLENTVARISZIEDAS':3006,
+        'LENTVARISLENTVARISKILIMUFABRIKAS':3006,
         'LENTVARISLENTVARISKITI':3007,
+        'LENTVARISLENTVARIS1LENTVARIS':3007,
+        'LENTVARISLENTVARIS1ASISLENTVARIS':3007,
+        'LENTVARISLENTVARISPIRMASISLENTVARIS':3007,
         'ANDRETRAKUVOKE':3101,
         'ANDRETISKEVICIAUS':3101,
         'ANDRE':3101,
@@ -1981,6 +2004,7 @@ while True:
         'TAKASBALTRUSAICIO':3803,
         'TAKASGEDVYDZIU':3804,
         'TAKASNERIES':3804,
+        'TAKASVETRUNGIU':3804,
         'GEDVYDZIUPERKUNO':3805,
         'GEDVYDZIUDEIVIU':3805,
         'GEDVYDZIUTAKAS':3806,
@@ -1995,16 +2019,29 @@ while True:
         'ZADEIKOSSPORTOGIMNAZIJA':3815,
         'ZADEIKOSKAIMELIOZIEDAS':3815,
         'ZADEIKOSGIROS':3816,
+        'ZADEIKOSBALIUKEVICIAUSDZUKO':3816,
         'JONYNOKAIMELIO':3817,
         'JONYNOKAIMELIOZIEDAS':3817,
         'JONYNOGIROS':3818,
+        'JONYNOBALIUKEVICIAUSDZUKO':3818,
         'GIROSJONYNO':3819,
+        'BALIUKEVICIAUSDZUKOJONYNO':3819,
         'GIROSKAIMELIO':3819,
+        'BALIUKEVICIAUSDZUKOKAIMELIO':3819,
         'GIROSZADEIKOS':3820,
+        'BALIUKEVICIAUSDZUKOZADEIKOS':3820,
         'GIROSPAMISKE':3821,
+        'BALIUKEVICIAUSDZUKOPAMISKE':3821,
         'GIROSROMERIOUNIVERSITETAS':3822,
+        'BALIUKEVICIAUSDZUKOROMERIOUNIVERSITETAS':3822,
+        'GIROSMYKOLOROMERIOUNIVERSITETAS':3822,
+        'BALIUKEVICIAUSDZUKOMYKOLOROMERIOUNIVERSITETAS':3822,
         'ROMERIOUNIVERSITETASGIROS':3823,
+        'ROMERIOUNIVERSITETASBALIUKEVICIAUSDZUKO':3823,
+        'MYKOLOROMERIOUNIVERSITETASGIROS':3823,
+        'MYKOLOROMERIOUNIVERSITETASBALIUKEVICIAUSDZUKO':3823,
         'PAMISKEGIROS':3824,
+        'PAMISKEBALIUKEVICIAUSDZUKO':3824,
         'PAMISKESTANEVICIAUS':3825,
         'STANEVICIAUSPAMISKE':3826,
         'STANEVICIAUSJOVARO':3827,
@@ -2014,13 +2051,22 @@ while True:
         'SEINIAUSLOZORAICIO':3832,
         'SEINIAUSBALTRUSAICIO':3832,
         'NERIESTAKAS':3833,
+        'VETRUNGIUTAKAS':3833,
         'NERIESZAMENHOFO':3834,
+        'VETRUNGIUZAMENHOFO':3834,
         'ZAMENHOFOLIETUVIO':3835,
+        'ZAMENHOFOMYKOLOLIETUVIO':3835,
         'ZAMENHOFO':3835,
         'ZAMENHOFONERIES':3836,
+        'ZAMENHOFOVETRUNGIU':3836,
         'LIETUVIONERIES':3837,
+        'LIETUVIOVETRUNGIU':3837,
+        'MYKOLOLIETUVIONERIES':3837,
+        'MYKOLOLIETUVIOVETRUNGIU':3837,
         'LIETUVIO':3837,
+        'MYKOLOLIETUVIO':3837,
         'LIETUVIOISLAIPINIMAS':3838,
+        'MYKOLOLIETUVIOISLAIPINIMAS':3838,
         'KAIMELIOJUZELIUNO':3839,
         'KAIMELIOZIEDASSPORTOGIMNAZIJA':3840,
         'JOVAROPANAIKINTAFABIJONISKIU':3841,
@@ -2209,6 +2255,7 @@ while True:
         'PIRMOSIOSBUKISKESDURPYNAS':4902,
         'LIEPUMETU':4905,
         'LIEPU':4905,
+        'LIEPULAIKINA':4905,
         'AUSROSLIEPU':4907,
         'AUSROS':4907,
         'METUSAULIO':4910,
@@ -2422,6 +2469,7 @@ while True:
         'RACKUNAILENTVARIOKRYZKELE':6003,
         'RACKUNAIKAIMELIS':6004,
         'LENTVARIOKRYZKELEDOBUKLE':6005,
+        'LENTVARIOKRYZKELE':6005,
         'LENTVARIOKRYZKELERACKUNAI':6006,
         'DOBUKLETRAKUVOKE':6007,
         'DOBUKLELENTVARIOKRYZKELE':6008,
@@ -2435,6 +2483,8 @@ while True:
         'OROUOSTASVAITKAUS':6015,
         'OROUOSTASDARIAUSIRGIRENO':6015,
         'OROUOSTASVIKINGU':6015,
+        'FABRIKO':6016,
+        'FABRIKOLENTVARIOKRYZKELE':6016,
         'ZALIASISTILTASLAIKINA':'0101b',
         'AKREDITACIJOSBIURAS':'0237a',
         'MEDIJUCENTRAS':'0237b',
@@ -2454,6 +2504,20 @@ while True:
         'VIENARAGIUPRUSU':'0522a',
         'BURBISKESPANAIKINTA':'0527a',
         'STOTISBAZILIJONU':'0530e',
+        'STOTISRUDNINKUTROLEIBUSAI':'0530a',
+        'STOTISRUDNINKUAUTOBUSAI':'0530j',
+        'STOTISRUDNINKU89':'0530e',
+        'STOTISPELESOSB':'0530b',
+        'STOTISPELESOSC':'0530c',
+        'STOTISPELESOSG':'0530g',
+        'STOTISPELESOSI':'0530i',
+        'STOTISAGUONUD':'0530d',
+        'STOTISAGUONUF':'0530f',
+        'STOTISAGUONUH':'0530h',
+        'STOTISAGUONUI':'0530i',
+        'STOTISAGUONUJ':'0530j',
+        'STOTISMOMUZIEJUS':'0530i',
+        'STOTISAUSROSVARTAI':'0530i',
         'STOTISA':'0530a',
         'STOTISB':'0530b',
         'STOTISC':'0530c',
@@ -2472,6 +2536,7 @@ while True:
         'SAVANORIUPROSPEKTASNAUJAMIESTIS':'0602a',
         'PAEMIMO':'0609a',
         'ISLEIDIMO':'0609b',
+        'KAREIVIULAIKINA':'0810a',
         'LAURINAVICIAUSSKVERASLAIKINA':'0914b',
         'ANTAKALNIOZIEDASAUTOBUSAI':'1118a',
         'ANTAKALNIOZIEDASANTAKALNISAUTOBUSAI':'1118a',
@@ -2537,6 +2602,8 @@ while True:
         'SILASKARACIUNAILAIKINA':'3542a',
         'SILASGIRINAICIULAIKINA':'3542a',
         'SILASBILIUNOLAIKINA':'3543a',
+        'MYKOLOLIETUVIOPANAIKINTA':'3837a',
+        'LIETUVIOPANAIKINTA':'3837a',
         'PAGALPAREIKALAVIMAKAIRENAI':'4022a',
         'NEMEZISLAIKINA':'4305a',
         'LAIKINA':'4305b',
@@ -2563,334 +2630,74 @@ while True:
         'BALTOJIVOKEPANAIKINTAJUODSILIU':'5111a',
         'BALTOJIVOKEPANAIKINTARAISTELIAI':'5111a',
         'KARVELISKIUKAPINESISLAIPINIMAS':'5144a',
-        'RINKTINESPANAIKINTA':'5188a'
+        'ZVERYNOZIEDASISLAIPINIMAS':'5151a',
+        'ZVERYNOZIEDASISLAIPINIMASMIDI':'5151b',
+        'RINKTINESPANAIKINTA':'5188a',
+        'PRAMOGUARENATAURAGNU':1,
+        'MINTIESSILOTILTAS':2,
+        'SVPETROIRPOVILOBAZNYCIA':3,
+        'PETROIRPOVILOBAZNYCIA':3,
+        'GERVECIUAUSROSVARTAI':4,
+        'STOTIS':5,
+        'STOTISRUDNINKU':6,
+        'STOTISPELESOS':7,
+        'STOTISAGUONU':8,
+        'SIAURESMIESTELISLUKSIO':9,
+        'DVARCIONYSLAZERIU':10,
+        'KLINIKUTVERECIAUS':11,
+        'ANTAKALNIOZIEDASANTAKALNIS':12,
+        'PELESOSSTOTIS':13,
+        'LIEPKALNISZIRNIU':14,
+        'NAUJININKAIPRUSU':15,
+        'MUSNINKUPABERZES':16,
+        'MILDOSSAUDYKLA':17,
+        'VALKININKUUMEDZIU':18,
+        'EISISKIUPLENTASNAUJININKAI':19,
+        'SALININKAIMECHANIKU':20,
+        'AUKSTIEJIPANERIAIVILIJOS':21,
+        'LENTVARISLENTVARIS':22
         }
 
     # Iškilus dviprasmybėms bus papildomai paprašoma pasirinkti
 
-    """
-    if st=='Pramogų arena-Tauragnų':
-        print('Autobusai ar Troleibusai?')
-        st=str(input())
-        if st=='Autobusai' or st=='autobusai' or st=='Pramogų arena-Tauragnų autobusai':
-            stop='0709'
-            st='Pramogų arena-Tauragnų autobusai'
-        if st=='Troleibusai' or st=='troleibusai' or st=='Pramogų arena-Tauragnų troleibusai':
-            stop='0805'
-            st='Pramogų arena-Tauragnų troleibusai'
-        else:
-            print('BLOGAI ĮVESTA')
-    elif st=='Minties-Šilo tiltas':
-        print('50 ar Kiti?')
-        st=str(input())
-        if st=='Kiti' or st=='kiti' or st=='Minties-Šilo tiltas':
-            stop='0903'
-            st='Minties-Šilo tiltas'
-        if st=='50' or st=='Minties-Šilo tiltas 50':
-            stop='0920'
-            st='Minties-Šilo tiltas 50'
-        else:
-            print('BLOGAI ĮVESTA')
-    elif st=='Šv. Petro ir Povilo bažnyčia laikina' or st=='Petro ir Povilo bažnyčia laikina':
-        print('Šeimyniškių ar L. Sapiegos?')
-        st=str(input())
-        if st=='L. Sapiegos' or st=='Šv. Petro ir Povilo bažynčia laikina-L. Sapiegos':
-            stop='0401a'
-            st='Šv. Petro ir Povilo bažynčia laikina-L. Sapiegos'
-        if st=='Šeimyniškių' or st=='Šv. Petro ir Povilo bažynčia laikina-Šeimyniškių':
-            stop='0402a'
-            st='Šv. Petro ir Povilo bažynčia laikina-Šeimyniškių'
-        else:
-            print('BLOGAI ĮVESTA')
-
-    elif st=='Gervėčių-Aušros vartai':
-        print('31 ar 89?')
-        st=str(input())
-        if st=='31' or st=='Gervėčių-Aušros vartai 31':
-            stop='0419'
-            st='Gervėčių-Aušros vartai 31'
-        if st=='89' or st=='Gervėčių-Aušros vartai 89':
-            stop='0444'
-            st='Gervėčių-Aušros vartai 89'
-        else:
-            print('BLOGAI ĮVESTA')
-
-
-    elif st=='Stotis':
-        print('Kokia raidė?')
-        st=str(input())
-        if st=='A' or st=='Stotis A':
-            stop='0530a'
-            st='Stotis A'
-        elif st=='B' or st=='Stotis B':
-            stop='0530b'
-            st='Stotis B'
-        elif st=='C' or st=='Stotis C':
-            stop='0530c'
-            st='Stotis C'
-        elif st=='D' or st=='Stotis D':
-            stop='0530d'
-            st='Stotis D'
-        elif st=='E' or st=='Stotis E':
-            stop='0530e'
-            st='Stotis E'
-        elif st=='F' or st=='Stotis F':
-            stop='0530f'
-            st='Stotis F'
-        elif st=='G' or st=='Stotis G':
-            stop='0530g'
-            st='Stotis G'
-        elif st=='H' or st=='Stotis H':
-            stop='0530h'
-            st='Stotis H'
-        elif st=='I' or st=='Stotis I':
-            stop='0530i'
-            st='Stotis I'
-        elif st=='J' or st=='Stotis J':
-            stop='0530j'
-            st='Stotis J'
-        elif st=='P' or st=='Stotis P':
-            stop='0530p'
-            st='Stotis P'
-        elif st=='S' or st=='Stotis S':
-            stop='0547'
-            st='Stotis S'
-        elif st=='W' or st=='Stotis W':
-            stop='0547w'
-            st='Stotis W'
-        elif st=='X' or st=='Stotis X':
-            stop='0546'
-            st='Stotis X'
-        elif st=='Z' or st=='Stotis Z':
-            stop='0530z'
-            st='Stotis Z'
-        else:
-            print('BLOGAI ĮVESTA')
-
-    elif st=='Stotis-Rūdninkų':
-        print('Troleibusai, Autobusai ar 89?')
-        st=str(input())
-        if st=='Troleibusai' or st=='troleibusai' or st=='Stotis A':
-            stop='0530a'
-            st='Stotis A'
-        if st=='89' or st=='Stotis E':
-            stop='0530e'
-            st='Stotis E'
-        if st=='Autobusai' or st=='autobusai' or st=='Stotis J':
-            stop='0530j'
-            st='Stotis J'
-        else:
-            print('BLOGAI ĮVESTA')
-    elif st=='Stotis-Pelesos':
-        print('B, C, G, ar I?')
-        st=str(input())
-        if st=='B' or st=='Stotis B':
-            stop='0530b'
-            st='Stotis B'
-        if st=='C' or st=='Stotis C':
-            stop='0530c'
-            st='Stotis C'
-        if st=='G' or st=='Stotis G':
-            stop='0530g'
-            st='Stotis G'
-        if st=='I' or st=='Stotis I':
-            stop='0530i'
-            st='Stotis I'
-        else:
-            print('BLOGAI ĮVESTA')
-    elif st=='Stotis-Aguonų':
-        print('D, F, H, ar I?')
-        st=str(input())
-        if st=='D' or st=='Stotis D':
-            stop='0530d'
-            st='Stotis D'
-        if st=='F' or st=='Stotis F':
-            stop='0530f'
-            st='Stotis F'
-        if st=='H' or st=='Stotis H':
-            stop='0530h'
-            st='Stotis H'
-        if st=='I':
-            stop='0530i'
-            st='Stotis I'
-        else:
-            print('BLOGAI ĮVESTA')
-    elif st=='Šiaurės miestelis-Povilo Lukšio':
-        print('30 ir 33 ar Kiti?')
-        st=str(input())
-        if st=='Kiti' or st=='kiti' or st=='Šiaurės miestelis-Povilo Lukšio':
-            stop='0922'
-            st='Šiaurės miestelis-Povilo Lukšio'
-        if st=='30' or st=='33' or st=='30 ir 33' or st=='Autobusai' or st=='autobusai' or st=='Šiaurės miestelis-Povilo Lukšio autobusai':
-            stop='0925'
-            st='Šiaurės miestelis-Povilo Lukšio autobusai'
-        else:
-            print('BLOGAI ĮVESTA')
-    elif st=='Dvarčionys-Lazerių':
-        print('Dvarčionių kryžkelė ar Baniškės?')
-        st=str(input())
-        if st=='Dvarčionių kryžkelė' or st=='Dvarčionys-Lazerių-Dvarčionių kryžkelė':
-            stop='1011'
-            st='Dvarčionys-Lazerių-Dvarčionių kryžkelė'
-        if st=='Baniškės' or st=='Dvarčionys-Lazerių-Baniškės':
-            stop='1026'
-            st='Dvarčionys-Lazerių-Baniškės'
-        else:
-            print('BLOGAI ĮVESTA')
-    elif st=='Klinikų-Tverečiaus':
-        print('Žolyno ar Antakalnio gatvėje?')
-        st=str(input())
-        if st=='Antakalnio' or st=='Antakalnio gatvėje' or st=='Klinikų-Tverečiaus kiti':
-            stop='1110'
-            st='Klinikų-Tverečiaus kiti'
-        if st=='Žolyno' or st=='Žolyno gatvėje' or st=='Klinikų-Tverečiaus autobusai':
-            stop='1112'
-            st='Klinikų-Tverečiaus autobusai'
-        else:
-            print('BLOGAI ĮVESTA')
-    elif st=='Antakalnio žiedas-Antakalnis':
-        print('Autobusai ar Troleibusai?')
-        st=str(input())
-        if st=='Troleibusai' or st=='troleibusai' or st=='Antakalnio žiedas-Antakalnis troleibusai':
-            stop='1118'
-            st='Antakalnio žiedas-Antakalnis troleibusai'
-        if st=='Autobusai' or st=='autobusai' or st=='Antakalnio žiedas-Antakalnis autobusai':
-            stop='1118a'
-            st='Antakalnio žiedas-Antakalnis autobusai'
-        else:
-            print('BLOGAI ĮVESTA')
-
-    elif st=='Pelesos-Stotis':
-        print('58 ar Kiti?')
-        st=str(input())
-        if st=='58' or st=='Pelesos-Stotis 58':
-            stop='1301'
-            st='Pelesos-Stotis 58'
-        if st=='Kiti' or st=='kiti' or st=='Pelesos-Stotis kiti':
-            stop='1303'
-            st='Pelesos-Stotis kiti'
-        else:
-            print('BLOGAI ĮVESTA')
-    elif st=='Liepkalnis-Žirnių':
-        print('58 ar Kiti?')
-        st=str(input())
-        if st=='Kiti' or st=='kiti' or st=='Pelesos-Stotis kiti':
-            stop='1317'
-            st='Pelesos-Stotis kiti'
-        if st=='58' or st=='Pelesos-Stotis 58':
-            stop='1514'
-            st='Pelesos-Stotis 58'
-        else:
-            print('BLOGAI ĮVESTA')
-
-    elif st=='Naujininkai-Prūsų':
-        print('Troleibusai ar Autobusai?')
-        st=str(input())
-        if st=='Troleibusai' or st=='troleibusai' or st=='Naujininkai-Prūsų troleibusai':
-            stop='1502'
-            st='Naujininkai-Prūsų troleibusai'
-        if st=='Autobusai' or st=='autobusai' or st=='Naujininkai-Prūsų autobusai':
-            stop='1517'
-            st='Naujininkai-Prūsų autobusai'
-        else:
-            print('BLOGAI ĮVESTA')
-    elif st=='Musninkų-Paberžės':
-        print('75 ar 87?')
-        st=str(input())
-        if st=='87' or st=='Musninkų-Paberžės 87':
-            stop='1919'
-            st='Musninkų-Paberžės 87'
-        if st=='75' or st=='Musninkų-Paberžės 75':
-            stop='1933'
-            st='Musninkų-Paberžės 75'
-        else:
-            print('BLOGAI ĮVESTA')
-    elif st=='Mildos-Šaudykla':
-        print('37 ar Kiti?')
-        st=str(input())
-        if st=='Kiti' or st=='Mildos-Šaudykla kiti':
-            stop='1216'
-            st='Mildos-Šaudykla kiti'
-        if st=='37' or st=='Mildos-Šaudykla 37':
-            stop='2301'
-            st='Mildos-Šaudykla 37'
-        else:
-            print('BLOGAI ĮVESTA')
-
-    elif st=='Valkininkų-Ūmėdžių':
-        print('24, Įlaipinimas ar Kiti?')
-        st=str(input())
-        if st=='24' or st=='Valkininkų-Ūmėdžių 24':
-            stop='2417'
-            st='Valkininkų-Ūmėdžių 24'
-        if st=='Įlaipinimas' or st=='įlaipinimas' or st=='Valkininkų-Ūmėdžių įlaipinimas':
-            stop='2418'
-            st='Valkininkų-Ūmėdžių įlaipinimas'
-        if st=='Kiti' or st=='kiti' or st=='Valkininkų-Ūmėdžių kiti':
-            stop='2901'
-            st='Valkininkų-Ūmėdžių kiti'
-        else:
-            print('BLOGAI ĮVESTA')
-    elif st=='Eišiškių plentas-Naujininkai':
-        print('Eišiškių ar Dariaus ir Girėno?')
-        st=str(input())
-        if st=='Eišiškių' or st=='Eišiškių plentas-Naujininkai kiti':
-            stop='2602'
-            st='Eišiškių plentas-Naujininkai kiti'
-        if st=='Dariaus ir Girėno' or st=='Eišiškių plentas-Naujininkai greitieji':
-            stop='2604'
-            st='Eišiškių plentas-Naujininkai greitieji'
-        else:
-            print('BLOGAI ĮVESTA')
-
-    elif st=='Salininkai-Mechanikų':
-        print('3 ar Kiti?')
-        st=str(input())
-        if st=='Kiti' or st=='kiti' or st=='Salininkai-Mechanikų kiti':
-            stop='2711'
-            st='Salininkai-Mechanikų kiti'
-        if st=='3' or st=='Salininkai-Mechanikų 3':
-            stop='2731'
-            st='Salininkai-Mechanikų 3'
-        else:
-            print('BLOGAI ĮVESTA')
-
-    elif st=='Aukštieji Paneriai-Vilijos':
-        print('Galvės ar Lentvario?')
-        st=str(input())
-        if st=='Lentvario' or st=='Aukštieji Paneriai-Vilijos-Lentvario':
-            stop='2906'
-            st='Aukštieji Paneriai-Vilijos-Lentvario'
-        if st=='Galvės' or st=='Aukštieji Paneriai-Vilijos-Galvės':
-            stop='2945'
-            st='Aukštieji Paneriai-Vilijos-Galvės'
-        else:
-            print('BLOGAI ĮVESTA')
-
-    elif st=='Lentvaris-Lentvaris':
-        print('Dzūkų ar Vilniaus?')
-        st=str(input())
-        if st=='Dzūkų' or st=='Lentvaris-Lentvaris žiedas':
-            stop='3006'
-            st='Lentvaris-Lentvaris žiedas'
-        if st=='Vilniaus' or st=='Lentvaris-Lentvaris':
-            stop=''
-            st='Lentvaris-Lentvaris'
-        else:
-            print('BLOGAI ĮVESTA')
-    """
+    pr={
+        1:'AUTOBUSAI ar TROLEIBUSAI?',
+        2:'50 ar KITI?',
+        3:'ŠEIMYNIŠKIŲ ar SAPIEGOS?',
+        4:'31 ar 89?',
+        5:'Kokia raidė?',
+        6:'TROLEIBUSAI, AUTOBUSAI ar 89?',
+        7:'Kokia raidė?',
+        8:'Kokia raidė?',
+        9:'30 IR 33 ar KITI?',
+        10:'DVARČIONIŲ KRYŽKELĖ ar BANIŠKĖS?',
+        11:'ANTAKALNIO ar ŽOLYNO?',
+        12:'TROLEIBUSAI ar AUTOBUSAI?',
+        13:'58 ar KITI?',
+        14:'58 ar KITI?',
+        15:'TROLEIBUSAI ar AUTOBUSAI?',
+        16:'48 ar 75?',
+        17:'37 ar KITI?',
+        18:'24, ĮLAIPINIMAS ar KITI?',
+        19:'DARIAUS IR GIRĖNO ar EIŠIŠKIŲ?',
+        20:'3 ar KITI?',
+        21:'LENTVARIO ar GALVĖS?',
+        22:'1 LENTVARTIS ar KILIMŲ FABRIKAS?',
+    }
 
     if inp!='':
-        st=inp.upper().strip().replace(' ','').replace('.','').replace('-','').replace('Ą','A').replace('Č','C').replace('Ę','E').replace('Ė','E').replace('Į','I').replace('Š','S').replace('Ų','U').replace('Ū','U').replace('Ž','Z')
+        st=inp.upper().strip().replace('st.','').replace(' ','').replace('.','').replace('-','').replace('Ą','A').replace('Č','C').replace('Ę','E').replace('Ė','E').replace('Į','I').replace('Š','S').replace('Ų','U').replace('Ū','U').replace('Ž','Z')
         if st=='CODE' or st=='KODAS' or st=='INPUT' or st=='IVESTIS':
             stop=str(input())
         else:
-            stop=str(dict.get(st)).zfill(4)
             try:
+                stop=dict.get(st)
                 if int(stop)<100:
-                    """ NEPABAIGTA """
+                    print(pr.get(int(stop)))
+                    st+=input().upper().strip().replace('st.','').replace(' ','').replace('.','').replace('-','').replace('Ą','A').replace('Č','C').replace('Ę','E').replace('Ė','E').replace('Į','I').replace('Š','S').replace('Ų','U').replace('Ū','U').replace('Ž','Z')
             except ValueError:
                 pass
+            stop=str(dict.get(st)).zfill(4)
     
     # Transporto duomenų rinkimas - 1 dalis
     # Iš išvykimų puslapio
@@ -2909,6 +2716,7 @@ while True:
     try:
         t.pop(0)
     except IndexError:
+        print('KLAIDA - BANDYKITE VĖL')
         continue
 
     # Duomenų rūšiavimas
