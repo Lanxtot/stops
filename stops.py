@@ -2697,6 +2697,8 @@ while True:
                     st+=input().upper().strip().replace('st.','').replace(' ','').replace('.','').replace('-','').replace('Ą','A').replace('Č','C').replace('Ę','E').replace('Ė','E').replace('Į','I').replace('Š','S').replace('Ų','U').replace('Ū','U').replace('Ž','Z')
             except ValueError:
                 pass
+            except TypeError:
+                pass
             stop=str(dict.get(st)).zfill(4)
     
     # Transporto duomenų rinkimas - 1 dalis
