@@ -9,8 +9,9 @@ stops_file = 'stops_list.csv'
 departures_file = 'departures.csv'
 gps_file = 'gps_data.csv'
 models_file = 'models.csv'
+challenge_file = 'challenge.csv'
 ridango_stops_file = 'stops.csv'
-ridango_timings_file = 'stop_times.csv'
+#ridango_timings_file = 'stop_times.csv'
 bugs_file = 'bugs.txt'
 date_file = 'date.txt'
 
@@ -470,7 +471,7 @@ def get_and_extract_zip(gtfs_file):
 
     # Extract the specified files
     with ZipFile(local_zip_filename, "r") as zf:
-        for file_name in ["stops.txt", "stop_times.txt"]:
+        for file_name in ["stops.txt"]: #, "stop_times.txt"]:
             if file_name in zf.namelist():
                 zf.extract(file_name, os.getcwd())
 
@@ -488,57 +489,153 @@ def get_and_extract_zip(gtfs_file):
 
 def display_information():
     """Main function to orchestrate the application flow."""
-    print('STOPS v2.0 | TESTING BUILD 01 | © Lanxtot')
+    print('STOPS v2.0 | BUILD 02_CHALLENGE | © Lanxtot')
 
     print()
-    print('Krypčių pasirinkimų sąraše radę nelogiškų, nesuprantamų ar klaidinančių krypčių, praneškite su / ženklu (jei klaidinga 1: „1/“ ir t.t.), vėliau pasidalinkite bugs.txt failu.')
-    print('Talpos/dydžio žymėjimas: mk – mikroautobusai | m – mažos talpos | t – standartinės talpos | ti – pailginti viengubi | i – dvigubi. Maršruto žymėjimas: * – pakeistos trasos reisas.')
-    print('Gave išvykimo laikus, galite įvesti tuščią eilutę (atnaujinti prognozes), išvykimo numerį (greitai pasirinkti tolesnę maršruto stotelę) ar kitos stotelės pavadinimą.')
-
-    get_gtfs_data("https://www.stops.lt/vilnius/vilnius/stops.txt", stops_file)
-    print('Maršrutų ir stotelių duomenys atnaujinti ',end='')
+    
+    print('  Maršrutų ir stotelių duomenys atnaujinti ',end='')
     with open(date_file, 'r') as date:
         print(date.read(),end='')
-    print('. Norėdami atnaujinti, įveskite „+“. Kitu atveju, įveskite stotelę.')
+    print('. Norėdami atnaujinti, įveskite „+“.')
+    
+    print()
+
+    print('  Sutartiniai ženklai ir veiksmai:')
+    print('  Talpos/dydžio žymėjimas: mk – mikroautobusai | m – mažos talpos | t – standartinės talpos | ti – pailginti viengubi | i – dvigubi.')
+    print('  Maršruto žymėjimas: T – troleibusų maršrutas | * – reisas alternatyvia trasa.')
+    print('  Galite įvesti tuščią eilutę ir atnaujinti prognozes arba kitos stotelės pavadinimą.')
+    print('  Krypčių pasirinkimų sąraše radę nelogiškų, nesuprantamų ar klaidinančių krypčių, užfiksuokite su / ženklu (jei klaidinga 1: „1/“ ir t.t.).')
+
+    print()
+
+    print('  CHALLENGE režimas:')
+    print('  Norėdami pasiekti, įveskite „-“.')
+    print("  Įvestis: skaičius – užfiksuojamas pasinaudotas garažinis numeris | „+“ – pridedamas visas modelis ar dydis | tuščia eilutė – išeiti iš režimo.")
     print()
 
 def update_data():
+    get_gtfs_data("https://www.stops.lt/vilnius/vilnius/stops.txt", stops_file)
     get_and_extract_zip("http://stops.lt/vilnius/ridango/gtfs.zip")
     with open(date_file, 'w') as date:
         date.write(datetime.today().strftime('%Y.%m.%d'))
     print('Atnaujinti maršrutų ir stotelių duomenys.')
     print()
 
-def get_stop_and_departures():
-    code_choice = False
-    user_stop = input('Įveskite: ')
-
+def check_user_stop(user_stop):
     if user_stop == "+":
         update_data()
         user_stop = input('Įveskite: ')
+        return user_stop
 
+    if user_stop == "-":
+        challenge()
+        user_stop = input('Įveskite: ')
+        return user_stop
+    
+    return user_stop
+
+def main():
+    display_information()
+    user_stop = input('Įveskite: ')
+    user_stop = check_user_stop(user_stop)
+    get_stop_and_departures(user_stop)
+
+def challenge():
+    print()
+
+    # Open the file for reading and processing
+    with open(challenge_file, 'r', encoding='utf-8') as csv_file:
+        csv_reader = csv.reader(csv_file, delimiter=',')
+        rows = list(csv_reader)
+    
+    # Display current rows
+    for row in rows:
+        try:
+            print(f'{row[0]:>4} {row[1]:<2} {row[2]}')
+        except IndexError:
+            pass
+    
+    print()
+
+    while True:
+        challenge_decision = input('Pridėkite: ')
+        
+        if challenge_decision == '':
+            break
+        
+        try:
+            # Fleet number handling
+            fleet_number = int(challenge_decision)
+            if fleet_number < 555 or fleet_number > 8050:
+                raise ValueError
+            
+            existing_row = next((row for row in rows if row and row[0].isdigit() and int(row[0]) == fleet_number), None)
+            if existing_row:
+                rows.remove(existing_row)
+                print('Ištrinta.')
+            else:
+                model, size = determine_vehicle_model([fleet_number])
+                rows.append([fleet_number, *size, *model])
+            
+        except ValueError:
+            if challenge_decision == '+':
+                inp = input('Įveskite ilgį/modelį: ')
+
+                selection_type = ''
+
+                if inp=='t' or inp=='i':
+                    print('  1. Autobusai')
+                    print('  2. Troleibusai')
+                    while True:
+                        selection_type = input('Nr.: ')
+                        if selection_type == '1':
+                            selection_type = 'Autobusai'
+                            break
+                        elif selection_type == '2' and inp =='i':
+                            inp = ''
+                            selection_type = 'Škoda 15Tr'
+                            break
+                        elif selection_type == '2' and inp =='t':
+                            selection_type = 'Troleibusai'
+                            break
+                        else:
+                            error()
+
+                if len(inp)<3:
+                    rows.append(['Visi', inp, selection_type])
+                else:
+                    rows.append(['Visi', '', inp])
+            else:
+                error()
+        
+        # Write updated rows back to the file
+        with open(challenge_file, 'w', newline='', encoding='utf-8') as csv_file:
+            csv_writer = csv.writer(csv_file, delimiter=',')
+            csv_writer.writerows(rows)
+    
+    print()
+
+def get_stop_and_departures(user_stop):
     while True:
         get_gtfs_data("https://www.stops.lt/vilnius/gps_full.txt", gps_file)
 
-        if code_choice == False:
-            user_stop = normalize(user_stop)
-            partial_matches = match_user_stop(user_stop)
+        user_stop = normalize(user_stop)
+        partial_matches = match_user_stop(user_stop)
 
-            if not partial_matches:
-                error()
-                user_stop = input('Įveskite: ')
-                continue
+        if not partial_matches:
+            error()
+            user_stop = input('Įveskite: ')
+            user_stop = check_user_stop(user_stop)
+            continue
 
-            stop_directions_rows, name = handle_partial_matches(partial_matches)
+        stop_directions_rows, name = handle_partial_matches(partial_matches)
 
-            if stop_directions_rows is None:
-                user_stop = input('Įveskite: ')
-                continue
+        if stop_directions_rows is None:
+            user_stop = input('Įveskite: ')
+            user_stop = check_user_stop(user_stop)
+            continue
 
-            stop_code = determine_stop_direction(name, stop_directions_rows)
-        else:
-            stop_code = user_stop
-            code_choice = False
+        stop_code = determine_stop_direction(name, stop_directions_rows)
 
         if stop_code:
             print()
@@ -560,30 +657,17 @@ def get_stop_and_departures():
                 print()
                 decision = input('Įveskite: ')
 
-                """
-                try:
-                    selection = int(decision) - 1
-
-                    if 1 <= int(decision) <= len(departure_times):
-                        break
-                    else:
-                        raise ValueError
-
-                except ValueError:
-                """
                 if decision == "":
                     print()
                     continue
                 else:
                     user_stop = decision
+                    user_stop = check_user_stop(user_stop)
                     break
 
         else:
             user_stop = input('Įveskite: ')
-
-def main():
-    display_information()
-    get_stop_and_departures()
+            user_stop = check_user_stop(user_stop)
 
 if __name__ == "__main__":
     main()
