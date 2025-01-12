@@ -1,7 +1,7 @@
-stop,2350
-bus,122,b-a,78648,565KWNZ,Naujininkai,-1,45
-bus,31,b-a,79038,4161KWNZD,Stotis,-1,45
-bus,122,b-a,80148,570KWNZ,Naujininkai,-1,45
-bus,31,b-a,80592,4190KWNZD,Stotis,-1,45
+stop,1109
+expressbus,4g,b-d,86483,8016KWZ,Autobusų parkas(Kirtimai),-1,45
+bus,101n,a-b,86493,4138KWNZ,Fabijoniškės,-1,45
+bus,101n,a-b,88020,4120KWNZ,Fabijoniškės,-1,45
+bus,101n,a-b,90000,4113KWNZ,Fabijoniškės,-1,45
 
 
