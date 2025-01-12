@@ -1,7 +1,8 @@
-stop,1109
-expressbus,4g,b-d,86483,8016KWZ,Autobusų parkas(Kirtimai),-1,45
-bus,101n,a-b,86493,4138KWNZ,Fabijoniškės,-1,45
-bus,101n,a-b,88020,4120KWNZ,Fabijoniškės,-1,45
-bus,101n,a-b,90000,4113KWNZ,Fabijoniškės,-1,45
+stop,1118
+trol,4,a-b1,60300,1737KWNZ,Gerosios Vilties st.,-1,45
+trol,4,a-b1,60960,1731KWNZ,Gerosios Vilties st.,-1,45
+trol,4,a-b1,61560,1855KWNZ,Gerosios Vilties st.,-1,45
+trol,4,a-b1,62220,1682KZ,Gerosios Vilties st.,-1,45
+trol,4,a-b1,62880,1707KZ,Gerosios Vilties st.,-1,45
 
 

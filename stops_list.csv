@@ -1,1711 +1,1711 @@
 ﻿ID;Direction;Lat;Lng;Stops;Name;Info;Street;Area;City;Pikas2024.7.17;2025.01.12 13:42:04
-id18505;;0;0
-3906;iš miesto;5464437;2506552;3907,3921;1-asis Lentvaris
-0032;;0;0;;AP į parką
-0031;;0;0;;AP iš parko
-0018;;5472120;2529556;5177,0813;AP vartai (atvykimas)
-1631;link žiedo;5466740;2521588;1651,1630;Bijūnų st.
-3008regio;link miesto;5484986;2537356;3009regio,2300;Bratoniškės
-0914b;;5470223;2528355;0705,0704,5185;Broniaus Laurinavičiaus skveras (laikina)
-2941b;;5460812;2508546;2941a;Dobrovolės st.;laikina
-2952;;5466814;2516225;2944;Elektrinės laikinoji st.;0
-6016;;5462572;2506645;6006,3907;Fabriko st.
-2953;;5465793;2515483;2927,2925,2929;Gariūnų laikinoji st.
-2145;;5475762;2527183;2146a,2145a;Geležinio Vilko st.
-2146;;5475848;2527229;2146a,5115
-3578;;5475317;2541434;3575,3574,3530;Inovacijų pramonės parkas (laikina)
-0826;;5471555;2527796;0827;Išlaipinama
-0609b;;5468193;2523434;1672,0616;Išleidimo st.;laikina
-5305;;5445269;2528013;5304;Jašiūnai;0
-3890;išlaipinimas;5473141;2524430;3813,3839,3812;Kaimelio žiedas
-1015;;5473646;2540379;3526,1016;Kairėnai
-3526;;5473664;2540210;1029,1015,1014
-4333a;;5460352;2534220;4333b;Katalikų kapinės;laikina
-4333b;;5460300;2534245;4333a,4332
-6011;;5463538;2513156;6012,3920;Laikina st. 1 (Ižos g.);0
-6009;;5464658;2512772;6010,2935;Laikina st. 1 (Liudvinavos g.)
-6013;;5463553;2513598;6014,2917;Laikina st. 1 (Žarijų g.)
-6012;;5463529;2513190;6011,6014;Laikina st. 2 (Ižos g.)
-6010;;5464645;2512760;6009,3901;Laikina st. 2 (Liudvinavos g.)
-6014;;5463529;2513581;6013,6012,2914;Laikina st. 2 (Žarijų g.)
-3125;;5464443;2504579;3126,3006;Lentvario geležinkelio stotis
-3126;;5464423;2504583;3125,6003
-4906;;5476234;2520993;4905,4911;Liepų st. (laikina)
-0237b;;5469174;2526415;0237a,0227;Media centre arrivals/departures
-3562;;5481068;2541624;3549,2300;Miškonys
-3221;;5471741;2522023;3211,3209,3222;Mykolo Biržiškos gimnazija
-3222;;5471858;2521516;3208,3207,3221
-2241;;5480143;2534802;2242,2264,2238;Naujaneriai
-2242;;5480145;2534816;2241,2226
-4305a;;5464038;2535454;1420,4305b;Nemėžis
-2613c;;5464240;2527853;2613b,2645;Oro uostas
-6015;;5464396;2527959;2613
-0609a;;5467405;2524002;0610,0609;Paėmimo st.;laikina
-0242a;;5468327;2528657;0242,0431,0244;Prezidentūra;0
-1028;;5472493;2534072;1005,1006;Senoji plytinė(išlaipinimas)
-2300;link miesto;5482865;2536410;2248,3008regio,3562;Skirgiškės
-5007a;iš centro;5474980;2520762;5006,5005;Tarandė (laikina)
-5304;;5448695;2524946;5305;Terešiškės
-0830;;5473161;2529066;3504,2018;Trinapolis
-1523;visos kryptys;5465304;2528045;1521,2604,1501;Vikingų slėnis
-2741;;5459526;2521780;2725,5139;Vokės parkas
-0245b;;5468077;2528238;0245a,0410;Vokiečių st.
+id18505;;0;0;;;;
+3906;iš miesto;5464437;2506552;3907,3921;1-asis Lentvaris;;
+0032;;0;0;;AP į parką;;
+0031;;0;0;;AP iš parko;;
+0018;;5472120;2529556;5177,0813;AP vartai (atvykimas);;
+1631;link žiedo;5466740;2521588;1651,1630;Bijūnų st.;;
+3008regio;link miesto;5484986;2537356;3009regio,2300;Bratoniškės;;
+0914b;;5470223;2528355;0705,0704,5185;Broniaus Laurinavičiaus skveras (laikina);;
+2941b;;5460812;2508546;2941a;Dobrovolės st.;laikina;
+2952;;5466814;2516225;2944;Elektrinės laikinoji st.;0;
+6016;;5462572;2506645;6006,3907;Fabriko st.;;
+2953;;5465793;2515483;2927,2925,2929;Gariūnų laikinoji st.;;
+2145;;5475762;2527183;2146a,2145a;Geležinio Vilko st.;;
+2146;;5475848;2527229;2146a,5115;Geležinio Vilko st.;;
+3578;;5475317;2541434;3575,3574,3530;Inovacijų pramonės parkas (laikina);;
+0826;;5471555;2527796;0827;Išlaipinama;;
+0609b;;5468193;2523434;1672,0616;Išleidimo st.;laikina;
+5305;;5445269;2528013;5304;Jašiūnai;0;
+3890;išlaipinimas;5473141;2524430;3813,3839,3812;Kaimelio žiedas;;
+1015;;5473646;2540379;3526,1016;Kairėnai;;
+3526;;5473664;2540210;1029,1015,1014;Kairėnai;;
+4333a;;5460352;2534220;4333b;Katalikų kapinės;laikina;
+4333b;;5460300;2534245;4333a,4332;;;
+6011;;5463538;2513156;6012,3920;Laikina st. 1 (Ižos g.);0;
+6009;;5464658;2512772;6010,2935;Laikina st. 1 (Liudvinavos g.);;
+6013;;5463553;2513598;6014,2917;Laikina st. 1 (Žarijų g.);;
+6012;;5463529;2513190;6011,6014;Laikina st. 2 (Ižos g.);;
+6010;;5464645;2512760;6009,3901;Laikina st. 2 (Liudvinavos g.);;
+6014;;5463529;2513581;6013,6012,2914;Laikina st. 2 (Žarijų g.);;
+3125;;5464443;2504579;3126,3006;Lentvario geležinkelio stotis;;
+3126;;5464423;2504583;3125,6003;;;
+4906;;5476234;2520993;4905,4911;Liepų st. (laikina);;
+0237b;;5469174;2526415;0237a,0227;Media centre arrivals/departures;;
+3562;;5481068;2541624;3549,2300;Miškonys;;
+3221;;5471741;2522023;3211,3209,3222;Mykolo Biržiškos gimnazija;;
+3222;;5471858;2521516;3208,3207,3221;;;
+2241;;5480143;2534802;2242,2264,2238;Naujaneriai;;
+2242;;5480145;2534816;2241,2226;;;
+4305a;;5464038;2535454;1420,4305b;Nemėžis;;
+2613c;;5464240;2527853;2613b,2645;Oro uostas;;
+6015;;5464396;2527959;2613;Naujaneriai;;
+0609a;;5467405;2524002;0610,0609;Paėmimo st.;laikina;
+0242a;;5468327;2528657;0242,0431,0244;Prezidentūra;0;
+1028;;5472493;2534072;1005,1006;Senoji plytinė(išlaipinimas);;
+2300;link miesto;5482865;2536410;2248,3008regio,3562;Skirgiškės;;
+5007a;iš centro;5474980;2520762;5006,5005;Tarandė (laikina);;
+5304;;5448695;2524946;5305;Terešiškės;;
+0830;;5473161;2529066;3504,2018;Trinapolis;;
+1523;visos kryptys;5465304;2528045;1521,2604,1501;Vikingų slėnis;;
+2741;;5459526;2521780;2725,5139;Vokės parkas;;
+0245b;;5468077;2528238;0245a,0410;Vokiečių st.;;
 2929;;5466163;2514856;2953,2939;Plungės st.;;Jočionių g.
 1029;iš miesto;5473719;2540245;3526,1138;Kairėnai;;Kairėnų g.
-1138;;5474191;2539876;3528,1029;pagal pareikalavimą
+1138;;5474191;2539876;3528,1029;pagal pareikalavimą;;
 3904;link miesto;5464632;2509966;3905,3903;Bališkės;;Lentvario g.
-3905;iš miesto;5464613;2509864;3904,3913
+3905;iš miesto;5464613;2509864;3904,3913;Bališkės;;Lentvario g. 
 3542a;iš centro;5478181;2538366;3542,5179;Šilas (laikina);;Nemenčinės pl.
-3543a;;5478211;2538397;3542,3543
+3543a;;5478211;2538397;3542,3543;Šilas (laikina);;Nemenčinės pl. 
 1670;;5467639;2522632;1671,1603;LITEXPO(Parodų g.);;Parodų g.
 3838;išlaipinimas;5474380;2522603;3837a,2105a;Mykolo Lietuvio st.;;Salomėjos Nėries g.
-3837;;5474254;2522692;3836,3837a,5001
+3837;;5474254;2522692;3836,3837a,5001;Mykolo Lietuvio st.;;Salomėjos Nėries g. 
 1118;visos kryptys, troleibusai;5472291;2531872;1118c;Antakalnio žiedas;wifi;Antakalnio g.;;Antakalnis
-1118a;visos kryptys, autobusai;5472232;2531887;1118c,1116;;0
-1118c;visos kryptys;5472274;2531912;1118,1118a,1119
-1115;link centro;5471960;2531724;1116,1114;Antakalnis
-1116;iš centro;5472106;2531821;1118a,1115
-1110;iš centro;5471125;2531486;1112,1109;Klinikų st.;wifi
-1109;link centro;5471058;2531437;1110,1108,0901;;0
-1103;link centro;5469630;2530809;1104,0402a,0905;Leono Sapiegos st.
-1104;iš centro;5469697;2530873;1103,1105
-1105;link centro;5470165;2530922;1106,1104;Petro Vileišio st.
-1106;iš centro;5470313;2531002;1107,1105
-1108;iš centro;5470545;2531096;1129,1109;Šilo tiltas
-1107;link centro;5470447;2531024;1139,1106,0903;;wifi
-1113;link centro;5471619;2531646;1114,1112,0821;Tverečiaus st.
-1114;iš centro;5471750;2531659;1113,1115;;0
+1118a;visos kryptys, autobusai;5472232;2531887;1118c,1116;Antakalnio žiedas;0;Antakalnio g. 
+1118c;visos kryptys;5472274;2531912;1118,1118a,1119;Antakalnio žiedas;;Antakalnio g.  
+1115;link centro;5471960;2531724;1116,1114;Antakalnis;;Antakalnio g.   
+1116;iš centro;5472106;2531821;1118a,1115;Antakalnis;;Antakalnio g.    
+1110;iš centro;5471125;2531486;1112,1109;Klinikų st.;wifi;Antakalnio g.     
+1109;link centro;5471058;2531437;1110,1108,0901;Klinikų st.;0;Antakalnio g.      
+1103;link centro;5469630;2530809;1104,0402a,0905;Leono Sapiegos st.;;Antakalnio g.       
+1104;iš centro;5469697;2530873;1103,1105;Leono Sapiegos st.;;Antakalnio g.        
+1105;link centro;5470165;2530922;1106,1104;Petro Vileišio st.;;Antakalnio g.         
+1106;iš centro;5470313;2531002;1107,1105;Petro Vileišio st.;;Antakalnio g.          
+1108;iš centro;5470545;2531096;1129,1109;Šilo tiltas;;Antakalnio g.           
+1107;link centro;5470447;2531024;1139,1106,0903;Šilo tiltas;wifi;Antakalnio g.            
+1113;link centro;5471619;2531646;1114,1112,0821;Tverečiaus st.;;Antakalnio g.             
+1114;iš centro;5471750;2531659;1113,1115;Tverečiaus st.;0;Antakalnio g.              
 1121;link Antakalnio;5472728;2531552;1132,3501;Lizdeikos st.;;Lizdeikos g.
-1132;link Žirmūnų;5472720;2531625;1121,1117
+1132;link Žirmūnų;5472720;2531625;1121,1117;Lizdeikos st.;;Lizdeikos g. 
 1119;link Saulėtekio;5472278;2532004;1118c,1117;Nemenčinės plentas;;Nemenčinės pl.
-1117;link centro;5472385;2532007;1119,1122,1132
-1021;link Nemenčinės;5472719;2532671;1001,1122,1123;Saulėtekis
-1122;link centro;5472622;2532482;1021,1117
+1117;link centro;5472385;2532007;1119,1122,1132;Nemenčinės plentas;;Nemenčinės pl. 
+1021;link Nemenčinės;5472719;2532671;1001,1122,1123;Saulėtekis;;Nemenčinės pl.  
+1122;link centro;5472622;2532482;1021,1117;Saulėtekis;;Nemenčinės pl.   
 1003;iš centro;5472385;2533566;1002,1004;Gedimino technikos universitetas;;Saulėtekio al.
-1002;link centro;5472412;2533451;1003,1023
-1001;iš centro;5472624;2532752;1021,1022;Saulėtekis
-1023;link Saulėtekio;5472454;2533199;1022,1002;Vilniaus universitetas
-1022;link centro;5472489;2533134;1023,1001;;wifi
+1002;link centro;5472412;2533451;1003,1023;Gedimino technikos universitetas;;Saulėtekio al. 
+1001;iš centro;5472624;2532752;1021,1022;Saulėtekis;;Saulėtekio al.  
+1023;link Saulėtekio;5472454;2533199;1022,1002;Vilniaus universitetas;;Saulėtekio al.   
+1022;link centro;5472489;2533134;1023,1001;Vilniaus universitetas;wifi;Saulėtekio al.    
 1129;link Šilo tilto;5470519;2531007;1139,1108;Šilo tiltas;;Šilo g.
 1126;link centro;5470277;2535406;2305,2395;Lyglaukiai;0;Viršupio g.
-1127a;link centro;5469905;2534770;2304,2303;Šilo st.
-1128;link centro;5469579;2534397;2303,2301;Viršupis
+1127a;link centro;5469905;2534770;2304,2303;Šilo st.;;
+1128;link centro;5469579;2534397;2303,2301;Viršupis;;
 1130;iš centro;5470840;2533044;1131,1134;Bistryčios st.;;Žolyno g.
-1131;link Antakalnio;5470839;2532956;1130,1137,1145
-1112;link centro;5471161;2531573;1110,1111,1113;Klinikų st.
-1111;iš centro;5471134;2531669;1112,1136
-1125;link centro;5470782;2533847;1134,2299,1127;Žolyno st.
+1131;link Antakalnio;5470839;2532956;1130,1137,1145;Bistryčios st.;;Žolyno g. 
+1112;link centro;5471161;2531573;1110,1111,1113;Klinikų st.;;Žolyno g.  
+1111;iš centro;5471134;2531669;1112,1136;Klinikų st.;;Žolyno g.   
+1125;link centro;5470782;2533847;1134,2299,1127;Žolyno st.;;Žolyno g.    
 2299;link centro;5471176;2534174;2298,1125;Mileišiškės;;Mileišiškių g.
-2298;iš centro;5471172;2534209;2299,2400
-2399;iš centro;5471312;2534809;2400,2398;Mileišiškių sodai
-2400;link centro;5471297;2534743;2399,2298
+2298;iš centro;5471172;2534209;2299,2400;Mileišiškės;;Mileišiškių g. 
+2399;iš centro;5471312;2534809;2400,2398;Mileišiškių sodai;;Mileišiškių g.  
+2400;link centro;5471297;2534743;2399,2298;Mileišiškių sodai;;Mileišiškių g.   
 2297;link centro;5470684;2538076;2296,2394,1034;Žilvičių st.;;Rokantiškių g.
-2296;iš centro;5470689;2538114;2297,2392
+2296;iš centro;5470689;2538114;2297,2392;Žilvičių st.;;Rokantiškių g. 
 1143;iš centro;5470241;2532416;1145,1140;Saulės slėnis;;Šilo g.
-1145;į centrą;5470233;2532467;1143,1131
-1139;iš centro;5470488;2531085;1107,1129,1141;Šilo tiltas
-1140;iš centro;5470387;2531720;1141,1143;Vinco Grybo st.
-1141;į centrą;5470401;2531701;1140,1139,1137
+1145;į centrą;5470233;2532467;1143,1131;Saulės slėnis;;Šilo g. 
+1139;iš centro;5470488;2531085;1107,1129,1141;Šilo tiltas;;Šilo g.  
+1140;iš centro;5470387;2531720;1141,1143;Vinco Grybo st.;;Šilo g.   
+1141;į centrą;5470401;2531701;1140,1139,1137;Vinco Grybo st.;;Šilo g.    
 2395;link centro;5470764;2535853;2396,1019,1126;Anapilio st.;;Viršupio g.
-2396;iš centro;5470771;2535840;2395,1048
-1047;link N.Vilnios;5471025;2535687;1048,2397;Sapieginės miškas
-1048;link centro;5470983;2535769;1047,2396
-1127;link centro;5470037;2534960;2304,2305,1125;Šilo st.
-2397;iš centro;5471267;2535319;2398,1047;Viršupio sodai
-2398;link centro;5471332;2535260;2397,2399,1042
+2396;iš centro;5470771;2535840;2395,1048;Anapilio st.;;Viršupio g. 
+1047;link N.Vilnios;5471025;2535687;1048,2397;Sapieginės miškas;;Viršupio g.  
+1048;link centro;5470983;2535769;1047,2396;Sapieginės miškas;;Viršupio g.   
+1127;link centro;5470037;2534960;2304,2305,1125;Šilo st.;;Viršupio g.    
+2397;iš centro;5471267;2535319;2398,1047;Viršupio sodai;;Viršupio g.     
+2398;link centro;5471332;2535260;2397,2399,1042;Viršupio sodai;;Viršupio g.      
 1136;link centro;5471065;2532032;1137,1111;Vieversių st.;;Žolyno g.
-1137;iš centro;5470983;2532257;1136,1131,1141
-1134;iš centro;5470782;2533774;1125,1130;Žolyno st.
+1137;iš centro;5470983;2532257;1136,1131,1141;Vieversių st.;;Žolyno g. 
+1134;iš centro;5470782;2533774;1125,1130;Žolyno st.;;Žolyno g.  
 5124;išlaipinimas;5462943;2517703;2906,2949;Agrastų st.;;Agrastų g.;;Aukštieji Paneriai
-5123;link A.Panerių;5461288;2518688;5118,2947;Margirio st.
-5118;iš miesto;5461256;2518706;5123,2818
+5123;link A.Panerių;5461288;2518688;5118,2947;Margirio st.;;Agrastų g. 
+5118;iš miesto;5461256;2518706;5123,2818;Margirio st.;;Agrastų g.  
 2810a;link miesto;5462689;2514704;2810,2801;Chemijos st.;;Fermentų g.
-2811;link Galvės g.;5462628;2515099;2810,2812;;;Kirtimų g.
-2810;link Vaidotų;5462740;2515066;2811,2810a,2909
-2818;link Pagirių;5460510;2519145;2819,5118;Pagirių st.
-2819;link Ž.Panerių;5460494;2519153;2818,2824
-2813;iš miesto;5462063;2515741;2812,2814,2806;Prekybos st.
-2812;link miesto;5462128;2515673;2813,2811
+2811;link Galvės g.;5462628;2515099;2810,2812;Chemijos st.;;Kirtimų g.
+2810;link Vaidotų;5462740;2515066;2811,2810a,2909;;;
+2818;link Pagirių;5460510;2519145;2819,5118;Pagirių st.;;
+2819;link Ž.Panerių;5460494;2519153;2818,2824;;;
+2813;iš miesto;5462063;2515741;2812,2814,2806;Prekybos st.;;
+2812;link miesto;5462128;2515673;2813,2811;Prekybos st.;;
 2822;visos kryptys;5461660;2513801;2805,3115;Kazbėjų žiedas;;Senasis Gardino pl.
 2801;link miesto;5462471;2514078;2802,2803,2810a;Fermentų st.;;Vytauto Andriaus Graičiūno g.
-2802;iš miesto;5462549;2513989;2801,2802a
-2807;iš miesto;5461584;2514953;2806,2823;Kazbėjų st.
-2806;link Galvės g.;5461645;2514909;2807,2805,2813
-2808;iš miesto;5461215;2515422;2809,2828;Slėnis
-2809;link miesto;5461227;2515440;2808,2825,2820
-2821;išlaipinimas;5460814;2516000;2828,2826;Vytauto Andriaus Graičiūno st.
-2803;link Galvės g. II;5462144;2514314;2804,2801;Vokės st.
-2805;link Baltosios Vokės;5461923;2514521;2804,2806,2822
-2804;link Galvės g. I;5461976;2514492;2805,2803
+2802;iš miesto;5462549;2513989;2801,2802a;Fermentų st.;;Vytauto Andriaus Graičiūno g. 
+2807;iš miesto;5461584;2514953;2806,2823;Kazbėjų st.;;Vytauto Andriaus Graičiūno g.  
+2806;link Galvės g.;5461645;2514909;2807,2805,2813;Kazbėjų st.;;Vytauto Andriaus Graičiūno g.   
+2808;iš miesto;5461215;2515422;2809,2828;Slėnis;;Vytauto Andriaus Graičiūno g.    
+2809;link miesto;5461227;2515440;2808,2825,2820;Slėnis;;Vytauto Andriaus Graičiūno g.     
+2821;išlaipinimas;5460814;2516000;2828,2826;Vytauto Andriaus Graičiūno st.;;Vytauto Andriaus Graičiūno g.      
+2803;link Galvės g. II;5462144;2514314;2804,2801;Vokės st.;;
+2805;link Baltosios Vokės;5461923;2514521;2804,2806,2822;Vytauto Andriaus Graičiūno st.;;
+2804;link Galvės g. I;5461976;2514492;2805,2803;Vytauto Andriaus Graičiūno st.;;
 2949;link Baltosios Vokės;5462743;2517996;2950,5124;Kadugių st.;;Juodšilių g.
-2950;link Ž. Panerių;5462674;2518154;2949,2948
-2947;link Baltosios Vokės;5462322;2519010;2948,5123;Vasarotojų st.
-2948;link Ž. Panerių;5462365;2518902;2947,2950,2946
+2950;link Ž. Panerių;5462674;2518154;2949,2948;Kadugių st.;;Juodšilių g. 
+2947;link Baltosios Vokės;5462322;2519010;2948,5123;Vasarotojų st.;;Juodšilių g.  
+2948;link Ž. Panerių;5462365;2518902;2947,2950,2946;Vasarotojų st.;;Juodšilių g.   
 5111;iš miesto;5460365;2519329;2824,5110;Baltoji Vokė;;Kirtimų g.
-5110;link miesto;5460240;2519557;5110a,5111
-2814;link Galvės g.;5461669;2516242;2820,2813;Juodšilių st.
-2820;link Baltosios Vokės;5461606;2516298;2814,2809
+5110;link miesto;5460240;2519557;5110a,5111;Baltoji Vokė;;Kirtimų g. 
+2814;link Galvės g.;5461669;2516242;2820,2813;Juodšilių st.;;Kirtimų g.  
+2820;link Baltosios Vokės;5461606;2516298;2814,2809;Juodšilių st.;;Kirtimų g.   
 2802a;link miesto;5462654;2513932;2802,2941;Fermentų st.;;Vytauto Andriaus Graičiūno g.
-2826;link miesto;5460427;2517448;2827,2821;pagal pareikalavimą
-2827;iš miesto;5460406;2517503;2826,2816
-2823;link miesto;5461410;2515204;2825,2807;Vilniaus Pergalė
-2825;iš miesto;5461403;2515191;2823,2809
-2828;iš miesto;5460815;2515942;2821,2808,3121;Vytauto Andriaus Graičiūno st.
+2826;link miesto;5460427;2517448;2827,2821;pagal pareikalavimą;;
+2827;iš miesto;5460406;2517503;2826,2816;;;
+2823;link miesto;5461410;2515204;2825,2807;Vilniaus Pergalė;;
+2825;iš miesto;5461403;2515191;2823,2809;Vilniaus Pergalė;;
+2828;iš miesto;5460815;2515942;2821,2808,3121;Vytauto Andriaus Graičiūno st.;;
 2946;išlaipinimas;5463242;2519844;2435,2948;Zuikių st.;;Zuikių g.
 4902;link Riešės;5476356;2520003;4901,4905,5216;1-osios Bukiškės;;Ukmergės g.;;Avižieniai
-4901;link centro;5476309;2519852;4902;2-osios Bukiškės
+4901;link centro;5476309;2519852;4902;2-osios Bukiškės;;Ukmergės g. 
 2159;link Santariškių;5475689;2523132;2153a,2152;Daubų st.;;Daubų g.;;Bajorai
-2153a;link miesto;5475731;2523113;2159,2153
+2153a;link miesto;5475731;2523113;2159,2153;;;
 2151;;5475645;2523851;2157,2155;Mergelės st.;;Mergelės g.
 2154;link Bajorų;5475623;2524332;2155,2149;Bajorų miškas;;Mokslininkų g.
-2155;link miesto;5475626;2524250;2154,2151
-2150;link Bajorų;5475445;2524977;2149,2105;Mokslininkų st.
-2149;link miesto;5475454;2524930;2150,2154,2026
+2155;link miesto;5475626;2524250;2154,2151;Bajorų miškas;;Mokslininkų g. 
+2150;link Bajorų;5475445;2524977;2149,2105;Mokslininkų st.;;Mokslininkų g.  
+2149;link miesto;5475454;2524930;2150,2154,2026;Mokslininkų st.;;Mokslininkų g.   
 2152;link Santariškių;5475526;2523294;2160,2159,2148;Riaubonių st.;;Riaubonių g.
-2160;link Santariškių;5475518;2523273;2152,2105a
+2160;link Santariškių;5475518;2523273;2152,2105a;;;
 2157;link Santariškių;5475682;2523783;2157a,2148,2151;Bajorai;;Šaulio g.
-2157a;iš miesto;5475696;2523777;2157
-2153;link Santariškių;5475759;2522938;2158,2153a;Šaulio st.
-2158;link Bukiškių;5475772;2522900;2153,4910
+2157a;iš miesto;5475696;2523777;2157;;;
+2153;link Santariškių;5475759;2522938;2158,2153a;Šaulio st.;;
+2158;link Bukiškių;5475772;2522900;2153,4910;Šaulio st.;;
 2148;link Santariškių;5475673;2523716;2157,2152;Bajorai;;Vandenio g.
 2261;iš miesto;5478495;2535139;2262,2240,2263;Ragės st.;;Balsių g.;;Balsiai
-2262;link miesto;5478468;2535194;2261,2271
-2270;į centrą;5478168;2535503;2271,2259;Žynių st.
-2271;iš centro;5478308;2535433;2270,2262
+2262;link miesto;5478468;2535194;2261,2271;Ragės st.;;Balsių g. 
+2270;į centrą;5478168;2535503;2271,2259;Žynių st.;;Balsių g.  
+2271;iš centro;5478308;2535433;2270,2262;Žynių st.;;Balsių g.   
 2259;iš miesto;5478058;2535980;2270,2269,2168;Balsių mokykla;;Bubilo g.
 2169;į miestą;5478674;2536723;2165,2166,3560;Aitvarų st.;;Kryžiokų g.
-2166;į miestą;5478356;2536891;2169,2168,3542;Bubilo st.
+2166;į miestą;5478356;2536891;2169,2168,3542;Bubilo st.;;Kryžiokų g. 
 2168;į miestą;5477993;2536615;2259,2166;Kryžiokų sodų st.;;Kryžiokų Sodų g.
 2255;link miesto;5477823;2534554;2256,2265;Austėjos st.;;Ragučio g.
-2256;iš miesto;5477817;2534615;2255,2257
-2268;link miesto;5477810;2535586;2269,2258;Laimos st.
-2269;iš miesto;5477804;2535628;2268,2259,2216
-2257;link miesto;5477816;2535174;2258,2256;Žalčių st.
-2258;iš miesto;5477804;2535262;2257,2268
+2256;iš miesto;5477817;2534615;2255,2257;Austėjos st.;;Ragučio g. 
+2268;link miesto;5477810;2535586;2269,2258;Laimos st.;;Ragučio g.  
+2269;iš miesto;5477804;2535628;2268,2259,2216;Laimos st.;;Ragučio g.   
+2257;link miesto;5477816;2535174;2258,2256;Žalčių st.;;Ragučio g.    
+2258;iš miesto;5477804;2535262;2257,2268;Žalčių st.;;Ragučio g.     
 2260;iš miesto;5480074;2534014;2264,2228;Krakiškių sodai;;Sakališkių g.
-2264;link miesto;5480091;2534074;2260,2241
+2264;link miesto;5480091;2534074;2260,2241;Krakiškių sodai;;Sakališkių g. 
 2165;į miestą;5478858;2536426;2169,2164;Užpalių st.;;Užpalių g.
-2164;į miestą;5478773;2535966;2165,2240;Žvorūnos st.
+2164;į miestą;5478773;2535966;2165,2240;Žvorūnos st.;;Užpalių g. 
 2222;iš miesto;5478618;2534781;2263;Balsiai;;Žaliųjų Ežerų g.
-2263;link miesto;5478604;2534776;2222,2221,2261
-2221;link miesto;5478544;2534673;2263,2220
+2263;link miesto;5478604;2534776;2222,2221,2261;Balsiai;;Žaliųjų Ežerų g. 
+2221;link miesto;5478544;2534673;2263,2220;Balsiai;;Žaliųjų Ežerų g.  
 2101;link Pašilaičių;5473682;2526515;2102,2017,2001;Ateities st.;;Ateities g.;;Baltupiai
-2002;link Kalvarijų g.;5473707;2526672;2102,2019,5142
-2112;link Baltupio g.;5473933;2527535;2113,2003,5143;Kalvarijos
-5143;link Kalvarijų g.;5473819;2527044;5142,2112;Rugių st.
-5142;link Geležinio Vilko g.;5473801;2526928;5143,2002
+2002;link Kalvarijų g.;5473707;2526672;2102,2019,5142;Ateities st.;;Ateities g. 
+2112;link Baltupio g.;5473933;2527535;2113,2003,5143;Kalvarijos;;Ateities g.  
+5143;link Kalvarijų g.;5473819;2527044;5142,2112;Rugių st.;;Ateities g.   
+5142;link Geležinio Vilko g.;5473801;2526928;5143,2002;Rugių st.;;Ateities g.    
 2017;link centro;5473600;2526599;2019,2101,2008;Ateities st.;;Baltupio g.
-2019;įlaipinimas;5473630;2526656;2017,2002
-2102;link Santariškių;5473750;2526584;2002,2101,2131
-2103;link centro;5474535;2526338;2104,2132,2023;Mokyklos st.
-2104;iš centro;5474629;2526375;2103,2142
+2019;įlaipinimas;5473630;2526656;2017,2002;Ateities st.;;Baltupio g. 
+2102;link Santariškių;5473750;2526584;2002,2101,2131;Ateities st.;;Baltupio g.  
+2103;link centro;5474535;2526338;2104,2132,2023;Mokyklos st.;;Baltupio g.   
+2104;iš centro;5474629;2526375;2103,2142;Mokyklos st.;;Baltupio g.    
 2010;iš centro;5472758;2527858;2011,2018,2009;Baltupiai;wifi;Didlaukio g.
-2008;link centro;5472903;2526926;2009,2017;Didlaukio st.
-2009;iš centro;5472915;2527162;2008,2010;;0
+2008;link centro;5472903;2526926;2009,2017;Didlaukio st.;;Didlaukio g. 
+2009;iš centro;5472915;2527162;2008,2010;Didlaukio st.;0;Didlaukio g.  
 2115;iš centro;5474415;2527788;2114,2116,3506;Jeruzalė;;Jeruzalės g.
-2114;link centro;5474295;2527691;2115,2113
-2113;link Santariškių;5473997;2527677;2112,2114;Kalvarijos
+2114;link centro;5474295;2527691;2115,2113;Jeruzalė;;Jeruzalės g. 
+2113;link Santariškių;5473997;2527677;2112,2114;Kalvarijos;;Jeruzalės g.  
 2011;link centro;5472688;2528001;2010,2013;Baltupiai;;Kalvarijų g.
-2018;iš centro;5472828;2528013;2010,2007,0830
-2003;link centro;5473854;2527686;2112,2004;Kalvarijos
-2012;link centro;5472387;2528144;2013,0801;Naujakiemio st.
-2013;iš centro;5472467;2528114;2012,2011
-2006;iš centro;5473436;2527891;2007,2005;Pušynas
-2007;link centro;5473328;2527880;2006,2018
-2004;iš centro;5473702;2527791;2005,2003;Seminarija
-2005;link centro;5473576;2527801;2004,2006
+2018;iš centro;5472828;2528013;2010,2007,0830;Baltupiai;;Kalvarijų g. 
+2003;link centro;5473854;2527686;2112,2004;Kalvarijos;;Kalvarijų g.  
+2012;link centro;5472387;2528144;2013,0801;Naujakiemio st.;;Kalvarijų g.   
+2013;iš centro;5472467;2528114;2012,2011;Naujakiemio st.;;Kalvarijų g.    
+2006;iš centro;5473436;2527891;2007,2005;Pušynas;;Kalvarijų g.     
+2007;link centro;5473328;2527880;2006,2018;Pušynas;;Kalvarijų g.      
+2004;iš centro;5473702;2527791;2005,2003;Seminarija;;Kalvarijų g.       
+2005;link centro;5473576;2527801;2004,2006;Seminarija;;Kalvarijų g.        
 4402;link centro;5471687;2519645;4403,4401;Buivydiškės;;Buivydiškių g.;;Buivydiškės
-4403;iš centro;5471735;2519697;4402,4414,3208
-4404;iš centro;5472409;2518789;4405,4415;Sodų st.
-4405;link centro;5472427;2518717;4404,4410
+4403;iš centro;5471735;2519697;4402,4414,3208;Buivydiškės;;Buivydiškių g. 
+4404;iš centro;5472409;2518789;4405,4415;Sodų st.;;Buivydiškių g.  
+4405;link centro;5472427;2518717;4404,4410;Sodų st.;;Buivydiškių g.   
 3403;link centro;5471065;2520082;4401,3404;Tvenkinių st.;;Sidaronių g.
-4401;iš centro;5471104;2520066;3403,4402,3665
-3404;iš centro;5470881;2520298;3405,3403;Sidaronių st.
-3405;link centro;5470795;2520358;3404,3407,3216
+4401;iš centro;5471104;2520066;3403,4402,3665;Tvenkinių st.;;Sidaronių g. 
+3404;iš centro;5470881;2520298;3405,3403;Sidaronių st.;;Sidaronių g.  
+3405;link centro;5470795;2520358;3404,3407,3216;Sidaronių st.;;Sidaronių g.   
 3406;iš centro;5470395;2520551;3407,3602;Vytauto Pociūno st.;;Vytauto Pociūno g.
-3407;link centro;5470496;2520548;3406,3405,3220
+3407;link centro;5470496;2520548;3406,3405,3220;Vytauto Pociūno st.;;Vytauto Pociūno g. 
 4910;;5475899;2522010;4911,2158;Mėtų st.;;Bičiulių g.;;Bukiškis
-4911;;5475930;2521930;4910,4906
+4911;;5475930;2521930;4910,4906;Mėtų st.;;Bičiulių g. 
 4905;;5476238;2520977;4906,4907,4902;Liepų st.;;Liepų g.
 4907;;5475959;2520734;5015,4905;Aušros st.;;Sodų g.
 0703;link centro;5469931;2528249;0704,0104;Kalvarijų turgus;;Kalvarijų g.;;Centras I
-0704;iš centro;5470019;2528301;0703,5186,0914b;;wifi
-0102;link centro;5469234;2528003;0101,0233;Žaliasis tiltas
-0101;iš centro;5469236;2528048;0102,0101b;;wifi,wc
+0704;iš centro;5470019;2528301;0703,5186,0914b;Kalvarijų turgus;wifi;Kalvarijų g. 
+0102;link centro;5469234;2528003;0101,0233;Žaliasis tiltas;;Kalvarijų g.  
+0101;iš centro;5469236;2528048;0102,0101b;Žaliasis tiltas;wifi,wc;Kalvarijų g.   
 0104;link Pilaitės;5469564;2527743;0103,0113,0703;Europos aikštė;wifi;Konstitucijos pr.
-0106;link Pilaitės;5469853;2526650;0105,0718;Lietuvos sąjūdžio kelias;0
-0105;link Žirmūnų;5469825;2526630;0106,0108
-0113;link Žirmūnų;5469671;2527311;0717,0104;Nacionalinė dailės galerija
-0114;link Pilaitės;5469793;2527003;0718,0717
+0106;link Pilaitės;5469853;2526650;0105,0718;Lietuvos sąjūdžio kelias;0;Konstitucijos pr. 
+0105;link Žirmūnų;5469825;2526630;0106,0108;Lietuvos sąjūdžio kelias;;Konstitucijos pr.  
+0113;link Žirmūnų;5469671;2527311;0717,0104;Nacionalinė dailės galerija;;Konstitucijos pr.   
+0114;link Pilaitės;5469793;2527003;0718,0717;Nacionalinė dailės galerija;;Konstitucijos pr.    
 0115;link Žalgirio g.;5469983;2526892;0718,0107;Šnipiškės;;Linkmenų g.
 0110;link centro;5469457;2528387;0109,5188;Lvivo st.;wifi;Šeimyniškių g.
-0109;link Žirmūnų;5469448;2528276;0110,0101b;;0
+0109;link Žirmūnų;5469448;2528276;0110,0101b;Lvivo st.;0;Šeimyniškių g. 
 0103;link Žirmūnų;5469528;2527759;0104,0101b;Europos aikštė;wifi;Konstitucijos pr.
 0222;Nuo Žaliojo tilto;5469288;2527088;0224,0221;Alberto Goštauto st.;0;Alberto Goštauto g.;;Centras II
-0221;link centro;5469456;2526747;0227,0222,0108
-0233;link Žaliojo tilto;5469081;2527732;0232,0102,0211;Operos ir baleto teatras
-0232;link Baltojo tilto;5469123;2527574;0233,0236;;wifi
+0221;link centro;5469456;2526747;0227,0222,0108;Alberto Goštauto st.;;Alberto Goštauto g. 
+0233;link Žaliojo tilto;5469081;2527732;0232,0102,0211;Operos ir baleto teatras;;Alberto Goštauto g.  
+0232;link Baltojo tilto;5469123;2527574;0233,0236;Operos ir baleto teatras;wifi;Alberto Goštauto g.   
 0219;link Pedagoginio žiedo;5468909;2526261;0220,0217;Gedimino prospektas;0;Geležinio Vilko g.
-0220;link Savanorių pr.;5468894;2526208;0219,0238,0253
+0220;link Savanorių pr.;5468894;2526208;0219,0238,0253;Gedimino prospektas;;Geležinio Vilko g. 
 0207;link centro;5468526;2527821;0212,0210;Jogailos st.;;Jogailos g.
 0218;link Senamiesčio;5468812;2526329;0217;Jokūbo Jasinskio st.;;Jokūbo Jasinskio g.
-0217;link Žvėryno;5468828;2526352;0218,0219,0216
-0216;link Žvėryno;5468784;2526659;0214,0217;Pamėnkalnio st.;wifi
+0217;link Žvėryno;5468828;2526352;0218,0219,0216;Jokūbo Jasinskio st.;;Jokūbo Jasinskio g. 
+0216;link Žvėryno;5468784;2526659;0214,0217;Pamėnkalnio st.;wifi;Jokūbo Jasinskio g.  
 0226;link Žaliojo tilto;5468958;2526922;0214,0231;Juozo Tumo-Vaižganto st.;0;Juozo Tumo-Vaižganto g.
-0224;link Gedimino pr.;5469179;2527091;0225,0223,0222;Kražių st.;wifi
-0225;link Žaliojo tilto;5469172;2527116;0224;;0
+0224;link Gedimino pr.;5469179;2527091;0225,0223,0222;Kražių st.;wifi;Juozo Tumo-Vaižganto g. 
+0225;link Žaliojo tilto;5469172;2527116;0224;Kražių st.;0;Juozo Tumo-Vaižganto g.  
 0231;link Vašingtono a.;5469090;2527072;0223,0236,0226;Lukiškės;;Lukiškių g.
-0236;link J.Tumo-Vaižganto g.;5469037;2527231;0231,0232
-0223;šalia skvero;5469160;2526987;0224,0231,0227;Vašingtono aikštė
+0236;link J.Tumo-Vaižganto g.;5469037;2527231;0231,0232;Lukiškės;;Lukiškių g. 
+0223;šalia skvero;5469160;2526987;0224,0231,0227;Vašingtono aikštė;;Lukiškių g.  
 0212;link Žvėryno;5468500;2527641;0207,0235,0215;Islandijos st.;;Pamėnkalnio g.
-0215;link Senamiesčio;5468736;2526934;0214,0212,0501;Pamėnkalnio st.
+0215;link Senamiesčio;5468736;2526934;0214,0212,0501;Pamėnkalnio st.;;Pamėnkalnio g. 
 0235;link stoties;5468371;2527701;0212,0406;Centro poliklinika;;Pylimo g.
 0203;link Gedimino pr.;5468665;2528644;0405,0243;Arkikatedra;wifi;Tado Vrublevskio g.
-0405;link Mindaugo tilto;5468667;2528675;0203,0201
+0405;link Mindaugo tilto;5468667;2528675;0203,0201;Arkikatedra;;Tado Vrublevskio g. 
 0211;link stoties;5468871;2527982;0210,0233;Vinco Kudirkos aikštė;;Vilniaus g.
-0210;link Žaliojo tilto;5468753;2527980;0211,0207,0243;;0
+0210;link Žaliojo tilto;5468753;2527980;0211,0207,0243;Vinco Kudirkos aikštė;0;Vilniaus g. 
 0214;link Tauro kalno;5468835;2526799;0216,0215,0226;Juozo Tumo-Vaižganto st.;wifi;Vinco Kudirkos g.
 0201;link Žaliojo tilto;5468858;2528741;0202,0441,5182,0405;Karaliaus Mindaugo tiltas;0;Žygimantų g.
-0202;iš centro;5468867;2528663;0201
+0202;iš centro;5468867;2528663;0201;Karaliaus Mindaugo tiltas;;Žygimantų g. 
 0227;link Pedagoginio žiedo;5469349;2526557;0221,0237b,0223;Gynėjų st.;;0
 0238;iš centro;5469099;2525993;0239,0305,0220;Nepriklausomybės aikštė;;Alberto Goštauto g.
-0253;į centrą;5468703;2525946;0254,0301,0220;Verslo trikampis
-0254;iš centro;5468664;2525903;0253,0503
+0253;į centrą;5468703;2525946;0254,0301,0220;Verslo trikampis;;Alberto Goštauto g. 
+0254;iš centro;5468664;2525903;0253,0503;Verslo trikampis;;Alberto Goštauto g.  
 0237a;išlaipinimas;5469206;2526238;0237,0237b;Accreditation office arrivals/departures;;Antano Tumėno g.
-0237;išlaipinimas;5469225;2526124;0237a,0239;Antano Tumėno st.
+0237;išlaipinimas;5469225;2526124;0237a,0239;Antano Tumėno st.;;Antano Tumėno g. 
 0243;iš centro;5468625;2528480;0242,0203,0210;Kalėdų miestelis;;Gedimino pr.
-0239;link Žaliojo tilto;5469118;2526026;0238,0237;Nepriklausomybės aikštė
+0239;link Žaliojo tilto;5469118;2526026;0238,0237;Nepriklausomybės aikštė;;Gedimino pr. 
 0242;iš centro;5468567;2528583;0243,0242a;Kalėdų miestelis;;Vrublevskio g.
 3104;išlaipinimas;5460105;2513817;3120,3121;Daniliškės;;Juozo Tiškevičiaus g.;;Daniliškės
 3116;link Pagirių;5459214;2515946;3117,3118;Degučių st.;;Jaunystės g.
-3117;link miesto;5459250;2515804;3116,3122
-3118;link miesto;5458863;2516800;3119,3116,2502;Jaunystės st.
-3119;iš miesto;5458795;2516923;3118,3123
-3121;link miesto;5459454;2515251;3122,3104,2828;Medkirčių st.
-3122;iš miesto;5459427;2515290;3121,3117
-3124;iš miesto;5458300;2517922;3123,5114;Vaidotų piliakalnis
-3123;link miesto;5458346;2517902;3124,3119
+3117;link miesto;5459250;2515804;3116,3122;Degučių st.;;Jaunystės g. 
+3118;link miesto;5458863;2516800;3119,3116,2502;Jaunystės st.;;Jaunystės g.  
+3119;iš miesto;5458795;2516923;3118,3123;Jaunystės st.;;Jaunystės g.   
+3121;link miesto;5459454;2515251;3122,3104,2828;Medkirčių st.;;Jaunystės g.    
+3122;iš miesto;5459427;2515290;3121,3117;Medkirčių st.;;Jaunystės g.     
+3124;iš miesto;5458300;2517922;3123,5114;Vaidotų piliakalnis;;Jaunystės g.      
+3123;link miesto;5458346;2517902;3124,3119;Vaidotų piliakalnis;;Jaunystės g.       
 3120;iš miesto;5460088;2513766;3104,3111;Daniliškės;;Juozo Tiškevičiaus g.
 2285;iš miesto;5480316;2529658;5149,2282,2235;Didieji Gulbinai;;Didžiųjų Gulbinų g.;;Didieji Gulbinai
-2282;iš miesto;5479746;2529563;2284,2285;Padvarės st.
-2284;į miestą;5479725;2529527;2282,2279
-2279;iš miesto;5479490;2529333;2280,2284;Pijų st.
-2280;į centrą;5479480;2529300;2279,2277,5119
+2282;iš miesto;5479746;2529563;2284,2285;Padvarės st.;;Didžiųjų Gulbinų g. 
+2284;į miestą;5479725;2529527;2282,2279;Padvarės st.;;Didžiųjų Gulbinų g.  
+2279;iš miesto;5479490;2529333;2280,2284;Pijų st.;;Didžiųjų Gulbinų g.   
+2280;į centrą;5479480;2529300;2279,2277,5119;Pijų st.;;Didžiųjų Gulbinų g.    
 1012;visos kryptys;5472949;2537465;1027,1013,1011;Lazerių st.;;Dvarčionių g.;;Dvarčionys
-1013;link miesto;5472956;2537489;1012,3525
+1013;link miesto;5472956;2537489;1012,3525;Lazerių st.;;Dvarčionių g. 
 4602;link miesto;5472031;2541133;4603,4601;Galgiai;;Kairėnų g.
-3528;iš miesto;5474315;2539835;3527,1138;Gvazdikų st.
-3527;link miesto;5474366;2539804;3528,3529
-1018;link mieto;5472976;2541224;1024,1017;Lubinų st.
-1024;iš miesto;5472872;2541181;1018,1025
-1016;link miesto;5473365;2541033;1017,1015;Paliuliškės
-1017;iš miesto;5473289;2541104;1016,1018
-1025;iš miesto;5472488;2541200;4601,1024;Purienų st.
-4601;link miesto;5472487;2541211;1025,4602
+3528;iš miesto;5474315;2539835;3527,1138;Gvazdikų st.;;Kairėnų g. 
+3527;link miesto;5474366;2539804;3528,3529;Gvazdikų st.;;Kairėnų g.  
+1018;link mieto;5472976;2541224;1024,1017;Lubinų st.;;Kairėnų g.   
+1024;iš miesto;5472872;2541181;1018,1025;Lubinų st.;;Kairėnų g.    
+1016;link miesto;5473365;2541033;1017,1015;Paliuliškės;;Kairėnų g.     
+1017;iš miesto;5473289;2541104;1016,1018;Paliuliškės;;Kairėnų g.      
+1025;iš miesto;5472488;2541200;4601,1024;Purienų st.;;Kairėnų g.       
+4601;link miesto;5472487;2541211;1025,4602;Purienų st.;;Kairėnų g.        
 1011;link miesto;5472972;2537052;1026,1012;Dvarčionys;;Keramikų g.
-1026;iš miesto;5472986;2537033;1011,3524,1008
+1026;iš miesto;5472986;2537033;1011,3524,1008;Dvarčionys;;Keramikų g. 
 3523;link miesto;5473049;2535577;1008,1007,3522;Aukštagiris;;Plytinės g.
-1008;iš miesto;5473057;2535661;3523,1026
-1014;iš miesto;5473453;2538833;3525,3526;Baniškės
-3525;link miesto;5473451;2538710;1014,1013
-1009;iš miesto;5473347;2537073;3524;Dvarčionių kryžkelė
-3524;link miesto;5473344;2536972;1009,1026
-1007;iš miesto;5472791;2534778;1006,3523,1043;Plytinės st.
-1006;link miesto;5472762;2534671;1007,1028,3519
+1008;iš miesto;5473057;2535661;3523,1026;Aukštagiris;;Plytinės g. 
+1014;iš miesto;5473453;2538833;3525,3526;Baniškės;;Plytinės g.  
+3525;link miesto;5473451;2538710;1014,1013;Baniškės;;Plytinės g.   
+1009;iš miesto;5473347;2537073;3524;Dvarčionių kryžkelė;;Plytinės g.    
+3524;link miesto;5473344;2536972;1009,1026;Dvarčionių kryžkelė;;Plytinės g.     
+1007;iš miesto;5472791;2534778;1006,3523,1043;Plytinės st.;;Plytinės g.      
+1006;link miesto;5472762;2534671;1007,1028,3519;Plytinės st.;;Plytinės g.       
 1005;iš miesto;5472416;2534075;1004,1028,1040;Senoji plytinė;;Saulėtekio al.
-1004;link miesto;5472403;2533967;1005,1003
+1004;link miesto;5472403;2533967;1005,1003;Senoji plytinė;;Saulėtekio al. 
 3529;link miesto;5475002;2540124;3530,3527,3561;Žemoji Veržuva;;Šilėnų g.
-3530;iš miesto;5475002;2540151;3529,3578
+3530;iš miesto;5475002;2540151;3529,3578;Žemoji Veržuva;;Šilėnų g. 
 1027;iš miesto;5472937;2537476;1012,1032;Lazerių st.;;Dvarčionių g.
 1040;link miesto;5471583;2535519;1042,1045,1005;Moliakalnio st.;;Moliakalnio st.
-1042;iš miesto;5471578;2535526;1040,2398
-1043;link miesto;5471888;2535994;1045,1039,1007;Pylimėliai
-1045;iš miesto;5471845;2535947;1043,1040
+1042;iš miesto;5471578;2535526;1040,2398;Moliakalnio st.;;Moliakalnio st. 
+1043;link miesto;5471888;2535994;1045,1039,1007;Pylimėliai;;Moliakalnio st.  
+1045;iš miesto;5471845;2535947;1043,1040;Pylimėliai;;Moliakalnio st.   
 1032;link miesto;5472255;2537632;1033,1027;Juodvarnių st.;;Pupojų g.
-1033;iš miesto;5472228;2537637;1032,1034
+1033;iš miesto;5472228;2537637;1032,1034;Juodvarnių st.;;Pupojų g. 
 1034;link miesto;5472065;2537415;1036,1033,2297;Stanislovo Kerbedžio st.;;Stanislovo Kerbedžio g.
-1036;iš miesto;5472063;2537309;1034,1038
-1038;link miesto;5472085;2537036;1039,1036;Stepono Kairio st.
-1039;iš miesto;5472081;2536923;1038,1043
+1036;iš miesto;5472063;2537309;1034,1038;Stanislovo Kerbedžio st.;;Stanislovo Kerbedžio g. 
+1038;link miesto;5472085;2537036;1039,1036;Stepono Kairio st.;;Stanislovo Kerbedžio g.  
+1039;iš miesto;5472081;2536923;1038,1043;Stepono Kairio st.;;Stanislovo Kerbedžio g.   
 3561;link miesto;5475910;2539505;3529,3539a;Vinciūniškės;;Vinciūniškių g.
 3648;iš centro;5470048;2516032;3650,3653;Gelūžės st.;;Salotės g.;;Dvarykščiai
-3650;į centrą;5469994;2516150;3648,3647
-3640;į centrą;5469840;2517182;3644,3646;Pakrantės st.
-3644;iš centro;5469844;2517185;3640,3638,3613
-3646;iš centro;5469881;2516742;3647,3640;Trakėnų st.
-3647;į centrą;5469893;2516645;3646,3650
+3650;į centrą;5469994;2516150;3648,3647;Gelūžės st.;;Salotės g. 
+3640;į centrą;5469840;2517182;3644,3646;Pakrantės st.;;Salotės g.  
+3644;iš centro;5469844;2517185;3640,3638,3613;Pakrantės st.;;Salotės g.   
+3646;iš centro;5469881;2516742;3647,3640;Trakėnų st.;;Salotės g.    
+3647;į centrą;5469893;2516645;3646,3650;Trakėnų st.;;Salotės g.     
 3817;link Kalvarijų g.;5473137;2524744;3818,5159;Antano Jonyno st.;;Ateities g.;;Fabijoniškės
-3818;link Fabijoniškių g.;5473156;2524893;3817,3819
-5159;link S.Stanevičiaus g.;5473066;2524621;3839,3817,3848;Kaimelio st.
-3822;link Geležinio Vilko g.;5473376;2525421;3820,3821,3823;Liongino Baliukevičiaus - Dzūko st.
-3819;link Ukmergės g;5473329;2525210;3820,3818,3816
-3823;link Ukmergės g.;5473517;2525795;2001,3822,2028;Mykolo Romerio universitetas
-2001;link centro;5473531;2525976;3823,2101
+3818;link Fabijoniškių g.;5473156;2524893;3817,3819;Antano Jonyno st.;;Ateities g. 
+5159;link S.Stanevičiaus g.;5473066;2524621;3839,3817,3848;Kaimelio st.;;Ateities g.  
+3822;link Geležinio Vilko g.;5473376;2525421;3820,3821,3823;Liongino Baliukevičiaus - Dzūko st.;;Ateities g.   
+3819;link Ukmergės g;5473329;2525210;3820,3818,3816;Liongino Baliukevičiaus - Dzūko st.;;Ateities g.    
+3823;link Ukmergės g.;5473517;2525795;2001,3822,2028;Mykolo Romerio universitetas;;Ateities g.     
+2001;link centro;5473531;2525976;3823,2101;Mykolo Romerio universitetas;;Ateities g.      
 3813;link Ateities g.;5473160;2524446;3890,3840,3814;Kaimelio žiedas;;Fabijoniškių g.
 3809;link centro;5473933;2524044;3810,3811,3807;Fabijoniškių žiedas;;Gedvydžių g.
-3806;link centro;5473634;2523730;3807,3804;Gedvydžių st.
-3807;iš centro;5473702;2523822;3806,3809;;wifi
+3806;link centro;5473634;2523730;3807,3804;Gedvydžių st.;;Gedvydžių g. 
+3807;iš centro;5473702;2523822;3806,3809;Gedvydžių st.;wifi;Gedvydžių g.  
 3810;link centro;5473906;2524147;3809,3831,2020;Fabijoniškių žiedas;0;Liudo Giros g.
-3811;išlaipinimas;5474009;2524062;3809
-3820;link Ukmergės g.;5473400;2525311;3822,3819;Liongino Baliukevičiaus - Dzūko st.
-3816;link Ateities g.;5473504;2524753;3815,3819;Pijaus Žadeikos st.
-3831;link Gedvydžių g.;5473552;2524623;3815,3810
-3815;link Ukmergės g.;5473490;2524626;3831,3816,3814;;;Pijaus Žadeikos g.
-3812;link Ukmergės g.;5473161;2524241;3890,3802;Sporto gimnazija
-3814;link Fabijoniškių g.;5473299;2524470;3813,3815
+3811;išlaipinimas;5474009;2524062;3809;Fabijoniškių žiedas;;Liudo Giros g. 
+3820;link Ukmergės g.;5473400;2525311;3822,3819;Liongino Baliukevičiaus - Dzūko st.;;Liudo Giros g.  
+3816;link Ateities g.;5473504;2524753;3815,3819;Pijaus Žadeikos st.;;Liudo Giros g.   
+3831;link Gedvydžių g.;5473552;2524623;3815,3810;Pijaus Žadeikos st.;;Liudo Giros g.    
+3815;link Ukmergės g.;5473490;2524626;3831,3816,3814;Pijaus Žadeikos st.;;Pijaus Žadeikos g.
+3812;link Ukmergės g.;5473161;2524241;3890,3802;Sporto gimnazija;;Pijaus Žadeikos g. 
+3814;link Fabijoniškių g.;5473299;2524470;3813,3815;Sporto gimnazija;;Pijaus Žadeikos g.  
 3835;iš centro;5474106;2522889;3836,3331;Liudviko Zamenhofo st.;;Salomėjos Nėries g.
-3803;link centro;5473296;2523689;3804,3802;Takas;wifi
-3804;iš centro;5473416;2523594;3322,3803,3806;;0
-3833;link centro;5473729;2523245;3834,3310,3805;Vėtrungių st.
-3834;iš centro;5473817;2523175;3833,3331
+3803;link centro;5473296;2523689;3804,3802;Takas;wifi;Salomėjos Nėries g. 
+3804;iš centro;5473416;2523594;3322,3803,3806;Takas;0;Salomėjos Nėries g.  
+3833;link centro;5473729;2523245;3834,3310,3805;Vėtrungių st.;;Salomėjos Nėries g.   
+3834;iš centro;5473817;2523175;3833,3331;Vėtrungių st.;;Salomėjos Nėries g.    
 3829;link centro;5472287;2525407;3828,3842;Jovaro st.;;Simono Stanevičiaus g.
-3828;iš centro;5472384;2525396;3829,3827;;wifi
-3821;link centro;5473313;2525369;3822,3824;Liongino Baliukevičiaus - Dzūko st.
-3825;link centro;5472958;2525452;3824,3826;Pamiškė;0
-3824;iš centro;5473041;2525490;3825,3821
-3827;link centro;5472520;2525372;3826,3828,3846;Simono Stanevičiaus st.
-3826;iš centro;5472610;2525418;3827,3825
+3828;iš centro;5472384;2525396;3829,3827;Jovaro st.;wifi;Simono Stanevičiaus g. 
+3821;link centro;5473313;2525369;3822,3824;Liongino Baliukevičiaus - Dzūko st.;;Simono Stanevičiaus g.  
+3825;link centro;5472958;2525452;3824,3826;Pamiškė;0;Simono Stanevičiaus g.   
+3824;iš centro;5473041;2525490;3825,3821;Pamiškė;;Simono Stanevičiaus g.    
+3827;link centro;5472520;2525372;3826,3828,3846;Simono Stanevičiaus st.;;Simono Stanevičiaus g.     
+3826;iš centro;5472610;2525418;3827,3825;Simono Stanevičiaus st.;;Simono Stanevičiaus g.      
 3802;iš centro;5473145;2523739;3320,3803,3812;Fabijoniškės;;Ukmergės g.
-3805;iš centro;5473463;2523419;3322,3833;Gedvydžių st.
-3322;link centro;5473413;2523420;3805,3804,3311
-3832;iš centro;5472146;2524426;3325,1933,3841;Igno Šeiniaus st.
-3325;link centro;5472179;2524353;3832,3323
-3801;iš centro;5472440;2524251;3323,3846;Stasio Lozoraičio st.
-3323;link centro;5472401;2524241;3801,3325,3313
+3805;iš centro;5473463;2523419;3322,3833;Gedvydžių st.;;Ukmergės g. 
+3322;link centro;5473413;2523420;3805,3804,3311;Gedvydžių st.;;Ukmergės g.  
+3832;iš centro;5472146;2524426;3325,1933,3841;Igno Šeiniaus st.;;Ukmergės g.   
+3325;link centro;5472179;2524353;3832,3323;Igno Šeiniaus st.;;Ukmergės g.    
+3801;iš centro;5472440;2524251;3323,3846;Stasio Lozoraičio st.;;Ukmergės g.     
+3323;link centro;5472401;2524241;3801,3325,3313;Stasio Lozoraičio st.;;Ukmergės g.      
 3839;iš centro;5473059;2524448;3890,5159;Kaimelio st.;;Ateities g.
 2026;link Bajorų;5474768;2524472;2025,2149;Mamerto Indriliūno st.;;B.Krivicko g.
 3844;;5472585;2524482;3846,3848;Fabijoniškių st.;;Fabijoniškių g.
-3846;;5472560;2524499;3844,3801,3827
-3841;iš centro;5472031;2525306;3842,3832;Jovaro st.
-3842;į centrą;5472043;2525454;3841,3829,1928
-3848;;5472945;2524555;5159,3844;Kaimelio st.
-3840;iš centro;5473155;2524488;3813;Kaimelio žiedas
+3846;;5472560;2524499;3844,3801,3827;;;
+3841;iš centro;5472031;2525306;3842,3832;Jovaro st.;;
+3842;į centrą;5472043;2525454;3841,3829,1928;;;
+3848;;5472945;2524555;5159,3844;Kaimelio st.;;
+3840;iš centro;5473155;2524488;3813;Kaimelio žiedas;;
 2025;link Ateities g.;5474709;2524589;2026,2023;Mamerto Indriliūno st.;;M.Indriliūno g.
 3836;link centro;5474203;2522754;3837,3835;Liudviko Zamenhofo st.;;Salomėjos Nėries g.
-3837a;galinė st.;5474357;2522563;3838,3837,5004;Mykolo Lietuvio st.
+3837a;galinė st.;5474357;2522563;3838,3837,5004;Mykolo Lietuvio st.;;
 3331;iš centro;5473936;2522774;3332,3835,3834;Perkūno st.;;Ukmergės g.
 2027;link Ateities g.;5473889;2525557;2028,2021;Mykolo Sleževičiaus st.;;Visorių g.
-2028;link Bajorų;5473863;2525718;2027,3823,2131
-2020;link Ateities g.;5474077;2525086;2021,2024,3810;Prano Vaičaičio st.
-2021;link Bajorų;5474074;2525118;2020,2027
-2023;link Ateities g.;5474565;2525082;2024,2025,2103;Visorių sodai
-2024;link Bajorų;5474482;2525071;2023,2020
+2028;link Bajorų;5473863;2525718;2027,3823,2131;Mykolo Sleževičiaus st.;;Visorių g. 
+2020;link Ateities g.;5474077;2525086;2021,2024,3810;Prano Vaičaičio st.;;Visorių g.  
+2021;link Bajorų;5474074;2525118;2020,2027;Prano Vaičaičio st.;;Visorių g.   
+2023;link Ateities g.;5474565;2525082;2024,2025,2103;Visorių sodai;;Visorių g.    
+2024;link Bajorų;5474482;2525071;2023,2020;Visorių sodai;;Visorių g.     
 4604;link miesto;5471454;2541260;1020,4603;Vakario st.;;Šiaurės g.;;Galgiai
 1062;galinė st.;5471652;2542595;1065,2375a;Šv.Jono Bosko gimnazija;;Egliškių g.
 1058;iš centro;5471276;2541542;1060,2336,1063;Centrinė st.;;Mokyklos g.
-1060;į centrą;5471277;2541509;1058,1020
-1063;į miestą;5471739;2542249;1065,1058;Egliškės
-1065;iš centro;5471771;2542313;1063,1062
+1060;į centrą;5471277;2541509;1058,1020;Centrinė st.;;Mokyklos g. 
+1063;į miestą;5471739;2542249;1065,1058;Egliškės;;Mokyklos g.  
+1065;iš centro;5471771;2542313;1063,1062;Egliškės;;Mokyklos g.   
 2910;link Kirtimų g.;5463274;2515080;2908,2912;Galvės st.;;Abiejų Tautų Respublikos pl.;;Gariūnai
-2904;link Savanorių pr.;5463874;2517833;2905,2903;Lentvario st.
-2905;link A.Panerių;5463836;2517726;2904,2937
-2941;link Ž. Panerių;5462871;2513342;2940,2802a,2914;Stasylų st.
-2940;link Trakų Vokės;5462829;2513073;2941,3109
-2937;link Savanorių pr.;5463595;2517316;2938,2905;Vilijos st.
-2938;link Kirtimų g.;5463557;2517174;2951,2937,2909
+2904;link Savanorių pr.;5463874;2517833;2905,2903;Lentvario st.;;Abiejų Tautų Respublikos pl. 
+2905;link A.Panerių;5463836;2517726;2904,2937;Lentvario st.;;Abiejų Tautų Respublikos pl.  
+2941;link Ž. Panerių;5462871;2513342;2940,2802a,2914;Stasylų st.;;Abiejų Tautų Respublikos pl.   
+2940;link Trakų Vokės;5462829;2513073;2941,3109;Stasylų st.;;Abiejų Tautų Respublikos pl.    
+2937;link Savanorių pr.;5463595;2517316;2938,2905;Vilijos st.;;Abiejų Tautų Respublikos pl.     
+2938;link Kirtimų g.;5463557;2517174;2951,2937,2909;Vilijos st.;;Abiejų Tautų Respublikos pl.      
 2903;visos kryptys;5464212;2518254;2904,2419;Fizikos institutas;;Galvės g.
 2927;link Savanorių pr.;5465892;2515913;2928,2953;Gariūnai;;Gariūnų g.
-2928;link Lazdynų;5465908;2516073;2926,2927
-2933;link Gariūnų;5466539;2517311;2934,2931;Vandenvala
-2934;link Lazdynų;5466534;2517380;2933,1652
+2928;link Lazdynų;5465908;2516073;2926,2927;Gariūnai;;Gariūnų g. 
+2933;link Gariūnų;5466539;2517311;2934,2931;Vandenvala;;Gariūnų g.  
+2934;link Lazdynų;5466534;2517380;2933,1652;Vandenvala;;Gariūnų g.   
 2911;link Galvės g.;5463601;2514652;2912,2913;Deguonies st.;;Granito g.
-2912;į žiedą;5463568;2514677;2911,2910,2915
-2913;išlaipinimas;5463733;2514349;2911,2916;Granito st.
+2912;į žiedą;5463568;2514677;2911,2910,2915;;;
+2913;išlaipinimas;5463733;2514349;2911,2916;Granito st.;;
 2932;link Gariūnų;5466746;2516205;2944,2931;Elektrinės st.;;Jočionių g.
-2944;iš Gariūnų;5466774;2516234;2932,2952
-2930;link Gariūnų;5466413;2516171;2931,2926;Jočionys
-2931;link TE-3;5466474;2516189;2930,2932,2933
+2944;iš Gariūnų;5466774;2516234;2932,2952;Elektrinės st.;;Jočionių g. 
+2930;link Gariūnų;5466413;2516171;2931,2926;Jočionys;;Jočionių g.  
+2931;link TE-3;5466474;2516189;2930,2932,2933;Jočionys;;Jočionių g.   
 2909;link Vaidotų;5463219;2515160;2908,2810,2938;Galvės st.;;Kirtimų g.
-2925;link Kirtimų g.;5465524;2515088;2924,2953;Kauno plentas
-2924;link Gariūnų;5465424;2515088;2925,2923
+2925;link Kirtimų g.;5465524;2515088;2924,2953;Kauno plentas;;Kirtimų g. 
+2924;link Gariūnų;5465424;2515088;2925,2923;Kauno plentas;;Kirtimų g.  
 2922;iš miesto;5464564;2514227;2923,2921;Kulokiškės;;Lentvario g.
-2923;link miesto;5464538;2514395;2922,2924
-2936;link Mūrinės Vokės;5464716;2512816;2935,2939;Liudvinava
-2935;link Kirtimų g.;5464705;2512837;2936,6009,2921
-3901;visos kryptys;5464828;2512176;3911,6010;Mūrinė Vokė
+2923;link miesto;5464538;2514395;2922,2924;Kulokiškės;;Lentvario g. 
+2936;link Mūrinės Vokės;5464716;2512816;2935,2939;Liudvinava;;Lentvario g.  
+2935;link Kirtimų g.;5464705;2512837;2936,6009,2921;Liudvinava;;Lentvario g.   
+3901;visos kryptys;5464828;2512176;3911,6010;Mūrinė Vokė;;Lentvario g.    
 2926;link TE-3;5465999;2516061;2928,2930;Gariūnai(Paneriškių g.);;Paneriškių g.
 2939;visos kryptys;5465806;2513807;2929,2936,4106;Prekybos bazė;;Savanorių pr.
 2901;link Savanorių pr.;5464395;2519972;2418,2423;Valkininkų st.;;Titnago g.
 2906;link Savanorių pr.;5463135;2517403;2945,5124,2951;Aukštieji Paneriai;;Vilijos g.
 2920;link Lentvario g.;5464480;2513449;2921,2918;Asfalto st.;;Žarijų g.
-2921;link Galvės g.;5464519;2513463;2920,2935,2922
-2919;link Galvės g.;5464015;2513522;2918,2916;Liudvinavo st.
-2918;link Lentvario g.;5464067;2513522;2919,2920
-2917;link Galvės g.;5463715;2513563;2916,6013;Šešėlių st.
-2916;link Lentvario g.;5463760;2513566;2917,2919,2913
-2914;link Liudvinavo;5463239;2514007;2915,6014,2941;Žarijų st.
-2915;link Galvės g.;5463223;2514053;2914,2912
+2921;link Galvės g.;5464519;2513463;2920,2935,2922;Asfalto st.;;Žarijų g. 
+2919;link Galvės g.;5464015;2513522;2918,2916;Liudvinavo st.;;Žarijų g.  
+2918;link Lentvario g.;5464067;2513522;2919,2920;Liudvinavo st.;;Žarijų g.   
+2917;link Galvės g.;5463715;2513563;2916,6013;Šešėlių st.;;Žarijų g.    
+2916;link Lentvario g.;5463760;2513566;2917,2919,2913;Šešėlių st.;;Žarijų g.     
+2914;link Liudvinavo;5463239;2514007;2915,6014,2941;Žarijų st.;;Žarijų g.      
+2915;link Galvės g.;5463223;2514053;2914,2912;Žarijų st.;;Žarijų g.       
 2941a;;5460846;2508539;2941b,6008;Dobrovolės st.;laikina;0
 2908;link Savanorių pr.;5463247;2515096;2910,2909;Galvės st.;0;Abiejų Tautų Respublikos pl.
 3911;visos kryptys;5464838;2512157;3901,3914;Mūrinė Vokė;;Lentvario g.
-3912;iš miesto;5464433;2509079;3913,3922;Stasio Krasausko st.
-3913;link miesto;5464446;2509120;3912,3905
+3912;iš miesto;5464433;2509079;3913,3922;Stasio Krasausko st.;;Lentvario g. 
+3913;link miesto;5464446;2509120;3912,3905;Stasio Krasausko st.;;Lentvario g.  
 2945;link Kirtimų g.;5463126;2517376;2906;Aukštieji Paneriai;;Vilijos g.
 4407;link Antežerių;5473597;2520137;4411,4413,5011;Naujosios Gineitiškės;;Gineitiškių g.;;Gineitiškės
-4411;link Pašilaičių;5473583;2520239;4407,3338
+4411;link Pašilaičių;5473583;2520239;4407,3338;Naujosios Gineitiškės;;Gineitiškių g. 
 5160;link Grigaičių;5468095;2541305;2350,2426,5194;Grigaičiai;;Pergalės g. (Naujoji Vilnia);;Grigaičiai
-5163;visos kryptys;5466430;2541555;5227,5162;Grigaičių žiedas
-5161;iš N.Vilnios;5466994;2541217;5162,5195;Jaunimo st.
-5162;link N.Vilnios;5466979;2541227;5161,5163
-5194;link Grigaičių;5467551;2541435;5195,5160;Karklėnai
-5195;link N.Vilnios;5467511;2541440;5194,5161
+5163;visos kryptys;5466430;2541555;5227,5162;Grigaičių žiedas;;Pergalės g. (Naujoji Vilnia) 
+5161;iš N.Vilnios;5466994;2541217;5162,5195;Jaunimo st.;;Pergalės g. (Naujoji Vilnia)  
+5162;link N.Vilnios;5466979;2541227;5161,5163;Jaunimo st.;;Pergalės g. (Naujoji Vilnia)   
+5194;link Grigaičių;5467551;2541435;5195,5160;Karklėnai;;Pergalės g. (Naujoji Vilnia)    
+5195;link N.Vilnios;5467511;2541440;5194,5161;Karklėnai;;Pergalės g. (Naujoji Vilnia)     
 4102;iš centro;5467057;2509277;4107,4105;Kunigiškių st.;;Kovo 11–osios g.;;Grigiškės
-4120;link centro;5466862;2510393;4104,4106;Salos
-4119;link centro;5466959;2509601;4103,4107;Šviesos st.
+4120;link centro;5466862;2510393;4104,4106;Salos;;Kovo 11–osios g. 
+4119;link centro;5466959;2509601;4103,4107;Šviesos st.;;Kovo 11–osios g.  
 4121;link centro;5467450;2508827;4123,4114;Kovo 11-osios st.;;0
 4127;link centro;5468066;2507473;4128,4124;Kauno Vokės st.;;Kauno Vokės g.
-4128;iš centro;5468059;2507504;4127,4112
-4124;link centro;5468346;2507075;4126,4127;Vokės sodai
-4126;iš centro;5468403;2507035;4124,4117
+4128;iš centro;5468059;2507504;4127,4112;Kauno Vokės st.;;Kauno Vokės g. 
+4124;link centro;5468346;2507075;4126,4127;Vokės sodai;;Kauno Vokės g.  
+4126;iš centro;5468403;2507035;4124,4117;Vokės sodai;;Kauno Vokės g.   
 4107;link centro;5467045;2509297;4102,4119;Kunigiškių st.;;Kovo 11–osios g.
-4104;iš centro;5466833;2510068;4120,4103;Salos
-4103;iš centro;5466945;2509672;4119,4104;Šviesos st.
+4104;iš centro;5466833;2510068;4120,4103;Salos;;Kovo 11–osios g. 
+4103;iš centro;5466945;2509672;4119,4104;Šviesos st.;;Kovo 11–osios g.  
 4114;visos kryptys;5467362;2508231;4118,4121;Grigiškių žiedas;;Lentvario g.
-4118;iš centro;5467342;2508206;4114,4112;Išlaipinimas
-4112;iš centro;5467349;2508072;4115,4118,4128;Kranto st.
-4115;link centro;5467329;2508022;4112,4113
-4113;iš centro;5466999;2507720;4116,4115;Žalioji st.
-4116;link centro;5466959;2507668;4113,3001
+4118;iš centro;5467342;2508206;4114,4112;Išlaipinimas;;
+4112;iš centro;5467349;2508072;4115,4118,4128;Kranto st.;;
+4115;link centro;5467329;2508022;4112,4113;Kranto st.;;
+4113;iš centro;5466999;2507720;4116,4115;Žalioji st.;;
+4116;link centro;5466959;2507668;4113,3001;Žalioji st.;;
 4105;link centro;5467194;2508946;4123,4102;Grigiškių poliklinika;;Mokyklos g.
-4123;link centro;5467278;2509004;4105,4121
+4123;link centro;5467278;2509004;4105,4121;Grigiškių poliklinika;;Mokyklos g. 
 4106;iš centro;5466864;2511174;4120,2939,3611;Neravų st.;;Sniegenų g.
 3917;;5464064;2510896;3918,3915;Jono Švažo st.;;Gurelių g.;;Gureliai
 3920;;5463664;2511077;3918,3101,6011;Kaimynų st.;;Jono Švažo g.
 3914;;5464672;2511176;3915,3902,3911;Gureliai;;Juliaus Janonio g.
-3915;;5464653;2511180;3914,3917
-3918;;5464019;2510786;3917,3920;Jono Švažo st.
+3915;;5464653;2511180;3914,3917;Gureliai;;Juliaus Janonio g. 
+3918;;5464019;2510786;3917,3920;Jono Švažo st.;;Juliaus Janonio g.  
 2723;link miesto;5458541;2524924;2724,2728;1-ieji Juodšiliai;;Baltosios Vokės g.;;Juodšiliai
-2724;iš miesto;5458528;2524828;2723,2726
-2728;link Miškinių;5458516;2526040;2729,2723;2-ieji Juodšiliai
-2729;link Mickevičiaus g.;5458501;2526216;2728,2720,2732
+2724;iš miesto;5458528;2524828;2723,2726;1-ieji Juodšiliai;;Baltosios Vokės g. 
+2728;link Miškinių;5458516;2526040;2729,2723;2-ieji Juodšiliai;;Baltosios Vokės g.  
+2729;link Mickevičiaus g.;5458501;2526216;2728,2720,2732;2-ieji Juodšiliai;;Baltosios Vokės g.   
 2720;;5458023;2526528;5300,2729;Juodšilių žiedas;;Pušų g.
 3209;iš centro;5471754;2522209;1801,3221,3204;Justiniškės;wifi;Justiniškių g.;;Justiniškės
-3211;link centro;5471652;2522085;1801,3221,3212;;0
-3214;link centro;5471080;2521661;1804,3216;Lūžiai
-1804;link Pašilaičių;5471164;2521772;3214,3213,1803
-3201;link centro;5472239;2522192;3202,3301;Pumpėnų st.;wifi
-3204;link centro;5472060;2522263;3203,3209,3219;Taikos st.;0
-3202;iš centro;5472159;2522279;3203,3201
+3211;link centro;5471652;2522085;1801,3221,3212;Justiniškės;0;Justiniškių g. 
+3214;link centro;5471080;2521661;1804,3216;Lūžiai;;Justiniškių g.  
+1804;link Pašilaičių;5471164;2521772;3214,3213,1803;Lūžiai;;Justiniškių g.   
+3201;link centro;5472239;2522192;3202,3301;Pumpėnų st.;wifi;Justiniškių g.    
+3204;link centro;5472060;2522263;3203,3209,3219;Taikos st.;0;Justiniškių g.     
+3202;iš centro;5472159;2522279;3203,3201;Taikos st.;;Justiniškių g.      
 1801;link Laisvės pr.;5471676;2522203;3211,3209,3218;Justiniškės;;Rygos g.
-3218;iš centro;5471647;2522962;1802,1912,1801;Rygos st.
+3218;iš centro;5471647;2522962;1802,1912,1801;Rygos st.;;Rygos g. 
 3208;iš centro;5471826;2521413;3222,3212,4403;Atžalyno st.;;Taikos g.
-3207;link centro;5471929;2521426;3222,3205
-3216;įlaipinimas;5470933;2521334;3214,1815,3405;Justiniškių žiedas
-3206;link centro;5472133;2521843;3205,3203;Mykolo Biržiškos gimnazija
-3205;iš centro;5472153;2521716;3206,3207
-3213;link žiedo;5471497;2521486;3212,1804;Šiaurinė st.
-3212;link Rygos g.;5471554;2521511;3213,3208,3211
-3203;iš centro;5472126;2522162;3202,3204,3206;Taikos st.
+3207;link centro;5471929;2521426;3222,3205;Atžalyno st.;;Taikos g. 
+3216;įlaipinimas;5470933;2521334;3214,1815,3405;Justiniškių žiedas;;Taikos g.  
+3206;link centro;5472133;2521843;3205,3203;Mykolo Biržiškos gimnazija;;Taikos g.   
+3205;iš centro;5472153;2521716;3206,3207;Mykolo Biržiškos gimnazija;;Taikos g.    
+3213;link žiedo;5471497;2521486;3212,1804;Šiaurinė st.;;Taikos g.     
+3212;link Rygos g.;5471554;2521511;3213,3208,3211;Šiaurinė st.;;Taikos g.      
+3203;iš centro;5472126;2522162;3202,3204,3206;Taikos st.;;Taikos g.       
 4019;;5465149;2534953;4024,1419;Airių st.;;Ašmenėlės g.;;Kalnėnai
-4024;;5465204;2534980;4019,4026,4017
-4025;;5465472;2535366;4026,1429;Savičiūnų st.
-4026;;5465450;2535330;4025,4024
+4024;;5465204;2534980;4019,4026,4017;Airių st.;;Ašmenėlės g. 
+4025;;5465472;2535366;4026,1429;Savičiūnų st.;;Ašmenėlės g.  
+4026;;5465450;2535330;4025,4024;Savičiūnų st.;;Ašmenėlės g.   
 4016;iš miesto;5465460;2533164;4020,4018,1437;Kalnėnai;;Gurių g.
-4020;link miesto;5465453;2533125;4016,4022a
-4022a;iš miesto;5465116;2532470;4021,4020,4357;Pagal pareikalavimą
-4021;link miesto;5465117;2532442;4022a,4022;Tautų st.
-4022;iš centro;5465056;2532347;4021,1417
+4020;link miesto;5465453;2533125;4016,4022a;Kalnėnai;;Gurių g. 
+4022a;iš miesto;5465116;2532470;4021,4020,4357;Pagal pareikalavimą;;
+4021;link miesto;5465117;2532442;4022a,4022;Tautų st.;;
+4022;iš centro;5465056;2532347;4021,1417;Tautų st.;;
 4017;;5465318;2534127;4018,4024;Juodupio st.;;Juodupio g.
-4018;;5465322;2534072;4017,4016,1418
+4018;;5465322;2534072;4017,4016,1418;Juodupio st.;;Juodupio g. 
 1707;link Lazdynų;5469244;2521631;1706,1705,1708;Karoliniškės;wifi;Laisvės pr.;;Karoliniškės
-1706;link Viršuliškių;5469279;2521733;1707,1703;;0
-1703;iš centro;5469635;2521992;1702,1706;Laisvės prospektas
-1702;link centro;5469752;2522123;5176,1703;;wifi
-1708;link Viršuliškių;5469092;2521486;1709,1707;Televizijos bokštas
-1709;link Lazdynų;5468996;2521260;1710,1708;;0
-1714;link Viršuliškių;5468519;2520766;1715,1713;Vaivorykštės st.
-1715;link Lazdynų;5468430;2520695;1716,1714,1635
+1706;link Viršuliškių;5469279;2521733;1707,1703;Karoliniškės;0;Laisvės pr. 
+1703;iš centro;5469635;2521992;1702,1706;Laisvės prospektas;;Laisvės pr.  
+1702;link centro;5469752;2522123;5176,1703;Laisvės prospektas;wifi;Laisvės pr.   
+1708;link Viršuliškių;5469092;2521486;1709,1707;Televizijos bokštas;;Laisvės pr.    
+1709;link Lazdynų;5468996;2521260;1710,1708;Televizijos bokštas;0;Laisvės pr.     
+1714;link Viršuliškių;5468519;2520766;1715,1713;Vaivorykštės st.;;Laisvės pr.      
+1715;link Lazdynų;5468430;2520695;1716,1714,1635;Vaivorykštės st.;;Laisvės pr.       
 1712;link centro;5468715;2520713;1713,1711;Atminties st.;;Loretos Asanavičiūtės g.
-1713;iš centro;5468674;2520650;1712,1714
-1705;link centro;5469344;2521524;1704,1707;Karoliniškių poliklinika;wifi
-1704;iš centro;5469283;2521416;1705;;0
-1717;išlaipinimas;5468477;2520559;1716,1661;Pasakų parkas;wifi
-1716;įlaipinimas;5468461;2520607;1717,1715;;0
-1711;iš centro;5468951;2520904;1710,1712;Ugniagesių st.
-1710;link centro;5469021;2521068;1709,1711
-1661;link Žvėryno;5468318;2519942;1662,1717,1612;Loretos Asanavičiūtės st.
-1662;link Ungurių žiedo;5468332;2519908;1661,1654
+1713;iš centro;5468674;2520650;1712,1714;Atminties st.;;Loretos Asanavičiūtės g. 
+1705;link centro;5469344;2521524;1704,1707;Karoliniškių poliklinika;wifi;Loretos Asanavičiūtės g.  
+1704;iš centro;5469283;2521416;1705;Karoliniškių poliklinika;0;Loretos Asanavičiūtės g.   
+1717;išlaipinimas;5468477;2520559;1716,1661;Pasakų parkas;wifi;Loretos Asanavičiūtės g.    
+1716;įlaipinimas;5468461;2520607;1717,1715;Pasakų parkas;0;Loretos Asanavičiūtės g.     
+1711;iš centro;5468951;2520904;1710,1712;Ugniagesių st.;;Loretos Asanavičiūtės g.      
+1710;link centro;5469021;2521068;1709,1711;Ugniagesių st.;;Loretos Asanavičiūtės g.       
+1661;link Žvėryno;5468318;2519942;1662,1717,1612;Loretos Asanavičiūtės st.;;Loretos Asanavičiūtės g.        
+1662;link Ungurių žiedo;5468332;2519908;1661,1654;Loretos Asanavičiūtės st.;;Loretos Asanavičiūtės g.         
 4326;iš miesto;5459737;2531626;4325,4323;Kineliai;;Liepkalnio g.;;Kineliai
-4325;link miesto;5459760;2531564;4326,4014,4360
+4325;link miesto;5459760;2531564;4326,4014,4360;Kineliai;;Liepkalnio g. 
 2608;link centro;5464755;2527318;2607,2602;Dariaus ir Girėno st.;;Dariaus ir Girėno g.;;Kirtimai
-2607;iš centro;5464719;2527313;2608,2611
-2603;iš centro;5465129;2527177;2604,2602;Eišiškių plentas
-2604;link centro;5465148;2527186;2603,1523
-2612;link centro;5464352;2527401;2611,2645;Felikso Vaitkaus st.
-2618;link centro;5463684;2527461;2619,2641;Kirtimai
-2619;iš centro;5463748;2527466;2618,2644,2617
-2622;įlaipinimas;5462953;2527220;2620,2653,2637;Kirtimų geležinkelio stotis
-2620;link centro;5463206;2527312;2621,2622,2648;Tiekimo st.
-2621;iš centro;5463323;2527323;2620,2641,2652
+2607;iš centro;5464719;2527313;2608,2611;Dariaus ir Girėno st.;;Dariaus ir Girėno g. 
+2603;iš centro;5465129;2527177;2604,2602;Eišiškių plentas;;Dariaus ir Girėno g.  
+2604;link centro;5465148;2527186;2603,1523;Eišiškių plentas;;Dariaus ir Girėno g.   
+2612;link centro;5464352;2527401;2611,2645;Felikso Vaitkaus st.;;Dariaus ir Girėno g.    
+2618;link centro;5463684;2527461;2619,2641;Kirtimai;;Dariaus ir Girėno g.     
+2619;iš centro;5463748;2527466;2618,2644,2617;Kirtimai;;Dariaus ir Girėno g.      
+2622;įlaipinimas;5462953;2527220;2620,2653,2637;Kirtimų geležinkelio stotis;;Dariaus ir Girėno g.       
+2620;link centro;5463206;2527312;2621,2622,2648;Tiekimo st.;;Dariaus ir Girėno g.        
+2621;iš centro;5463323;2527323;2620,2641,2652;Tiekimo st.;;Dariaus ir Girėno g.         
 2628;link centro;5463435;2525372;2629,2630,2650;Dilgynė;;Eišiškių pl.
-2601;iš centro;5464925;2526784;2602,2606;Eišiškių plentas
-2602;link centro;5464970;2526853;2601,2603,2608
-2614;link centro;5464344;2526321;2615,2610;Hidrogeologijos st.
-2615;iš centro;5464295;2526267;2614,2616,2624
-2606;link centro;5464632;2526573;2605,2601;Metalo st.
-2625;iš centro;5463898;2525882;2624,2626;Verslo st.
-2624;link centro;5463933;2525934;2625,2615
-2626;nuo Eišiškių pl.;5463701;2525814;2625,2627,2623;;;Geologų g.
+2601;iš centro;5464925;2526784;2602,2606;Eišiškių plentas;;Eišiškių pl. 
+2602;link centro;5464970;2526853;2601,2603,2608;Eišiškių plentas;;Eišiškių pl.  
+2614;link centro;5464344;2526321;2615,2610;Hidrogeologijos st.;;Eišiškių pl.   
+2615;iš centro;5464295;2526267;2614,2616,2624;Hidrogeologijos st.;;Eišiškių pl.    
+2606;link centro;5464632;2526573;2605,2601;Metalo st.;;Eišiškių pl.     
+2625;iš centro;5463898;2525882;2624,2626;Verslo st.;;Eišiškių pl.      
+2624;link centro;5463933;2525934;2625,2615;Verslo st.;;Eišiškių pl.       
+2626;nuo Eišiškių pl.;5463701;2525814;2625,2627,2623;Verslo st.;;Geologų g.
 2639;iš centro;5463085;2525945;2651,2640,2650;Meistrų st.;;Meistrų g.
 2616;link centro;5463986;2526679;2617,2615;Geologų st.;;Metalo g.
-2617;iš centro;5463868;2526684;2616,2652,2619
-2623;iš centro;5463486;2526604;2652,2653,2626;Katilinė
-2609;iš centro;5464556;2526567;2605,2610;Metalo st.
-2610;link Geologų g.;5464488;2526596;2609,2614,2611
-2640;iš centro;5463078;2526474;2653,2639;Pameistrių st.
+2617;iš centro;5463868;2526684;2616,2652,2619;Geologų st.;;Metalo g. 
+2623;iš centro;5463486;2526604;2652,2653,2626;Katilinė;;Metalo g.  
+2609;iš centro;5464556;2526567;2605,2610;Metalo st.;;Metalo g.   
+2610;link Geologų g.;5464488;2526596;2609,2614,2611;;;
+2640;iš centro;5463078;2526474;2653,2639;Pameistrių st.;;
 2627;iš centro;5463399;2525666;2650,2630,2626;Elektros st.;;Motorų g.
 2613b;išvykimas;5464278;2527893;2613c,2613;Oro uostas;;Rodūnios kelias
-2641;išlaipinimas;5463581;2527655;2649,2618,2621;Paštas
-2644;iš centro;5464160;2527772;2645,2619;Rodūnios kelias (Oro uostas)
-2645;link centro;5464221;2527783;2613c,2644,2612
+2641;išlaipinimas;5463581;2527655;2649,2618,2621;Paštas;;Rodūnios kelias 
+2644;iš centro;5464160;2527772;2645,2619;Rodūnios kelias (Oro uostas);;Rodūnios kelias  
+2645;link centro;5464221;2527783;2613c,2644,2612;Rodūnios kelias (Oro uostas);;Rodūnios kelias   
 2629;į Užusienį;5463427;2525296;2628,2717;Dilgynė;;Užusienio g.
 2611;iš centro;5464478;2527357;2612,2607,2610;Felikso Vaitkaus st.;;Dariaus ir Girėno g.
 2630;iš centro;5463490;2525412;2628,2627;Dilgynė;;Eišiškių pl.
-2605;iš centro;5464581;2526501;2609,2606;Metalo st.
+2605;iš centro;5464581;2526501;2609,2606;Metalo st.;;Eišiškių pl. 
 2651;link centro;5463073;2525939;2639;Meistrų st.;;Meistrų g.
 2652;link centro;5463488;2526621;2623,2617,2621;Katilinė;;Metalo g.
-2653;link centro;5463079;2526495;2640,2623,2622;Pameistrių st.
+2653;link centro;5463079;2526495;2640,2623,2622;Pameistrių st.;;Metalo g. 
 2650;link centro;5463374;2525639;2627,2628,2639;Elektros st.;;Motorų g.
 2613;įlaipinimas;5464331;2527948;2613b,6015;Oro uostas;;Rodūnios kelias
-2649;visos kryptys;5463595;2527704;2641,2635;Paštas
-2648;išlaipinimas;5463249;2527778;2620;Rodūnios sodų st.
+2649;visos kryptys;5463595;2527704;2641,2635;Paštas;;Rodūnios kelias 
+2648;išlaipinimas;5463249;2527778;2620;Rodūnios sodų st.;;Rodūnios kelias  
 3656;į centrą;5470471;2514413;3652,3654,3655;Gavaičių st.;;Gavaičių g.;;Kriaučiūnai
-3655;į centrą;5471202;2514936;3615,3616,3656;Kriaučiūnai
+3655;į centrą;5471202;2514936;3615,3616,3656;Kriaučiūnai;;Gavaičių g. 
 3652;iš centro;5470299;2514734;3653,3656;Obeliškių st.;;Kriaučiūnų g.
-3653;į centrą;5470284;2514757;3652,3648
-3654;iš centro;5470294;2514099;3656,3611;Vienkiemių st.
+3653;į centrą;5470284;2514757;3652,3648;Obeliškių st.;;Kriaučiūnų g. 
+3654;iš centro;5470294;2514099;3656,3611;Vienkiemių st.;;Kriaučiūnų g.  
 5178;link miesto;5464104;2533163;4357,4355;Kuprioniškės;;Ilgoji g.;;Kuprijoniškės
 4002;iš miesto;5464878;2532131;1417;Kinologijos centras;;Minsko pl.
 4330;Rudamina;5459052;2534810;4320;Čekėnai;;Vilniaus g. (Rudamina)
 4355;iš miesto;5463744;2532758;4358,5178;Vyturių st.;;Ilgoji g.
 4357;;5464456;2533503;1418,5178,4022a;Vilties st.;;Vilties g.
 1612;link Laisvės pr.;5467818;2520273;1613,1667,1614,1661;Akacijų st.;;Architektų g.;;Lazdynai
-1613;link Erfurto g.;5467792;2520181;1612,1615
-1619;link Laisvės pr.;5467343;2521451;1643,1645;Architektų st.;wifi
-1643;link Oslo g.;5467313;2521339;1619,1628,1618
-1606;iš centro;5467994;2521765;1605;Ąžuolo st.;0
-1605;link centro;5467934;2521701;1606,1610,1620
-5193;link Karoliniškių;5467448;2520080;1617,1616,1656;Erfurto st.
-1646;link centro;5467980;2520734;1667,1636;Paukščių takas
-1620;link Laisvės pr.;5467653;2521611;1645,1640,1605,1604;Riešutų st.
-1645;link Oslo g.;5467600;2521556;1620,1619
-1607;link centro;5468215;2521371;1608,1610;Ryto st.;wifi
-1608;iš centro;5468268;2521309;1607,1635;;0
-1618;link Laisvės pr.;5467281;2520703;1642,1624,1643;Šalnos st.
-1642;link Oslo g.;5467307;2520607;1618,1615
+1613;link Erfurto g.;5467792;2520181;1612,1615;Akacijų st.;;Architektų g. 
+1619;link Laisvės pr.;5467343;2521451;1643,1645;Architektų st.;wifi;Architektų g.  
+1643;link Oslo g.;5467313;2521339;1619,1628,1618;Architektų st.;;Architektų g.   
+1606;iš centro;5467994;2521765;1605;Ąžuolo st.;0;Architektų g.    
+1605;link centro;5467934;2521701;1606,1610,1620;Ąžuolo st.;;Architektų g.     
+5193;link Karoliniškių;5467448;2520080;1617,1616,1656;Erfurto st.;;Architektų g.      
+1646;link centro;5467980;2520734;1667,1636;Paukščių takas;;Architektų g.       
+1620;link Laisvės pr.;5467653;2521611;1645,1640,1605,1604;Riešutų st.;;Architektų g.        
+1645;link Oslo g.;5467600;2521556;1620,1619;Riešutų st.;;Architektų g.         
+1607;link centro;5468215;2521371;1608,1610;Ryto st.;wifi;Architektų g.          
+1608;iš centro;5468268;2521309;1607,1635;Ryto st.;0;Architektų g.           
+1618;link Laisvės pr.;5467281;2520703;1642,1624,1643;Šalnos st.;;Architektų g.            
+1642;link Oslo g.;5467307;2520607;1618,1615;Šalnos st.;;Architektų g.             
 1634;išlaipinimas;5465501;2519563;1634a,2428;Bukčiai;;Bukčių g.
-1633;link Šiltnamių g.;5465845;2520379;1632,1650;Neužmirštuolių st.
-1632;link Bukčių;5465818;2520248;1633,1634a,1668b
-1648;link Šiltnamių g.;5466456;2521403;1647,1649;Ratilių st.
-1647;link Bukčių;5466525;2521435;1648,1651
-1649;link žiedo;5465918;2520776;1650,1648;Užutekio st.
-1650;link Žvėryno;5465907;2520740;1649,1633,1663
+1633;link Šiltnamių g.;5465845;2520379;1632,1650;Neužmirštuolių st.;;Bukčių g. 
+1632;link Bukčių;5465818;2520248;1633,1634a,1668b;Neužmirštuolių st.;;Bukčių g.  
+1648;link Šiltnamių g.;5466456;2521403;1647,1649;Ratilių st.;;Bukčių g.   
+1647;link Bukčių;5466525;2521435;1648,1651;Ratilių st.;;Bukčių g.    
+1649;link žiedo;5465918;2520776;1650,1648;Užutekio st.;;Bukčių g.     
+1650;link Žvėryno;5465907;2520740;1649,1633,1663;Užutekio st.;;Bukčių g.      
 1617;link Laisvės pr.;5467363;2520114;5189,5193;Erfurto st.;;Erfurto g.
-5189;iš centro;5467357;2520062;1617,1621
-1640;link Laisvės pr.;5467761;2521259;1611,1620;Lazdynai
-1611;link baseino;5467778;2521233;1640,1609,1641
-1615;link Laisvės pr.;5467520;2520412;1616,1614,1642,1613;Lazdynų seniūnija
-1616;link Oslo g.;5467473;2520258;1615,5193;;wifi
-1622;link Laisvės pr.;5467016;2519759;1623,1653,1621;Oslo st.;0
-1641;link Laisvės pr.;5467661;2520840;1614,1611,1667;Žėručio st.
-1614;link Oslo g.;5467642;2520696;1641,1615,1612
+5189;iš centro;5467357;2520062;1617,1621;Erfurto st.;;Erfurto g. 
+1640;link Laisvės pr.;5467761;2521259;1611,1620;Lazdynai;;Erfurto g.  
+1611;link baseino;5467778;2521233;1640,1609,1641;Lazdynai;;Erfurto g.   
+1615;link Laisvės pr.;5467520;2520412;1616,1614,1642,1613;Lazdynų seniūnija;;Erfurto g.    
+1616;link Oslo g.;5467473;2520258;1615,5193;Lazdynų seniūnija;wifi;Erfurto g.     
+1622;link Laisvės pr.;5467016;2519759;1623,1653,1621;Oslo st.;0;Erfurto g.      
+1641;link Laisvės pr.;5467661;2520840;1614,1611,1667;Žėručio st.;;Erfurto g.       
+1614;link Oslo g.;5467642;2520696;1641,1615,1612;Žėručio st.;;Erfurto g.        
 2401;link centro;5466900;2523547;0608;Eigulių st.;;Laisvės pr.
-0608;iš centro;5466935;2523571;2401,5196,1601
-1609;link centro;5467891;2521331;1610,1611;Lazdynai;wifi
-1610;iš centro;5467926;2521329;1609,1605,1635,1607;;0
-1603;iš centro;5467561;2522250;1604,1670,1602;LITEXPO
-1604;link centro;5467577;2522186;1603,1620
-1601;iš centro;5467119;2522725;1602,0608;Miškiniai
-1602;link centro;5467093;2522641;1601,1659,1603
-1636;link centro;5468065;2520884;1635,1646;Paukščių takas
-1635;iš centro;5468085;2520922;1636,1610,1608,1715
+0608;iš centro;5466935;2523571;2401,5196,1601;Eigulių st.;;Laisvės pr. 
+1609;link centro;5467891;2521331;1610,1611;Lazdynai;wifi;Laisvės pr.  
+1610;iš centro;5467926;2521329;1609,1605,1635,1607;Lazdynai;0;Laisvės pr.   
+1603;iš centro;5467561;2522250;1604,1670,1602;LITEXPO;;Laisvės pr.    
+1604;link centro;5467577;2522186;1603,1620;LITEXPO;;Laisvės pr.     
+1601;iš centro;5467119;2522725;1602,0608;Miškiniai;;Laisvės pr.      
+1602;link centro;5467093;2522641;1601,1659,1603;Miškiniai;;Laisvės pr.       
+1636;link centro;5468065;2520884;1635,1646;Paukščių takas;;Laisvės pr.        
+1635;iš centro;5468085;2520922;1636,1610,1608,1715;Paukščių takas;;Laisvės pr.         
 1623;link Lazdynėlių;5466953;2519796;1622,1637;Oslo st.;;Lazdynėlių g.
-1638;link centro;5466649;2519576;1637,1639;Žaros st.
-1637;iš centro;5466672;2519581;1638,1623
+1638;link centro;5466649;2519576;1637,1639;Žaros st.;;
+1637;iš centro;5466672;2519581;1638,1623;;;
 1626;link centro;5467031;2520903;1627,1624;Lazdynų ligoninė;;Oslo g.
-1624;iš centro;5467050;2520809;1626,1625,1618
-1629;link centro;5467091;2521492;1628;Šiltnamių st.
-1628;iš centro;5467106;2521418;1629,1630,1643
+1624;iš centro;5467050;2520809;1626,1625,1618;Lazdynų ligoninė;;Oslo g. 
+1629;link centro;5467091;2521492;1628;Šiltnamių st.;;Oslo g.  
+1628;iš centro;5467106;2521418;1629,1630,1643;Šiltnamių st.;;Oslo g.   
 1627;link Bukčių;5466985;2520846;1626,1625,1665;Jonažolių st.;;Šiltnamių g.
-1625;link Oslo g.;5466997;2520740;1627,1624,5158
-5158;visos kryptys;5466907;2520662;1625,1653;Lazdynų ligoninė
-1621;link Bukčių;5467084;2519699;1622,5189;Oslo st
-1653;link Bukčių;5467007;2519877;1622,5158;Oslo st.
-1630;link Oslo g.;5466911;2521298;1628,1665,1631;Pakalnučių st.
+1625;link Oslo g.;5466997;2520740;1627,1624,5158;Jonažolių st.;;Šiltnamių g. 
+5158;visos kryptys;5466907;2520662;1625,1653;Lazdynų ligoninė;;Šiltnamių g.  
+1621;link Bukčių;5467084;2519699;1622,5189;Oslo st;;
+1653;link Bukčių;5467007;2519877;1622,5158;Oslo st.;;
+1630;link Oslo g.;5466911;2521298;1628,1665,1631;Pakalnučių st.;;
 1667;iš centro;5467972;2520699;1646,1612,1641;Paukščių takas;;Architektų g.
 1651;link Žvėryno;5466729;2521606;1631,1660,1647;Bijūnų st.;;Bukčių g.
-1634a;;5465508;2519575;1634,1632;Bukčiai
+1634a;;5465508;2519575;1634,1632;Bukčiai;;
 1655;link Žvėryno;5467585;2519278;1656,1654;Gudeliai;;Gudelių g.
-1656;link žiedo;5467558;2519308;1655,5193
+1656;link žiedo;5467558;2519308;1655,5193;Gudeliai;;Gudelių g. 
 1672;į centrą;5467826;2522691;1671,0609b;LITEXPO;;Kazimiero Jelskio g.
 1652a;;5466277;2519235;1652,1639;Lazdynėliai;;Lazdynėlių g.
-1639;išlaipinimas;5466348;2519268;1652a,1638
-1652;įlaipinimas;5466261;2519196;1652a,1668a,2934
-1668a;išlaipinimas;5466204;2519227;1668b,1652;Lazdynėliai (laikina)
-1668b;įlaipinimas;5466204;2519236;1668a,1632
+1639;išlaipinimas;5466348;2519268;1652a,1638;;;
+1652;įlaipinimas;5466261;2519196;1652a,1668a,2934;Gudeliai;;
+1668a;išlaipinimas;5466204;2519227;1668b,1652;Lazdynėliai (laikina);;
+1668b;įlaipinimas;5466204;2519236;1668a,1632;;;
 1654;link Žvėryno;5468081;2518967;1657,1655,1662;Monikos Mironaitės st.;;Monikos Mironaitės g.
-1657;link Ungurių žiedo;5468083;2518950;1654,3639
+1657;link Ungurių žiedo;5468083;2518950;1654,3639;Monikos Mironaitės st.;;Monikos Mironaitės g. 
 1671;iš centro;5467720;2522553;1670,1672;LITEXPO(išlaipinimas);;Parodų g.
 1660;link žiedo;5466748;2521675;1651,1658;Bijūnų st.;;Šiltnamių g.
-1665;iš centro;5466900;2520914;1627,1630;Lazdynų ligoninė
-1659;įlaipinimas;5466708;2522145;1658,1602;Šiltnamių žiedas
-1658;išlaipinimas;5466691;2522117;1659,1660;Šiltnamių žiedas(išlaipinimas)
+1665;iš centro;5466900;2520914;1627,1630;Lazdynų ligoninė;;Šiltnamių g. 
+1659;įlaipinimas;5466708;2522145;1658,1602;Šiltnamių žiedas;;Šiltnamių g.  
+1658;išlaipinimas;5466691;2522117;1659,1660;Šiltnamių žiedas(išlaipinimas);;
 1663;įlaipinimas;5465354;2520851;1650,2411;Ungurių st.;;Ungurių g.
 3006;link Grikiškių;5464554;2504896;2999,3125;Lentvaris;;Dzūkų g.;;Lentvaris
 3000;link Grigiškių;5465364;2504649;3004,2999;Kilimų fabrikas;;Klevų g.
-3004;link miesto;5465519;2504569;3000,3005
-2999;link Grigiškių;5464624;2505234;3007,3006,3000;Lentvaris
+3004;link miesto;5465519;2504569;3000,3005;Kilimų fabrikas;;Klevų g. 
+2999;link Grigiškių;5464624;2505234;3007,3006,3000;Lentvaris;;
 3921;iš centro;5464386;2507848;3922,3906;Mačiuliškių st.;;Lentvario g.
-3922;link centro;5464365;2508055;3921,3912
+3922;link centro;5464365;2508055;3921,3912;Mačiuliškių st.;;Lentvario g. 
 3907;link miesto;5464427;2506487;3906,3003,6016;1-asis Lentvaris;;Vilniaus g.
-3003;link miesto;5464505;2505501;3007,3907;Lentvaris(Vilniaus g.)
-3007;;5464513;2505360;3003,2999
+3003;link miesto;5464505;2505501;3007,3907;Lentvaris(Vilniaus g.);;Vilniaus g. 
+3007;;5464513;2505360;3003,2999;Lentvaris(Vilniaus g.);;Vilniaus g.  
 3001;link Grigiškių;5465800;2505965;3002,4116;Naujasis Lentvaris;;Vytauto g.
-3002;link miesto;5465801;2505934;3001,3005
-3005;link miesto;5465804;2504874;3004,3002;Vandenų st.
+3002;link miesto;5465801;2505934;3001,3005;Naujasis Lentvaris;;Vytauto g. 
+3005;link miesto;5465804;2504874;3004,3002;Vandenų st.;;Vytauto g.  
 4011;link centro;5461206;2531046;4012,4010;Basiukai;;Liepkalnio g.;;Liepkalnis
-4012;iš centro;5461052;2531098;4011,4013
-4013;link centro;5460612;2531308;4014,4012;Katiliškės
-2633;iš centro;5464917;2530266;4003,4004;Kelininkų st.
-4003;link centro;5465048;2530308;2633,2632,1417
-4015;link centro;5462535;2530561;2636,2655;Lydos st.
-2636;iš centro;5462522;2530547;4015,2647,4009
-2635;iš centro;5463671;2530307;4005,2634,2649;Miško parkas
-4005;link centro;5463609;2530331;2635,2656,4358
-2634;iš centro;5464398;2530273;4004,2635;Šalčininkų kryptis
-4004;link centro;5464484;2530285;2634,2633
-4010;iš centro;5461725;2530824;4009,4011;Svirno st.
-4009;link centro;5461865;2530796;4010,2636
-2632;iš stoties;5465307;2530270;4001,4003;Žirnių st.
-4014;iš centro;5460587;2531291;4013,4325;Katiliškės
+4012;iš centro;5461052;2531098;4011,4013;Basiukai;;Liepkalnio g. 
+4013;link centro;5460612;2531308;4014,4012;Katiliškės;;Liepkalnio g.  
+2633;iš centro;5464917;2530266;4003,4004;Kelininkų st.;;Liepkalnio g.   
+4003;link centro;5465048;2530308;2633,2632,1417;Kelininkų st.;;Liepkalnio g.    
+4015;link centro;5462535;2530561;2636,2655;Lydos st.;;Liepkalnio g.     
+2636;iš centro;5462522;2530547;4015,2647,4009;Lydos st.;;Liepkalnio g.      
+2635;iš centro;5463671;2530307;4005,2634,2649;Miško parkas;;Liepkalnio g.       
+4005;link centro;5463609;2530331;2635,2656,4358;Miško parkas;;Liepkalnio g.        
+2634;iš centro;5464398;2530273;4004,2635;Šalčininkų kryptis;;Liepkalnio g.         
+4004;link centro;5464484;2530285;2634,2633;Šalčininkų kryptis;;Liepkalnio g.          
+4010;iš centro;5461725;2530824;4009,4011;Svirno st.;;Liepkalnio g.           
+4009;link centro;5461865;2530796;4010,2636;Svirno st.;;Liepkalnio g.            
+2632;iš stoties;5465307;2530270;4001,4003;Žirnių st.;;Liepkalnio g.             
+4014;iš centro;5460587;2531291;4013,4325;Katiliškės;;Liepkalnio g.              
 4001;iš stoties;5465394;2530397;1314,2632;Žirnių st.;;Žirnių g.
-1513;link oro uosto;5465470;2530181;1314,2631
+1513;link oro uosto;5465470;2530181;1314,2631;Žirnių st.;;Žirnių g. 
 2286;į miestą;5476307;2530662;2130,2201,2272;Ežerėliai;;Gulbinėlių g.;;Mažieji Gulbinai
-2272;į miestą;5477035;2530112;2273,2286,2137;Gulbinėlių st.
-2273;iš centro;5477138;2530117;2272,2276
-2275;iš centro;5477427;2530032;2276,2278;Raudonės st.
-2276;į centrą;5477380;2530039;2275,2273
+2272;į miestą;5477035;2530112;2273,2286,2137;Gulbinėlių st.;;Gulbinėlių g. 
+2273;iš centro;5477138;2530117;2272,2276;Gulbinėlių st.;;Gulbinėlių g.  
+2275;iš centro;5477427;2530032;2276,2278;Raudonės st.;;Gulbinėlių g.   
+2276;į centrą;5477380;2530039;2275,2273;Raudonės st.;;Gulbinėlių g.    
 2277;iš centro;5478649;2529783;2278,2280;Mažieji Gulbinai;;Zebedeno g.
-2278;į centrą;5478620;2529770;2277,2275
+2278;į centrą;5478620;2529770;2277,2275;Mažieji Gulbinai;;Zebedeno g. 
 1050;link miesto;5470770;2540045;1051,2377;Mažieji Pupojai;;Rokantiškių g.;;Mažieji Pupojai
-1051;iš centro;5470762;2540079;1050,1056,2331
-1054;iš centro;5470877;2540521;1056,1020;Šiaurės Sodai
-1056;į centrą;5470883;2540502;1054,1051
+1051;iš centro;5470762;2540079;1050,1056,2331;Mažieji Pupojai;;Rokantiškių g. 
+1054;iš centro;5470877;2540521;1056,1020;Šiaurės Sodai;;Rokantiškių g.  
+1056;į centrą;5470883;2540502;1054,1051;Šiaurės Sodai;;Rokantiškių g.   
 2726;link miesto;5458885;2523720;2727,2724;Miškinių sodai;;Baltosios Vokės g.;;Miškiniai
-2727;iš miesto;5458993;2523454;2726,2721,2719
-0530b;"B" stotelė;5467110;2528443;0530c,0530;Stotis;wifi;Geležinkelio g.;;Naujamiestis
-0530d;"D" stotelė;5467106;2528399;0530c,0530f
-0530g;"G" stotelė;5467085;2528336;0530h,0530f
-0530c;"C" stotelė;5467108;2528420;0530d,0530b
-0530j;"J" stotelė;5467025;2528349;0530i,1509
-0530a;"A" stotelė;5467071;2528490;0530
-0530;iš stoties;5467112;2528467;0530b,0530p,0530a
-0530h;"H" stotelė;5467077;2528326;0530g,0530i
-0548;;5466824;2527636;1506,0415;Stotis (Atstova Šv.Stepono g.);0
+2727;iš miesto;5458993;2523454;2726,2721,2719;Miškinių sodai;;Baltosios Vokės g. 
+0530b;B stotelė;5467110;2528443;0530c,0530;Stotis;wifi;Geležinkelio g.;;Naujamiestis
+0530d;D stotelė;5467106;2528399;0530c,0530f;Stotis;;Geležinkelio g. 
+0530g;G stotelė;5467085;2528336;0530h,0530f;Stotis;;Geležinkelio g.  
+0530c;C stotelė;5467108;2528420;0530d,0530b;Stotis;;Geležinkelio g.   
+0530j;J stotelė;5467025;2528349;0530i,1509;Stotis;;Geležinkelio g.    
+0530a;A stotelė;5467071;2528490;0530;Stotis;;Geležinkelio g.     
+0530;iš stoties;5467112;2528467;0530b,0530p,0530a;;;
+0530h;H stotelė;5467077;2528326;0530g,0530i;Stotis;;
+0548;;5466824;2527636;1506,0415;Stotis (Atstova Šv.Stepono g.);0;
 0501;iš centro;5468197;2526820;0502,0408,0215;Algirdo st.;wifi;Jono Basanavičiaus g.
-0502;link centro;5468145;2526640;0504,0503,0501;;0
+0502;link centro;5468145;2526640;0504,0503,0501;Algirdo st.;0;Jono Basanavičiaus g. 
 0415;link stoties;5467263;2527852;0414,0546,0548;Aguonų st.;;Kauno g.
-0414;iš stoties;5467284;2527736;0415,0521;;wifi
-0517;iš stoties;5467043;2526121;0516,0518;Naujamiestis
-0518;link stoties;5467049;2526260;0517,0514,0519a,0523;;0
-0521;link stoties;5467191;2527022;0520,0522a,0414;Vienaragių st.
-0519;iš centro;5467180;2526847;0522a,0520,0519a
+0414;iš stoties;5467284;2527736;0415,0521;Aguonų st.;wifi;Kauno g. 
+0517;iš stoties;5467043;2526121;0516,0518;Naujamiestis;;Kauno g.  
+0518;link stoties;5467049;2526260;0517,0514,0519a,0523;Naujamiestis;0;Kauno g.   
+0521;link stoties;5467191;2527022;0520,0522a,0414;Vienaragių st.;;Kauno g.    
+0519;iš centro;5467180;2526847;0522a,0520,0519a;Vienaragių st.;;Kauno g.     
 0516;link centro;5467042;2525985;0517,0535;Naugarduko st.;wifi;Naugarduko g.
-0512;iš centro;5467424;2526792;0513,0520,0511;Švitrigailos st.;0
-0514;iš centro;5467185;2526233;0518;Vytenio st.
-0513;link centro;5467342;2526607;0512,0519a
+0512;iš centro;5467424;2526792;0513,0520,0511;Švitrigailos st.;0;Naugarduko g. 
+0514;iš centro;5467185;2526233;0518;Vytenio st.;;Naugarduko g.  
+0513;link centro;5467342;2526607;0512,0519a;Vytenio st.;;Naugarduko g.   
 0523;link Vilkpedės;5466815;2526369;0524,0525,0518;„Lelija“;;Panerių g.
-0524;į centrą;5466823;2526460;0523,0531
-0527a;į stotį;5466644;2525562;2402a,0536,0526;Burbiškės
-0525;iš stoties;5466742;2526005;0526,0523,0535;Smolensko st.
-0526;link stoties;5466714;2525911;0525,0527a
+0524;į centrą;5466823;2526460;0523,0531;„Lelija“;;Panerių g. 
+0527a;į stotį;5466644;2525562;2402a,0536,0526;Burbiškės;;
+0525;iš stoties;5466742;2526005;0526,0523,0535;Smolensko st.;;
+0526;link stoties;5466714;2525911;0525,0527a;Smolensko st.;;
 0507;iš centro;5467986;2525964;0506,0505;Simono Konarskio st.;;Savanorių pr.
-0506;link centro;5467947;2525932;0507,0508
-0509;iš centro;5467719;2525438;0508,0615;Vingis;wifi
-0508;link centro;5467754;2525555;0509,0506;;0
+0506;link centro;5467947;2525932;0507,0508;Simono Konarskio st.;;Savanorių pr. 
+0509;iš centro;5467719;2525438;0508,0615;Vingis;wifi;Savanorių pr.  
+0508;link centro;5467754;2525555;0509,0506;Vingis;0;Savanorių pr.   
 0547w;;5467177;2528602;0530z,0528,5153;Stotis(Išlaipinimas);;Seinų g.
-0530f;"F" stotelė;5467115;2528328;0546,0530g,0530d;Stotis;;Stoties g.
-0530e;"E" stotelė;5467147;2528327;0546,0547
-0546;;5467140;2528300;0530e,0530f,0415;Stotis (keleivių išlaipinimas)
+0530f;F stotelė;5467115;2528328;0546,0530g,0530d;Stotis;;Stoties g.
+0530e;E stotelė;5467147;2528327;0546,0547;Stotis;;Stoties g. 
+0546;;5467140;2528300;0530e,0530f,0415;Stotis (keleivių išlaipinimas);;Stoties g.  
 0504;iš centro;5468082;2526548;0502,0505,0510;Mikalojaus Konstantino Čiurlionio st.;;Švitrigailos g.
-0511;iš centro;5467694;2526749;0510,0512;Taraso Ševčenkos st.
-0510;link centro;5467869;2526718;0511,0504;;wifi
-0520;link centro;5467262;2526932;0521,0519,0512;Vienaragių st.;0
-0522a;iš centro;5467111;2526955;0521,0519,0531;;wifi
+0511;iš centro;5467694;2526749;0510,0512;Taraso Ševčenkos st.;;Švitrigailos g. 
+0510;link centro;5467869;2526718;0511,0504;Taraso Ševčenkos st.;wifi;Švitrigailos g.  
+0520;link centro;5467262;2526932;0521,0519,0512;Vienaragių st.;0;Švitrigailos g.   
+0522a;iš centro;5467111;2526955;0521,0519,0531;Vienaragių st.;wifi;Švitrigailos g.    
 0505;iš centro;5468160;2526471;0503,0504,0507;Mikalojaus Konstantino Čiurlionio st.;;Vinco Kudirkos g.
-0503;link centro;5468203;2526526;0505,0502,0254;;0
+0503;link centro;5468203;2526526;0505,0502,0254;Mikalojaus Konstantino Čiurlionio st.;0;Vinco Kudirkos g. 
 0531;link stoties;5466967;2526711;0519a,0522a,0524,1503;Amatų st.;;Vytenio g.
 0515;link centro;5467274;2525565;0612,0601;Statybininkų st.;;Žemaitės g.
-0530i;"I" stotelė;5467066;2528313;0530h,0530j;Stotis;wifi;Geležinkelio g.
-0530z;;5467110;2528532;0530p,0547w;;0
-0530p;;5467115;2528513;0530z,0530;Stotis (keleivių išlaipinimas)
+0530i;I stotelė;5467066;2528313;0530h,0530j;Stotis;wifi;Geležinkelio g.
+0530z;;5467110;2528532;0530p,0547w;;0;
+0530p;;5467115;2528513;0530z,0530;Stotis (keleivių išlaipinimas);;
 0519a;iš stoties;5467130;2526603;0519,0531,0513,0518;Laikina st.;;Kauno g.
 0527;link stoties;5466671;2525310;2402,2402a;Burbiškės;;Naugarduko g.
-0536;link centro;5466815;2525570;0527a,0535;Skroblų st.
-0535;link Vilkpėdės;5466983;2525833;0516,0612,0536,0525
+0536;link centro;5466815;2525570;0527a,0535;Skroblų st.;;Naugarduko g. 
+0535;link Vilkpėdės;5466983;2525833;0516,0612,0536,0525;Skroblų st.;;Naugarduko g.  
 0547;;5467191;2528338;0530e,0412;Stotis (keleivių išlaipinimas);;Seinų g.
 1501;iš stoties;5466084;2527320;1517,1523;Naujininkai;wifi;Dariaus ir Girėno g.;;Naujininkai
-1502;į centrą;5466275;2527418;1517,1504
-1517;link stoties;5466192;2527370;1502,1501
-1503;iš stoties;5466522;2527280;1504,0531;Prūsų st.;0
-1504;link stoties;5466505;2527316;1503,1506,1502
+1502;į centrą;5466275;2527418;1517,1504;Naujininkai;;Dariaus ir Girėno g. 
+1517;link stoties;5466192;2527370;1502,1501;Naujininkai;;Dariaus ir Girėno g.  
+1503;iš stoties;5466522;2527280;1504,0531;Prūsų st.;0;Dariaus ir Girėno g.   
+1504;link stoties;5466505;2527316;1503,1506,1502;Prūsų st.;;Dariaus ir Girėno g.    
 1505;iš stoties;5466528;2527651;1506,1508;Dzūkų st.;;Dzūkų g.
-1506;link stoties;5466582;2527595;1505,1504,0548
-1510;iš stoties;5466417;2528719;1511,1317,1522;Merkinės st.
-1511;link stoties;5466421;2528622;1510,1507,0529
-1507;iš stoties;5466428;2528024;1508,1511;Rudaminos st.
-1508;link stoties;5466463;2527975;1507,1505
+1506;link stoties;5466582;2527595;1505,1504,0548;Dzūkų st.;;Dzūkų g. 
+1510;iš stoties;5466417;2528719;1511,1317,1522;Merkinės st.;;Dzūkų g.  
+1511;link stoties;5466421;2528622;1510,1507,0529;Merkinės st.;;Dzūkų g.   
+1507;iš stoties;5466428;2528024;1508,1511;Rudaminos st.;;Dzūkų g.    
+1508;link stoties;5466463;2527975;1507,1505;Rudaminos st.;;Dzūkų g.     
 2631;link stoties;5465511;2529743;1513,2654,1519;Karaimų kapinės;;Žirnių g.
-1515;link stoties;5465598;2528787;1522,1521;Tyzenhauzų st.
+1515;link stoties;5465598;2528787;1522,1521;Tyzenhauzų st.;;
 1520;link Oro uosto;5465123;2528203;1521;Vikingų st.;;Vikingų g.
-1521;link stoties;5465183;2528255;1520,1523,1515
+1521;link stoties;5465183;2528255;1520,1523,1515;Vikingų st.;;Vikingų g. 
 2654;link stoties;5465412;2529115;1522,2631;Liepynės kapinės;;Žirnių g.
-1522;link Oro uosto;5465627;2528859;1515,2654,1510;Tyzenhauzų st.
+1522;link Oro uosto;5465627;2528859;1515,2654,1510;Tyzenhauzų st.;;
 2322;link miesto;5469516;2539570;2376,2323;Alberto Kojelavičiaus st.;;Alberto Kojelavičiaus g.;;Naujoji Vilnia
-2376;link Šiaurės g.;5469511;2539530;2322,2321
-2367;link Arimų g.;5469735;2542837;2366,2369,2365;Bičių st.
-2366;link Šiaurės g.;5469768;2542966;2367,2373
-2361;link Arimų g.;5469516;2541467;2360,2363;Gandrų st.
-2360;link Šiaurės g.;5469521;2541434;2361,2347,2332
-2308;link miesto;5469439;2536363;2309,2312;Girininkija
-2309;iš miesto;5469459;2536486;2308,2311,2314
-2344;link Arimų g.;5469433;2540838;2343,2345;Ievų st.
-2343;link Šiaurės g.;5469430;2540698;2344,2338
-2338;link Arimų g.;5469432;2540168;2337,2340,2343;Jankos Kupalos st.
-2337;link Šiaurės g.;5469445;2540140;2338
-2311;iš miesto;5469551;2536901;2310,2309;Kučkuriškės
-2310;link miesto;5469581;2536955;2311,2316,1019
-2365;link Arimų g.;5469626;2542181;2364,2367;Rugiagėlių st.
-2364;link Šiaurės g.;5469608;2542021;2365,2362
-2320;link miesto;5469566;2538774;2321,2319;Širšių st.
-2321;iš miesto;5469561;2538930;2320,2376
-2318;link miesto;5469670;2538105;2319,2394;Užtvankos st.
-2319;iš miesto;5469650;2538113;2318,2317,2320
-2306;link miesto;5469397;2534920;2307,2303;Viadukas
+2376;link Šiaurės g.;5469511;2539530;2322,2321;Alberto Kojelavičiaus st.;;Alberto Kojelavičiaus g. 
+2367;link Arimų g.;5469735;2542837;2366,2369,2365;Bičių st.;;Alberto Kojelavičiaus g.  
+2366;link Šiaurės g.;5469768;2542966;2367,2373;Bičių st.;;Alberto Kojelavičiaus g.   
+2361;link Arimų g.;5469516;2541467;2360,2363;Gandrų st.;;Alberto Kojelavičiaus g.    
+2360;link Šiaurės g.;5469521;2541434;2361,2347,2332;Gandrų st.;;Alberto Kojelavičiaus g.     
+2308;link miesto;5469439;2536363;2309,2312;Girininkija;;Alberto Kojelavičiaus g.      
+2309;iš miesto;5469459;2536486;2308,2311,2314;Girininkija;;Alberto Kojelavičiaus g.       
+2344;link Arimų g.;5469433;2540838;2343,2345;Ievų st.;;Alberto Kojelavičiaus g.        
+2343;link Šiaurės g.;5469430;2540698;2344,2338;Ievų st.;;Alberto Kojelavičiaus g.         
+2338;link Arimų g.;5469432;2540168;2337,2340,2343;Jankos Kupalos st.;;Alberto Kojelavičiaus g.          
+2337;link Šiaurės g.;5469445;2540140;2338;Jankos Kupalos st.;;Alberto Kojelavičiaus g.           
+2311;iš miesto;5469551;2536901;2310,2309;Kučkuriškės;;Alberto Kojelavičiaus g.            
+2310;link miesto;5469581;2536955;2311,2316,1019;Kučkuriškės;;Alberto Kojelavičiaus g.             
+2365;link Arimų g.;5469626;2542181;2364,2367;Rugiagėlių st.;;Alberto Kojelavičiaus g.              
+2364;link Šiaurės g.;5469608;2542021;2365,2362;Rugiagėlių st.;;Alberto Kojelavičiaus g.               
+2320;link miesto;5469566;2538774;2321,2319;Širšių st.;;Alberto Kojelavičiaus g.                
+2321;iš miesto;5469561;2538930;2320,2376;Širšių st.;;Alberto Kojelavičiaus g.                 
+2318;link miesto;5469670;2538105;2319,2394;Užtvankos st.;;Alberto Kojelavičiaus g.                  
+2319;iš miesto;5469650;2538113;2318,2317,2320;Užtvankos st.;;Alberto Kojelavičiaus g.                   
+2306;link miesto;5469397;2534920;2307,2303;Viadukas;;Alberto Kojelavičiaus g.                    
 2375;įlaipinimas;5470248;2543145;2374,2375b;Arimų st.;;Arimų g.
-2373;link Šiaurės g.;5469889;2543281;2374,2366;Užkiemio st.
-2374;link Arimų g.;5469908;2543283;2373,2375
+2373;link Šiaurės g.;5469889;2543281;2374,2366;Užkiemio st.;;Arimų g. 
+2374;link Arimų g.;5469908;2543283;2373,2375;Užkiemio st.;;Arimų g.  
 2340;link S. Batoro g.;5469318;2540137;2339,2338,2341;Dūmų st.;;Dūmų g.
-2339;link Šiaurės g.;5469318;2540036;2340,2376a
+2339;link Šiaurės g.;5469318;2540036;2340,2376a;Dūmų st.;;Dūmų g. 
 2350;link miesto;5468156;2541215;2351,5160,1416;Grigaičiai;;Džiaugsmo g.
 4603;iš miesto;5471935;2541150;4602,4604;Galgiai;;Kairėnų g.
 2330;išlaipinimas;5470476;2539286;2377,2328;Kalno st.;;Kalno g.
-2377;link miesto;5470491;2539314;2330,1046,1050
+2377;link miesto;5470491;2539314;2330,1046,1050;Kalno st.;;Kalno g. 
 2371;link Pramonės g.;5469518;2543604;2370,2379;Linksmoji st.;;Linksmoji g.
-2370;link Parko g.;5469508;2543593;2371,2368,2359
-2357;link Pramonės g.;5468593;2542996;2378,2358;Naujosios Vilnios žiedas
-2359;link Pramonės g.;5469044;2543374;2358,2370;Rytų st.
-2358;link Parko g.;5468956;2543274;4605,2359,2357
+2370;link Parko g.;5469508;2543593;2371,2368,2359;Linksmoji st.;;Linksmoji g. 
+2357;link Pramonės g.;5468593;2542996;2378,2358;Naujosios Vilnios žiedas;;Linksmoji g.  
+2359;link Pramonės g.;5469044;2543374;2358,2370;Rytų st.;;Linksmoji g.   
+2358;link Parko g.;5468956;2543274;4605,2359,2357;Rytų st.;;Linksmoji g.    
 2301;link miesto;5469302;2534210;1216,1128;Mildos st.;;Mildos g.
 2349;iš miesto;5468798;2541324;2348,2352;Genių st.;;Parko g.
-2348;link miesto;5468827;2541255;2349,4615
-2356;įlaipinimas;5468558;2542811;2378,2355;Naujosios Vilnios žiedas;wifi
-2378;išlaipinimas;5468543;2542889;2356,2357,2431;;0
-2355;link Linksmosios g.;5468550;2542610;2354,2356;Parko st.
-2354;link Pergalės g.;5468561;2542449;2355,2353;;wifi
-2353;iš miesto;5468563;2541933;2352,2354;Respublikinė psichiatrijos ligoninė;0
-2352;link miesto;5468594;2541868;2353,2349,2351;;wifi
+2348;link miesto;5468827;2541255;2349,4615;Genių st.;;Parko g. 
+2356;įlaipinimas;5468558;2542811;2378,2355;Naujosios Vilnios žiedas;wifi;Parko g.  
+2378;išlaipinimas;5468543;2542889;2356,2357,2431;Naujosios Vilnios žiedas;0;Parko g.   
+2355;link Linksmosios g.;5468550;2542610;2354,2356;Parko st.;;Parko g.    
+2354;link Pergalės g.;5468561;2542449;2355,2353;Parko st.;wifi;Parko g.     
+2353;iš miesto;5468563;2541933;2352,2354;Respublikinė psichiatrijos ligoninė;0;Parko g.      
+2352;link miesto;5468594;2541868;2353,2349,2351;Respublikinė psichiatrijos ligoninė;wifi;Parko g.       
 2351;iš miesto;5468198;2541263;2350,2352;Grigaičiai;0;Pergalės g. (Naujoji Vilnia)
-2346;iš miesto;5469260;2541063;2345,2347,4606;Tremtinių st.
+2346;iš miesto;5469260;2541063;2345,2347,4606;Tremtinių st.;;Pergalės g. (Naujoji Vilnia) 
 2372;įlaipinimas;5469523;2544039;2379,2388regio;Naujoji Vilnia;;Pramonės g.
-2369;link Linksmosios g.;5469563;2542869;2368,2367,4608;Neries st.
-2368;link Pergalės g.;5469572;2542939;2369,2370
-2380regio;iš miesto;5469237;2546002;2381regio,2383aregio;Polocko kryptis
-2381regio;į miestą;5469259;2545939;2380regio,1148
-2363;link Linksmosios g.;5469435;2541807;2362,2361,4612;Pramonės st.
-2362;link Pergalės g.;5469448;2541865;2363,2364
-2347;iš miesto;5469310;2541141;2346,2360;Tremtinių st.
-2382regio;iš miesto;5469346;2548062;2383aregio,2385regio;Viktariškės
-2383aregio;į miestą;5469299;2547763;2382regio,2380regio
+2369;link Linksmosios g.;5469563;2542869;2368,2367,4608;Neries st.;;Pramonės g. 
+2368;link Pergalės g.;5469572;2542939;2369,2370;Neries st.;;Pramonės g.  
+2380regio;iš miesto;5469237;2546002;2381regio,2383aregio;Polocko kryptis;;Pramonės g.   
+2381regio;į miestą;5469259;2545939;2380regio,1148;Polocko kryptis;;Pramonės g.    
+2363;link Linksmosios g.;5469435;2541807;2362,2361,4612;Pramonės st.;;Pramonės g.     
+2362;link Pergalės g.;5469448;2541865;2363,2364;Pramonės st.;;Pramonės g.      
+2347;iš miesto;5469310;2541141;2346,2360;Tremtinių st.;;Pramonės g.       
+2382regio;iš miesto;5469346;2548062;2383aregio,2385regio;Viktariškės;;Pramonės g.        
+2383aregio;į miestą;5469299;2547763;2382regio,2380regio;Viktariškės;;Pramonės g.         
 1019;link miesto;5470411;2536406;1031,2395,2310;Rokantiškės;;Rokantiškių g.
 2376a;iš N.Vilnios;5469461;2539710;2323,2324,2339;Alberto Kojelavičiaus st.;;Šiaurės g.
-2323;iš miesto;5469465;2539674;2376a,2322
-2324;link miesto;5469631;2539844;2376a,2325
-2331;iš miesto;5470100;2540844;2332,2326,1051;Palydovo st.
-2332;link miesto;5470112;2540998;2331,2333,2360
-2334;iš miesto;5470272;2541411;2334a,2333;Pupojų st.
-2333;link miesto;5470183;2541310;2334,2332
-2336;link miesto;5470929;2541681;2335,1058;Šiaurės st.
-2335;iš miesto;5470863;2541716;2336,2334a
-2326;link miesto;5469939;2540195;2327,2331;Uosių st.
-2325;iš miesto;5469903;2540122;2327,2324
-1020;link N.Vilnios;5471359;2541240;4604,1060,1054;Vakario st.
+2323;iš miesto;5469465;2539674;2376a,2322;Rokantiškės;;Šiaurės g. 
+2324;link miesto;5469631;2539844;2376a,2325;Rokantiškės;;Šiaurės g.  
+2331;iš miesto;5470100;2540844;2332,2326,1051;Palydovo st.;;Šiaurės g.   
+2332;link miesto;5470112;2540998;2331,2333,2360;Palydovo st.;;Šiaurės g.    
+2334;iš miesto;5470272;2541411;2334a,2333;Pupojų st.;;Šiaurės g.     
+2333;link miesto;5470183;2541310;2334,2332;Pupojų st.;;Šiaurės g.      
+2336;link miesto;5470929;2541681;2335,1058;Šiaurės st.;;Šiaurės g.       
+2335;iš miesto;5470863;2541716;2336,2334a;Šiaurės st.;;Šiaurės g.        
+2326;link miesto;5469939;2540195;2327,2331;Uosių st.;;Šiaurės g.         
+2325;iš miesto;5469903;2540122;2327,2324;Uosių st.;;Šiaurės g.          
+1020;link N.Vilnios;5471359;2541240;4604,1060,1054;Vakario st.;;Šiaurės g.           
 2342;iš miesto;5468949;2540021;2341;Lelijų st.;;Stepono Batoro g.
-2341;link miesto;5468973;2540104;2342,2340
-2302;iš miesto;5469147;2534376;1216,2307;Mildos st.
-2315;iš miesto;5469112;2536730;2314;Pūčkoriai
-2314;link miesto;5469145;2536641;2315,2309
-2313;iš miesto;5469159;2536010;2312,1421;Pūčkorių atodanga
-2312;link miesto;5469193;2535951;2313,2308,2307
-2317;iš miesto;5469312;2537896;2316,2319;Stepono Batoro st.
-2316;link miesto;5469317;2537802;2317,2310
-2345;link miesto;5469290;2540981;2346,2344;Tremtinių st.
-2307;iš miesto;5469301;2534898;2306,2302,2312;Viadukas
+2341;link miesto;5468973;2540104;2342,2340;Lelijų st.;;Stepono Batoro g. 
+2302;iš miesto;5469147;2534376;1216,2307;Mildos st.;;Stepono Batoro g.  
+2315;iš miesto;5469112;2536730;2314;Pūčkoriai;;Stepono Batoro g.   
+2314;link miesto;5469145;2536641;2315,2309;Pūčkoriai;;Stepono Batoro g.    
+2313;iš miesto;5469159;2536010;2312,1421;Pūčkorių atodanga;;Stepono Batoro g.     
+2312;link miesto;5469193;2535951;2313,2308,2307;Pūčkorių atodanga;;Stepono Batoro g.      
+2317;iš miesto;5469312;2537896;2316,2319;Stepono Batoro st.;;Stepono Batoro g.       
+2316;link miesto;5469317;2537802;2317,2310;Stepono Batoro st.;;Stepono Batoro g.        
+2345;link miesto;5469290;2540981;2346,2344;Tremtinių st.;;Stepono Batoro g.         
+2307;iš miesto;5469301;2534898;2306,2302,2312;Viadukas;;Stepono Batoro g.          
 2328;iš miesto;5470163;2539411;2329,2330;Paparčių st.;;Uosių g.
-2329;link miesto;5470157;2539462;2328,2327
-2327;link miesto;5469943;2540141;2326,2325,2329;Uosių st.
+2329;link miesto;5470157;2539462;2328,2327;Paparčių st.;;Uosių g. 
+2327;link miesto;5469943;2540141;2326,2325,2329;Uosių st.;;Uosių g.  
 2305;iš miesto;5470237;2535381;1126,1127;Lyglaukiai;;Viršupio g.
-2304;iš miesto;5470009;2534933;1127,1127a;Šilo st.
-2303;iš miesto;5469615;2534496;1128,2306,1127a;Viršupis
+2304;iš miesto;5470009;2534933;1127,1127a;Šilo st.;;Viršupio g. 
+2303;iš miesto;5469615;2534496;1128,2306,1127a;Viršupis;;Viršupio g.  
 2375a;į miestą;5470636;2544271;2375b,1062;Baniškių g.;;Gamtos g.
-2375b;iš miesto;5470612;2544273;2375a,2375
+2375b;iš miesto;5470612;2544273;2375a,2375;;;
 4606;link Pergalės g.;5469073;2541208;4615,2346;Gerovės st.;;Gerovės g.
-4615;link Darželio g.;5469065;2541253;4606,2348,4613
-4608;link Pergalės g.;5469042;2542695;4610,4605,2369;Karklėnų st.
-4610;link Linksmosios g.;5469036;2542668;4608,4612
-4605;link Pergalės g.;5469016;2543180;2358,4608;Rytų st.
-4612;link Pergalės g.;5469070;2541891;4613,2363,4610;Žvirblių st.
-4613;link Karklėnų g.;5469059;2541844;4612,4615
+4615;link Darželio g.;5469065;2541253;4606,2348,4613;Gerovės st.;;Gerovės g. 
+4608;link Pergalės g.;5469042;2542695;4610,4605,2369;Karklėnų st.;;Gerovės g.  
+4610;link Linksmosios g.;5469036;2542668;4608,4612;Karklėnų st.;;Gerovės g.   
+4605;link Pergalės g.;5469016;2543180;2358,4608;Rytų st.;;Gerovės g.    
+4612;link Pergalės g.;5469070;2541891;4613,2363,4610;Žvirblių st.;;Gerovės g.     
+4613;link Karklėnų g.;5469059;2541844;4612,4615;Žvirblių st.;;Gerovės g.      
 2429;iš miesto;5468233;2542799;2431,2427;Gerviškių st.;;Linksmoji g.
-2431;į miestą;5468233;2542822;2429,2378
-2426;į miestą;5467992;2542000;2427,5160;Meškonių st.
-2427;išlaipinimo;5468002;2542011;2426,2429
+2431;į miestą;5468233;2542822;2429,2378;Gerviškių st.;;Linksmoji g. 
+2426;į miestą;5467992;2542000;2427,5160;Meškonių st.;;Linksmoji g.  
+2427;išlaipinimo;5468002;2542011;2426,2429;Meškonių st.;;Linksmoji g.   
 1147;link N.Vilnios;5469377;2544871;1146,1148;Elektrodepas (A);;Pramonės g.
-1146;iš miesto;5469397;2544858;1147,2387regio;Elektrodepas (B)
-1148;iš miesto;5469375;2545013;1147,2381regio;Elektrodepas (C)
-2379;iš miesto;5469526;2543904;2372,2371;Naujoji Vilnia
-2387regio;iš miesto;5469446;2544467;2388regio,1146;Verbų st.
-2388regio;į miestą;5469455;2544464;2387regio,2372
+1146;iš miesto;5469397;2544858;1147,2387regio;Elektrodepas (B);;
+1148;iš miesto;5469375;2545013;1147,2381regio;Elektrodepas (C);;
+2379;iš miesto;5469526;2543904;2372,2371;Naujoji Vilnia;;
+2387regio;iš miesto;5469446;2544467;2388regio,1146;Verbų st.;;
+2388regio;į miestą;5469455;2544464;2387regio,2372;Verbų st.;;
 1046;link miesto;5470728;2539168;1049,2377;Duburio st.;;Rokantiškių g.
-1049;link N.Vilnios;5470731;2539033;1046,2391
-1030;link miesto;5470586;2537112;1031,2393;Klonio st.
-1031;link N.Vilnios;5470582;2537100;1030,1019
-2393;iš miesto;5470590;2537578;2394,1030;Rokantiškių sodai
-2394;link miesto;5470606;2537675;2393,2297,2318
-2391;iš miesto;5470754;2538691;2392,1049;Uosių sodai
-2392;link miesto;5470770;2538548;2391,2296
+1049;link N.Vilnios;5470731;2539033;1046,2391;Duburio st.;;Rokantiškių g. 
+1030;link miesto;5470586;2537112;1031,2393;Klonio st.;;Rokantiškių g.  
+1031;link N.Vilnios;5470582;2537100;1030,1019;Klonio st.;;Rokantiškių g.   
+2393;iš miesto;5470590;2537578;2394,1030;Rokantiškių sodai;;Rokantiškių g.    
+2394;link miesto;5470606;2537675;2393,2297,2318;Rokantiškių sodai;;Rokantiškių g.     
+2391;iš miesto;5470754;2538691;2392,1049;Uosių sodai;;Rokantiškių g.      
+2392;link miesto;5470770;2538548;2391,2296;Uosių sodai;;Rokantiškių g.       
 2334a;iš centro;5470348;2541503;2334,2335;Pupojų st.(laikina);;Šiaurės g.
 4310;iš miesto;5461364;2538872;4309,4311;Sodžiaus st.;;Gėlių g.;;Nemėžis
-4309;link miesto;5461390;2538901;4310,4307
-4307;iš miesto;5462039;2538993;4308,4309;Stankutiškės
-4308;link miesto;5462085;2539024;4307,4306
+4309;link miesto;5461390;2538901;4310,4307;Sodžiaus st.;;Gėlių g. 
+4307;iš miesto;5462039;2538993;4308,4309;Stankutiškės;;Gėlių g.  
+4308;link miesto;5462085;2539024;4307,4306;Stankutiškės;;Gėlių g.   
 4304;iš miesto;5463720;2536844;4327,4329;Daržininkai;;Minsko pl.
-4327;link miesto;5463803;2536670;4304,4303
-4301;iš miesto;5464434;2533872;1418,1419;Minsko plentas
-4303;iš miesto;5463997;2535694;1420,4350,4327;Nemėžis
-1420;link stoties;5464047;2535628;4303,4305a
-4306;iš miesto;5462644;2539308;4329,4308;Posūkis
-4329;link miesto;5462727;2539227;4306,5231,4304
-4302;iš miesto;5464243;2534666;1419,4305b;Sodai
+4327;link miesto;5463803;2536670;4304,4303;Daržininkai;;Minsko pl. 
+4301;iš miesto;5464434;2533872;1418,1419;Minsko plentas;;Minsko pl.  
+4303;iš miesto;5463997;2535694;1420,4350,4327;Nemėžis;;Minsko pl.   
+1420;link stoties;5464047;2535628;4303,4305a;Nemėžis;;Minsko pl.    
+4306;iš miesto;5462644;2539308;4329,4308;Posūkis;;Minsko pl.     
+4329;link miesto;5462727;2539227;4306,5231,4304;Posūkis;;Minsko pl.      
+4302;iš miesto;5464243;2534666;1419,4305b;Sodai;;Minsko pl.       
 4359;iš miesto;5463259;2533531;4351,4353;Ramunių st.;;0
 4351;iš miesto;5463364;2534363;4305c,4359;Baltarusių st.;;Baltarusių g.
-4354;iš miesto;5463440;2535045;4352,4305c;Smėlio st.;nauja
+4354;iš miesto;5463440;2535045;4352,4305c;Smėlio st.;nauja;Baltarusių g. 
 4353;iš miesto;5463182;2532668;4358,4359,2656;Sodybų st.;0;Ilgoji g.
-4358;iš miesto;5463509;2532657;4355,4353,4005;Šveicarų st.
+4358;iš miesto;5463509;2532657;4355,4353,4005;Šveicarų st.;;Ilgoji g. 
 4305b;iš centro;5463967;2534957;4305a,4302,4305c;Laikina st. (Sodų g.);;Sodų g.
-4305c;iš centro;5463534;2534571;4351,4354,4305b;V. Sirokomlės st.
+4305c;iš centro;5463534;2534571;4351,4354,4305b;V. Sirokomlės st.;;
 4350;iš miesto;5463900;2535580;4303,4352;Nemėžis;;Vladislavo Sirokomlės g.
-4352;iš miesto;5463453;2535393;4354,4350;Vladislavo Sirokomlės st.
+4352;iš miesto;5463453;2535393;4354,4350;Vladislavo Sirokomlės st.;;Vladislavo Sirokomlės g. 
 5139;iš miesto;5459582;2520494;5138,2741;Durpių st.;;Durpių g.;;Pagiriai
-5138;link miesto;5459657;2520456;5139,5111a
-5114;išlaipinimas;5457716;2519829;5112,3124;Pagiriai
-5133;iš miesto;5458635;2521041;5134,5113;Pirmieji Pagiriai
-5134;link miesto;5458711;2521116;5133,2721
-5112;iš miesto;5458150;2520442;5113,5114;Žemieji Pagiriai
-5113;link miesto;5458272;2520609;5112,5133
+5138;link miesto;5459657;2520456;5139,5111a;Durpių st.;;Durpių g. 
+5114;išlaipinimas;5457716;2519829;5112,3124;Pagiriai;;Durpių g.  
+5133;iš miesto;5458635;2521041;5134,5113;Pirmieji Pagiriai;;Durpių g.   
+5134;link miesto;5458711;2521116;5133,2721;Pirmieji Pagiriai;;Durpių g.    
+5112;iš miesto;5458150;2520442;5113,5114;Žemieji Pagiriai;;Durpių g.     
+5113;link miesto;5458272;2520609;5112,5133;Žemieji Pagiriai;;Durpių g.      
 2721;iš miesto;5459416;2521924;2725,5134,2727;Vokės parkas;;Baltosios Vokės g.;;Paneriai
-2725;link miesto;5459525;2521919;2741,2721
+2725;link miesto;5459525;2521919;2741,2721;Vokės parkas;;Baltosios Vokės g. 
 3902;link miesto;5464765;2511084;3903,3914;Juliaus Janonio st.;;Lentvario g.
-3903;iš miesto;5464778;2510911;3902,3904
+3903;iš miesto;5464778;2510911;3902,3904;Juliaus Janonio st.;;Lentvario g. 
 2951;link žiedo;5463484;2517254;2938,2906;Vilijos st.;;Vilijos g.
 3307;iš centro;5473135;2522435;3308,3304,3306;Gabijos st.;;Gabijos g.;;Pašilaičiai
-3308;link centro;5473140;2522632;3307,3311
+3308;link centro;5473140;2522632;3307,3311;Gabijos st.;;Gabijos g. 
 3306a;;5473555;2521798;3330,3337,3317;Skalvių st.;;Gineitiškių g.
 3303;link centro;5472871;2521815;3304,3302;Medeinos st.;;Justiniškių g.
-3304;iš centro;5472967;2521902;3303,3307
-3306;išlaipinimas;5473471;2522005;3305,3307;Skalvių st.
-3305;įlaipinimas;5473455;2521963;3306,3305a
-3301;link centro;5472563;2521922;3302,3201;Sūduvių st.
-3302;iš centro;5472646;2521906;3301,3303
+3304;iš centro;5472967;2521902;3303,3307;Medeinos st.;;Justiniškių g. 
+3306;išlaipinimas;5473471;2522005;3305,3307;Skalvių st.;;Justiniškių g.  
+3305;įlaipinimas;5473455;2521963;3306,3305a;Skalvių st.;;Justiniškių g.   
+3301;link centro;5472563;2521922;3302,3201;Sūduvių st.;;Justiniškių g.    
+3302;iš centro;5472646;2521906;3301,3303;Sūduvių st.;;Justiniškių g.     
 3320;link Laisvės pr.;5473041;2523684;3329,3328,3802;Juliaus Juzeliūno st.;;Laisvės pr.
-3319;link Ukmergės g.;5472918;2523568;3329,3335
-3324;visos kryptys;5472773;2523387;3335,3315;Pašilaičių žiedas;wifi
-3313;iš centro;5472332;2523400;3314,3316,3323;Vilniaus rajono poliklinika
-3314;link centro;5472281;2523343;3313,1913;;0
-3316;link centro;5472576;2523344;3315,3313;Žemynos st.
-3315;iš centro;5472665;2523398;3316,3324
+3319;link Ukmergės g.;5472918;2523568;3329,3335;Juliaus Juzeliūno st.;;Laisvės pr. 
+3324;visos kryptys;5472773;2523387;3335,3315;Pašilaičių žiedas;wifi;Laisvės pr.  
+3313;iš centro;5472332;2523400;3314,3316,3323;Vilniaus rajono poliklinika;;Laisvės pr.   
+3314;link centro;5472281;2523343;3313,1913;Vilniaus rajono poliklinika;0;Laisvės pr.    
+3316;link centro;5472576;2523344;3315,3313;Žemynos st.;;Laisvės pr.     
+3315;iš centro;5472665;2523398;3316,3324;Žemynos st.;;Laisvės pr.      
 3328;iš centro;5473054;2523504;3320,3312;Juliaus Juzeliūno st.;;Pašilaičių g.
-3312;link centro;5473141;2523164;3311,3328;Pašilaičiai
-3311;iš centro;5473195;2523050;3312,3308,3322
+3312;link centro;5473141;2523164;3311,3328;Pašilaičiai;;Pašilaičių g. 
+3311;iš centro;5473195;2523050;3312,3308,3322;Pašilaičiai;;Pašilaičių g.  
 3310;įlaipinimas;5473562;2522905;3833;Deivių st.;;Ukmergės g.
-3326;link centro;5472934;2523892;3327,3329;Jurgio Baltrušaičio st.
-3327;iš centro;5472903;2523961;3326
-3329;link centro;5472944;2523738;3326,3319,3320;;;Ateities g.
+3326;link centro;5472934;2523892;3327,3329;Jurgio Baltrušaičio st.;;Ukmergės g. 
+3327;iš centro;5472903;2523961;3326;Jurgio Baltrušaičio st.;;Ukmergės g.  
+3329;link centro;5472944;2523738;3326,3319,3320;Jurgio Baltrušaičio st.;;Ateities g.
 3305a;link Pašilaičių;5473439;2521918;3305,3330;Skalvių st.;;Justiniškių g.
-3330;galinė st.;5473482;2521859;3305a,3306a;Skalvių žiedas
+3330;galinė st.;5473482;2521859;3305a,3306a;Skalvių žiedas;;Justiniškių g. 
 3335;išlaipinimas;5472842;2523430;3324,3319;Pašilaičių žiedas;;Laisvės pr.
 3338;link centro;5473576;2521127;3336,4411;Gileikių st.;;Pavilnionių g.
-3336;link centro;5473575;2521449;3337,3338;Pavilnionių st.
-3337;iš centro;5473569;2521497;3336,3306a
+3336;link centro;5473575;2521449;3337,3338;Pavilnionių st.;;Pavilnionių g. 
+3337;iš centro;5473569;2521497;3336,3306a;Pavilnionių st.;;Pavilnionių g.  
 3332;link centro;5473936;2522720;3331;Perkūno st.;;Ukmergės g.
 0425;iš centro;5467912;2530272;1450,0423;Paupio turgus;laikina;Aukštaičių g.;;Paupys
 1210;iš stoties;5468532;2530853;0437,0438,1443;Filaretų st.;0;Olandų g.
-0437;link Olandų žiedo;5468473;2530917;1210,1209
-1101;iš stoties;5468802;2530531;0438,1102;Krivių st.
-0438;link Olandų žiedo;5468730;2530562;1101,1210
-1209;link centro;5468331;2531286;0436,0437;Polocko st.
-0439;link stoties;5469130;2530471;1102,0402;Vasaros st.
-1102;iš stoties;5469122;2530503;0439,1101
+0437;link Olandų žiedo;5468473;2530917;1210,1209;Filaretų st.;;Olandų g. 
+1101;iš stoties;5468802;2530531;0438,1102;Krivių st.;;Olandų g.  
+0438;link Olandų žiedo;5468730;2530562;1101,1210;Krivių st.;;Olandų g.   
+1209;link centro;5468331;2531286;0436,0437;Polocko st.;;Olandų g.    
+0439;link stoties;5469130;2530471;1102,0402;Vasaros st.;;Olandų g.     
+1102;iš stoties;5469122;2530503;0439,1101;Vasaros st.;;Olandų g.      
 1218;link centro;5467430;2532268;1206,1312,1435;Markučiai;;Pavilnio g.
 1217;link N.Vilnios;5468403;2532038;1211,1212;Belmontas;;Stepono Batoro g.
-1211;link centro;5468379;2531940;1217,1208
-1216;link centro;5469162;2534337;2302,2301,1215;Mildos st.
-1213;iš centro;5468640;2532505;1212,1214;Rudens st.
-1212;link centro;5468599;2532358;1213,1217
-1215;iš centro;5468902;2533243;1214,1216,1435;Šaudykla
-1214;link centro;5468899;2533066;1215,1213
-1208;link N.Vilnios;5468188;2531555;0436,1211;Srovės st.
+1211;link centro;5468379;2531940;1217,1208;Belmontas;;Stepono Batoro g. 
+1216;link centro;5469162;2534337;2302,2301,1215;Mildos st.;;Stepono Batoro g.  
+1213;iš centro;5468640;2532505;1212,1214;Rudens st.;;Stepono Batoro g.   
+1212;link centro;5468599;2532358;1213,1217;Rudens st.;;Stepono Batoro g.    
+1215;iš centro;5468902;2533243;1214,1216,1435;Šaudykla;;Stepono Batoro g.     
+1214;link centro;5468899;2533066;1215,1213;Šaudykla;;Stepono Batoro g.      
+1208;link N.Vilnios;5468188;2531555;0436,1211;Srovės st.;;Stepono Batoro g.       
 1204;iš centro;5467465;2531948;1205,1206,1311;Vilnelės st.;;Subačiaus g.
-1205;link centro;5467490;2531879;1204,1219
+1205;link centro;5467490;2531879;1204,1219;Vilnelės st.;;Subačiaus g. 
 1207;link N.Vilnios;5467878;2531164;0424,0435;Drujos st.;;Zarasų g.
-0424;link stoties;5467839;2531053;1452,1207;;laikina
-1203;link centro;5467669;2531012;1202,1201,1452;Zarasų st.;0
+0424;link stoties;5467839;2531053;1452,1207;Drujos st.;laikina;Zarasų g. 
+1203;link centro;5467669;2531012;1202,1201,1452;Zarasų st.;0;Zarasų g.  
 1448;link centro;5467912;2529718;1449,1447,0420;Aukštaičių st.;laikina;Aukštaičių g.
-1449;iš centro;5467912;2529937;1448,1450,0433
-1450;link centro;5467918;2530266;0425,1449;Paupio turgus
-1451;iš centro;5467904;2530775;1453,1452,0434;Riedulių st.
+1449;iš centro;5467912;2529937;1448,1450,0433;;;
+1450;link centro;5467918;2530266;0425,1449;Paupio turgus;;
+1451;iš centro;5467904;2530775;1453,1452,0434;Riedulių st.;;
 1219;;5467597;2531787;1205,1201;Kaukysos st.;0;Kaukysos g.
 1452;iš centro;5467839;2531012;0424,1451,1203;Drujos st.;laikina;Paupio g.
-1453;link centro;5467814;2530658;1451,0422;Paupio st.
+1453;link centro;5467814;2530658;1451,0422;Paupio st.;;
 1206;link centro;5467437;2532209;1218,1204;Markučiai;0;Pavilnio g.
 1414;link N.Vilnios;5467718;2538428;1413,1415;Alėja;;Džiaugsmo g.;;Pavilnys
-1413;link stoties;5467721;2538291;1414,1412
-1407;link stoties;5466794;2535941;1408,1406;Grūdų st.
-1408;link N.Vilnios;5466867;2535996;1407,1409
-1412;link N.Vilnios;5467501;2536844;1411,1413;Įtraukties centras
-1411;link stoties;5467492;2536752;1412,1410,1421
-1409;link stoties;5467120;2536119;1410,1408;Pavilnys
-1410;link N.Vilnios;5467171;2536178;1409,1411,1430
-1416;link N.Vilnios;5467783;2539869;1415,2350;Strielčiukai
-1415;link stoties;5467790;2539691;1416,1414
+1413;link stoties;5467721;2538291;1414,1412;Alėja;;Džiaugsmo g. 
+1407;link stoties;5466794;2535941;1408,1406;Grūdų st.;;Džiaugsmo g.  
+1408;link N.Vilnios;5466867;2535996;1407,1409;Grūdų st.;;Džiaugsmo g.   
+1412;link N.Vilnios;5467501;2536844;1411,1413;Įtraukties centras;;Džiaugsmo g.    
+1411;link stoties;5467492;2536752;1412,1410,1421;Įtraukties centras;;Džiaugsmo g.     
+1409;link stoties;5467120;2536119;1410,1408;Pavilnys;;Džiaugsmo g.      
+1410;link N.Vilnios;5467171;2536178;1409,1411,1430;Pavilnys;;Džiaugsmo g.       
+1416;link N.Vilnios;5467783;2539869;1415,2350;Strielčiukai;;Džiaugsmo g.        
+1415;link stoties;5467790;2539691;1416,1414;Strielčiukai;;Džiaugsmo g.         
 1405;link stoties;5466689;2535356;1406,1404;Garsioji st.;;Garsioji g.
-1406;link N.Vilnios;5466692;2535541;1405,1407
+1406;link N.Vilnios;5466692;2535541;1405,1407;Garsioji st.;;Garsioji g. 
 1427;įlaipinimas;5465889;2536440;1438,1440;Šumsko kryptis;;Gurių Sodų g.
 1428;link miesto;5466035;2535536;1429,1423;Ašmenėlės st.;;Juodasis kelias
-1429;iš miesto;5466028;2535559;1428,1426,4025
-1401;link stoties;5466285;2534007;1402,1436,1313;Guriai
-1422;iš stoties;5466245;2534243;1402
-1425;iš miesto;5465986;2535971;1426,1439;Gurių sodai
-1426;link miesto;5465997;2535911;1425,1429
-1423;iš miesto;5466124;2534986;1424,1428;Pranciškaus Baltraus Šivickio st.
-1424;link miesto;5466132;2534958;1423,1404
+1429;iš miesto;5466028;2535559;1428,1426,4025;Ašmenėlės st.;;Juodasis kelias 
+1401;link stoties;5466285;2534007;1402,1436,1313;Guriai;;Juodasis kelias  
+1422;iš stoties;5466245;2534243;1402;Guriai;;Juodasis kelias   
+1425;iš miesto;5465986;2535971;1426,1439;Gurių sodai;;Juodasis kelias    
+1426;link miesto;5465997;2535911;1425,1429;Gurių sodai;;Juodasis kelias     
+1423;iš miesto;5466124;2534986;1424,1428;Pranciškaus Baltraus Šivickio st.;;Juodasis kelias      
+1424;link miesto;5466132;2534958;1423,1404;Pranciškaus Baltraus Šivickio st.;;Juodasis kelias       
 1417;link stoties;5464925;2532053;4002,4022,4003;Kinologijos centras;;Minsko pl.
-1418;link stoties;5464501;2533736;4301,4357,4018;Minsko plentas
-1419;link stoties;5464299;2534566;4302,4301,4019;Sodai
+1418;link stoties;5464501;2533736;4301,4357,4018;Minsko plentas;;Minsko pl. 
+1419;link stoties;5464299;2534566;4302,4301,4019;Sodai;;Minsko pl.  
 1402;iš stoties;5466331;2534187;1422,1401,1403;Guriai;;Tolimoji g.
-1403;link stoties;5466494;2534565;1404,1402;Pavilnio sodai
-1404;link N.Vilnios;5466501;2534655;1403,1424,1405
+1403;link stoties;5466494;2534565;1404,1402;Pavilnio sodai;;Tolimoji g. 
+1404;link N.Vilnios;5466501;2534655;1403,1424,1405;Pavilnio sodai;;Tolimoji g.  
 1421;išlaipinimas;5467924;2535934;1430,1411,2313;Žemasis Pavilnys;;Žemoji g.
 1436;link Gurių;5466007;2533748;1437,1401;Pavilnio regioninis parkas;;Gurių g.
-1437;link miesto;5465995;2533723;1436,4016
+1437;link miesto;5465995;2533723;1436,4016;Pavilnio regioninis parkas;;Gurių g. 
 1438;iš miesto;5465897;2536406;1427,1439;Išlaipinimas;;Juodasis kelias
-1439;link miesto;5465934;2536306;1438,1425;Šumsko kryptis
-1440;iš miesto;5465884;2536494;1427,5219
+1439;link miesto;5465934;2536306;1438,1425;Šumsko kryptis;;Juodasis kelias 
+1440;iš miesto;5465884;2536494;1427,5219;Šumsko kryptis;;Juodasis kelias  
 1435a;link miesto;5467844;2535309;1431;Pavilnio laikinoji st.;;Pavilnio g.
-1434;iš miesto;5467649;2534376;1435,1433;Tuputiškės
-1435;link miesto;5467655;2534235;1434,1218,1215
+1434;iš miesto;5467649;2534376;1435,1433;Tuputiškės;;Pavilnio g. 
+1435;link miesto;5467655;2534235;1434,1218,1215;Tuputiškės;;Pavilnio g.  
 1432;iš miesto;5467615;2535091;1433,1431;Žemoji st.;;Žemoji g.
-1433;link miesto;5467619;2535063;1432,1434
-1430;iš miesto;5467762;2535552;1431,1421,1410;Žiedų st.
-1431;link miesto;5467737;2535472;1430,1435a,1432
+1433;link miesto;5467619;2535063;1432,1434;Žemoji st.;;Žemoji g. 
+1430;iš miesto;5467762;2535552;1431,1421,1410;Žiedų st.;;Žemoji g.  
+1431;link miesto;5467737;2535472;1430,1435a,1432;Žiedų st.;;Žemoji g.   
 3318;iš centro;5474167;2522222;5002,3309;Pavilionys;;Perkūnkiemio g.;;Perkūnkiemis
-3309;link centro;5473921;2522016;3317,3318;Perkūnkiemis
-3317;iš centro;5473854;2521926;3309,3306a
+3309;link centro;5473921;2522016;3317,3318;Perkūnkiemis;;Perkūnkiemio g. 
+3317;iš centro;5473854;2521926;3309,3306a;Perkūnkiemis;;Perkūnkiemio g.  
 3612;išlaipinimas;5470178;2517195;3613,3621;Bitėnų st.;;Bitėnų g.;;Pilaitė
-3613;link centro;5470169;2517235;3612,3644
+3613;link centro;5470169;2517235;3612,3644;Bitėnų st.;;Bitėnų g. 
 3621;išlaipinimas;5470320;2517291;3609,3612;Bitėnų žiedas(Atstovos vieta);;Karaliaučiaus g.
-3609;link centro;5470400;2517438;3614,3621;Gilužio st.
-3614;iš centro;5470451;2517449;3609,3607
-3628;iš centro;5470798;2517510;3608,3627;Karaliaučiaus st.
+3609;link centro;5470400;2517438;3614,3621;Gilužio st.;;Karaliaučiaus g. 
+3614;iš centro;5470451;2517449;3609,3607;Gilužio st.;;Karaliaučiaus g.  
+3628;iš centro;5470798;2517510;3608,3627;Karaliaučiaus st.;;Karaliaučiaus g.   
 3604;iš centro;5470816;2518651;3629,3635;Papilėnų st.;;Papilėnų st.
 3623;iš centro;5471045;2518122;3624,3626;Įsruties st.;;Pilaitės pr.
-3624;link centro;5470994;2518293;3623,3622,3606
-3625;į centrą;5471050;2517406;3627,3662,3633;Pajautos st.
-3626;link centro;5471018;2517608;3627,3623
-3627;iš centro;5470977;2517488;3626,3625,3628
-3602;iš centro;5470247;2520345;3406,3634,3601;Pilaitė
-5164;iš centro;5469991;2521175;5165,3634,1841;Piliakalnio st.
-5165;link centro;5469943;2521248;5164,5190
-3622;iš centro;5470932;2518742;3629,3665,3624;Smalinės st.
-3629;link centro;5470855;2518792;3622,3604
+3624;link centro;5470994;2518293;3623,3622,3606;Įsruties st.;;Pilaitės pr. 
+3625;į centrą;5471050;2517406;3627,3662,3633;Pajautos st.;;Pilaitės pr.  
+3626;link centro;5471018;2517608;3627,3623;Pajautos st.;;Pilaitės pr.   
+3627;iš centro;5470977;2517488;3626,3625,3628;Pajautos st.;;Pilaitės pr.    
+3602;iš centro;5470247;2520345;3406,3634,3601;Pilaitė;;Pilaitės pr.     
+5164;iš centro;5469991;2521175;5165,3634,1841;Piliakalnio st.;;Pilaitės pr.      
+5165;link centro;5469943;2521248;5164,5190;Piliakalnio st.;;Pilaitės pr.       
+3622;iš centro;5470932;2518742;3629,3665,3624;Smalinės st.;;Pilaitės pr.        
+3629;link centro;5470855;2518792;3622,3604;Smalinės st.;;Pilaitės pr.         
 3630;iš centro;5470462;2519571;3601,3637;Senoji Pilaitė;;Senasis Pilaitės kelias
-3601;link centro;5470416;2519664;3630,3602
+3601;link centro;5470416;2519664;3630,3602;Smalinės st.;;Senasis Pilaitės kelias 
 3607;link centro;5470725;2517582;3608,3605,3614;Karaliaučiaus st.;;Vydūno g.
-3608;iš centro;5470740;2517572;3607,3628
-3603;link centro;5470685;2518741;3631,3635;Papilėnų st.
-3631;iš miesto;5470683;2518821;3603,3637
-3606;iš centro;5470736;2518119;3605,3624;Tolminkiemio st.
-3605;link centro;5470721;2518009;3606,3607;;wifi
+3608;iš centro;5470740;2517572;3607,3628;Karaliaučiaus st.;;Vydūno g. 
+3603;link centro;5470685;2518741;3631,3635;Papilėnų st.;;Vydūno g.  
+3631;iš miesto;5470683;2518821;3603,3637;Papilėnų st.;;Vydūno g.   
+3606;iš centro;5470736;2518119;3605,3624;Tolminkiemio st.;;Vydūno g.    
+3605;link centro;5470721;2518009;3606,3607;Tolminkiemio st.;wifi;Vydūno g.     
 3635;link centro;5470753;2518781;3603,3604;Papilėnų st.;0;0
 3632;iš centro;5471059;2516035;3633,3658;Padekaniškės;;Čekoniškių g.
-3633;link centro;5471045;2516312;3632,3625
+3633;link centro;5471045;2516312;3632,3625;Padekaniškės;;Čekoniškių g. 
 3634;link centro;5470095;2520542;3602,5164;Pilaitė;;Pilaitės pr.
 3638;iš centro;5469888;2517690;3639,3644;Paplūdimio st.;;Salotės g.
-3639;į centrą;5469899;2517747;3638,3641,1657
+3639;į centrą;5469899;2517747;3638,3641,1657;Paplūdimio st.;;Salotės g. 
 3636;iš centro;5470404;2518815;3637,3643;Imanuelio Kanto st.;;Smalinės g.
-3637;į centrą;5470491;2518879;3636,3631,3630
-3665;iš centro;5470995;2518933;3622,4401;Smalinės st.
-3641;iš centro;5470126;2518265;3643,3639;Taurupės st.
-3643;į centrą;5470119;2518285;3641,3636
+3637;į centrą;5470491;2518879;3636,3631,3630;Imanuelio Kanto st.;;Smalinės g. 
+3665;iš centro;5470995;2518933;3622,4401;Smalinės st.;;Smalinės g.  
+3641;iš centro;5470126;2518265;3643,3639;Taurupės st.;;Smalinės g.   
+3643;į centrą;5470119;2518285;3641,3636;Taurupės st.;;Smalinės g.    
 3660;iš centro;5471623;2517064;3662,3664;Varnės st.;;Varnės g.
-3662;į centrą;5471584;2516911;3660,3659,3625
+3662;į centrą;5471584;2516911;3660,3659,3625;Varnės st.;;Varnės g. 
 3658;iš centro;5471251;2516060;3659,3632;Vėluvos st.;;Zujūnų g.
-3659;į centrą;5471283;2516034;3658,3616,3662
+3659;į centrą;5471283;2516034;3658,3616,3662;Vėluvos st.;;Zujūnų g. 
 3610;galinė st.;5471351;2513098;3617,3611;Platiniškės;;Platiniškių g.;;Platiniškės
-3611;į centrą;5470409;2512483;3654,3610,5144,4106;Šventapilės st.
+3611;į centrą;5470409;2512483;3654,3610,5144,4106;Šventapilės st.;;Platiniškių g. 
 1514;iš stoties;5466285;2529885;1519,1512;Liepkalnis;;Dzūkų g.;;Rasos
-1512;iš stoties;5466423;2529368;1317,1514,1305;Perlojos st.
-1317;link stoties;5466464;2529225;1512,1510
+1512;iš stoties;5466423;2529368;1317,1514,1305;Perlojos st.;;Dzūkų g. 
+1317;link stoties;5466464;2529225;1512,1510;Perlojos st.;;Dzūkų g.  
 1316;iš stoties;5466287;2529995;1315,1519;Liepkalnis;;Liepkalnio g.
-1315;link stoties;5466298;2530015;1316,1308
-1314;link stoties;5465469;2530307;1513,4001;Žirnių st.
+1315;link stoties;5466298;2530015;1316,1308;Liepkalnis;;Liepkalnio g. 
+1314;link stoties;5465469;2530307;1513,4001;Žirnių st.;;Liepkalnio g.  
 0418;iš stoties;5467460;2529728;0444,0420,0417;Gervėčių st.;;Rasų g.
-0419;link stoties;5467336;2529882;0443,0444,0445
-1307;iš stoties;5467002;2530118;1306,1304,1308;Rasų kapinės
-1306;link stoties;5467046;2530109;1307,0445,1319
+0419;link stoties;5467336;2529882;0443,0444,0445;Gervėčių st.;;Rasų g. 
+1307;iš stoties;5467002;2530118;1306,1304,1308;Rasų kapinės;;Rasų g.  
+1306;link stoties;5467046;2530109;1307,0445,1319;Rasų kapinės;;Rasų g.   
 1309;iš stoties;5466644;2530701;1308,1310;Dunojaus st.;;Ribiškių Didžioji g.
-1308;link stoties;5466661;2530673;1309,1307,1315
-1312;link stoties;5466648;2532460;1313,1311,1218;Juodasis kelias
-1313;iš stoties;5466634;2532542;1312,1401
-1310;link stoties;5466687;2531260;1311,1309;Ribiškės
-1311;iš stoties;5466684;2531329;1310,1312,1204
+1308;link stoties;5466661;2530673;1309,1307,1315;Dunojaus st.;;Ribiškių Didžioji g. 
+1312;link stoties;5466648;2532460;1313,1311,1218;Juodasis kelias;;Ribiškių Didžioji g.  
+1313;iš stoties;5466634;2532542;1312,1401;Juodasis kelias;;Ribiškių Didžioji g.   
+1310;link stoties;5466687;2531260;1311,1309;Ribiškės;;Ribiškių Didžioji g.    
+1311;iš stoties;5466684;2531329;1310,1312,1204;Ribiškės;;Ribiškių Didžioji g.     
 1318;link centro;5467221;2530501;1319;Balstogės st.;;Sukilėlių g.
-1319;link Senamiesčio;5467137;2530457;1318,1306
+1319;link Senamiesčio;5467137;2530457;1318,1306;Balstogės st.;;Sukilėlių g. 
 1519;link stoties;5466277;2529962;1316,1514,2631;Liepkalnis;;Dzūkų g.
 5135;link Molėtų pl.;5480761;2524898;5192,5102;Beržų st.;;Beržų g.;;Riešė
-5192;link Bendorių;5480782;2524738;5135,5104
-5104;link Molėtų pl.;5480852;2523468;5103,5192;Riešės gimnazija
-5103;link Bendorių;5480876;2523330;5104,5217
+5192;link Bendorių;5480782;2524738;5135,5104;Beržų st.;;Beržų g. 
+5104;link Molėtų pl.;5480852;2523468;5103,5192;Riešės gimnazija;;Beržų g.  
+5103;link Bendorių;5480876;2523330;5104,5217;Riešės gimnazija;;Beržų g.   
 5101;link Molėtų pl.;5480607;2525677;5102,5202;Didžioji Riešė;;Molėtų g.
-5102;link Riešės;5480688;2525676;5101,5135
-5131;link Molėtų pl.;5479815;2526213;5132,5130;Kaštonų st.
-5132;link Riešės;5479836;2526211;5131,5201
-5125;link Molėtų pl.;5478219;2527196;5206,5126;Kiparisų st.
-5126;link Riešės;5478325;2527173;5125,5127
-5129;link Molėtų pl.;5479221;2526597;5130,5128;Lauko st.
-5130;link Riešės;5479315;2526582;5129,5131
-5127;link Molėtų pl.;5478641;2526938;5128,5120,5126;Samanų st.
-5128;link Riešės;5478714;2526907;5127,5129
+5102;link Riešės;5480688;2525676;5101,5135;Didžioji Riešė;;Molėtų g. 
+5131;link Molėtų pl.;5479815;2526213;5132,5130;Kaštonų st.;;Molėtų g.  
+5132;link Riešės;5479836;2526211;5131,5201;Kaštonų st.;;Molėtų g.   
+5125;link Molėtų pl.;5478219;2527196;5206,5126;Kiparisų st.;;Molėtų g.    
+5126;link Riešės;5478325;2527173;5125,5127;Kiparisų st.;;Molėtų g.     
+5129;link Molėtų pl.;5479221;2526597;5130,5128;Lauko st.;;Molėtų g.      
+5130;link Riešės;5479315;2526582;5129,5131;Lauko st.;;Molėtų g.       
+5127;link Molėtų pl.;5478641;2526938;5128,5120,5126;Samanų st.;;Molėtų g.        
+5128;link Riešės;5478714;2526907;5127,5129;Samanų st.;;Molėtų g.         
 5119;iš miesto;5478872;2527653;5120,2280;Gulbinai;;Molėtų pl.
-5120;į miestą;5478675;2527437;5119,5127
-5141;iš miesto;5480722;2527466;5122,5148;Riešė
+5120;į miestą;5478675;2527437;5119,5127;;;
+5141;iš miesto;5480722;2527466;5122,5148;Riešė;;
 5121;link Kalino;5480490;2526845;5122,5202;Alyvų st.;;Riešės g.
-5122;link Riešės;5480492;2527128;5121,5141
+5122;link Riešės;5480492;2527128;5121,5141;Alyvų st.;;Riešės g. 
 5202;iš miesto;5480180;2525981;5201,5101,5121;Kooperatyvo st.;;Molėtų g.
-5201;link miesto;5480107;2526002;5202,5132
-5206;visos kryptys;5478134;2527287;5125,5106;Vanaginės žiedas
+5201;link miesto;5480107;2526002;5202,5132;Kooperatyvo st.;;Molėtų g. 
+5206;visos kryptys;5478134;2527287;5125,5106;Vanaginės žiedas;;Molėtų g.  
 4322;iš miesto;5459265;2533948;4321,4319a;Čekėnų st.;;Gamyklos g.;;Rudamina
-4321;link miesto;5459302;2533798;4322,4324
-4320;iš miesto;5459135;2534825;4334,4330,4328;Rudamina (panaikinta)
-4324;iš miesto;5459464;2532951;4323,4321;Rudaminos paukštynas
-4323;link miesto;5459484;2532915;4324,4326
+4321;link miesto;5459302;2533798;4322,4324;Čekėnų st.;;Gamyklos g. 
+4320;iš miesto;5459135;2534825;4334,4330,4328;Rudamina (panaikinta);;
+4324;iš miesto;5459464;2532951;4323,4321;Rudaminos paukštynas;;
+4323;link miesto;5459484;2532915;4324,4326;Rudaminos paukštynas;;
 4319;į stotį;5459238;2535120;4328,4317;Rudamina;;Vilniaus g. (Rudamina)
 4318;link miesto;5459598;2536412;4317,4316;Draugystės st.;;Žygio g.
-4317;iš miesto;5459592;2536351;4318,4319
+4317;iš miesto;5459592;2536351;4318,4319;Draugystės st.;;Žygio g. 
 4328;iš miesto;5459210;2534908;4320c,4320,4319;Rudamina;;Gamyklos g.
-4334;į miestą;5459165;2534692;4320,4320a,4320c
-4320a;į miestą;5459192;2534523;4319a,4334;Rudamina (laikina) (panaikinta)
-4319a;iš miesto;5459183;2534446;4320a,4322
+4334;į miestą;5459165;2534692;4320,4320a,4320c;Rudamina;;Gamyklos g. 
+4320a;į miestą;5459192;2534523;4319a,4334;Rudamina (laikina) (panaikinta);;
+4319a;iš miesto;5459183;2534446;4320a,4322;;;
 4332;žiedas;5459484;2534744;4320b,4333b;Rudamina (apsisukimo žiedas);;Mokyklos g.
-4320b;iš miesto;5459261;2534820;4320c,4332;Rudamina (išlaipinimas)
-4320c;į miestą;5459245;2534806;4320b,4328,4334;Rudamina (laikina)
+4320b;iš miesto;5459261;2534820;4320c,4332;Rudamina (išlaipinimas);;
+4320c;į miestą;5459245;2534806;4320b,4328,4334;Rudamina (laikina);;
 2708;link Eišiškių pl.;5460968;2525171;2709;Mechanikų st.;;Mechanikų g.;;Salininkai
-2709;link Salininkų;5460970;2525147;2708,2731,2707
-2706;link miesto;5461419;2525197;2707,2735,2705;Salininkų žiedas
-2707;visos kryptys;5461403;2525182;2706,2709
+2709;link Salininkų;5460970;2525147;2708,2731,2707;Mechanikų st.;;Mechanikų g. 
+2706;link miesto;5461419;2525197;2707,2735,2705;Salininkų žiedas;;Mechanikų g.  
+2707;visos kryptys;5461403;2525182;2706,2709;Salininkų žiedas;;Mechanikų g.   
 2713;link miesto;5460512;2526033;2712,2714;Jono Stašaičio st.;;Salininkų g.
-2712;link Mechanikų g.;5460525;2525838;2713,2711
-5137;link miesto;5460789;2524404;5136,2719;Kelmijos sodai
-5136;iš miesto;5460828;2524382;5137,5146
-2715;iš miesto;5460948;2527456;4008,2740;Pervaža
-4008;link miesto;5460923;2527467;2715,2815
-5145;iš miesto;5461127;2523016;5146,5199,5109;Raistelių miškas
-5146;link miesto;5461112;2523105;5145,5136
-2638;iš miesto;5461186;2527491;4007,2739;Sakalaičių st.
-4007;link miesto;5461265;2527545;2638,2637
-2711;link Eišiškių pl.;5460566;2525161;2710,2712;Salininkai
-2710;link Salininkų;5460565;2525118;2711,2731
-2637;iš miesto;5461803;2528348;4006,4007,2622;Salininkų sodai
-4006;link miesto;5461823;2528465;2637,2646
-2714;iš miesto;5460566;2526949;2815,2713,2733;Vilniaus st.
-2815;link stoties;5460611;2527069;2714,4008
+2712;link Mechanikų g.;5460525;2525838;2713,2711;Jono Stašaičio st.;;Salininkų g. 
+5137;link miesto;5460789;2524404;5136,2719;Kelmijos sodai;;Salininkų g.  
+5136;iš miesto;5460828;2524382;5137,5146;Kelmijos sodai;;Salininkų g.   
+2715;iš miesto;5460948;2527456;4008,2740;Pervaža;;Salininkų g.    
+4008;link miesto;5460923;2527467;2715,2815;Pervaža;;Salininkų g.     
+5145;iš miesto;5461127;2523016;5146,5199,5109;Raistelių miškas;;Salininkų g.      
+5146;link miesto;5461112;2523105;5145,5136;Raistelių miškas;;Salininkų g.       
+2638;iš miesto;5461186;2527491;4007,2739;Sakalaičių st.;;Salininkų g.        
+4007;link miesto;5461265;2527545;2638,2637;Sakalaičių st.;;Salininkų g.         
+2711;link Eišiškių pl.;5460566;2525161;2710,2712;Salininkai;;Salininkų g.          
+2710;link Salininkų;5460565;2525118;2711,2731;Salininkai;;Salininkų g.           
+2637;iš miesto;5461803;2528348;4006,4007,2622;Salininkų sodai;;Salininkų g.            
+4006;link miesto;5461823;2528465;2637,2646;Salininkų sodai;;Salininkų g.             
+2714;iš miesto;5460566;2526949;2815,2713,2733;Vilniaus st.;;Salininkų g.              
+2815;link stoties;5460611;2527069;2714,4008;Vilniaus st.;;Salininkų g.               
 2732;iš miesto;5460081;2527358;2733,2729;Avinėlių st.;;0
-2733;link miesto;5460091;2527383;2732,2714,4361;;;Avinėlių g.
+2733;link miesto;5460091;2527383;2732,2714,4361;Avinėlių st.;;Avinėlių g.
 2655;link Rudaminos;5462936;2530463;2656,4015;Pripetės st.;;Liepkalnio g.
-2656;link stoties;5462968;2530473;2655,4005,4353
+2656;link stoties;5462968;2530473;2655,4005,4353;Pripetės st.;;Liepkalnio g. 
 2731;link miesto;5460621;2525050;2719,2710,2709;Salininkai;;Mechanikų g.
 2737;link centro;5461225;2526698;2738,2736;Gervėbalės g.;;Sakalaičių g.
-2738;iš centro;5461206;2526730;2737,2739
-2735;link miesto;5461327;2526070;2736,2706;Sakalaičių g.
-2736;iš miesto;5461310;2526091;2735,2737
-2739;link miesto;5461030;2527321;2740,2638,2738;Valakų g.
-2740;iš miesto;5460997;2527315;2739,2715
+2738;iš centro;5461206;2526730;2737,2739;;;
+2735;link miesto;5461327;2526070;2736,2706;Sakalaičių g.;;
+2736;iš miesto;5461310;2526091;2735,2737;;;
+2739;link miesto;5461030;2527321;2740,2638,2738;Valakų g.;;
+2740;iš miesto;5460997;2527315;2739,2715;;;
 2646;iš miesto;5462137;2529469;2647,4006;Pupinė;;Salininkų g.
-2647;link miesto;5462153;2529581;2646,2636
-2719;iš miesto;5460589;2524960;2731,5137,2727;Salininkai
+2647;link miesto;5462153;2529581;2646,2636;Pupinė;;Salininkų g. 
+2719;iš miesto;5460589;2524960;2731,5137,2727;Salininkai;;Salininkų g.  
 2105;įlaipinimas;5475762;2525671;2106,2150;Bajorų sodai;;Bajorų kelias;;Santariškės
 2107;link centro;5475262;2527066;2141,2142;Akademijos st.;;Baltupio g.
-2131;link centro;5474065;2526436;2132,2102,2028;Maumedžių st.
-2132;iš centro;5474108;2526437;2131,2103
+2131;link centro;5474065;2526436;2132,2102,2028;Maumedžių st.;;Baltupio g. 
+2132;iš centro;5474108;2526437;2131,2103;Maumedžių st.;;Baltupio g.  
 2142;į miestą;5475309;2526868;2144,2107,2104;Akademijos st.;;Geležinio Vilko g.
-2145a;link centro, už šviesoforo;5475677;2527172;2145,2109,2143;Geležinio Vilko st.
+2145a;link centro, už šviesoforo;5475677;2527172;2145,2109,2143;Geležinio Vilko st.;;
 2116;link centro;5474855;2527913;2117,2119a,2115;Žaliųjų Ežerų st.;;Jeruzalės g.
 2110;iš centro;5475718;2526991;2109,2111;Jono Kairiūkščio st.;;Jono Kairiūkščio g.
-2109;link centro;5475705;2527026;2110,2145a
-2111;įlaipinimas;5475781;2526474;2110,2106;Visoriai
+2109;link centro;5475705;2527026;2110,2145a;Jono Kairiūkščio st.;;Jono Kairiūkščio g. 
+2111;įlaipinimas;5475781;2526474;2110,2106;Visoriai;;Jono Kairiūkščio g.  
 2144;iš centro;5475352;2526838;2142,2143,2133;Akademijos st.;;Mokslininkų g.
-2106a;iš centro;5475431;2526319;2139,2106;Chemijos institutas
-2133;link centro;5475385;2526385;2139,2144
-2118;iš centro;5475031;2527754;2117,2141;Molėtų plentas
+2106a;iš centro;5475431;2526319;2139,2106;Chemijos institutas;;
+2133;link centro;5475385;2526385;2139,2144;Akademijos st.;;
+2118;iš centro;5475031;2527754;2117,2141;Molėtų plentas;;
 2143;iš centro;5475391;2527025;2144,2145a;Akademijos st.;;Molėtų pl.
-5107;link centro;5477380;2527197;5106,5198;Vanaginė
-5106;link Riešės;5477539;2527291;5107,5206
+5107;link centro;5477380;2527197;5106,5198;Vanaginė;;Molėtų pl. 
+5106;link Riešės;5477539;2527291;5107,5206;Vanaginė;;Molėtų pl.  
 2105a;apsisukimo žiedas;5475352;2523163;2160,3838;Bajorai;;Paukščių tako g.
 2134;iš centro;5475921;2528157;2135,2136a;Muzikų st.;;Santariškių g.
-2135;link centro;5475832;2528103;2134,2123,2146a
-2121;link centro;5475200;2527979;2122,2120;Santariškės;wifi
-2122;iš centro;5475286;2528031;2121,2156;;0
-2137;įlaipinimas;5476370;2528215;2136a,5116,2272;Santariškių žiedas
-2123;įlaipinimas;5475633;2528131;2147,2135;Vaikų ligoninė
-2138;link centro;5475551;2528054;2156,2147
-2120;iš centro;5475062;2527982;2119a,2117,2121;Žaliųjų Ežerų st.
+2135;link centro;5475832;2528103;2134,2123,2146a;Muzikų st.;;Santariškių g. 
+2121;link centro;5475200;2527979;2122,2120;Santariškės;wifi;Santariškių g.  
+2122;iš centro;5475286;2528031;2121,2156;Santariškės;0;Santariškių g.   
+2137;įlaipinimas;5476370;2528215;2136a,5116,2272;Santariškių žiedas;;Santariškių g.    
+2123;įlaipinimas;5475633;2528131;2147,2135;Vaikų ligoninė;;Santariškių g.     
+2138;link centro;5475551;2528054;2156,2147;Vaikų ligoninė;;Santariškių g.      
+2120;iš centro;5475062;2527982;2119a,2117,2121;Žaliųjų Ežerų st.;;Santariškių g.       
 2127a;iš centro;5475183;2528788;2127,2128;Petro Baublio st.;;Žaliųjų Ežerų g.
-2119a;iš centro, Žaliųjų Ežerų g.;5474967;2528111;2120,2116,2125b;Žaliųjų Ežerų st.
+2119a;iš centro, Žaliųjų Ežerų g.;5474967;2528111;2120,2116,2125b;Žaliųjų Ežerų st.;;
 2141;link centro;5475263;2527239;2107,2118;Akademijos st.;;Mokslininkų g.
-2139;iš miesto;5475392;2526381;2133,2106a;Chemijos institutas
-2117;link centro;5474975;2527810;2118,2120,2116;Molėtų plentas
+2139;iš miesto;5475392;2526381;2133,2106a;Chemijos institutas;;Mokslininkų g. 
+2117;link centro;5474975;2527810;2118,2120,2116;Molėtų plentas;;Mokslininkų g.  
 2146a;iš centro, prieš šviesoforą;5475765;2527238;2145,2146,2135;Geležinio Vilko st.;;Molėtų pl.
 2136a;išlaipinimas;5476262;2528220;2137,2134;Santariškių žiedas (išlaipinama);;Santariškių g.
-2147;iš centro;5475613;2528085;2123,2138;Vaikų ligoninė
-2156;išlaipinimas;5475524;2528088;2138,2122;Vaikų ligoninė (išlaipinimas)
+2147;iš centro;5475613;2528085;2123,2138;Vaikų ligoninė;;Santariškių g. 
+2156;išlaipinimas;5475524;2528088;2138,2122;Vaikų ligoninė (išlaipinimas);;Santariškių g.  
 2127;iš centro;5475086;2528497;2125b,2127a;Petro Baublio st.;;Žaliųjų Ežerų g.
-2125b;link centro;5475052;2528355;2127,2119a
+2125b;link centro;5475052;2528355;2127,2119a;Petro Baublio st.;;Žaliųjų Ežerų g. 
 0441;iš centro;5468822;2528900;0201,0403;Karaliaus Mindaugo tiltas;;Arsenalo g.;;Senamiestis
 0416;link stoties;5467368;2528949;0440,0417,1303;Aušros vartai;wifi;Aušros Vartų g.
 0432;link centro;5468497;2529110;0431,0430;Bernardinų sodas;0;Barboros Radvilaitės g.
-0431;iš centro;5468472;2529025;0432,0242a
+0431;iš centro;5468472;2529025;0432,0242a;Bernardinų sodas;;Barboros Radvilaitės g. 
 5153;link Aušros vartų g.;5467408;2528657;0446,0440,0547w;Bazilijonų st.;wifi;Bazilijonų g.
 0443;link Olandų žiedo;5467390;2529923;0419;Gervėčių st.;0;Drujos g.
 0412;link stoties;5467424;2528366;0413,0547,0411;Gėlių st.;;Gėlių g.
 0408;link centro;5468004;2527628;0409,0407,0501;Trakų st.;;Jono Basanavičiaus g.
 1302;iš stoties;5467108;2529127;1303,1301,1304;Pelesos st.;;Liepkalnio g.
-1303;link stoties;5467140;2529175;1302,0416
-1305;iš stoties;5466756;2529710;1304,1512;Stadionas
-1304;link stoties;5466848;2529639;1305,1307,1302
+1303;link stoties;5467140;2529175;1302,0416;Pelesos st.;;Liepkalnio g. 
+1305;iš stoties;5466756;2529710;1304,1512;Stadionas;;Liepkalnio g.  
+1304;link stoties;5466848;2529639;1305,1307,1302;Stadionas;;Liepkalnio g.   
 0429;link centro;5468212;2529297;0430,0428;Dailės akademija;wc;Maironio g.
-0430;iš centro;5468401;2529287;0432,0429;;0
-0427;iš centro;5467994;2529236;0426,0449;Užupio st.
-0426;link centro;5467991;2529266;0427,0428
+0430;iš centro;5468401;2529287;0432,0429;Dailės akademija;0;Maironio g. 
+0427;iš centro;5467994;2529236;0426,0449;Užupio st.;;Maironio g.  
+0426;link centro;5467991;2529266;0427,0428;Užupio st.;;Maironio g.   
 0417;iš stoties;5467473;2529278;0416,0418;Aušros vartai;;Mikalojaus Daukšos g.
 0436;link stoties;5468270;2531266;1209,0435,1208;Polocko st.;;Olandų g.
 0529;iš stoties;5466793;2528368;1509,1511;Panevėžio st.;;Pelesos g.
-1509;link stoties;5466814;2528476;0529,0530j
-0528;link Dzūkų g.;5467085;2528921;1301,0547w;Pelesos st.
-1301;iš stoties;5467091;2528961;0528,1302
+1509;link stoties;5466814;2528476;0529,0530j;Panevėžio st.;;Pelesos g. 
+0528;link Dzūkų g.;5467085;2528921;1301,0547w;Pelesos st.;;Pelesos g.  
+1301;iš stoties;5467091;2528961;0528,1302;Pelesos st.;;Pelesos g.   
 0409;link stoties;5467934;2527802;0410,0408;MO muziejus;wifi;Pylimo g.
-0410;link centro;5467902;2527855;0409,0411,0245b;;0
-0407;iš centro;5468117;2527731;0406,0408;Reformatų st.
-0406;link centro;5468149;2527740;0407,0235
-0413;link centro;5467454;2528492;0446,0412,0449a;Rūdninkų st.
-0411;link stoties;5467665;2528086;0410,0412;Vingriai
+0410;link centro;5467902;2527855;0409,0411,0245b;MO muziejus;0;Pylimo g. 
+0407;iš centro;5468117;2527731;0406,0408;Reformatų st.;;Pylimo g.  
+0406;link centro;5468149;2527740;0407,0235;Reformatų st.;;Pylimo g.   
+0413;link centro;5467454;2528492;0446,0412,0449a;Rūdninkų st.;;Pylimo g.    
+0411;link stoties;5467665;2528086;0410,0412;Vingriai;;Pylimo g.     
 0434;iš centro;5468145;2530538;1443,1451;Bernardinų kapinės;;Polocko g.
-0435;iš centro;5468200;2531198;0436,1207;Bernardinų st.
-0433;iš centro;5468121;2530076;1446,1449,1443;Užupis
+0435;iš centro;5468200;2531198;0436,1207;Bernardinų st.;;Polocko g. 
+0433;iš centro;5468121;2530076;1446,1449,1443;Užupis;;Polocko g.  
 0420;iš stoties;5467660;2529735;0421,0418,1448;Misionierių st.;;Subačiaus g.
-0421;link stoties;5467662;2529652;0420
-0423;link centro;5467723;2530249;0422,0425;Subačiaus st.
-0422;iš centro;5467701;2530362;0423,1453
-1201;link Markučių;5467624;2531040;1203,1219;Zarasų st.
-1202;link centro;5467658;2530940;1203
+0421;link stoties;5467662;2529652;0420;Misionierių st.;;Subačiaus g. 
+0423;link centro;5467723;2530249;0422,0425;Subačiaus st.;;Subačiaus g.  
+0422;iš centro;5467701;2530362;0423,1453;Subačiaus st.;;Subačiaus g.   
+1201;link Markučių;5467624;2531040;1203,1219;Zarasų st.;;Subačiaus g.    
+1202;link centro;5467658;2530940;1203;Zarasų st.;;Subačiaus g.     
 0403;link centro;5468938;2529450;0404,0441;Kalnų parkas;;Tado Kosciuškos g.
-0404;iš centro;5468965;2529581;0403,0403a
-0401;link centro;5469301;2530313;0402,0401a;Šv. Petro ir Povilo bažnyčia;wifi
-0402;iš centro;5469275;2530315;0401,0439,0403a;;0
+0404;iš centro;5468965;2529581;0403,0403a;Kalnų parkas;;Tado Kosciuškos g. 
+0401;link centro;5469301;2530313;0402,0401a;Šv. Petro ir Povilo bažnyčia;wifi;Tado Kosciuškos g.  
+0402;iš centro;5469275;2530315;0401,0439,0403a;Šv. Petro ir Povilo bažnyčia;0;Tado Kosciuškos g.   
 0246;link Trakų g.;5467848;2528604;0247,0244;Rotušė;;Vokiečių g.
-0244;iš centro;5468047;2528317;0245,0246,0242a;Vokiečių st.
+0244;iš centro;5468047;2528317;0245,0246,0242a;Vokiečių st.;;
 0444;link stoties;5467365;2529757;0419,0418;Gervėčių st.;;Zarasų g.
 0401a;nuo Žirmūnų tilto;5469382;2530353;0402a,0401;Šv. Petro ir Povilo bažnyčia;;0
-0402a;link Žirmūnų tilto;5469397;2530350;0401a,1103,0906
+0402a;link Žirmūnų tilto;5469397;2530350;0401a,1103,0906;;;
 0446;link Rotušės;5467442;2528595;5153,0413;Bazilijonų st.;;Arklių g.
 0440;link stoties;5467417;2528808;5153,0416;Aušros vartai;;Bazilijonų g.
 0247;visos kryptys;5467823;2528634;0246,0449a;Rotušė;wc;Didžioji g.
-0449;;5467792;2528756;0449a,0427;;0
+0449;;5467792;2528756;0449a,0427;;0;
 0445;iš stoties;5467203;2529905;0419,1306;Ramybės st.;;Rasų g.
 0449a;į stotį;5467772;2528639;0247,0449,0413;Rotušė;;Rūdninkų g.
 0403a;link centro;5469033;2529709;0404,0402;Kalnų parkas(laikina);;Tado Kosciuškos g.
 0245a;link Rotušės;5468057;2528274;0245,0245b;Vokiečių st.;wifi;Vokiečių g.
-0245;link Rotušės;5468050;2528297;0244,0245a;;0
+0245;link Rotušės;5468050;2528297;0244,0245a;;0;
 1910;link Pašilaičių;5471394;2523743;1909,1911,1920;Buivydiškių st.;;Buivydiškių g.;;Šeškinė
-1909;link Šeškinės;5471322;2523789;1910,1908,1917
-1911;link Šeškinės;5471575;2523211;1802,1912,1910;Rygos st.
-1908;link Justiniškių;5470949;2524035;1907,1909;Vaikų kaimas
+1909;link Šeškinės;5471322;2523789;1910,1908,1917;Buivydiškių st.;;Buivydiškių g. 
+1911;link Šeškinės;5471575;2523211;1802,1912,1910;Rygos st.;;Buivydiškių g.  
+1908;link Justiniškių;5470949;2524035;1907,1909;Vaikų kaimas;;Buivydiškių g.   
 1924;link centro;5471443;2525677;1925,1930;Gelvonėlio st.;;Gelvonų g.
-1925;iš centro;5471505;2525741;1924,1926
-1927;link centro;5471764;2525763;1928,1926;Gelvonų st.;wifi
-1928;iš centro;5471838;2525767;1927,3842;;0
-1930;link Fabijoniškių;5471157;2525700;1923,1931,1924;Šeškinės kalvos
+1925;iš centro;5471505;2525741;1924,1926;Gelvonėlio st.;;Gelvonų g. 
+1927;link centro;5471764;2525763;1928,1926;Gelvonų st.;wifi;Gelvonų g.  
+1928;iš centro;5471838;2525767;1927,3842;Gelvonų st.;0;Gelvonų g.   
+1930;link Fabijoniškių;5471157;2525700;1923,1931,1924;Šeškinės kalvos;;Gelvonų g.    
 3219;link centro;5471893;2523200;1913,1912,3204;Čiobiškio st.;;Laisvės pr.
-1913;link Pašilaičių;5471946;2523292;3219,3314
-1912;link Pašilaičių;5471687;2523153;1911,3218,3219;Rygos st.
-1802;link Lazdynų;5471560;2523019;3218,1911,1818
+1913;link Pašilaičių;5471946;2523292;3219,3314;Čiobiškio st.;;Laisvės pr. 
+1912;link Pašilaičių;5471687;2523153;1911,3218,3219;Rygos st.;;Laisvės pr.  
+1802;link Lazdynų;5471560;2523019;3218,1911,1818;Rygos st.;;Laisvės pr.   
 1931;link Ukmergės g.;5471085;2525622;1930,1902;Šeškinės kalvos;wifi;Ozo g.
-1923;link Žirmūnų;5471109;2525819;1930,1901;;0
-1906;link Buivydiškių g.;5470980;2524424;1905,1907;Siesikų st.
-1905;link Ukmergės g.;5470985;2524636;1906,1914
-1907;link Ukmergės g.;5470877;2524118;1908,1906,1843;Vaikų kaimas
+1923;link Žirmūnų;5471109;2525819;1930,1901;Šeškinės kalvos;0;Ozo g. 
+1906;link Buivydiškių g.;5470980;2524424;1905,1907;Siesikų st.;;Ozo g.  
+1905;link Ukmergės g.;5470985;2524636;1906,1914;Siesikų st.;;Ozo g.   
+1907;link Ukmergės g.;5470877;2524118;1908,1906,1843;Vaikų kaimas;;Ozo g.    
 1926;link Fabijoniškių;5471616;2525481;1929,1925,1927;Paberžės st.;;Paberžės g.
-1929;link žiedo;5471617;2525358;1926,1922,1921
+1929;link žiedo;5471617;2525358;1926,1922,1921;Paberžės st.;;Paberžės g. 
 1918;iš centro;5471500;2524638;1932,1917,1916;Dūkštų st.;;Šeškinės g.
-1917;link centro;5471486;2524528;1918,1909;;wifi
-1920;link centro;5471665;2524386;1919,1910;Musninkų st.;0
-1933;įlaipinimas;5471690;2524484;1919,1921,3832
-1919;iš centro;5471662;2524452;1933,1920;;wifi
-1922;link Paberžės g.;5471328;2525166;1916,1929;Ukmergės st.;0
+1917;link centro;5471486;2524528;1918,1909;Dūkštų st.;wifi;Šeškinės g. 
+1920;link centro;5471665;2524386;1919,1910;Musninkų st.;0;Šeškinės g.  
+1933;įlaipinimas;5471690;2524484;1919,1921,3832;Musninkų st.;;Šeškinės g.   
+1919;iš centro;5471662;2524452;1933,1920;Musninkų st.;wifi;Šeškinės g.    
+1922;link Paberžės g.;5471328;2525166;1916,1929;Ukmergės st.;0;Šeškinės g.     
 1904;iš centro, už viaduko;5471069;2525124;1902,1915;Šeškinė;;Ukmergės g.
-1903;link centro;5470963;2525157;1902
-1902;iš centro;5470976;2525213;1903,1904,1931
-1921;iš centro;5471606;2524745;1932,1933,1929;Šeškinės poliklinika
-1932;link centro;5471545;2524715;1921,1918
-1916;link Perkūnkiemio;5471245;2524974;1915,1922,1918;Ukmergės st.
-1915;link centro;5471194;2524942;1914,1916,1904
-1914;link Laisvės pr.;5471201;2524880;1915,1905
+1903;link centro;5470963;2525157;1902;Ukmergės st.;;Ukmergės g. 
+1902;iš centro;5470976;2525213;1903,1904,1931;Ukmergės st.;;Ukmergės g.  
+1921;iš centro;5471606;2524745;1932,1933,1929;Šeškinės poliklinika;;Ukmergės g.   
+1932;link centro;5471545;2524715;1921,1918;Šeškinės poliklinika;;Ukmergės g.    
+1916;link Perkūnkiemio;5471245;2524974;1915,1922,1918;Ukmergės st.;;Ukmergės g.     
+1915;link centro;5471194;2524942;1914,1916,1904;Ukmergės st.;;Ukmergės g.      
+1914;link Laisvės pr.;5471201;2524880;1915,1905;Ukmergės st.;;Ukmergės g.       
 4313;iš miesto;5460583;2538387;4314,4316,4315;Skaidiškės;;Rudaminos g.;;Skaidiškės
-4314;link miesto;5460640;2538357;4313,4312
-4316;iš miesto;5460569;2538255;4313,4318
-4311;link Minsko pl.;5461040;2538701;4312,4310;Skaidiškių žiedas
-4312;link miesto;5460943;2538599;4311,4314
+4314;link miesto;5460640;2538357;4313,4312;Skaidiškės;;Rudaminos g. 
+4316;iš miesto;5460569;2538255;4313,4318;Skaidiškės;;Rudaminos g.  
+4311;link Minsko pl.;5461040;2538701;4312,4310;Skaidiškių žiedas;;
+4312;link miesto;5460943;2538599;4311,4314;Skaidiškės;;
 4315;išlaipinimas;5460573;2539316;4313;Skaistės st.;;Sodų g.
 0914;iš centro;5470419;2528405;0915,0706;Broniaus Laurinavičiaus skveras;wifi,wc;Kalvarijų g.;;Šnipiškės
-0707;link centro;5470734;2528494;0916,0915;Giedraičių st.;wifi
-0916;iš centro;5470804;2528550;0707,0928,0708
-0709;link centro;5471448;2528664;2015,0804,0803;Pramogų arena;0
-0802;iš centro;5471626;2528694;2015,0804,2014
-0708;link centro;5471169;2528625;0803,0916;Tauragnų st.;wifi
-0803;iš centro;5471234;2528672;0708,0709,0926;;0
-0705;link centro;5470308;2528353;0914b,0706;Žalgirio st.;wifi
-0915;link Žaliųjų ežerų;5470436;2528434;0914,5147,0707;;0;Verkių g.
+0707;link centro;5470734;2528494;0916,0915;Giedraičių st.;wifi;Kalvarijų g. 
+0916;iš centro;5470804;2528550;0707,0928,0708;Giedraičių st.;;Kalvarijų g.  
+0709;link centro;5471448;2528664;2015,0804,0803;Pramogų arena;0;Kalvarijų g.   
+0802;iš centro;5471626;2528694;2015,0804,2014;Pramogų arena;;Kalvarijų g.    
+0708;link centro;5471169;2528625;0803,0916;Tauragnų st.;wifi;Kalvarijų g.     
+0803;iš centro;5471234;2528672;0708,0709,0926;Tauragnų st.;0;Kalvarijų g.      
+0705;link centro;5470308;2528353;0914b,0706;Žalgirio st.;wifi;Kalvarijų g.       
+0915;link Žaliųjų ežerų;5470436;2528434;0914,5147,0707;Žalgirio st.;0;Verkių g.
 5181;link centro;5470357;2528703;0913,5147;Trimitų st.;;Žalgirio g.
-0706;link Geležinio Vilko g.;5470390;2528302;0711,0914,0705;Žalgirio st.
+0706;link Geležinio Vilko g.;5470390;2528302;0711,0914,0705;Žalgirio st.;;Žalgirio g. 
 0101b;iš centro;5469303;2528092;0101,0109,0103;Žaliasis tiltas (laikina);;Kalvarijų g.
 0712;liš centro;5470204;2527568;0713,0716;Kernavės st.;;Kernavės g.
-0713;į centrą;5470129;2527491;0712,0715
-0715;;5469887;2527435;0717,0713;Krokuvos st.
-0717;;5469846;2527328;0715,0113,0114;;;Lvivo g.
-0718;;5469947;2526883;0115,0106,0114;Šnipiškės
+0713;į centrą;5470129;2527491;0712,0715;Kernavės st.;;Kernavės g. 
+0715;;5469887;2527435;0717,0713;Krokuvos st.;;Kernavės g.  
+0717;;5469846;2527328;0715,0113,0114;Krokuvos st.;;Lvivo g.
+0718;;5469947;2526883;0115,0106,0114;Šnipiškės;;Lvivo g. 
 0825;link Pramogų arenos;5471465;2527770;0827,2016;Ozo žiedas;;Ozo g.
-0827;išlaipinimas;5471539;2527730;0826,0825
+0827;išlaipinimas;5471539;2527730;0826,0825;Ozo žiedas;;Ozo g. 
 0716;;5470417;2527691;0712,0702,0711;Oršos st.;;Žalgirio g.
 3910;link miesto;5474939;2518096;5014,5013,5020;Raudonbalė;;Putiniškių g.;;Tarandė
 5009;link centro;5474665;2519087;5019a,5011,4412;Laidagaliai;;Tarandės g.
-5006;link centro;5474938;2520812;5007,5007a,5003;Tarandė
-5007;iš centro;5474932;2520724;5006,5016
-5011;link centro;5474800;2519964;5016,5009,4407;Tomo Žebrausko st.
+5006;link centro;5474938;2520812;5007,5007a,5003;Tarandė;;Tarandės g. 
+5007;iš centro;5474932;2520724;5006,5016;;;
+5011;link centro;5474800;2519964;5016,5009,4407;Tomo Žebrausko st.;;
 5005;link centro;5475758;2520566;5015,5018,5007a;Bukiškių st.;;Ukmergės g.
-5003;iš centro;5475095;2521377;5004,5006;Medelynas
-5004;link centro;5474959;2521489;5003,3837a
-5001;iš centro;5474187;2522410;5002,3837;Pavilionys
-5002;link centro;5474197;2522351;5001,3318
+5003;iš centro;5475095;2521377;5004,5006;Medelynas;;Ukmergės g. 
+5004;link centro;5474959;2521489;5003,3837a;Medelynas;;Ukmergės g.  
+5001;iš centro;5474187;2522410;5002,3837;Pavilionys;;Ukmergės g.   
+5002;link centro;5474197;2522351;5001,3318;Pavilionys;;Ukmergės g.    
 5020;iš centro;5475011;2518665;5019a,3910;Gegliškių st.;;Gegliškių g.
 5019;iš centro;5475248;2519173;5019a,5018a;Juozo Kamarausko st.;;Juozo Kamarausko g.
-5019a;į centrą;5475087;2519096;5019,5020,5009;Juozo Kamarausko st. (laikina)
+5019a;į centrą;5475087;2519096;5019,5020,5009;Juozo Kamarausko st. (laikina);;Juozo Kamarausko g. 
 5014;link centro;5474907;2517862;3910;Kelmiškių st.;;Kelmiškių g.
 5018;iš centro;5475556;2519598;5018a,5005;Kelpių st.;;Kelpių g.
-5018a;į centrą;5475531;2519607;5018,5019;Kelpių st. (laikina)
+5018a;į centrą;5475531;2519607;5018,5019;Kelpių st. (laikina);;Kelpių g. 
 5013;link centro;5474649;2518251;3910;Pagrandos st.;;Putiniškių g.
 5016;iš centro;5474929;2520103;5011,5007;Tomo Žebrausko st.;;Tomo Žebrausko g.
 6006;;5462002;2506492;6005,6016,6003;Lentvario kryžkelė;;0;;Trakų rajonas
-6003;;5462329;2502273;6004,6006,3126;Račkūnai
-6004;;5462352;2502211;6003
+6003;;5462329;2502273;6004,6006,3126;Račkūnai;;
+6004;;5462352;2502211;6003;;;
 4117;link miesto;5470001;2506367;4126,5144a;Valai;;Ąžuolų g.
 6005;;5461951;2506831;6006,6008;Lentvario kryžkelė;;Galvės g.
 6001;;5462830;2494484;6002;Kaimelis;;Vilniaus g.
-6002;;5462858;2494408;6001,6000
+6002;;5462858;2494408;6001,6000;;;
 6000;;5463325;2493478;6002;Trakų AS;;Vytauto g.
 3109;link miesto;5462400;2511253;3106,3108,2940;Trakų Vokė;;Abiejų Tautų Respublikos pl.;;Trakų Vokė
-3106;iš miesto;5462368;2511000;3109,3101
+3106;iš miesto;5462368;2511000;3109,3101;Trakų Vokė;;Abiejų Tautų Respublikos pl. 
 3101;iš miesto;5462843;2510818;3105,3106,3920;Eduardo Andrė st.;;Eduardo Andrė g.
 3105;link E.Andrė st.;5462730;2510127;3101,6007;Gunkliškių st.;;Gunkliškių g.
 3110;link miesto;5460393;2513419;3111,3114;Bičiulių st.;;Juozo Tiškevičiaus g.
-3111;iš miesto;5460313;2513479;3110,3120
-3112;link miesto;5461762;2511657;3113,3107;Emilijos Pliaterytės st.
-3113;iš miesto;5461700;2511674;3112,3102
-3102;link miesto;5461208;2512092;3103,3113;Juodbaliai
-3103;iš miesto;5461189;2512084;3102,3115
-3107;iš miesto;5462135;2511329;3108,3112;Juozo Tiškevičiaus st.
-3108;link miesto;5462198;2511288;3107,3109
-3114;iš miesto;5460831;2512912;3115,3110;Metropolis
-3115;link miesto;5460870;2512891;3114,3103,2822
+3111;iš miesto;5460313;2513479;3110,3120;Bičiulių st.;;Juozo Tiškevičiaus g. 
+3112;link miesto;5461762;2511657;3113,3107;Emilijos Pliaterytės st.;;Juozo Tiškevičiaus g.  
+3113;iš miesto;5461700;2511674;3112,3102;Emilijos Pliaterytės st.;;Juozo Tiškevičiaus g.   
+3102;link miesto;5461208;2512092;3103,3113;Juodbaliai;;Juozo Tiškevičiaus g.    
+3103;iš miesto;5461189;2512084;3102,3115;Juodbaliai;;Juozo Tiškevičiaus g.     
+3107;iš miesto;5462135;2511329;3108,3112;Juozo Tiškevičiaus st.;;Juozo Tiškevičiaus g.      
+3108;link miesto;5462198;2511288;3107,3109;Juozo Tiškevičiaus st.;;Juozo Tiškevičiaus g.       
+3114;iš miesto;5460831;2512912;3115,3110;Metropolis;;Juozo Tiškevičiaus g.        
+3115;link miesto;5460870;2512891;3114,3103,2822;Metropolis;;Juozo Tiškevičiaus g.         
 0428;iš centro;5468024;2529365;0426,1447,0429;Vilnios st.;;Užupio g.;;Užupis
 1443;;5468328;2530266;0433,0434,1210;Užupio gimnazija;laikina;Krivių g.
-1444;į centrą;5468151;2529920;1446;Varpų st.
-1446;iš miesto;5468148;2529930;1444,0433
+1444;į centrą;5468151;2529920;1446;Varpų st.;;
+1446;iš miesto;5468148;2529930;1444,0433;;;
 1447;link centro;5468019;2529546;0428,1448;Angelo st.;;Užupio g.
 5110a;link Pagirių;5460180;2519765;5111a,5110;Baltoji Vokė;0;Durpių g.;;Užusienis
-5111a;link Eišiškių pl.;5460173;2519832;5110a,5138,5108
+5111a;link Eišiškių pl.;5460173;2519832;5110a,5138,5108;;;
 2704;link miesto;5462186;2524387;5117,2705,2703;Ąžuolijai;;Eišiškių pl.
-5117;iš miesto;5462168;2524273;2704,5200
-2702;iš miesto;5462740;2524954;2703,2717;Eišiškių sodai
-2703;link miesto;5462625;2524947;2702,2704
-5108;iš miesto;5461123;2521761;5109,5111a;Raisteliai
-5109;link miesto;5461139;2521812;5108,5145
+5117;iš miesto;5462168;2524273;2704,5200;Ąžuolijai;;Eišiškių pl. 
+2702;iš miesto;5462740;2524954;2703,2717;Eišiškių sodai;;Eišiškių pl.  
+2703;link miesto;5462625;2524947;2702,2704;Eišiškių sodai;;Eišiškių pl.   
+5108;iš miesto;5461123;2521761;5109,5111a;Raisteliai;;Eišiškių pl.    
+5109;link miesto;5461139;2521812;5108,5145;Raisteliai;;Eišiškių pl.     
 2705;iš miesto;5462026;2524455;2704,2706;Ąžuolijai;;Mechanikų g.
 2717;link miesto;5463383;2524933;2716,2629,2702;Dieveniškių st.;;Užusienio g.
-2716;iš miesto;5463407;2524880;2717,2701
-2701;įlaipinimas;5463298;2523943;2716,2432;Užusienis
+2716;iš miesto;5463407;2524880;2717,2701;Dieveniškių st.;;Užusienio g. 
+2701;įlaipinimas;5463298;2523943;2716,2432;Užusienis;;Užusienio g.  
 2816;link žiedo;5460143;2518212;2817,2501,2827;Šaltinio st.;;Krantinės g.;;Vaidotai
-2817;link miesto;5460171;2518311;2816,2824
-2501;įlaipinimas;5459876;2517635;2502,2816;Vaidotai
-2824;link Vaidotų;5460412;2519113;2819,5111,2817;Krantinės st.
+2817;link miesto;5460171;2518311;2816,2824;Šaltinio st.;;Krantinės g. 
+2501;įlaipinimas;5459876;2517635;2502,2816;Vaidotai;;Krantinės g.  
+2824;link Vaidotų;5460412;2519113;2819,5111,2817;Krantinės st.;;Krantinės g.   
 2502;įlaipinimas;5459597;2517562;2501,3118;Vėjo st.;;Vėjo g.
 3546;link centro;5479303;2542904;3559,3544;Balžio st.;;Balžio g.;;Valakupiai
-3559;iš centro;5479300;2542967;3546,3558
-3558;įlaipinimas;5479419;2543652;3559;Balžio žiedas
-5179;link Nemenčinės pl.;5477744;2538975;5180,3542a,3541;Girinaičių st.
-5180;link žiedo;5477745;2538993;5179,3545
-3544;iš centro;5478333;2540463;3545,3546;Miškas
-3545;link centro;5478307;2540316;3544,5180
+3559;iš centro;5479300;2542967;3546,3558;Balžio st.;;Balžio g. 
+3558;įlaipinimas;5479419;2543652;3559;Balžio žiedas;;Balžio g.  
+5179;link Nemenčinės pl.;5477744;2538975;5180,3542a,3541;Girinaičių st.;;
+5180;link žiedo;5477745;2538993;5179,3545;;;
+3544;iš centro;5478333;2540463;3545,3546;Miškas;;
+3545;link centro;5478307;2540316;3544,5180;Miškas;;
 3511;link Turniškių g.;5474069;2532285;3512,3510;Mėlynių st.;;Grybautojų g.
-3554;link centro;5474065;2531469;3512,3569;Svajonių st.
+3554;link centro;5474065;2531469;3512,3569;Svajonių st.;;Grybautojų g. 
 3501;link Žirmūnų;5472783;2531438;1121,3502,0820;Oskaro Milašiaus st.;;Kareivių g.
 3514;link Nemenčinės pl.;5473295;2531820;3571,3513,3515;Grybautojų st.;;Lakštingalų g.
-3515;link Nemenčinės pl.;5473140;2532414;3516,3514;Žuvėdrų st.
-3516;link Grybautojų g.;5473133;2532467;3515,1123
+3515;link Nemenčinės pl.;5473140;2532414;3516,3514;Žuvėdrų st.;;Lakštingalų g. 
+3516;link Grybautojų g.;5473133;2532467;3515,1123;Žuvėdrų st.;;Lakštingalų g.  
 3560;link centro;5478949;2538327;3551,3543,2169;Laurų st.;;Laurų g.
 3502;link centro;5472872;2531366;3564,3501;Lizdeikos st.;;Lizdeikos g.
-3503;link centro;5473082;2530869;3565,3500;Rato st.
+3503;link centro;5473082;2530869;3565,3500;Rato st.;;Lizdeikos g. 
 3547;iš centro;5479863;2539775;3548,3549;Antaviliai;;Nemenčinės pl.
-3548;link centro;5479822;2539651;3555,3547,3550
-3549;įlaipinimas;5479980;2539922;3547,3562;Antavilių žiedas
-3522;iš centro;5473855;2534438;3521,3552,3523;Ežerėlių st.
-3521;link centro;5473784;2534252;3522,3520,3510
-3550;iš centro;5479425;2539154;3551,3548;Jono Biliūno st.
-3551;link centro;5479371;2539069;3550,3560
-3540;link centro;5477234;2538218;3541,3539a;Karačiūnai
-3541;iš centro;5477306;2538303;3540,5179
-3520;link Nemenčinės;5473457;2533814;3519,3521;Kiškių st.
-3519;link centro;5473383;2533664;3520,3518,1006
-1123;link centro;5472880;2532883;3518,1021,3516;Lakštingalų st.
-3518;link Nemenčinės;5472998;2533112;1123,3519
-3553;iš centro;5474176;2534931;3552,3534;Nugalėtojų st.
-3552;link centro;5474172;2534857;3553,3522
-3542;link centro;5478204;2538346;3542a,3543a,2166;Šilas
-3543;iš centro;5478313;2538376;3543a,3560
-3537;iš centro;5475471;2536580;3536,3538a;Smėlynė
-3536;link centro;5475437;2536489;3537,3535,2214
-3534;link centro;5474815;2535776;3535,3553;Turniškių miškas
-3535;iš centro;5474838;2535849;3534,3536
-3538;link centro;5476149;2537262;3538a;Veržuvos st.
-3539;iš centro;5476224;2537405;3538a,3539a
+3548;link centro;5479822;2539651;3555,3547,3550;Rato st.;;Nemenčinės pl. 
+3549;įlaipinimas;5479980;2539922;3547,3562;Antavilių žiedas;;
+3522;iš centro;5473855;2534438;3521,3552,3523;Ežerėlių st.;;
+3521;link centro;5473784;2534252;3522,3520,3510;Ežerėlių st.;;
+3550;iš centro;5479425;2539154;3551,3548;Jono Biliūno st.;;
+3551;link centro;5479371;2539069;3550,3560;Jono Biliūno st.;;
+3540;link centro;5477234;2538218;3541,3539a;Karačiūnai;;
+3541;iš centro;5477306;2538303;3540,5179;Karačiūnai;;
+3520;link Nemenčinės;5473457;2533814;3519,3521;Kiškių st.;;
+3519;link centro;5473383;2533664;3520,3518,1006;Kiškių st.;;
+1123;link centro;5472880;2532883;3518,1021,3516;Lakštingalų st.;;
+3518;link Nemenčinės;5472998;2533112;1123,3519;Lakštingalų st.;;
+3553;iš centro;5474176;2534931;3552,3534;Nugalėtojų st.;;
+3552;link centro;5474172;2534857;3553,3522;Nugalėtojų st.;;
+3542;link centro;5478204;2538346;3542a,3543a,2166;Šilas;;
+3543;iš centro;5478313;2538376;3543a,3560;Šilas;;
+3537;iš centro;5475471;2536580;3536,3538a;Smėlynė;;
+3536;link centro;5475437;2536489;3537,3535,2214;Smėlynė;;
+3534;link centro;5474815;2535776;3535,3553;Turniškių miškas;;
+3535;iš centro;5474838;2535849;3534,3536;Turniškių miškas;;
+3538;link centro;5476149;2537262;3538a;Veržuvos st.;;
+3539;iš centro;5476224;2537405;3538a,3539a;Veržuvos st.;;
 3533;įlaipinimas;5474999;2542812;3532;Aukštoji Veržuva;;Šilėnų g.
-3532;iš centro;5474711;2541714;3531,3533;Vaguva
-3531;link centro;5474725;2541687;3532,3572
+3532;iš centro;5474711;2541714;3531,3533;Vaguva;;Šilėnų g. 
+3531;link centro;5474725;2541687;3532,3572;Vaguva;;Šilėnų g.  
 3507;link centro;5474355;2530345;3568,3567,2129;Bruknių st.;;Svajonių g.
 3510;išlaipinimas;5474512;2532753;3508,3511,3521,2202;Turniškės;;Turniškių g
 3504;link Antakalnio;5473311;2529605;3500,3505,0830;1-asis paplūdimys;;Vaidilutės g.
-3506;link Antakalnio;5474239;2529460;3567,2115;2-asis paplūdimys
-3505;link centro;5473604;2529455;3566,3504;Vaidilutės st.
+3506;link Antakalnio;5474239;2529460;3567,2115;2-asis paplūdimys;;Vaidilutės g. 
+3505;link centro;5473604;2529455;3566,3504;Vaidilutės st.;;Vaidilutės g.  
 3513;link Svajonių g.;5473330;2531756;3514,3512;Grybautojų st.;;Valakupių g.
-3512;link Svajonių g.;5473969;2531569;3554,3511,3513;Mėlynių st.
-3509;link Turniškių g.;5474585;2531977;3509a,3508;Meškeriotojų st.
-3508;link Grybautojų g.;5474621;2532017;3509,3510
+3512;link Svajonių g.;5473969;2531569;3554,3511,3513;Mėlynių st.;;
+3509;link Turniškių g.;5474585;2531977;3509a,3508;Meškeriotojų st.;;
+3508;link Grybautojų g.;5474621;2532017;3509,3510;Meškeriotojų st.;;
 3564;link Turniškių;5472898;2531338;3502,3565,3571;Lizdeikos st.;;Lizdeikos g.
-3565;link Turniškių;5473061;2530952;3503,3564;Rato st.
+3565;link Turniškių;5473061;2530952;3503,3564;Rato st.;;Lizdeikos g. 
 3509a;;5474590;2531924;3509;Meškeriotojų st.;;Meškeriotojų g.
 3555;iš centro;5479877;2539630;3548;Antaviliai;;Nemenčinės pl.
-3539a;iš centro;5476372;2537525;3539,2218,3540,3561;Veržuvos st.(laikina)
-3538a;link centro;5476139;2537292;3538,3539,3537
+3539a;iš centro;5476372;2537525;3539,2218,3540,3561;Veržuvos st.(laikina);;Nemenčinės pl. 
+3538a;link centro;5476139;2537292;3538,3539,3537;Veržuvos st.(laikina);;Nemenčinės pl.  
 3568;link Turniškių;5474326;2530429;3507,3569;Bruknių st.;;Svajonių g.
-3569;link Turniškių;5474109;2531276;3554,3568;Svajonių st.
+3569;link Turniškių;5474109;2531276;3554,3568;Svajonių st.;;Svajonių g. 
 3500;iš centro;5473265;2529831;3504,0818,3503;1-asis paplūdimys;;Vaidilutės g.
-3567;link Turniškių;5474190;2529484;3506,3507,3566;2-asis paplūdimys
-3566;link Turniškių;5473656;2529460;3505,3567;Vaidilutės st.
+3567;link Turniškių;5474190;2529484;3506,3507,3566;2-asis paplūdimys;;Vaidilutės g. 
+3566;link Turniškių;5473656;2529460;3505,3567;Vaidilutės st.;;Vaidilutės g.  
 3571;link Turniškių;5473258;2531774;3514,3564;Grybautojų st.;;Valakupių g.
 2106;iš miesto;5475508;2526182;2106a,2111,2105;Chemijos institutas;;Bajorų kelias;;Verkiai
 2245;įlaipinimas;5482336;2533030;2243,2248;Birelių žiedas;;Birelių g.
 2248;visos kryptys;5482508;2535353;2300,2245,2246;Europos parkas;;Europos parko g.
-2246;iš miesto;5480947;2535237;2247,2248;Juozapiškės
-2247;link miesto;5480698;2535280;2246,2227
-2227;link Skirgiškių;5480194;2534928;2226,2247;Naujaneriai
+2246;iš miesto;5480947;2535237;2247,2248;Juozapiškės;;Europos parko g. 
+2247;link miesto;5480698;2535280;2246,2227;Juozapiškės;;Europos parko g.  
+2227;link Skirgiškių;5480194;2534928;2226,2247;Naujaneriai;;Europos parko g.   
 5191;link miesto;5476817;2527152;5198,5116;Prašiškės;;Molėtų pl.
-5198;iš miesto;5476860;2527183;5191,5107
-5116;iš miesto;5476518;2527190;5115,5191,2137;Skersinės st.
-5115;link miesto;5476453;2527160;5116,2146
+5198;iš miesto;5476860;2527183;5191,5107;Prašiškės;;Molėtų pl. 
+5116;iš miesto;5476518;2527190;5115,5191,2137;Skersinės st.;;Molėtų pl.  
+5115;link miesto;5476453;2527160;5116,2146;Skersinės st.;;Molėtų pl.   
 2224;iš miesto;5476332;2534632;2225,2214;Naujoji st.;;Ožkinių g.
-2225;link miesto;5476349;2534598;2224,2204
-2217;iš miesto;5476718;2536150;2216,2218;Ožkiniai
-2216;link miesto;5476706;2536011;2217,2215,2269
-2218;įlaipinimas;5476844;2536646;2217,3539a;Ožkinių žiedas
-2215;iš miesto;5476398;2535276;2214,2216;Staviškės
-2214;link miesto;5476345;2535162;2215,2224,3536
+2225;link miesto;5476349;2534598;2224,2204;Naujoji st.;;Ožkinių g. 
+2217;iš miesto;5476718;2536150;2216,2218;Ožkiniai;;Ožkinių g.  
+2216;link miesto;5476706;2536011;2217,2215,2269;Ožkiniai;;Ožkinių g.   
+2218;įlaipinimas;5476844;2536646;2217,3539a;Ožkinių žiedas;;Ožkinių g.    
+2215;iš miesto;5476398;2535276;2214,2216;Staviškės;;Ožkinių g.     
+2214;link miesto;5476345;2535162;2215,2224,3536;Staviškės;;Ožkinių g.      
 2233;iš miesto;5480584;2531892;2234,2235;Gulbinų st.;;Pagubės g.
-2234;link miesto;5480560;2531976;2233,2252
-2235;išlaipinimas;5480796;2531320;2233,2285;Pagubė
+2234;link miesto;5480560;2531976;2233,2252;Gulbinų st.;;Pagubės g. 
+2235;išlaipinimas;5480796;2531320;2233,2285;Pagubė;;Pagubės g.  
 2206;iš miesto;5476698;2533586;2207,2204;Kremplių st.;;Popieriaus g.
-2207;link miesto;5476725;2533566;2206,2209
-2202;link miesto;5475984;2533217;2205,3510;Naujieji Verkiai
-2208;iš miesto;5476987;2533202;2209,2211;Popieriaus st.
-2209;link miesto;5476996;2533261;2208,2207,2212
-2205;link miesto;5476256;2533563;2204,2202;Vaikų darželis
-2204;iš miesto;5476306;2533591;2205,2206,2225
+2207;link miesto;5476725;2533566;2206,2209;Kremplių st.;;Popieriaus g. 
+2202;link miesto;5475984;2533217;2205,3510;Naujieji Verkiai;;Popieriaus g.  
+2208;iš miesto;5476987;2533202;2209,2211;Popieriaus st.;;Popieriaus g.   
+2209;link miesto;5476996;2533261;2208,2207,2212;Popieriaus st.;;Popieriaus g.    
+2205;link miesto;5476256;2533563;2204,2202;Vaikų darželis;;Popieriaus g.     
+2204;iš miesto;5476306;2533591;2205,2206,2225;Vaikų darželis;;Popieriaus g.      
 2243;iš miesto;5482118;2532066;2244,2245;Bireliai;;Sakališkių g.
-2244;link miesto;5482099;2532052;2243,2237
-2230;iš miesto;5480323;2532958;2231,2250;Diemedis
-2231;link miesto;5480289;2532974;2230,2229
-2228;iš miesto;5480030;2533611;2229,2260;Paežerys
-2229;link miesto;5480012;2533534;2228,2231
-2237;iš miesto;5481469;2532187;2249,2244;Sakališkės
+2244;link miesto;5482099;2532052;2243,2237;Bireliai;;Sakališkių g. 
+2230;iš miesto;5480323;2532958;2231,2250;Diemedis;;Sakališkių g.  
+2231;link miesto;5480289;2532974;2230,2229;Diemedis;;Sakališkių g.   
+2228;iš miesto;5480030;2533611;2229,2260;Paežerys;;Sakališkių g.    
+2229;link miesto;5480012;2533534;2228,2231;Paežerys;;Sakališkių g.     
+2237;iš miesto;5481469;2532187;2249,2244;Sakališkės;;Sakališkių g.      
 2240;;5478655;2535317;2261,2164,2236;Žvorūnos st.;;Užpalių g.
 2130;iš miesto;5476131;2530666;2286,2129;Ežerėliai;;Žaliųjų Ežerų g.
-2201;link miesto;5476255;2531018;2286,2210
-2238;iš miesto;5479594;2534992;2239,2241;Krakiškės
-2239;link miesto;5479522;2535003;2238,2223
-2223;iš miesto;5479219;2535118;2236,2239;Kryžiokai
-2236;link miesto;5479161;2535127;2223,2240
-2226;link miesto, Birelių;5480173;2534841;2242,2227;Naujaneriai
-2220;iš miesto;5478076;2534263;2219,2221;Ragučio st.
-2219;link miesto;5478026;2534204;2220,2265
-2211;iš miesto;5477033;2532744;2210,2208;Verkių bendruomenės namai
-2210;link miesto;5477002;2532650;2211,2201
-2213;iš miesto;5477739;2533811;2212,2267;Verkių Riešė
-2212;link miesto;5477695;2533699;2213,2209
-2129;iš miesto;5475236;2529645;2128,3507,2130;Verkių rūmai
-2128;link miesto;5475224;2529599;2129,2127a
+2201;link miesto;5476255;2531018;2286,2210;Ežerėliai;;Žaliųjų Ežerų g. 
+2238;iš miesto;5479594;2534992;2239,2241;Krakiškės;;Žaliųjų Ežerų g.  
+2239;link miesto;5479522;2535003;2238,2223;Krakiškės;;Žaliųjų Ežerų g.   
+2223;iš miesto;5479219;2535118;2236,2239;Kryžiokai;;Žaliųjų Ežerų g.    
+2236;link miesto;5479161;2535127;2223,2240;Kryžiokai;;Žaliųjų Ežerų g.     
+2226;link miesto, Birelių;5480173;2534841;2242,2227;Naujaneriai;;Žaliųjų Ežerų g.      
+2220;iš miesto;5478076;2534263;2219,2221;Ragučio st.;;Žaliųjų Ežerų g.       
+2219;link miesto;5478026;2534204;2220,2265;Ragučio st.;;Žaliųjų Ežerų g.        
+2211;iš miesto;5477033;2532744;2210,2208;Verkių bendruomenės namai;;Žaliųjų Ežerų g.         
+2210;link miesto;5477002;2532650;2211,2201;Verkių bendruomenės namai;;Žaliųjų Ežerų g.          
+2213;iš miesto;5477739;2533811;2212,2267;Verkių Riešė;;Žaliųjų Ežerų g.           
+2212;link miesto;5477695;2533699;2213,2209;Verkių Riešė;;Žaliųjų Ežerų g.            
+2129;iš miesto;5475236;2529645;2128,3507,2130;Verkių rūmai;;Žaliųjų Ežerų g.             
+2128;link miesto;5475224;2529599;2129,2127a;Verkių rūmai;;Žaliųjų Ežerų g.              
 2252;iš miesto;5480621;2532679;2251,2234;Pagubės sodai;;Pagubės g.
 2253;iš miesto;5481125;2532378;2254,2249;Ąžuolynas;;Sakališkių g.
-2254;link miesto;5481099;2532384;2253,2251
-2250;link miesto;5480599;2532749;2251,2230;Pagubės sodai
-2251;iš miesto;5480638;2532727;2252,2250,2254
-2249;link miesto;5481465;2532173;2237,2253;Sakališkės
+2254;link miesto;5481099;2532384;2253,2251;Ąžuolynas;;Sakališkių g. 
+2250;link miesto;5480599;2532749;2251,2230;Pagubės sodai;;Sakališkių g.  
+2251;iš miesto;5480638;2532727;2252,2250,2254;Pagubės sodai;;Sakališkių g.   
+2249;link miesto;5481465;2532173;2237,2253;Sakališkės;;Sakališkių g.    
 2265;iš miesto;5477860;2534072;2267,2219,2255;Žaliojo Visalaukio st.;;Žaliųjų Ežerų g.
-2267;link miesto;5477863;2534044;2265,2213
+2267;link miesto;5477863;2534044;2265,2213;Žaliojo Visalaukio st.;;Žaliųjų Ežerų g. 
 5196;iš centro;5466898;2523783;5197,0608;Giraitės st.;;Geležinio Vilko g.;;Vilkpėdė
-5197;link centro;5466873;2523817;5196,0607,2404
-0611;iš centro;5467688;2524579;0615,0616;Vinco Pietario st.
-0609;iš centro;5467280;2523943;0609a,0606;Vingio parkas
-0610;link centro;5467405;2524199;0609a,0603
+5197;link centro;5466873;2523817;5196,0607,2404;Giraitės st.;;Geležinio Vilko g. 
+0611;iš centro;5467688;2524579;0615,0616;Vinco Pietario st.;;Geležinio Vilko g.  
+0609;iš centro;5467280;2523943;0609a,0606;Vingio parkas;;Geležinio Vilko g.   
+0610;link centro;5467405;2524199;0609a,0603;Vingio parkas;;Geležinio Vilko g.    
 0606;iš centro, autobusų;5467080;2524196;0607,0609;Gerosios Vilties st.;;Savanorių pr.
-0607;link centro, troleibusų;5467040;2524159;0606,5197;;wifi
-0603;iš centro;5467340;2524700;0602a,0610;Savanorių prospektas
-0602a;link centro;5467403;2524860;0603,0601
+0607;link centro, troleibusų;5467040;2524159;0606,5197;Gerosios Vilties st.;wifi;Savanorių pr. 
+0603;iš centro;5467340;2524700;0602a,0610;Savanorių prospektas;;Savanorių pr.  
+0602a;link centro;5467403;2524860;0603,0601;Savanorių prospektas;;Savanorių pr.   
 0612;iš centro;5467135;2525735;0535,0515;Statybininkų st.;0;Žemaitės g.
-0601;link stoties;5467489;2525194;0615,0602a,0515;Žemaitės st.
+0601;link stoties;5467489;2525194;0615,0602a,0515;Žemaitės st.;;Žemaitės g. 
 0616;iš centro;5468193;2524847;0617,0611,0609b;Jaunas kaip Vilnius;;Geležinio Vilko g.
-0617;į centrą;5468208;2524890;0616
+0617;į centrą;5468208;2524890;0616;;;
 0615;į centrą;5467638;2525014;0601,0611,0509;Vinco Pietario st.;;Vinco Pietario g
 5144;įlaipinimas;5470931;2510116;5144a,3620,3611;Karveliškių kapinės;;0;;Vilniaus rajonas
-5144a;išlaipinimas;5470928;2510079;5144,4117
+5144a;išlaipinimas;5470928;2510079;5144,4117;Karveliškių kapinės;;0 
 3615;iš miesto;5471244;2514919;3655,3617;Kriaučiūnai;;Čekoniškių g.
-3616;link miesto;5471200;2515055;3655,3659
-3617;iš miesto;5471607;2513202;3618,3610,3615;Papiškės
-3618;link miesto;5471643;2512997;3617,3619
-3619;iš miesto;5471746;2511279;3620,3618;Vaivadiškės
-3620;link miesto;5471720;2511156;3619,5144
+3616;link miesto;5471200;2515055;3655,3659;Kriaučiūnai;;Čekoniškių g. 
+3617;iš miesto;5471607;2513202;3618,3610,3615;Papiškės;;Čekoniškių g.  
+3618;link miesto;5471643;2512997;3617,3619;Papiškės;;Čekoniškių g.   
+3619;iš miesto;5471746;2511279;3620,3618;Vaivadiškės;;Čekoniškių g.    
+3620;link miesto;5471720;2511156;3619,5144;Vaivadiškės;;Čekoniškių g.     
 5199;iš miesto;5461641;2522780;5200,5145;Panerių miškas;;Eišiškių pl.
-5200;link miesto;5461701;2522945;5199,5117
+5200;link miesto;5461701;2522945;5199,5117;Panerių miškas;;Eišiškių pl. 
 2384regio;iš miesto;5469852;2549468;2385regio,2386regio;Lyta;;Pramonės g.
-2385regio;į miestą;5469808;2549333;2384regio,2382regio
+2385regio;į miestą;5469808;2549333;2384regio,2382regio;Lyta;;Pramonės g. 
 2386regio;galinė st.;5470245;2551650;2384regio;Mickūnai;;Vilniaus g. (Mickūnai)
 5300;;5457973;2526661;2720,5301,5303;Juodšiliai;;0
-5301;;5458059;2526724;5300,4361
-5148;iš miesto;5480778;2528081;5150,5141;Kalinas
-5150;link miesto;5480772;2528147;5148,5149
-4360;iš miesto;5458789;2529504;4361,4325;Kalviškės
-4361;link miesto;5458808;2529391;4360,5301,2733
-5302;;5456325;2526185;5303;Valčiūnai
-5303;;5456385;2526225;5302,5300
+5301;;5458059;2526724;5300,4361;;;
+5148;iš miesto;5480778;2528081;5150,5141;Kalinas;;
+5150;link miesto;5480772;2528147;5148,5149;Kalinas;;
+4360;iš miesto;5458789;2529504;4361,4325;Kalviškės;;
+4361;link miesto;5458808;2529391;4360,5301,2733;;;
+5302;;5456325;2526185;5303;Valčiūnai;;
+5303;;5456385;2526225;5302,5300;;;
 5217;link D.Riešės;5480916;2522766;5218,5103;Ežero st.;;Bendorių kelias
-5218;link M.Riešės;5480892;2522533;5217,5207
-5207;iš miesto;5480259;2520262;5208,5218;Mažoji Riešė
-5208;link miesto;5480257;2520164;5207,5209
+5218;link M.Riešės;5480892;2522533;5217,5207;Ežero st.;;Bendorių kelias 
+5207;iš miesto;5480259;2520262;5208,5218;Mažoji Riešė;;Bendorių kelias  
+5208;link miesto;5480257;2520164;5207,5209;Mažoji Riešė;;Bendorių kelias   
 5231;;5463861;2539994;5232,4329;1-asis Didžiasalis;;Filaretų g.
-5232;;5464001;2540136;5231,5228
-5226;;5464802;2540662;5228,5230;2-asis Didžiasalis
-5228;;5464777;2540621;5226,5232
-5230;;5465256;2540902;5225,5226;Naujosios Vilnios sankryža
+5232;;5464001;2540136;5231,5228;1-asis Didžiasalis;;Filaretų g. 
+5226;;5464802;2540662;5228,5230;2-asis Didžiasalis;;Filaretų g.  
+5228;;5464777;2540621;5226,5232;2-asis Didžiasalis;;Filaretų g.   
+5230;;5465256;2540902;5225,5226;Naujosios Vilnios sankryža;;Filaretų g.    
 5149;;5480372;2529594;2285,5150;Didieji Gulbinai;;Medikiškių g.
 5227;;5466329;2541498;5163,5225;Grigaičių žiedas;;Pergalės g. (Naujoji Vilnia)
 5211;iš miesto;5479055;2519565;5212,5210;Bendorėliai;;Senasis Ukmergės kelias
-5212;link miesto;5478926;2519489;5211,5213
-5209;iš miesto;5479504;2519782;5210,5208;Bendoriai
-5210;link miesto;5479446;2519728;5209,5211
-5215;iš miesto;5477086;2519584;5216,5214;Durpynas
-5216;link miesto;5477031;2519593;5215,4902
-5213;iš miesto;5478070;2519317;5214,5212;Klevinė
-5214;link miesto;5477937;2519272;5213,5215
+5212;link miesto;5478926;2519489;5211,5213;Bendorėliai;;Senasis Ukmergės kelias 
+5209;iš miesto;5479504;2519782;5210,5208;Bendoriai;;Senasis Ukmergės kelias  
+5210;link miesto;5479446;2519728;5209,5211;Bendoriai;;Senasis Ukmergės kelias   
+5215;iš miesto;5477086;2519584;5216,5214;Durpynas;;Senasis Ukmergės kelias    
+5216;link miesto;5477031;2519593;5215,4902;Durpynas;;Senasis Ukmergės kelias     
+5213;iš miesto;5478070;2519317;5214,5212;Klevinė;;Senasis Ukmergės kelias      
+5214;link miesto;5477937;2519272;5213,5215;Klevinė;;Senasis Ukmergės kelias       
 3009regio;iš miesto;5485018;2537385;3008regio,2389regio;Bratoniškės;;Skirgiškių g.
-2389regio;link miesto;5485670;2538278;2390regio,3009regio;S.b. „Pavasaris“
-2390regio;iš miesto;5485708;2538371;2389regio
+2389regio;link miesto;5485670;2538278;2390regio,3009regio;S.b. „Pavasaris“;;Skirgiškių g. 
+2390regio;iš miesto;5485708;2538371;2389regio;;;
 5219;;5465775;2537406;5221,1440;9-asis kilometras;;Šumsko pl.
-5221;;5465747;2537603;5219,5223
-5225;;5465389;2540869;5230,5224,5227;Naujosios Vilnios sankryža
-5223;;5465753;2539333;5224,5221;Slėnis
-5224;;5465714;2539439;5223,5225
+5221;;5465747;2537603;5219,5223;9-asis kilometras;;Šumsko pl. 
+5225;;5465389;2540869;5230,5224,5227;Naujosios Vilnios sankryža;;Šumsko pl.  
+5223;;5465753;2539333;5224,5221;Slėnis;;Šumsko pl.   
+5224;;5465714;2539439;5223,5225;Slėnis;;Šumsko pl.    
 5015;iš miesto;5475776;2520586;5005,4907;Bukiškių st.;;Ukmergės g.
 1815;link Pašilaičių;5470665;2521577;3220,3216;Kaukaro st.;;Justiniškių g.;;Viršuliškės
-3220;link centro;5470555;2521579;1815,1841,3407
-1810;link Justiniškių;5470361;2522353;1811,1809,1813;Spaudos rūmai;wifi
-1813;visos kryptys;5470363;2521940;1841,1810;Troleibusų parkas;0
+3220;link centro;5470555;2521579;1815,1841,3407;Kaukaro st.;;Justiniškių g. 
+1810;link Justiniškių;5470361;2522353;1811,1809,1813;Spaudos rūmai;wifi;Justiniškių g.  
+1813;visos kryptys;5470363;2521940;1841,1810;Troleibusų parkas;0;Justiniškių g.   
 1803;link Lazdynų;5471178;2522678;1818,1805,1804;Pal. Jurgio Matulaičio bažnyčia;;Laisvės pr.
-1818;link Pašilaičių;5471240;2522824;1803,1802
-1805;link Lazdynų;5470909;2522607;1807,1803;Šaulių sąjunga
-5166;link Justiniškių;5470037;2522343;5167,1811,1820;Sietyno st.
-5176;link Karoliniškių;5469858;2522124;5190,1702
-1811;link Lazdynų;5470263;2522377;1810,5166;Spaudos rūmai;wifi
-1809;link Justiniškių;5470417;2522547;1810,1819;;0
-1819;iš centro;5470649;2522676;1808,1809,1816;Viršuliškės
-1808;link Lazdynų;5470683;2522623;1819,1807;;wifi
-1807;link Pašilaičių;5470849;2522674;1805,1808;;0
+1818;link Pašilaičių;5471240;2522824;1803,1802;Pal. Jurgio Matulaičio bažnyčia;;Laisvės pr. 
+1805;link Lazdynų;5470909;2522607;1807,1803;Šaulių sąjunga;;Laisvės pr.  
+5166;link Justiniškių;5470037;2522343;5167,1811,1820;Sietyno st.;;Laisvės pr.   
+5176;link Karoliniškių;5469858;2522124;5190,1702;Sietyno st.;;Laisvės pr.    
+1811;link Lazdynų;5470263;2522377;1810,5166;Spaudos rūmai;wifi;Laisvės pr.     
+1809;link Justiniškių;5470417;2522547;1810,1819;Spaudos rūmai;0;Laisvės pr.      
+1819;iš centro;5470649;2522676;1808,1809,1816;Viršuliškės;;Laisvės pr.       
+1808;link Lazdynų;5470683;2522623;1819,1807;Viršuliškės;wifi;Laisvės pr.        
+1807;link Pašilaičių;5470849;2522674;1805,1808;Viršuliškės;0;Laisvės pr.         
 5167;link Pilaitės;5469967;2522116;5190,5166;Sietyno st.;wifi;Pilaitės pr.
-5190;link centro;5469893;2522087;5176,5167,5165;;0
+5190;link centro;5469893;2522087;5176,5167,5165;Sietyno st.;0;Pilaitės pr. 
 1820;iš centro;5470018;2522967;1718,5166;Teodoro Narbuto st.;;Teodoro Narbuto g.
-1718;link centro;5469995;2523016;1820
+1718;link centro;5469995;2523016;1820;Teodoro Narbuto st.;;Teodoro Narbuto g. 
 1816;link Laisvės pr.;5470510;2523405;1817,1819;Čiunės Sugiharos st.;;Viršuliškių g.
-1817;link Ozo g.;5470479;2523527;1816,1842,0315
+1817;link Ozo g.;5470479;2523527;1816,1842,0315;Čiunės Sugiharos st.;;Viršuliškių g. 
 1842;link Viršuliškių;5470695;2523769;1843,1817;Ąžuolyno st.;;Ažuolyno g.
-1843;link Akropolio;5470755;2523795;1842,1907
+1843;link Akropolio;5470755;2523795;1842,1907;Ąžuolyno st.;;Ažuolyno g. 
 1841;link troleibusų parko;5470330;2521824;1813,3220,5164;Viršilų st.;;Viršilų g.
 3575;;5475313;2541540;3578,3572;Inovacijų pramonės parkas;;0;;Vismaliukai
-3574;;5475380;2541403;3578,3576;Miškadvaris
-3576;;5475517;2541665;3574;Tujų st.
+3574;;5475380;2541403;3578,3576;Miškadvaris;;0 
+3576;;5475517;2541665;3574;Tujų st.;;0  
 3572;;5475228;2541632;3575,3531;Vismaliukai;;Vismaliukų g.
 2402;iš centro;5466680;2525275;0527,2424;Burbiškės;;Naugarduko g.;;Žemieji Paneriai
 2402a;iš centro;5466609;2525335;0527,0527a;;;Panerių g.
 2410;link centro;5465066;2521825;2411,2409;Baldai;;Savanorių pr.
-2411;iš centro;5464983;2521614;2410,2412,1663
-2409;iš centro;5465416;2522384;2408,2410;Pakalniškių st.
-2406;link centro;5465967;2523359;2407,2405;Riovonys
-2407;iš centro;5465893;2523233;2406,2408
-2412;link centro;5464722;2521217;2413,2411;Sausupio st.
-2414;iš centro;5464487;2520712;2415,2413;Vaduvos st.;wifi
-2415;link centro;5464438;2520665;2414,2414e;;0
-2404;link centro;5466478;2523679;2405,5197,2425;Vilkpėdės st.
-2405;iš centro;5466331;2523548;2404,2406
-2413;iš centro;5464608;2520948;2414,2412;Žemieji Paneriai
+2411;iš centro;5464983;2521614;2410,2412,1663;Baldai;;Savanorių pr. 
+2409;iš centro;5465416;2522384;2408,2410;Pakalniškių st.;;Savanorių pr.  
+2406;link centro;5465967;2523359;2407,2405;Riovonys;;Savanorių pr.   
+2407;iš centro;5465893;2523233;2406,2408;Riovonys;;Savanorių pr.    
+2412;link centro;5464722;2521217;2413,2411;Sausupio st.;;Savanorių pr.     
+2414;iš centro;5464487;2520712;2415,2413;Vaduvos st.;wifi;Savanorių pr.      
+2415;link centro;5464438;2520665;2414,2414e;Vaduvos st.;0;Savanorių pr.       
+2404;link centro;5466478;2523679;2405,5197,2425;Vilkpėdės st.;;Savanorių pr.        
+2405;iš centro;5466331;2523548;2404,2406;Vilkpėdės st.;;Savanorių pr.         
+2413;iš centro;5464608;2520948;2414,2412;Žemieji Paneriai;;Savanorių pr.          
 2422;link žiedo;5464537;2519468;2423,2419;Jankiškių st.;;Titnago g.
-2423;link centro;5464506;2519522;2422,2901
-2419;link Savanorių pr.;5464676;2519113;2420,2422,2903;Šaltupio st.
-2420;link žiedo;5464734;2519038;2419,2421
-2421;link centro;5464970;2518613;2428,2420;Titnago st.
-2416;link centro;5464262;2520425;2414e,2437,2417;Ūmėdžių st.
-2418;link centro;5464372;2520184;2417,2901;Valkininkų st.
-2417;iš centro;5464406;2520256;2418,2416
+2423;link centro;5464506;2519522;2422,2901;Jankiškių st.;;Titnago g. 
+2419;link Savanorių pr.;5464676;2519113;2420,2422,2903;Šaltupio st.;;Titnago g.  
+2420;link žiedo;5464734;2519038;2419,2421;Šaltupio st.;;Titnago g.   
+2421;link centro;5464970;2518613;2428,2420;Titnago st.;;Titnago g.    
+2416;link centro;5464262;2520425;2414e,2437,2417;Ūmėdžių st.;;Titnago g.     
+2418;link centro;5464372;2520184;2417,2901;Valkininkų st.;;Titnago g.      
+2417;iš centro;5464406;2520256;2418,2416;Valkininkų st.;;Titnago g.       
 6007;;5461973;2509049;6008,3105;Dobūklė;;Galvės g.
-6008;;5461980;2508953;6007,2941a,6005
+6008;;5461980;2508953;6007,2941a,6005;Dobūklė;;Galvės g. 
 2432;link centro;5464709;2523872;2408,2701;Riovonių g.;;Riovonių g.
 2408;link centro;5465453;2522513;2409,2407,2432;Pakalniškių st.;;Savanorių pr.
-2435;iš centro;5463880;2520398;2436,2946;Panerių kalvyno st.
-2436;link centro;5463899;2520459;2435,2434
-2437;;5464137;2520590;2434,2416;Skapiškio st.
+2435;iš centro;5463880;2520398;2436,2946;Panerių kalvyno st.;;Savanorių pr. 
+2436;link centro;5463899;2520459;2435,2434;Panerių kalvyno st.;;Savanorių pr.  
+2437;;5464137;2520590;2434,2416;Skapiškio st.;;Savanorių pr.   
 2428;link žiedo;5465030;2518546;2421a,2421,1634;Titnago st.(išlaipinimas);;Titnago g.
-2421a;išlaipinimas;5465049;2518459;2428;Titnago žiedas
+2421a;išlaipinimas;5465049;2518459;2428;Titnago žiedas;;Titnago g. 
 2434;iš centro;5464083;2520573;2437,2436;Skapiškio st.;;Vaduvos g.
-2414e;iš centro;5464332;2520551;2416,2415;Vaduvos st.
+2414e;iš centro;5464332;2520551;2416,2415;Vaduvos st.;;
 2424;įlaipinimas;5466563;2524565;2425,2402;Vilkpėdės žiedas;;Vilkpėdės g.
-2425;išlaipinimas;5466575;2524501;2424,2404
+2425;išlaipinimas;5466575;2524501;2424,2404;Vilkpėdės žiedas;;Vilkpėdės g. 
 2014;link centro;5472145;2528502;0801,0802,0831;Jono Kazlausko st.;;Kalvarijų g.;;Žirmūnai I
-0801;iš centro;5472241;2528381;2014,2012
+0801;iš centro;5472241;2528381;2014,2012;Jono Kazlausko st.;;Kalvarijų g. 
 0808;link centro;5471989;2530161;0810a;Kareivių st.;;Kareivių g.
-0812;iš centro;5472062;2530316;0810a,0814,0819
-0805;link centro;5471556;2528943;0804,0807;Pramogų arena
-0804;iš centro;5471504;2528821;0805,0709,0802;;wifi
-0819;link Žirmūnų;5472356;2530725;0820,0812;Valakampių tiltas;0
-0820;link Antakalnio;5472409;2530849;0819,3501
-0807;link Kalvarijų g.;5471687;2529360;0806,0805;Verkių st.
-0806;link Valakampių;5471732;2529562;0823,0807
+0812;iš centro;5472062;2530316;0810a,0814,0819;Kareivių st.;;Kareivių g. 
+0805;link centro;5471556;2528943;0804,0807;Pramogų arena;;Kareivių g.  
+0804;iš centro;5471504;2528821;0805,0709,0802;Pramogų arena;wifi;Kareivių g.   
+0819;link Žirmūnų;5472356;2530725;0820,0812;Valakampių tiltas;0;Kareivių g.    
+0820;link Antakalnio;5472409;2530849;0819,3501;Valakampių tiltas;;Kareivių g.     
+0807;link Kalvarijų g.;5471687;2529360;0806,0805;Verkių st.;;Kareivių g.      
+0806;link Valakampių;5471732;2529562;0823,0807;Verkių st.;;Kareivių g.       
 0710;link Kalvarijų g.;5471305;2527899;2016,2015;Licėjus;;Ozo g.
-2015;link centro;5471508;2528573;0709,0802,0710;Pramogų arena
+2015;link centro;5471508;2528573;0709,0802,0710;Pramogų arena;;Ozo g. 
 0921;įlaipinimas;5471072;2530239;0929,0922,0920;Povilo Lukšio st.;;Povilo Lukšio g.
-0922;link žiedo;5471139;2530392;0902,0901,0921;Šiaurės miestelis
+0922;link žiedo;5471139;2530392;0902,0901,0921;Šiaurės miestelis;;Povilo Lukšio g. 
 5177;link centro;5472092;2529589;0018,0823;Autobusų parkas;;Verkių g.
-0813;iš centro;5472216;2529669;0831,0018,0815
-0823;iš centro;5471843;2529553;0806,5177;Verkių st.
+0813;iš centro;5472216;2529669;0831,0018,0815;Autobusų parkas;;Verkių g. 
+0823;iš centro;5471843;2529553;0806,5177;Verkių st.;;Verkių g.  
 0711;link Žirmūnų;5470378;2528221;0706,0716;Žalgirio st.;;Žalgirio g.
 0810;link centro;5471859;2530393;0811,0821;Kareivių st.;wifi;Žirmūnų g.
-0811;iš centro;5471934;2530356;0810a,0810
-0817;link centro;5472657;2529674;0818;Šaltinėlio st.
-0816;iš centro;5472541;2529826;0818,0815;;0
-0814;link centro;5472190;2530071;0815,0812;Žirmūnų seniūnija;wifi
-0815;iš centro;5472236;2529994;0814,0813,0816;;0
-0818;iš centro;5472666;2529710;0817,0816,3500;Žirmūnų žiedas
+0811;iš centro;5471934;2530356;0810a,0810;Kareivių st.;;Žirmūnų g. 
+0817;link centro;5472657;2529674;0818;Šaltinėlio st.;;Žirmūnų g.  
+0816;iš centro;5472541;2529826;0818,0815;Šaltinėlio st.;0;Žirmūnų g.   
+0814;link centro;5472190;2530071;0815,0812;Žirmūnų seniūnija;wifi;Žirmūnų g.    
+0815;iš centro;5472236;2529994;0814,0813,0816;Žirmūnų seniūnija;0;Žirmūnų g.     
+0818;iš centro;5472666;2529710;0817,0816,3500;Žirmūnų žiedas;;Žirmūnų g.      
 2016;iš centro;5471314;2527692;0710,0825;Licėjus;;Ozo g.
 0930;link Žirmūnų;5471199;2529395;0926,0924;Jono Galvydžio st.;;Povilo Lukšio g.
-0929;išlaipinimas;5471097;2530067;0925,0921;Povilo Lukšio st.
-0924;link Kalvarijų g.;5471152;2529786;0925,0930;Šiaurės miestelis
-0925;link Žirmūnų g.;5471119;2529938;0929,0924
+0929;išlaipinimas;5471097;2530067;0925,0921;Povilo Lukšio st.;;Povilo Lukšio g. 
+0924;link Kalvarijų g.;5471152;2529786;0925,0930;Šiaurės miestelis;;Povilo Lukšio g.  
+0925;link Žirmūnų g.;5471119;2529938;0929,0924;Šiaurės miestelis;;Povilo Lukšio g.   
 0926;link centro;5471183;2529233;0930,0928,0803;Jono Galvydžio st.;;Ulonų g.
-0927;link Žirmūnų g.;5470889;2529121;0928;Ulonų st.
-0928;link centro;5470921;2529100;0927,0926,0916
+0927;link Žirmūnų g.;5470889;2529121;0928;Ulonų st.;;Ulonų g. 
+0928;link centro;5470921;2529100;0927,0926,0916;Ulonų st.;;Ulonų g.  
 0810a;link centro;5471976;2530287;0811,0808,0812;Kareivių st.(laikina);;Žirmūnų g.
 0831;;5472236;2529522;0813,2014;Autobusų parkas (Žvalgų g.);;Žvalgų g.
 5187;iš centro;5470460;2528946;0917,0913;Žygio st.;;Apkasų g.;;Žirmūnai II
 0918;link Šilo tilto;5470393;2529270;0917,0919;Apkasų st.;;Minties g.
-0917;link Kalvarijų g.;5470394;2529142;0918,5187
-0919;link Kalvarijų g.;5470507;2529864;0920,0918;Minties st.
-0920;link Žirmūnų g.;5470506;2529968;0919,0903,0921
+0917;link Kalvarijų g.;5470394;2529142;0918,5187;Apkasų st.;;Minties g. 
+0919;link Kalvarijų g.;5470507;2529864;0920,0918;Minties st.;;Minties g.  
+0920;link Žirmūnų g.;5470506;2529968;0919,0903,0921;Minties st.;;Minties g.   
 5185;iš centro;5470110;2528660;5186,0914b,0913;Herkaus Manto st.;;Rinktinės g.
-5186;link centro;5470068;2528623;5185,0704
-5184;iš centro;5469508;2528838;5188,0907;Rinktinės st.
-5188;link centro;5469506;2528809;5184,0110
-5182;iš centro;5469004;2528870;0201,5183;Žvejų st.
-5183;link centro;5469170;2528910;5182,5188a
+5186;link centro;5470068;2528623;5185,0704;Herkaus Manto st.;;Rinktinės g. 
+5184;iš centro;5469508;2528838;5188,0907;Rinktinės st.;;Rinktinės g.  
+5188;link centro;5469506;2528809;5184,0110;Rinktinės st.;;Rinktinės g.   
+5182;iš centro;5469004;2528870;0201,5183;Žvejų st.;;Rinktinės g.    
+5183;link centro;5469170;2528910;5182,5188a;Žvejų st.;;Rinktinės g.     
 0907;link centro;5469497;2528955;0111,5184,0908;Rinktinės st.;;Šeimyniškių g.
-0111;iš centro;5469477;2528954;0907,5188a
-0908;link centro;5469566;2529616;0112,0909,0907;Šeimyniškių st.
-0112;link Šiaurės miestelio;5469556;2529687;0908
+0111;iš centro;5469477;2528954;0907,5188a;Rinktinės st.;;Šeimyniškių g. 
+0908;link centro;5469566;2529616;0112,0909,0907;Šeimyniškių st.;;Šeimyniškių g.  
+0112;link Šiaurės miestelio;5469556;2529687;0908;Šeimyniškių st.;;Šeimyniškių g.   
 0912;iš centro;5470078;2529246;0911,0913;Mikalojaus Katkaus st.;;Tuskulėnų g.
-0911;link centro;5470009;2529290;0912,0910
-0913;link Žirmūnų žiedo;5470295;2528893;5181,5187,5185,0912;Trimitų st.
-0909;link Žirmūnų žiedo;5469702;2529706;0910,0908,0906;Tuskulėnai
-0910;nuo Žirmūnų žiedo;5469770;2529670;0909,0911
+0911;link centro;5470009;2529290;0912,0910;Mikalojaus Katkaus st.;;Tuskulėnų g. 
+0913;link Žirmūnų žiedo;5470295;2528893;5181,5187,5185,0912;Trimitų st.;;Tuskulėnų g.  
+0909;link Žirmūnų žiedo;5469702;2529706;0910,0908,0906;Tuskulėnai;;Tuskulėnų g.   
+0910;nuo Žirmūnų žiedo;5469770;2529670;0909,0911;Tuskulėnai;;Tuskulėnų g.    
 5147;atstovos vieta;5470403;2528474;0915,5181;Žalgirio žiedas(atstovos vieta;;Žalgirio g.
 0904;link centro;5470362;2530416;0903,0905;Minties st.;wifi;Žirmūnų g.
-0903;iš centro;5470418;2530454;0904,0920,1107;;0
-0902;link centro;5471083;2530465;0922;Šiaurės miestelis
-0901;iš centro;5471182;2530509;0922,0822,1109
-0906;link centro;5469757;2530032;0905,0909,0402a;Tuskulėnų rimties parkas;wifi
-0905;iš centro;5469823;2530130;0906,1103,0904;;0
-0822;link centro;5471595;2530509;0828,0901;Žirmūnai
-0821;iš centro;5471666;2530545;0828,0810,1113
+0903;iš centro;5470418;2530454;0904,0920,1107;Minties st.;0;Žirmūnų g. 
+0902;link centro;5471083;2530465;0922;Šiaurės miestelis;;Žirmūnų g.  
+0901;iš centro;5471182;2530509;0922,0822,1109;Šiaurės miestelis;;Žirmūnų g.   
+0906;link centro;5469757;2530032;0905,0909,0402a;Tuskulėnų rimties parkas;wifi;Žirmūnų g.    
+0905;iš centro;5469823;2530130;0906,1103,0904;Tuskulėnų rimties parkas;0;Žirmūnų g.     
+0822;link centro;5471595;2530509;0828,0901;Žirmūnai;;Žirmūnų g.      
+0821;iš centro;5471666;2530545;0828,0810,1113;Žirmūnai;;Žirmūnų g.       
 5188a;link centro;5469407;2528844;0111,5183;Rinktinės st.;;Rinktinės g.
 0828;iš centro;5471602;2530533;0822,0821;Žirmūnai;laikina;Žirmūnų g.
 4414;link centro;5472050;2519473;4415,4403;Ąžuolų st.;0;Buivydiškių g.;;Zujūnai
-4415;iš centro;5472171;2519339;4414,4404
-4406;link centro;5472671;2518153;4410,3663,4419;Zujūnai
-4410;link Gineitiškių;5472662;2518209;4406,4405
+4415;iš centro;5472171;2519339;4414,4404;Ąžuolų st.;;Buivydiškių g. 
+4406;link centro;5472671;2518153;4410,3663,4419;Zujūnai;;Buivydiškių g.  
+4410;link Gineitiškių;5472662;2518209;4406,4405;Zujūnai;;Buivydiškių g.   
 4412;link Antežerių;5473590;2518928;4413,4408,5009;Senosios Gineitiškės;;Gineitiškių g.
-4413;link Pašilaičių;5473565;2519373;4412,4407
+4413;link Pašilaičių;5473565;2519373;4412,4407;Senosios Gineitiškės;;Gineitiškių g. 
 4408;link Pašilaičių;5473377;2518649;4409,4412;Antežeriai;;Žirgų g.
-4409;link Zujūnų;5473255;2518527;4408,4416
+4409;link Zujūnų;5473255;2518527;4408,4416;Antežeriai;;Žirgų g. 
 3663;iš centro;5472432;2517904;3664,4406;Pergalės st.;;Pergalės g. (Zujūnai)
-3664;į centrą;5472417;2517860;3663,3660
+3664;į centrą;5472417;2517860;3663,3660;Pergalės st.;;Pergalės g. (Zujūnai) 
 4416;iš centro;5473051;2518419;4419,4409;Garbės st.;;Zujūnų g.
-4419;į centrą;5472982;2518311;4416,4406
+4419;į centrą;5472982;2518311;4416,4406;Garbės st.;;Zujūnų g. 
 0107;link Žirmūnų;5470239;2526438;0321,0115,0701;Saltoniškės;;Geležinio Vilko g.;;Žvėrynas
-0320;link Žirmūnų;5469729;2526327;0108,0318;Studentų st.
-0108;link Pilaitės;5469724;2526430;0320,0105,0221
+0320;link Žirmūnų;5469729;2526327;0108,0318;Studentų st.;;Geležinio Vilko g. 
+0108;link Pilaitės;5469724;2526430;0320,0105,0221;Studentų st.;;Geležinio Vilko g.  
 0304;iš centro;5469121;2525158;0303,0307,0306;Kęstučio st.;;Kęstučio g.
-0303;link centro;5468948;2525190;0304,0302
-0307;link centro;5469385;2525072;0308,0304;Latvių st.;wifi
-0308;iš centro;5469433;2525075;0307,0311,0310
-0311;link centro;5469744;2524977;0312,0308;Sėlių st.;0
+0303;link centro;5468948;2525190;0304,0302;Kęstučio st.;;Kęstučio g. 
+0307;link centro;5469385;2525072;0308,0304;Latvių st.;wifi;Kęstučio g.  
+0308;iš centro;5469433;2525075;0307,0311,0310;Latvių st.;;Kęstučio g.   
+0311;link centro;5469744;2524977;0312,0308;Sėlių st.;0;Kęstučio g.    
 0301;link centro;5468893;2525691;0302,0253;Liubarto tiltas;;Liubarto g.
-0302;link Žvėryno;5468908;2525574;0301,0305,0303
+0302;link Žvėryno;5468908;2525574;0301,0305,0303;Liubarto tiltas;;Liubarto g. 
 0312;iš centro;5469840;2524868;0311,5151;Sėlių st.;;Sėlių g.
-0313;link centro;5469872;2524565;5151b,5151;Žvėrynas
-5151;įlaipinimas;5469846;2524620;0313,0312;Žvėryno žiedas;wifi
+0313;link centro;5469872;2524565;5151b,5151;Žvėrynas;;Sėlių g. 
+5151;įlaipinimas;5469846;2524620;0313,0312;Žvėryno žiedas;wifi;Sėlių g.  
 0317;iš centro;5469915;2525704;0316,0319;Panorama;0;Teodoro Narbuto g.
-0316;link centro;5469892;2525607;0317,0310
-0318;link centro;5469830;2526121;0319,0320;Švietimo akademija
-0319;iš centro;5469870;2526133;0318,0317,0321
-0315;iš centro;5469948;2524320;0314,1817;Žvėrynas
-0314;link centro;5469938;2524499;5151b,0315
+0316;link centro;5469892;2525607;0317,0310;Panorama;;Teodoro Narbuto g. 
+0318;link centro;5469830;2526121;0319,0320;Švietimo akademija;;Teodoro Narbuto g.  
+0319;iš centro;5469870;2526133;0318,0317,0321;Švietimo akademija;;Teodoro Narbuto g.   
+0315;iš centro;5469948;2524320;0314,1817;Žvėrynas;;Teodoro Narbuto g.    
+0314;link centro;5469938;2524499;5151b,0315;Žvėrynas;;Teodoro Narbuto g.     
 0321;link centro;5470123;2526289;1901,0107,0319;Saltoniškės;;Ukmergės g.
-1901;link Šeškinės;5470231;2526185;0321,1923
+1901;link Šeškinės;5470231;2526185;0321,1923;Saltoniškės;;Ukmergės g. 
 0309;iš centro;5469583;2525609;0310;Džocharo Dudajevo skv.;;Vytauto g.
-0310;link centro;5469585;2525585;0309,0316,0308
-0305;iš centro;5469117;2525643;0306,0238,0302;Vytauto st.
-0306;link centro;5469173;2525622;0305,0304
+0310;link centro;5469585;2525585;0309,0316,0308;Džocharo Dudajevo skv.;;Vytauto g. 
+0305;iš centro;5469117;2525643;0306,0238,0302;Vytauto st.;;Vytauto g.  
+0306;link centro;5469173;2525622;0305,0304;Vytauto st.;;Vytauto g.   
 0702;link Žirmūnų;5470453;2527236;0701,0716;Linkmenų st.;;Žalgirio g.
-0701;link Geležinio Vilko g.;5470487;2526979;0702,0107
+0701;link Geležinio Vilko g.;5470487;2526979;0702,0107;Linkmenų st.;;Žalgirio g. 
 5151b;išlaipinimas;5469866;2524504;0313,5151a,0314;Žvėryno žiedas (išlaipinimas 11, 116);;Sėlių g.
-5151a;išlaipinimas;5469833;2524528;5151b;Žvėryno žiedas (išlaipinimas 32, 59, 63)
+5151a;išlaipinimas;5469833;2524528;5151b;Žvėryno žiedas (išlaipinimas 32, 59, 63);;Sėlių g. 
