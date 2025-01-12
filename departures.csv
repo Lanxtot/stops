@@ -1,7 +1,25 @@
-stop,1118
-trol,4,a-b1,61560,1855KWNZ,Gerosios Vilties st.,-1,45
-trol,4,a-b1,62220,1682KZ,Gerosios Vilties st.,-1,45
-trol,4,a-b1,62880,1707KZ,Gerosios Vilties st.,-1,45
-trol,4,a-d,63540,1649,1-asis troleibusų parkas (Žolyno g.),-1,45
+stop,1109
+trol,4,a-b1,71930,1745KWNZ,Gerosios Vilties st.,-1,45
+trol,19,b-a,71978,2780KWNZ,Pašilaičiai,-1,45
+trol,2,a-b,72025,1849KWNZ,Stotis,-1,45
+trol,2,a-b,72455,1735KWNZ,Stotis,-1,45
+trol,4,a-b1,72462,1737KWNZ,Gerosios Vilties st.,-1,45
+expressbus,4g,b-a,72564,8013KWZ,Pilaitė,-1,45
+trol,2,a-b,72912,1681KZ,Stotis,-1,45
+bus,50,a-b,72960,4135KWNZ,Bajorai,-1,45
+trol,2,a-b,73452,1700KZ,Stotis,-1,45
+trol,4,a-b1,73482,1731KWNZ,Gerosios Vilties st.,-1,45
+expressbus,4g,b-a,73584,8025KWZ,Pilaitė,-1,45
+trol,19,b-a,73692,2783KWNZ,Pašilaičiai,-1,45
+trol,2,a-b,73872,1705KZ,Stotis,-1,45
+trol,4,a-b1,74022,1682KZ,Gerosios Vilties st.,-1,45
+trol,2,a-b,74352,1710Z,Stotis,-1,45
+expressbus,4g,b-a,74484,8006KWZ,Pilaitė,-1,45
+bus,50,a-b,74520,4108KWNZ,Bajorai,-1,45
+trol,2,a-b,74712,1736KWNZ,Stotis,-1,45
+trol,19,b-a,74772,2781KWNZ,Pašilaičiai,-1,45
+trol,4,a-b1,74802,1707KZ,Gerosios Vilties st.,-1,45
+trol,2,a-b,75192,1859KWNZ,Stotis,-1,45
+expressbus,4g,b-a,75384,8016KWZ,Pilaitė,-1,45
 
 
