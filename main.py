@@ -113,7 +113,6 @@ def match_user_stop(user_stop):
 def handle_partial_matches(partial_matches):
     # Extract the values from the dictionary (the 6th column values)
     values = list(partial_matches.values())
-    print(partial_matches)
     
     # Dismiss any matches containing 'išlaipinimas' or 'atstova' (case-insensitive)
     dismissed_values = [value for value in values if 'išlaipinimas' in value.lower() or 'išlaipinama' in value.lower() or 'atstova' in value.lower() or 'atstovos' in value.lower()]
@@ -433,12 +432,12 @@ def display_departures(name, departure_times, vehicle_delays, route_numbers, tri
 
     print(f"{name} | Laikas: {datetime.now().strftime('%H:%M:%S')}")
     if direction_length > 7:
-        print(f"Nr. Išvyksta Nuokr. Marš. Graf. {"Kryptis":^{direction_length}}Dyd. {"Modelis":^{model_length-1}} Gar.")
+        print(f"Išvyksta Nuokr. Marš. Graf. {"Kryptis":^{direction_length}}Dyd. {"Modelis":^{model_length-1}} Gar.")
     else:
-        print(f"Nr. Išvyksta Nuokr. Marš. Graf. {"Krpt.":^{direction_length-1}} Dyd. {"Modelis":^{model_length-1}} Gar.")
+        print(f"Išvyksta Nuokr. Marš. Graf. {"Krpt.":^{direction_length-1}} Dyd. {"Modelis":^{model_length-1}} Gar.")
 
     for departure_time, vehicle_delay, route_number, trip_direction, schedule_number, fleet_number, size, model in zip(departure_times, vehicle_delays, route_numbers, trip_directions, schedule_numbers, fleet_numbers, sizes, models):
-        print(f"{item:>2}. {departure_time:<8} {vehicle_delay:<7} {route_number:>4} ({schedule_number:<2}) {trip_direction:<{direction_length}}  {size:<2} {model:<{model_length}} {fleet_number:<4} ")
+        print(f"{departure_time:<8} {vehicle_delay:<7} {route_number:>4} ({schedule_number:<2}) {trip_direction:<{direction_length}}  {size:<2} {model:<{model_length}} {fleet_number:<4} ")
 
         item += 1
 
@@ -556,7 +555,7 @@ def get_stop_and_departures():
                 print()
                 decision = input('Įveskite: ')
 
-
+                """
                 try:
                     selection = int(decision) - 1
 
@@ -566,12 +565,13 @@ def get_stop_and_departures():
                         raise ValueError
 
                 except ValueError:
-                    if decision == "":
-                        print()
-                        continue
-                    else:
-                        user_stop = decision
-                        break
+                """
+                if decision == "":
+                    print()
+                    continue
+                else:
+                    user_stop = decision
+                    break
 
         else:
             user_stop = input('Įveskite: ')
