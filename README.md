@@ -41,7 +41,7 @@ Norėdami atnaujinti, iš naujo parsisiųskite kodą
 10. Sukurkite Termux:Widget 1x1 valdiklį pasirinkdami Stops.sh
 11. Paleiskite Stops.sh
 
-Norėdami atnaujinti, vėl atlikite 7.5. žingsnį
+Norėdami atnaujinti, vėl įveskite: git clone -b challenge https://github.com/Lanxtot/stops
 
 ## iOS
 
