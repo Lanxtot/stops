@@ -2,8 +2,6 @@ import re
 import requests
 import csv
 import os
-from time import sleep
-from random import randint
 from datetime import datetime
 from zipfile import ZipFile
 
@@ -14,6 +12,7 @@ models_file = 'models.csv'
 ridango_stops_file = 'stops.csv'
 ridango_timings_file = 'stop_times.csv'
 bugs_file = 'bugs.txt'
+date_file = 'date.txt'
 
 def error():
     print('Prašome patikslinti.')
@@ -114,6 +113,7 @@ def match_user_stop(user_stop):
 def handle_partial_matches(partial_matches):
     # Extract the values from the dictionary (the 6th column values)
     values = list(partial_matches.values())
+    print(partial_matches)
     
     # Dismiss any matches containing 'išlaipinimas' or 'atstova' (case-insensitive)
     dismissed_values = [value for value in values if 'išlaipinimas' in value.lower() or 'išlaipinama' in value.lower() or 'atstova' in value.lower() or 'atstovos' in value.lower()]
@@ -419,6 +419,29 @@ def determine_vehicle_model(fleet_numbers):
 
     return models, sizes
 
+def display_departures(name, departure_times, vehicle_delays, route_numbers, trip_directions, schedule_numbers, fleet_numbers, sizes, models):
+    item = 1
+    direction_length = 0
+    model_length = 0
+
+    for trip_direction in trip_directions:
+        if len(trip_direction) > direction_length:
+            direction_length = len(trip_direction)
+    for model in models:
+        if len(model) > model_length:
+            model_length = len(model)
+
+    print(f"{name} | Laikas: {datetime.now().strftime('%H:%M:%S')}")
+    if direction_length > 7:
+        print(f"Nr. Išvyksta Nuokr. Marš. Graf. {"Kryptis":^{direction_length}}Dyd. {"Modelis":^{model_length-1}} Gar.")
+    else:
+        print(f"Nr. Išvyksta Nuokr. Marš. Graf. {"Krpt.":^{direction_length-1}} Dyd. {"Modelis":^{model_length-1}} Gar.")
+
+    for departure_time, vehicle_delay, route_number, trip_direction, schedule_number, fleet_number, size, model in zip(departure_times, vehicle_delays, route_numbers, trip_directions, schedule_numbers, fleet_numbers, sizes, models):
+        print(f"{item:>2}. {departure_time:<8} {vehicle_delay:<7} {route_number:>4} ({schedule_number:<2}) {trip_direction:<{direction_length}}  {size:<2} {model:<{model_length}} {fleet_number:<4} ")
+
+        item += 1
+
 def get_and_extract_zip(gtfs_file):
     """
     Downloads a GTFS zip file from the given URL, extracts 'stops.txt' and 'stop_times.txt',
@@ -459,109 +482,103 @@ def get_and_extract_zip(gtfs_file):
     if os.path.exists(local_zip_filename):
         os.remove(local_zip_filename)
 
-def display_departures(advanced, selected_name, departure_times, vehicle_delays, route_numbers, trip_directions, schedule_numbers, fleet_numbers, sizes, models):
-    item = 1
-    direction_length = 0
-    model_length = 0
-
-    for trip_direction in trip_directions:
-        if len(trip_direction) > direction_length:
-            direction_length = len(trip_direction)
-    for model in models:
-        if len(model) > model_length:
-            model_length = len(model)
-
-    print(f"{selected_name} | Laikas: {datetime.now().strftime('%H:%M:%S')}")
-    if advanced == True:
-        if direction_length > 7:
-            print(f"Nr. Išvyksta Nuokr. Marš. Graf. {"Kryptis":^{direction_length}}Dyd. {"Modelis":^{model_length-1}} Gar.")
-        else:
-            print(f"Nr. Išvyksta Nuokr. Marš. Graf. {"Krpt.":^{direction_length-1}} Dyd. {"Modelis":^{model_length-1}} Gar.")
-
-        for departure_time, vehicle_delay, route_number, trip_direction, schedule_number, fleet_number, size, model in zip(departure_times, vehicle_delays, route_numbers, trip_directions, schedule_numbers, fleet_numbers, sizes, models):
-            print(f"{item:>2}. {departure_time:<8} {vehicle_delay:<6}  {route_number:>4} ({schedule_number:<2}) {trip_direction:<{direction_length}}  {size:<2} {model:<{model_length}} {fleet_number:<4} ")
-
-            item += 1
-
-    else:
-        if direction_length > 7:
-            print(f"Nr. Išvyksta Nuokr. Marš.  {"Kryptis":^{direction_length}}Talpa")
-        else:
-            print(f"Nr. Išvyksta Nuokr. Marš.  {"Krpt.":^{direction_length-1}} Talpa")
-
-        for departure_time, vehicle_delay, route_number, trip_direction, schedule_number, fleet_number, size, model in zip(departure_times, vehicle_delays, route_numbers, trip_directions, schedule_numbers, fleet_numbers, sizes, models):
-            print(f"{item:>2}. {departure_time:<8} {vehicle_delay:<6}  {route_number:>4} {trip_direction:<{direction_length}}  {size:<2}")
-
-            item += 1
-     
-
-def main():
-    advanced = False
-
+def display_information():
+    """Main function to orchestrate the application flow."""
     print('STOPS v2.0 | TESTING BUILD 01 | © Lanxtot')
 
     print()
-    print('Jei krypčių pasirinkimų sąraše rasite nelogiškų, nesuprantamų ar klaidinančių krypčių, praneškite apie jas su / ženklu (jei klaidingas 1: „1/“ ir t.t.), vėliau pasidalinkite bugs.txt failu (lanxtot per Discord).')
-    print('Talpos/dydžio žymejimas: mk – mikroautobusai | m – mažos talpos | t – standartinės talpos | ti – pailginti viengubi | i – dvigubi.')
-    print('Gave išvykimo laikus, galite įvesti tuščią eilutę (atnaujinti prognozes), išvykimo numerį (tolesnių stotelių laikai – vėliau galėsite įvesti stotelės numerį ir pamatyti visus išvykimus) ar kitos stotelės pavadinimą.')
-    print('Norėdami pamatyti papildomus duomenis entuziastams, įveskite „?“.')
-    print()
-    
-    get_gtfs_data("https://www.stops.lt/vilnius/vilnius/stops.txt",stops_file)
-    get_and_extract_zip("https://www.stops.lt/vilnius/ridango/gtfs.zip")
-    user_stop=input('Įveskite: ')
+    print('Krypčių pasirinkimų sąraše radę nelogiškų, nesuprantamų ar klaidinančių krypčių, praneškite su / ženklu (jei klaidinga 1: „1/“ ir t.t.), vėliau pasidalinkite bugs.txt failu.')
+    print('Talpos/dydžio žymėjimas: mk – mikroautobusai | m – mažos talpos | t – standartinės talpos | ti – pailginti viengubi | i – dvigubi.')
+    print('Gave išvykimo laikus, galite įvesti tuščią eilutę (atnaujinti prognozes), išvykimo numerį (greitai pasirinkti tolesnę maršruto stotelę) ar kitos stotelės pavadinimą.')
 
-    if user_stop=='?':
-        advanced = True
-        print('Režimas entuziastams.')
-        print()
-        user_stop=input('Įveskite: ')
+    get_gtfs_data("https://www.stops.lt/vilnius/vilnius/stops.txt", stops_file)
+    print('Maršrutų ir stotelių duomenys atnaujinti ',end='')
+    with open(date_file, 'r') as date:
+        print(date.read(),end='')
+    print('. Norėdami atnaujinti, įveskite „+“. Kitu atveju, įveskite stotelę.')
+    print()
+
+def update_data():
+    get_and_extract_zip("http://stops.lt/vilnius/ridango/gtfs.zip")
+    with open(date_file, 'w') as date:
+        date.write(datetime.today().strftime('%Y.%m.%d'))
+    print('Atnaujinti maršrutų ir stotelių duomenys.')
+    print()
+
+def get_stop_and_departures():
+    code_choice = False
+    user_stop = input('Įveskite: ')
+
+    if user_stop == "+":
+        update_data()
+        user_stop = input('Įveskite: ')
 
     while True:
-        user_stop = normalize(user_stop)
-        partial_matches = match_user_stop(user_stop)
-        
-        if not partial_matches:
-            error()
-            user_stop=input('Įveskite: ')
-            continue  # Restart the loop if no matches were found
+        get_gtfs_data("https://www.stops.lt/vilnius/gps_full.txt", gps_file)
 
-        stop_directions_rows, selected_name = handle_partial_matches(partial_matches)
-        
-        # If None is returned, it means the user needs to refine their input
-        if stop_directions_rows is None:
-            user_stop=input('Įveskite: ')
-            continue  # Restart the loop without prompting for input again
+        if code_choice == False:
+            user_stop = normalize(user_stop)
+            partial_matches = match_user_stop(user_stop)
 
-        stop_code = determine_stop_direction(stop_directions_rows)
+            if not partial_matches:
+                error()
+                user_stop = input('Įveskite: ')
+                continue
 
-        if stop_code is not None:
+            stop_directions_rows, name = handle_partial_matches(partial_matches)
+
+            if stop_directions_rows is None:
+                user_stop = input('Įveskite: ')
+                continue
+
+            stop_code = determine_stop_direction(stop_directions_rows)
+        else:
+            stop_code = user_stop
+            code_choice = False
+
+        if stop_code:
             print()
 
             while True:
-                empty=get_departures(stop_code)
-                if empty==True:
-                    print('Laikų nėra.')
-                
+                empty = get_departures(stop_code)
+                if empty == True:
+                    print('Laikų nėra.',stop_code)
                 else:
                     route_types, route_numbers, departure_times, vehicle_attributes, fleet_numbers, trip_directions = analyze_departures()
-                    get_gtfs_data("https://www.stops.lt/vilnius/gps_full.txt",gps_file)
                     vehicle_delays, trip_ids, schedule_numbers = analyze_gps_data(fleet_numbers)
                     models, sizes = determine_vehicle_model(fleet_numbers)
-                    
-                    display_departures(advanced, selected_name, departure_times, vehicle_delays, route_numbers, trip_directions, schedule_numbers, fleet_numbers, sizes, models)
-                    # Activation of other functions will go here in the future
+                    display_departures(
+                        name, departure_times, vehicle_delays,
+                        route_numbers, trip_directions, schedule_numbers, fleet_numbers,
+                        sizes, models
+                    )
+
                 print()
                 decision = input('Įveskite: ')
-                if decision=="":
-                    print()
-                    continue
-                else:
-                    user_stop = decision
-                    break
-        
+
+
+                try:
+                    selection = int(decision) - 1
+
+                    if 1 <= int(decision) <= len(departure_times):
+                        break
+                    else:
+                        raise ValueError
+
+                except ValueError:
+                    if decision == "":
+                        print()
+                        continue
+                    else:
+                        user_stop = decision
+                        break
+
         else:
-            user_stop=input('Įveskite: ')
+            user_stop = input('Įveskite: ')
+
+def main():
+    display_information()
+    get_stop_and_departures()
 
 if __name__ == "__main__":
     main()
