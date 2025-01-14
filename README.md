@@ -5,15 +5,15 @@ Python programa, iš oficialių Vilniaus visuomeninio transporto GTFS duomenų p
 ## Windows
 
 1. Įsidiekite Python 3.12 ar naujesnę versiją: <https://www.python.org/downloads/>
-2. Atsidarę Windows terminalą įveskite:
-* pip install python
-* pip install requests
+2. Atsidarę Windows terminalą įveskite: pip install requests
 3. Atsisiųskite programos šaltinio kodą
 4. Paleiskite main.py failą
 
 Norėdami atnaujinti, iš naujo parsisiųskite kodą
 
 ## Android
+
+Pastaba: norėdami tikslių laikų, įsidiekite versiją „challenge-android“
 
 1. Atsisiųskite F-Droid (ignoruokite klaidinančius perspėjimus apie galimą žalą): <https://f-droid.org/>
 2. Suteikite leidimą F-Droid įdiegti nežinomas programas
@@ -32,7 +32,7 @@ Norėdami atnaujinti, iš naujo parsisiųskite kodą
 * mkdir -p /data/data/com.termux/files/home/.shortcuts
 * chmod 700 -R /data/data/com.termux/files/home/.shortcuts
 * nano ~/.shortcuts/Stops.sh
-8. Atidarę failą su nurodyta komanda ir įveskite, užbaigę įvestį išeikite su CTRL+X ir sutikite su viskuo:
+8. Atidarę failą su nurodyta komanda įveskite, užbaigę įvestį išeikite su CTRL+X ir sutikite su viskuo:
 * #!/bin/bash
 * cd ~/stops
 * python3 main.py

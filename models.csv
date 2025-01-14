@@ -21,7 +21,8 @@ Start,Model,Size
 1139,Škoda 9Tr,t
 1400,Škoda 14Tr,t
 1600,Škoda 15Tr,i
-1601,Škoda 14Tr,t
+1605,Škoda 14Tr,t
+1650,Neįvestas modelis,?
 1651,Škoda 14TrM,t
 1674,Solaris Trollino II 15 AC,ti
 1719,MAZ-ETON T203 Amber,t
@@ -33,6 +34,8 @@ Start,Model,Size
 2139,Neįvestas modelis,?
 2400,Škoda 14Tr,t
 2600,Škoda 15Tr,i
+2605,Škoda 14Tr,t
+2650,Neįvestas modelis,?
 2651,Škoda 14TrM,t
 2674,Solaris Trollino II 15 AC,ti
 2719,MAZ-ETON T203 Amber,t
@@ -50,7 +53,8 @@ Start,Model,Size
 4007,MAN A23 NG313,i
 4018,MAN A23 Lion’s City GL NG313,i
 4027,Neįvestas modelis,?
-4030,MAN A21 Lion’s City NL273
+4030,MAN A21 Lion’s City NL273,t
+4035,Neįvestas modelis,?
 4101,Solaris Urbino IV 12,t
 4139,Neįvestas modelis,?
 4151,Solaris Urbino IV 18,i
