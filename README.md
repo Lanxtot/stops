@@ -28,20 +28,20 @@ Pastaba: norėdami tikslių laikų, įsidiekite versiją „challenge-android“
 * pkg install python
 * pip install requests
 * pkg install git bash
-* git clone -b challenge https://github.com/Lanxtot/stops
+* git clone -b challenge-android https://github.com/Lanxtot/stops
 * mkdir -p /data/data/com.termux/files/home/.shortcuts
 * chmod 700 -R /data/data/com.termux/files/home/.shortcuts
-* nano ~/.shortcuts/Stops.sh
+* nano ~/.shortcuts/Stops
 8. Atidarę failą su nurodyta komanda įveskite, užbaigę įvestį išeikite su CTRL+X ir sutikite su viskuo:
 * #!/bin/bash
 * cd ~/stops
 * python3 main.py
-9. Įveskite aplinkoje:
-* chmod +x ~/.shortcuts/Stops.sh
-10. Sukurkite Termux:Widget 1x1 valdiklį pasirinkdami Stops.sh
+10. Sukurkite Termux:Widget 1x1 valdiklį pasirinkdami Stops
 11. Paleiskite Stops.sh
 
-Norėdami atnaujinti, vėl įveskite: git clone -b challenge https://github.com/Lanxtot/stops
+Norėdami atnaujinti, įveskite:
+* cd stops
+* git pull .
 
 ## iOS
 
