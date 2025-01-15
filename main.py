@@ -593,29 +593,31 @@ def get_and_extract_zip(gtfs_file):
         os.remove(local_zip_filename)
 
 def display_information():
-    """Main function to orchestrate the application flow."""
-    print('STOPS v2.0 | BUILD 03_CHALLENGE | © Lanxtot')
-
+    print('STOPS v2.0 | BUILD 03_CHALLENGE | © Lanxtot')   
     print()
     
-    print('  Maršrutų ir stotelių duomenys atnaujinti ',end='')
-    with open(date_file, 'r') as date:
-        print(date.read(),end='')
-    print('. Norėdami atnaujinti, įveskite „+“.')
-    
-    print()
-
-    print('  Sutartiniai ženklai ir veiksmai:')
+    print('Pagrindinis stotelių režimas:')
     print('  Talpos/dydžio žymėjimas: mk – mikroautobusai | m – mažos talpos | t – standartinės talpos | ti – pailginti viengubi | i – dvigubi.')
     print('  Maršruto žymėjimas: T – troleibusų maršrutas | * – reisas alternatyvia trasa.')
     print('  Galite įvesti tuščią eilutę ir atnaujinti prognozes arba kitos stotelės pavadinimą.')
     print('  Krypčių pasirinkimų sąraše radę nelogiškų, nesuprantamų ar klaidinančių krypčių, užfiksuokite su / ženklu (jei klaidinga 1: „1/“ ir t.t.).')
-
     print()
-
-    print('  CHALLENGE režimas:')
+    
+    print('Maršruto peržiūros režimas:')
+    print('  Norėdami pasiekti, įveskite „?“.')
+    print('  Įveskite norimo peržiūrėti maršruto numerį. Troleibusų maršrutus pasiekite pradėdami numerį „t“ raide. Norėdami išeiti, įveskite tuščią eilutę.')
+    print()
+    
+    print('Iššūkio režimas:')
     print('  Norėdami pasiekti, įveskite „-“.')
     print("  Įvestis: skaičius – užfiksuojamas pasinaudotas garažinis numeris | „+“ – pridedamas visas modelis ar dydis | tuščia eilutė – išeiti iš režimo.")
+    print()
+
+    print('Atnaujinimo režimas:')
+    print('  Maršrutų ir stotelių duomenys atnaujinti ',end='')
+    with open(date_file, 'r') as date:
+        print(date.read(),end='')
+    print('. Norėdami atnaujinti, įveskite „+“.')
     print()
 
 def update_data():
