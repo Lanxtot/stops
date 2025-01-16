@@ -1,9 +1,8 @@
 import re
 import requests
 import csv
-import json
 import os
-from datetime import datetime
+from datetime import datetime, timedelta
 from zipfile import ZipFile
 
 stops_file = 'stops_list.csv'
@@ -15,6 +14,14 @@ ridango_stops_file = 'stops.csv'
 schedule_file = 'schedule_types.csv'
 bugs_file = 'bugs.txt'
 date_file = 'date.txt'
+os_file = 'os.txt'
+
+def current_time():
+    with open(os_file, 'r') as os_data_4:
+        if os_data_4.read() == '3':
+            return datetime.now().strftime('%H:%M:%S') + timedelta(hours=2)
+        else:
+            return datetime.now().strftime('%H:%M:%S')
 
 def error():
     print('Prašome patikslinti.')
@@ -45,6 +52,8 @@ def get_gtfs_data(url,selected_file):
         file14.write(response.text)
 
 def match_entered_stop(entered_stop):
+    get_gtfs_data("https://www.stops.lt/vilnius/vilnius/stops.txt", stops_file)
+
     partial_matches = {}
     last_non_empty_value = None
     updated_rows = []
@@ -61,24 +70,21 @@ def match_entered_stop(entered_stop):
         file1_csv_reader = csv.reader(file1, delimiter=';')
 
         for row_number, row in enumerate(file1_csv_reader, start=1):
-            # Ensure the row has at least 6 columns
-            while len(row) <= 5:
-                row.append('')  # Add empty values until the row has at least 6 columns
 
             # Ensure the row has at least 8 columns
             while len(row) <= 7:
                 row.append('')  # Add empty values until the row has at least 8 columns
-
-            # Skip rows whose first column does not match any value in valid_values
-            if row[0].strip() not in valid_values:
-                updated_rows.append(row)  # Add skipped row without modification
-                continue
 
             # Handle the 6th column (index 5)
             if row[5]:
                 last_non_empty_value = row[5]
             else:
                 row[5] = last_non_empty_value  # Use the value from the previous row if 6th column is empty
+
+            # Skip rows whose first column does not match any value in valid_values
+            if row[0] not in valid_values:
+                updated_rows.append(row)  # Add skipped row without modification
+                continue
 
             # Handle the 8th column (index 7)
             if not row[7]:
@@ -197,10 +203,7 @@ def determine_stop_direction(stop_name, stop_directions_rows):
         direction_2nd = rows[row_number - 1][1].strip()  # Get the 2nd column value (direction)
         code_1st = rows[row_number - 1][0].strip()  # 1st column value (Code)
 
-        if code_1st == '6015':
-                stop_code = '6015'
-                return stop_code
-        elif code_1st in exceptions:
+        if code_1st in exceptions:
             if exceptions[code_1st] == '0':  # Check if the direction is '0'
                 continue  # Skip this row
             elif exceptions[code_1st]:
@@ -346,7 +349,15 @@ def analyze_departures():
             route_numbers.append(route_number)
 
             # Convert and append departure time
-            departure_time = datetime.fromtimestamp(int(departure_time_unix)-2*60*60).strftime('%H:%M:%S')
+            with open(os_file, 'r') as os_data_2:
+                content = os_data_2.read()
+                if content == '2':
+                    departure_time = datetime.fromtimestamp(int(departure_time_unix)-3*60*60).strftime('%H:%M:%S')
+                elif content == '3':
+                    departure_time = datetime.fromtimestamp(int(departure_time_unix)).strftime('%H:%M:%S')
+                else:
+                    departure_time = datetime.fromtimestamp(int(departure_time_unix)-2*60*60).strftime('%H:%M:%S')
+
             departure_times.append(departure_time)
 
             # Separate and append vehicle attributes and fleet number
@@ -442,7 +453,7 @@ def display_gps_data():
             model_length = max(model_lengths)
             direction_length = max(direction_lengths)
 
-            print(f"Maršrutas: {number} | TP kiekis: {len(fleet_numbers)} | Laikas: {datetime.now().strftime('%H:%M:%S')}")
+            print(f"Maršrutas: {number} | TP kiekis: {len(fleet_numbers)} | Laikas: {current_time()}")
             print(f'Gr. D. Nr. {"Modelis":^{model_length}}  {"Kryptis":^{direction_length}} Išv.')
 
             for fleet_number, model, size, trip_start, trip_direction, schedule_number in sorted_data:
@@ -541,7 +552,7 @@ def display_departures(name, departure_times, vehicle_delays, route_numbers, rou
         if len(number) > number_length:
             number_length = len(model)
 
-    print(f"Stotelė: {name} | Laikas: {datetime.now().strftime('%H:%M:%S')}")
+    print(f"Stotelė: {name} | Laikas: {current_time()}")
     if direction_length > 7:
         print(f'Išvyksta Nuokr. {"Nr.":>{number_length}} Graf. {"Kryptis":^{direction_length}}Dyd. Gar. {"Modelis":^{model_length-2}}')
     else:
@@ -576,7 +587,7 @@ def get_and_extract_zip(gtfs_file):
 
     # Extract the specified files
     with ZipFile(local_zip_filename, "r") as zf:
-        for file_name in ["stops.txt"]: #, "stop_times.txt"]:
+        for file_name in ["stops.txt"]:
             if file_name in zf.namelist():
                 zf.extract(file_name, os.getcwd())
 
@@ -593,72 +604,111 @@ def get_and_extract_zip(gtfs_file):
         os.remove(local_zip_filename)
 
 def display_information():
-    print('STOPS v2.0 | BUILD 03_CHALLENGE | © Lanxtot')   
-    print()
-    
-    print('Pagrindinis stotelių režimas:')
+    with open(os_file, 'r') as os_data_5:
+        if os_data_5.read() != '1':
+            print('Naudodami programą laikykite mobilųjį įrenginį horizontaliai.')
+            print()
+
+    print('STOTELĖS. Gaukite pasirinktos stotelės artimiausios valandos išvykimo laikus:')
+    print('  Įveskite norimos stotelės pavadinimą arba jo fragmentą.')
     print('  Talpos/dydžio žymėjimas: mk – mikroautobusai | m – mažos talpos | t – standartinės talpos | ti – pailginti viengubi | i – dvigubi.')
     print('  Maršruto žymėjimas: T – troleibusų maršrutas | * – reisas alternatyvia trasa.')
     print('  Galite įvesti tuščią eilutę ir atnaujinti prognozes arba kitos stotelės pavadinimą.')
     print('  Krypčių pasirinkimų sąraše radę nelogiškų, nesuprantamų ar klaidinančių krypčių, užfiksuokite su / ženklu (jei klaidinga 1: „1/“ ir t.t.).')
     print()
     
-    print('Maršruto peržiūros režimas:')
+    print('MARŠRUTO PERŽIŪRA. Gaukite informaciją apie šiuo metu pasirinktame maršrute kursuojančias transporto priemones:')
     print('  Norėdami pasiekti, įveskite „?“.')
     print('  Įveskite norimo peržiūrėti maršruto numerį. Troleibusų maršrutus pasiekite pradėdami numerį „t“ raide. Norėdami išeiti, įveskite tuščią eilutę.')
     print()
+
+    print('TRANSPORTO PRIEMONĖS PAIEŠKA. Gaukite informaciją, kuriuo maršrutu kursuoja pasirinkta transporto priemonė:')
+    print('  Norėdami pasiekti, įveskite „!“.')
+    print('  Įveskite norimos surasti transporto priemonės garažinį numerį. Norėdami išeiti, įveskite tuščią eilutę.')
+    print()
     
-    print('Iššūkio režimas:')
+    print('SEKIMAS. Sekite transporto priemones, kuriomis jau esate važiavę:')
     print('  Norėdami pasiekti, įveskite „-“.')
-    print("  Įvestis: skaičius – užfiksuojamas pasinaudotas garažinis numeris | „+“ – pridedamas visas modelis ar dydis | tuščia eilutė – išeiti iš režimo.")
+    print('  Įvestis: skaičius – užfiksuojamas pasinaudotas garažinis numeris | „+“ – pridedamas visas modelis ar dydis | tuščia eilutė – išeiti iš režimo.')
     print()
 
-    print('Atnaujinimo režimas:')
+    print('ATSILIEPIMAI. Pamatykite savo praneštą klaidingą informaciją (stotelių kodus).')
+    print('  Norėdami pasiekti, įveskite „/“. Išeisite automatiškai.')
+    print()
+
+    print('ATNAUJINIMAS. Naujinkite programos duomenis:')
     print('  Maršrutų ir stotelių duomenys atnaujinti ',end='')
     with open(date_file, 'r') as date:
         print(date.read(),end='')
-    print('. Norėdami atnaujinti, įveskite „+“.')
+    print('.')
+    print('  Norėdami atnaujinti, įveskite „+“.')
+    print()
+
+def feedback():
+    with open(bugs_file, 'a+') as feedback_file:
+        print(feedback_file.read())
     print()
 
 def update_data():
-    get_gtfs_data("https://www.stops.lt/vilnius/vilnius/stops.txt", stops_file)
     get_and_extract_zip("http://stops.lt/vilnius/ridango/gtfs.zip")
     with open(date_file, 'w') as date:
         date.write(datetime.today().strftime('%Y.%m.%d'))
     print('Atnaujinti maršrutų ir stotelių duomenys.')
     print()
 
-def enter_stop():
-    while True:
-        entered_stop = input('Įveskite: ')
-        if entered_stop == "+":
-            update_data()
-        elif entered_stop == "-":
-            challenge()
-        elif entered_stop == "?":
-            display_gps_data()
-        else:
-            return entered_stop
+def os_check():
+    with open(os_file, 'r+') as os_data:
+        if os_data.read() == '':
+            print('Pasirinkitę savo operacinę sistemą:')
+            print('  1. Windows')
+            print('  2. Android')
+            print('  3. iOS')
+            while True:
+                os = input('Nr.: ')
+                if os == '1' or os == '2' or os == '3':
+                    break
+                else:
+                    error()
+            os_data.truncate(0)
+            os_data.write(os)
+            print()
 
 def main():
+    print('STOPS v2.0 | https://github.com/Lanxtot/stops | © Lanxtot')   
+    print()
+
+    os_check()
     display_information()
     get_stop_and_departures()
 
 def challenge():
     print()
 
-    # Open the file for reading and processing
-    with open(challenge_file, 'r', encoding='utf-8') as file9:
-        file9_csv_reader = csv.reader(file9, delimiter=',')
-        rows = list(file9_csv_reader)
+    try:
+        with open(challenge_file, 'r', encoding='utf-8') as file9:
+            file9_csv_reader = csv.reader(file9, delimiter=',')
+            rows = list(file9_csv_reader)
+
+            sorted_rows = sorted(rows, key=lambda row: (row[0].zfill(4), row[1], row[2]))
+
+    except FileNotFoundError:
+        with open(challenge_file, 'w', encoding='utf-8') as file9:
+            file9.write("") 
+            rows = []
+
+            sorted_rows = sorted(rows, key=lambda row: (row[0].zfill(4), row[1], row[2]))
     
-    # Display current rows
-    for row in rows:
+    with open(challenge_file, 'w', encoding='utf-8', newline='') as file9:
+        file9_csv_writer = csv.writer(file9, delimiter=',')
+        file9_csv_writer.writerows(sorted_rows)
+
+    # Print the sorted rows
+    for row in sorted_rows:
         try:
             print(f'{row[0]:>4} {row[1]:<2} {row[2]}')
         except IndexError:
             pass
-    
+
     print()
 
     while True:
@@ -720,16 +770,99 @@ def challenge():
             file15_csv_writer = csv.writer(file15, delimiter=',')
             file15_csv_writer.writerows(rows)
 
-def get_stop_and_departures():
+def search_gps_data():
 
-    repeat = False
+    get_gtfs_data("https://www.stops.lt/vilnius/gps_full.txt", gps_file)
+    while True:
+        route_number = None
+
+        print()
+        fleet_number = input('Nurodykite garažinį numerį: ')
+
+        if fleet_number == '':
+            print()
+            break
+        print()
+
+        with open(gps_file, mode='r', encoding='utf-8') as file5:
+            csv_reader_file5 = csv.reader(file5, delimiter=',')
+            rows = list(csv_reader_file5)
+
+            for row in rows:
+                if len(row) < 15:
+                    continue
+
+                if row[3] == fleet_number:
+                    route_type = row[0]
+                    
+                    if route_type == 'Troleibusai':
+                        route_number = 'T' + row[1]
+                    else:
+                        route_number = row[1]
+                  
+                    trip_start = row[8]
+                    try:
+                        hours = (int(trip_start) // 60) % 24
+                        minutes = int(trip_start) % 60
+                        trip_start = f"{hours:02}:{minutes:02}"
+                    except ValueError:
+                        pass
+
+                    trip_type = row[12]
+                    trip_direction = row[13]
+                    if re.search(r'\d+', trip_type):
+                        route_number += '*'
+
+                    trip_id = row[14]
+                    schedule_parts = trip_id.strip().split('-')
+                    try:
+                        schedule_number = schedule_parts[1].zfill(2)
+                    except IndexError:
+                        schedule_number = '?'
+                    
+                    break
+            
+        if route_number:
+            model, size = determine_vehicle_model([fleet_number])
+            model = model[0]
+            size = size[0]
+        
+            print(f"TP: {model}, nr. {fleet_number} ({size}) ")
+
+            if trip_start:
+                print(f'Maršrutas: {route_number} ({schedule_number}) {trip_direction} | Išvyksta: {trip_start}')
+            else:
+                print(f'Maršrutas: {route_number} ({schedule_number}) {trip_direction}')
+
+        else:
+            error()
+
+def enter_stop(decision):
+    while True:
+        if decision:
+            entered_stop = decision
+            decision = None
+        else:
+            entered_stop = input('Įveskite: ')
+        
+        if entered_stop == "+":
+            update_data()
+        elif entered_stop == "-":
+            challenge()
+        elif entered_stop == "?":
+            display_gps_data()
+        elif entered_stop == "!":
+            search_gps_data()
+        elif entered_stop == "/":
+            feedback()
+        else:
+            return entered_stop
+
+def get_stop_and_departures():
+    decision = None
 
     while True:
-        if repeat:
-            entered_stop = decision
-            repeat = False
-        else:
-            entered_stop = enter_stop()
+        entered_stop = enter_stop(decision)
 
         get_gtfs_data("https://www.stops.lt/vilnius/gps_full.txt", gps_file)
 
@@ -754,6 +887,8 @@ def get_stop_and_departures():
                 empty = get_departures(stop_code)
                 if empty == True:
                     print('Laikų nėra.')
+                    print()
+                    break
                 else:
                     route_types, route_numbers, route_variants, departure_times, vehicle_attributes, fleet_numbers, trip_directions = analyze_departures()
                     vehicle_delays, trip_ids, schedule_numbers = analyze_gps_data(fleet_numbers)
@@ -771,7 +906,6 @@ def get_stop_and_departures():
                     print()
                     continue
                 else:
-                    repeat = True
                     break
 
         else:
