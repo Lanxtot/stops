@@ -9,12 +9,10 @@ Python programa, iš oficialių Vilniaus visuomeninio transporto GTFS duomenų p
 3. Atsisiųskite programos šaltinio kodą
 4. Paleiskite main.py failą
 
-Norėdami atnaujinti, iš naujo parsisiųskite kodą
+Norėdami atnaujinti, iš naujo parsisiųskite kodą.
 
 ## Android
-
-Pastaba: norėdami tikslių laikų, įsidiekite versiją „challenge-android“
-
+ 
 1. Atsisiųskite F-Droid (ignoruokite klaidinančius perspėjimus apie galimą žalą): <https://f-droid.org/>
 2. Suteikite leidimą F-Droid įdiegti nežinomas programas
 3. Atsisiųskite Termux ir Termux:Widget iš F-Droid parduotuvės
@@ -28,7 +26,7 @@ Pastaba: norėdami tikslių laikų, įsidiekite versiją „challenge-android“
 * pkg install python
 * pip install requests
 * pkg install git bash
-* git clone -b challenge-android https://github.com/Lanxtot/stops
+* git clone https://github.com/Lanxtot/stops
 * mkdir -p /data/data/com.termux/files/home/.shortcuts
 * chmod 700 -R /data/data/com.termux/files/home/.shortcuts
 * nano ~/.shortcuts/Stops
@@ -37,14 +35,18 @@ Pastaba: norėdami tikslių laikų, įsidiekite versiją „challenge-android“
 * cd ~/stops
 * python3 main.py
 10. Sukurkite Termux:Widget 1x1 valdiklį pasirinkdami Stops
-11. Paleiskite Stops.sh
+11. Paleiskite Stops
 
-Norėdami atnaujinti, įveskite:
+Norėdami atnaujinti, Termux bazinėje aplinkoje įveskite:
 * cd stops
 * git pull .
 
 ## iOS
 
-1. Eikite į artimiausią elektronikos parduotuvę
-2. Nusipirkite išmanujį įrenginį su Android operacine sistema
-3. Toliau sekite instrukcijas skiltyje Android
+Galima naudotis įsidiegus Linux emuliatorių. Tereikia atsiųsti failus su Git, atverti atsiųstą aplanką ir paleisti failą „main.py“ su Python.
+
+Norėdami atnaujinti, naudokitės Git „pull .“ funkcija.
+
+## Pastabos
+
+Atsisiuntę šią programą galėsite pasirinkti savo operacinę sistemą ir gauti geriausiai pritaikytus bei tiksliausius duomenis.
