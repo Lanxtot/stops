@@ -2,6 +2,8 @@ Python programa, iš oficialių Vilniaus visuomeninio transporto GTFS duomenų p
 
 # Įdiegimo instrukcijos
 
+Atsisiuntę šią programą galėsite pasirinkti savo operacinę sistemą ir gauti geriausiai pritaikytus bei tiksliausius duomenis.
+
 ## Windows
 
 1. Įsidiekite Python 3.12 ar naujesnę versiją: <https://www.python.org/downloads/>
@@ -46,7 +48,3 @@ Norėdami atnaujinti, Termux bazinėje aplinkoje įveskite:
 Galima naudotis įsidiegus Linux emuliatorių. Tereikia atsiųsti failus su Git, atverti atsiųstą aplanką ir paleisti failą „main.py“ su Python.
 
 Norėdami atnaujinti, naudokitės Git „pull .“ funkcija.
-
-## Pastabos
-
-Atsisiuntę šią programą galėsite pasirinkti savo operacinę sistemą ir gauti geriausiai pritaikytus bei tiksliausius duomenis.
