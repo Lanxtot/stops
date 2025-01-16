@@ -1,4 +1,4 @@
-Python programa, iš oficialių Vilniaus visuomeninio transporto GTFS duomenų pateikianti išvykimo laikus tiksliau nei visur kitur (stops.lt front-end'as, Trafi, Google Maps). Stotelės pasirenkamos aiškiu ir patogiu būdu. Išvykimo laikai prognozuojami stops.lt sistemos, tačiau pateikiami tiksliu HH:MM:SS formatu. Taip pat pateikiama atvykstančios transporto priemonės talpa, nuokrypis nuo tvarkaraščio bei transporto priemonių garažiniai ir reisų grafikų numeriai.
+Python programa, iš oficialių Vilniaus visuomeninio transporto GTFS duomenų pateikianti išvykimo laikus tiksliau nei visur kitur (stops.lt front-end'as, Trafi, Google Maps). Stotelės pasirenkamos aiškiu ir patogiu būdu. Išvykimo laikai prognozuojami stops.lt sistemos, tačiau pateikiami tiksliu HH:MM:SS formatu. Taip pat pateikiama atvykstančios transporto priemonės garažinis numeris, grafiko numeris ir nuokrypis nuo tvarkaraščio. Prieinamos ir kitos naudingos funkcijos, pvz. maršrutu kursuojančių transporto priemonių suvestinė.
 
 # Įdiegimo instrukcijos
 
