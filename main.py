@@ -543,12 +543,12 @@ def display_departures(name, departure_times, vehicle_delays, route_numbers, rou
 
     print(f"Stotelė: {name} | Laikas: {datetime.now().strftime('%H:%M:%S')}")
     if direction_length > 7:
-        print(f"Išvyksta Nuokr. {"Nr.":>{number_length}} Graf. {"Kryptis":^{direction_length}}Dyd. Gar. {"Modelis":^{model_length-2}}")
+        print(f'Išvyksta Nuokr. {"Nr.":>{number_length}} Graf. {"Kryptis":^{direction_length}}Dyd. Gar. {"Modelis":^{model_length-2}}')
     else:
-        print(f"Išvyksta Nuokr. {"Nr.":>{number_length}} Graf. {"Krpt.":^{direction_length-1}} Dyd. Gar. {"Modelis":^{model_length-2}}")
+        print(f'Išvyksta Nuokr. {"Nr.":>{number_length}} Graf. {"Krpt.":^{direction_length-1}} Dyd. Gar. {"Modelis":^{model_length-2}}')
 
     for departure_time, vehicle_delay, route_number, route_variant, trip_direction, schedule_number, fleet_number, size, model in zip(departure_times, vehicle_delays, route_numbers, route_variants, trip_directions, schedule_numbers, fleet_numbers, sizes, models):
-        print(f"{departure_time:<8} {vehicle_delay:<6} {route_number:>{number_length}}{route_variant}({schedule_number:<2}) {trip_direction:<{direction_length}}  {size:>2} {fleet_number:>4} {model:<{model_length}}  ")
+        print(f'{departure_time:<8} {vehicle_delay:<6} {route_number:>{number_length}}{route_variant}({schedule_number:<2}) {trip_direction:<{direction_length}}  {size:>2} {fleet_number:>4} {model:<{model_length}}')
 
         item += 1
 
