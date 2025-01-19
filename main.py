@@ -19,7 +19,11 @@ os_file = 'os.txt'
 def current_time():
     with open(os_file, 'r') as os_data_4:
         if os_data_4.read() == '3':
-            return datetime.now().strftime('%H:%M:%S') + timedelta(hours=2)
+            now = datetime.now()
+            hours = (now.hour + 2) % 24
+            minutes = now.minute
+            seconds = now.second
+            return f'{hours:02} {minutes:02} {seconds:02}'
         else:
             return datetime.now().strftime('%H:%M:%S')
 
@@ -372,8 +376,8 @@ def analyze_departures():
 
 def display_gps_data():
 
-    get_gtfs_data("https://www.stops.lt/vilnius/gps_full.txt", gps_file)
     while True:
+        get_gtfs_data("https://www.stops.lt/vilnius/gps_full.txt", gps_file)
 
         fleet_numbers = []
         models = []
@@ -679,7 +683,7 @@ def main():
 
     os_check()
     display_information()
-    get_stop_and_departures()
+    execute_program()
 
 def challenge():
     print()
@@ -771,9 +775,9 @@ def challenge():
             file15_csv_writer.writerows(rows)
 
 def search_gps_data():
-
-    get_gtfs_data("https://www.stops.lt/vilnius/gps_full.txt", gps_file)
     while True:
+        get_gtfs_data("https://www.stops.lt/vilnius/gps_full.txt", gps_file)
+
         route_number = None
 
         print()
@@ -837,15 +841,13 @@ def search_gps_data():
         else:
             error()
 
-def enter_stop(decision):
+def enter_stop(stop_code):
     while True:
-        if decision:
-            entered_stop = decision
-            decision = None
-        else:
-            entered_stop = input('Įveskite: ')
+        entered_stop = input('Įveskite: ')
         
-        if entered_stop == "+":
+        if entered_stop == "" and stop_code:
+            return None, stop_code
+        elif entered_stop == "+":
             update_data()
         elif entered_stop == "-":
             challenge()
@@ -856,39 +858,41 @@ def enter_stop(decision):
         elif entered_stop == "/":
             feedback()
         else:
-            return entered_stop
+            return entered_stop, None
 
-def get_stop_and_departures():
-    decision = None
+def execute_program():
+    stop_code = None
 
     while True:
-        entered_stop = enter_stop(decision)
+        entered_stop, stop_code = enter_stop(stop_code)
 
-        get_gtfs_data("https://www.stops.lt/vilnius/gps_full.txt", gps_file)
+        if not stop_code:    
+            entered_stop = normalize(entered_stop)
+            partial_matches = match_entered_stop(entered_stop)
 
-        entered_stop = normalize(entered_stop)
-        partial_matches = match_entered_stop(entered_stop)
+            if not partial_matches:
+                error()
+                continue
 
-        if not partial_matches:
-            error()
-            continue
+            stop_directions_rows, name = handle_partial_matches(partial_matches)
 
-        stop_directions_rows, name = handle_partial_matches(partial_matches)
+            if stop_directions_rows is None:
+                continue
 
-        if stop_directions_rows is None:
-            continue
-
-        stop_code = determine_stop_direction(name, stop_directions_rows)
+            stop_code = determine_stop_direction(name, stop_directions_rows)
 
         if stop_code:
             print()
 
             while True:
+                get_gtfs_data("https://www.stops.lt/vilnius/gps_full.txt", gps_file)
+
                 empty = get_departures(stop_code)
-                if empty == True:
+                if empty:
                     print('Laikų nėra.')
                     print()
                     break
+
                 else:
                     route_types, route_numbers, route_variants, departure_times, vehicle_attributes, fleet_numbers, trip_directions = analyze_departures()
                     vehicle_delays, trip_ids, schedule_numbers = analyze_gps_data(fleet_numbers)
@@ -900,13 +904,7 @@ def get_stop_and_departures():
                     )
 
                 print()
-                decision = input('Įveskite: ')
-
-                if decision == "":
-                    print()
-                    continue
-                else:
-                    break
+                break
 
         else:
             continue
