@@ -23,7 +23,7 @@ def current_time():
             hours = (now.hour + 2) % 24
             minutes = now.minute
             seconds = now.second
-            return f'{hours:02} {minutes:02} {seconds:02}'
+            return f'{hours:02}:{minutes:02}:{seconds:02}'
         else:
             return datetime.now().strftime('%H:%M:%S')
 
