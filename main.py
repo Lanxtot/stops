@@ -4,21 +4,23 @@ import re
 import requests
 import csv
 import os
-from datetime import datetime, timedelta
+from datetime import datetime
 from zipfile import ZipFile
 
 # Files
 
+os_file = 'os.txt'
 stops_file = 'stops_list.csv'
 departures_file = 'departures.csv'
 gps_file = 'gps_data.csv'
-models_file = 'models.csv'
+models_file_1 = 'models.csv'
+models_file_2 = 'models_short.csv'
 challenge_file = 'challenge.csv'
 ridango_stops_file = 'stops.csv'
 schedule_file = 'schedule_types.csv'
+exceptions_file = 'exceptions.csv'
 bugs_file = 'bugs.txt'
 date_file = 'date.txt'
-os_file = 'os.txt'
 
 # Mini functions
 
@@ -43,7 +45,7 @@ def normalize(input_string):
     cleaned_string = re.sub(r'[^a-zA-Z]', '', input_string)
     return cleaned_string
 
-def get_gtfs_data(url,selected_file):
+def rip_txt(url,selected_file):
     response = requests.get(url)
     response.encoding = 'utf-8'
 
@@ -61,17 +63,7 @@ def current_time():
         else:
             return datetime.now().strftime('%H:%M:%S')
 
-def get_and_extract_zip(gtfs_file):
-    """
-    Downloads a GTFS zip file from the given URL, extracts 'stops.txt' and 'stop_times.txt',
-    and renames them to 'stops.csv' and 'stop_times.csv'.
-
-    Parameters:
-        gtfs_file (str): URL of the GTFS zip file.
-
-    Returns:
-        None
-    """
+def rip_from_zipfile(gtfs_file):
     # Define filenames
     local_zip_filename = "gtfs.zip"
 
@@ -104,7 +96,7 @@ def get_and_extract_zip(gtfs_file):
 # Main features
 
 def match_entered_stop(entered_stop):
-    get_gtfs_data("https://www.stops.lt/vilnius/vilnius/stops.txt", stops_file)
+    rip_txt("https://www.stops.lt/vilnius/vilnius/stops.txt", stops_file)
 
     partial_matches = {}
     last_non_empty_value = None
@@ -217,17 +209,18 @@ def handle_partial_matches(partial_matches):
             else:
                 error()  # Invalid choice, prompt again
         except ValueError:
-            error()
             if not selection:
                 return None, None
+            else:
+                error()
         except IndexError:
-            error()
             if not selection:
                 return None, None
+            else:
+                error()
 
 def determine_stop_direction(stop_name, stop_directions_rows):
     # Read the exceptions.csv file and create a dictionary with Code and Option
-    exceptions_file = 'exceptions.csv'
     exceptions = {}
     with open(exceptions_file, mode='r', encoding='utf-8') as file2:
         file2_csv_reader = csv.DictReader(file2, delimiter=';')
@@ -353,15 +346,17 @@ def determine_stop_direction(stop_name, stop_directions_rows):
             except TypeError:
                 error()
             except ValueError:
-                error()
                 if not user_choice:
                     print()
                     return None
+                else:
+                    error()
             except IndexError:
-                error()
                 if not user_choice:
                     print()
                     return None
+                else:
+                    error()
 
 def get_departures(stop_code):
     url = "https://www.stops.lt/vilnius/departures2.php?stopid=" + stop_code
@@ -379,7 +374,7 @@ def get_departures(stop_code):
 
         return empty
 
-def analyze_departures():
+def process_departures():
     route_types = []
     route_numbers = []
     route_variants = []
@@ -434,12 +429,20 @@ def analyze_departures():
             fleet_numbers.append(''.join(filter(str.isdigit, vehicle_block)))
 
             # Append trip direction
+
+            with open(os_file, 'r') as os_data_7:
+                if os_data_7.read() == '3':
+                    trip_direction = trip_direction.replace('autobusų parkas','AP')
+                    trip_direction = trip_direction.replace('Autobusų parkas','AP')
+                    trip_direction = trip_direction.replace('troleibusų parkas','TP')
+                    trip_direction = trip_direction.replace('Troleibusų parkas','TP')
+
             trip_directions.append(trip_direction)
 
     # Return all prepared lists
     return route_types, route_numbers, route_variants, departure_times, vehicle_attributes, fleet_numbers, trip_directions
 
-def analyze_gps_data(fleet_numbers):
+def process_realtime_data(fleet_numbers):
     # Prepare lists to store extracted data
     vehicle_delays = []
     trip_ids = []
@@ -486,9 +489,15 @@ def analyze_gps_data(fleet_numbers):
     # Return the collected lists
     return vehicle_delays, trip_ids, schedule_numbers
 
-def determine_vehicle_model(fleet_numbers):
+def assign_vehicle_model(fleet_numbers):
     models = []
     sizes = []
+
+    with open(os_file, 'r') as os_data_6:
+        if os_data_6.read() == '3':
+            models_file = models_file_2
+        else:
+            models_file = models_file_1
 
     # Read the models_file and store its contents in a list for comparison
     with open(models_file, mode='r', encoding='utf-8') as file8:
@@ -556,7 +565,7 @@ def enter_code():
             error()
 
 def update_data():
-    get_and_extract_zip("http://stops.lt/vilnius/ridango/gtfs.zip")
+    rip_from_zipfile("http://stops.lt/vilnius/ridango/gtfs.zip")
     with open(date_file, 'w') as date:
         date.write(datetime.today().strftime('%Y.%m.%d'))
     print('Atnaujinti maršrutų ir stotelių duomenys.')
@@ -612,7 +621,7 @@ def challenge():
                 rows.remove(existing_row)
                 print('Ištrinta.')
             else:
-                model, size = determine_vehicle_model([fleet_number])
+                model, size = assign_vehicle_model([fleet_number])
                 rows.append([fleet_number, *size, *model])
             
         except ValueError:
@@ -651,10 +660,10 @@ def challenge():
             file15_csv_writer = csv.writer(file15, delimiter=',')
             file15_csv_writer.writerows(rows)
 
-def display_gps_data():
+def analyze_route():
 
     while True:
-        get_gtfs_data("https://www.stops.lt/vilnius/gps_full.txt", gps_file)
+        rip_txt("https://www.stops.lt/vilnius/gps_full.txt", gps_file)
 
         fleet_numbers = []
         models = []
@@ -723,7 +732,7 @@ def display_gps_data():
         else:
 
             for fleet_number in fleet_numbers:
-                model, size = determine_vehicle_model([fleet_number])
+                model, size = assign_vehicle_model([fleet_number])
                 models.append(model[0])
                 model_lengths.append(len(model[0]))
                 sizes.append(size[0])
@@ -740,9 +749,9 @@ def display_gps_data():
             for fleet_number, model, size, trip_start, trip_direction, schedule_number in sorted_data:
                 print(f'{schedule_number:<3}{size:>2} {fleet_number:>4} {model:<{model_length}}  {trip_direction:<{direction_length}} {trip_start}')
 
-def search_gps_data():
+def search_vehicle():
     while True:
-        get_gtfs_data("https://www.stops.lt/vilnius/gps_full.txt", gps_file)
+        rip_txt("https://www.stops.lt/vilnius/gps_full.txt", gps_file)
 
         route_number = None
 
@@ -793,7 +802,7 @@ def search_gps_data():
                     break
             
         if route_number:
-            model, size = determine_vehicle_model([fleet_number])
+            model, size = assign_vehicle_model([fleet_number])
             model = model[0]
             size = size[0]
         
@@ -830,9 +839,9 @@ def enter_stop(stop_code):
         elif entered_stop == "-":
             challenge()
         elif entered_stop == "?":
-            display_gps_data()
+            analyze_route()
         elif entered_stop == "!":
-            search_gps_data()
+            search_vehicle()
         elif entered_stop == "/":
             feedback()
         else:
@@ -931,7 +940,7 @@ def execute_program():
             print()
 
             while True:
-                get_gtfs_data("https://www.stops.lt/vilnius/gps_full.txt", gps_file)
+                rip_txt("https://www.stops.lt/vilnius/gps_full.txt", gps_file)
 
                 empty = get_departures(stop_code)
                 if empty:
@@ -940,9 +949,9 @@ def execute_program():
                     break
 
                 else:
-                    route_types, route_numbers, route_variants, departure_times, vehicle_attributes, fleet_numbers, trip_directions = analyze_departures()
-                    vehicle_delays, trip_ids, schedule_numbers = analyze_gps_data(fleet_numbers)
-                    models, sizes = determine_vehicle_model(fleet_numbers)
+                    route_types, route_numbers, route_variants, departure_times, vehicle_attributes, fleet_numbers, trip_directions = process_departures()
+                    vehicle_delays, trip_ids, schedule_numbers = process_realtime_data(fleet_numbers)
+                    models, sizes = assign_vehicle_model(fleet_numbers)
                     display_departures(
                         name, departure_times, vehicle_delays,
                         route_numbers, route_variants, trip_directions, schedule_numbers, fleet_numbers,
@@ -955,7 +964,7 @@ def execute_program():
 # Main code
 
 def main():
-    print('STOPS v2.1 TESTING BUILD 06 | https://github.com/Lanxtot/stops | © Lanxtot')   
+    print('STOPS v2.1 TESTING BUILD 07 | https://github.com/Lanxtot/stops | © Lanxtot')   
     print()
 
     os_check()
