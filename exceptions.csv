@@ -1,96 +1,139 @@
-Code,Direction
-0530,0
-2242,0
-3221,0
-3222,0
-2622,Kirtimų geležinkelio stotis
-2330,link N.Vilnios
-0443,iš stoties
-5231,link N.Vilnios
-5232,link Rudaminos
-5226,link Rudaminos
-5228,link N.Vilnios
-5219,link miesto
-5223,iš miesto
-5224,link miesto
-5221,iš miesto
-4019,iš centro
-4024,link centro
-6007,link miesto
-6008,iš miesto
-1437,link Kalnėnų
-2145,link miesto
-2146,iš miesto
-3914,link Gurelių
-3915,link miesto
-2152,visos kryptys
-2160,link Vandenio g.
-2802a,link miesto (už sankryžos)
-2801,link miesto (prieš sankryžą)
-3917,link Gurelių
-3918,link miesto
-2999,0
-3104,link miesto
-5118,iš A.Panerių
-2711,link miesto
-2376a,0
-1452,iš Paupio
-2821,link miesto
-2105a,0
-2157a,laikina
-0401a,nuo Žirmūnų tilto (laikina)
-0402a,link Žirmūnų tilto (laikina)
-0449a,iš stoties
-0449,0
-2402a,0
-0527a,0
-2123,0
-2106a,0
-3848,laikina
-3306a,0
-3305a,0
-2414e,0
-0245,0
-0245b,iš centro (Vilniaus g.)
-2127a,0
-2119a,0
-1218,iš centro
-2148,iš miesto
-2157,link miesto
-4017,link centro
-4018,iš centro
-6005,link miesto
-6006,iš miesto
-1015,link N.Vilnios
-3526,link miesto
-0715,link Žalgirio g.
-0717,link Konstitucijos pr.
-4910,link miesto
-4911,iš miesto
-5230,link Rudaminos
-5225,link miesto
-4025,iš centro
-4026,link centro
-5223,link miesto
-5224,iš miesto
-0530z,Z stotelė
-0828,0
-3221,0
-3222,0
-5111a,0
-5110a,0
-2221,link Balsių mokyklos
-5147,0
-1127a,0
-1617,iš Oslo g.
-5189,link Oslo g.
-3901,link Gurelių (20 link Ž.Panerių)
-3911,link Lazdynų (62 iš Gurelių)
-2226,link Pagubės
-2241,link miesto
-2901,iš Titnago g.
-1216,link miesto
-3555,panaikinta
-3820,iš centro
-5163,link N.Vilnios
-5227,iš N.Vilnios
+Code;Direction
+0530;0
+2242;0
+3221;0
+3222;0
+2622;Kirtimų geležinkelio stotis
+2330;link N.Vilnios
+0443;iš stoties
+4316;link Rudaminos
+5231;link N.Vilnios
+1502;įlaipinimas
+1517;iš Kirtimų
+2015;link Šeškinės
+5232;link Rudaminos
+5226;link Rudaminos
+5228;link N.Vilnios
+5219;link miesto
+5223;iš miesto
+5224;link miesto
+5221;iš miesto
+4019;iš centro
+4024;link centro
+6007;link miesto
+2649;link oro uosto
+2641;iš oro uosto
+1301;link stoties
+0528;iš stoties
+2626;panaikinta
+6008;iš miesto
+1437;link Kalnėnų
+2145;link miesto
+2146;iš miesto
+3914;link Gurelių
+3915;link miesto
+2152;visos kryptys
+2160;link Vandenio g.
+2802a;link miesto (už sankryžos)
+2801;link miesto (prieš sankryžą)
+3917;link Gurelių
+3918;link miesto
+2999;0
+3104;link miesto
+5118;iš A.Panerių
+2711;link miesto
+2376a;0
+1452;iš Paupio
+2821;link miesto
+2105a;0
+2157a;laikina
+0401a;nuo Žirmūnų tilto (laikina)
+0402a;link Žirmūnų tilto (laikina)
+0449a;iš stoties
+0449;0
+2402a;0
+0527a;0
+2123;0
+2106a;0
+3848;laikina
+3306a;0
+3305a;0
+2414e;0
+0245;0
+0245b;iš centro (Vilniaus g.)
+2127a;0
+2119a;0
+1218;iš centro
+2148;iš miesto
+2157;link miesto
+4017;link centro
+4018;iš centro
+6005;link miesto
+6006;iš miesto
+1015;link N.Vilnios
+3526;link miesto
+0715;link Žalgirio g.
+0717;link Konstitucijos pr.
+4910;link miesto
+4911;iš miesto
+5230;link Rudaminos
+5225;link miesto
+4025;iš centro
+4026;link centro
+5223;link miesto
+5224;iš miesto
+0530z;Z stotelė
+0828;0
+3221;0
+3222;0
+5111a;0
+5110a;0
+2221;link Balsių mokyklos
+5147;0
+1127a;0
+1617;iš Oslo g.
+5189;link Oslo g.
+3901;link Gurelių (20 link Ž.Panerių)
+3911;link Lazdynų (62 iš Gurelių)
+2226;link Pagubės
+2241;link miesto
+2901;iš Titnago g.
+2706;link Eišiškių pl.
+2707;link Salininkų
+0924;link Ulonų g.
+0925;nuo Ulonų g.
+0718;link Kernavės g.
+0712;iš centro
+1819;link Akropolio
+1809;link Fabijoniškių
+1702;iš Karoliniškių
+1703;link Karoliniškių
+1717;link aplinkkelio
+1605;link Erfurto g.
+1606;link Karoliniškių
+1607;link Erfurto g.
+1608;link Karoliniškių
+2910;nuo Savanorių pr.
+2811;link B.Vokės
+1216;link miesto
+3555;panaikinta
+3820;iš centro
+5163;link N.Vilnios
+5227;iš N.Vilnios
+2712;link Eišiškių pl.
+2713;link pervažos
+1203;link Olandų g.
+2102;link Visorių
+2001;link Geležinio Vilko g.
+3839;link Pašilaičių
+3840;nuo Ateities g.
+1207;link Olandų g.
+0406;iš stoties
+0440;link Pylimo g.
+2323;link S. Batoro g.
+2376;iš miesto
+1118c;link Valakampių
+1118;įlaipinimas, troleibusai
+1118a;įlaipinimas, autobusai
+3502;iš Turniškių
+3542a;link centro
