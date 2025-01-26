@@ -15,10 +15,12 @@ departures_file = 'departures.csv'
 gps_file = 'gps_data.csv'
 models_file_1 = 'models.csv'
 models_file_2 = 'models_short.csv'
+regional_models_file = 'models_regional.csv'
 challenge_file = 'challenge.csv'
 ridango_stops_file = 'stops.csv'
 schedule_file = 'schedule_types.csv'
 exceptions_file = 'exceptions.csv'
+favorites_file = 'favorites.csv'
 bugs_file = 'bugs.txt'
 date_file = 'date.txt'
 
@@ -208,12 +210,7 @@ def handle_partial_matches(partial_matches):
                 return stop_directions_rows, stop_name  # Return both the list of rows and the selected stop name
             else:
                 error()  # Invalid choice, prompt again
-        except ValueError:
-            if not selection:
-                return None, None
-            else:
-                error()
-        except IndexError:
+        except:
             if not selection:
                 return None, None
             else:
@@ -296,7 +293,7 @@ def determine_stop_direction(stop_name, stop_directions_rows):
     for idx, (row_number, direction, code_1st) in enumerate(displayed_directions, start=1):
         try:
             direction_8th = direction_8th_column[row_number]  # Get the street name from the 8th column
-        except KeyError:
+        except:
             direction_8th = '?'
         
         # Check for duplicate directions and append street name if needed
@@ -330,7 +327,7 @@ def determine_stop_direction(stop_name, stop_directions_rows):
                 return stop_code
             else:
                 error()  # Invalid choice, prompt again
-        except ValueError:
+        except:
             bug_report=list(user_choice)
             try:
                 bug_report[0]=int(bug_report[0])
@@ -472,7 +469,7 @@ def process_realtime_data(fleet_numbers):
                         delay_seconds = abs(delay_seconds) % 60
                         formatted_delay = f"{'-' if negative_delay == True else ' '}{abs(delay_minutes):02}:{delay_seconds:02}"
                         vehicle_delays.append(formatted_delay)
-                    except ValueError:
+                    except:
                         vehicle_delays.append("00:00")  # Default if conversion fails
 
                     # Extract and append schedule_number from the 15th column
@@ -480,7 +477,7 @@ def process_realtime_data(fleet_numbers):
                     schedule_parts = trip_id.strip().split('-')
                     try:
                         schedule_number = schedule_parts[1].zfill(2)
-                    except IndexError:
+                    except:
                         schedule_number = ' ?'
 
                     trip_ids.append(trip_id)
@@ -489,7 +486,7 @@ def process_realtime_data(fleet_numbers):
     # Return the collected lists
     return vehicle_delays, trip_ids, schedule_numbers
 
-def assign_vehicle_model(fleet_numbers):
+def assign_vehicle_model(vehicle_numbers):
     models = []
     sizes = []
 
@@ -498,28 +495,52 @@ def assign_vehicle_model(fleet_numbers):
             models_file = models_file_2
         else:
             models_file = models_file_1
-
-    # Read the models_file and store its contents in a list for comparison
+   
     with open(models_file, mode='r', encoding='utf-8') as file8:
         file8_csv_reader = csv.DictReader(file8)
-        rows = list(file8_csv_reader)  # Store all rows in a list
+        rows = list(file8_csv_reader)
+            
+    with open(regional_models_file, 'r') as file16:
+        file16_csv_reader = csv.reader(file16, delimiter=';')
+        regional_rows = list(file16_csv_reader)
+    
+    if vehicle_numbers[0].isdecimal():
 
-    # Iterate over each fleet_number
-    for fleet_number in fleet_numbers:
-        matched_model = None
-        matched_size = None
+        for fleet_number in vehicle_numbers:
+            matched_model = None
+            matched_size = None
 
-        # Iterate over rows in the models file
-        for i, row in enumerate(rows):
-            start_value = int(row['Start'])
-            next_start_value = int(rows[i + 1]['Start']) if i + 1 < len(rows) else float('inf')
+            if int(fleet_number) <= 54:
+                for regional_row in regional_rows:
+                    if fleet_number == regional_row[0]:
+                        matched_model = regional_row[2]
+                        matched_size = regional_row[3]
+                        break
 
-            if start_value <= int(fleet_number) < next_start_value:
-                matched_model = row['Model']
-                matched_size = row['Size']
-                break
+            else:
+                for i, row in enumerate(rows):
+                    start_value = int(row['Start'])
+                    next_start_value = int(rows[i + 1]['Start']) if i + 1 < len(rows) else float('inf')
 
-        # Append the matched model and size to the respective lists
+                    if start_value <= int(fleet_number) < next_start_value:
+                        matched_model = row['Model']
+                        matched_size = row['Size']
+                        break
+
+            models.append(matched_model if matched_model else "Neįvestas modelis")
+            sizes.append(matched_size if matched_size else "?")
+    
+    else:
+        for license_plate in vehicle_numbers:
+            matched_model = None
+            matched_size = None
+
+            for regional_row in regional_rows:
+                if license_plate == regional_row[1]:
+                    matched_model = regional_row[2]
+                    matched_size = regional_row[3]
+                    break
+        
         models.append(matched_model if matched_model else "Neįvestas modelis")
         sizes.append(matched_size if matched_size else "?")
 
@@ -527,7 +548,7 @@ def assign_vehicle_model(fleet_numbers):
 
 def display_departures(name, departure_times, vehicle_delays, route_numbers, route_variants, trip_directions, schedule_numbers, fleet_numbers, sizes, models):
     item = 1
-    direction_length = 0
+    direction_length = 6
     model_length = 0
     number_length = 3
 
@@ -571,94 +592,168 @@ def update_data():
     print('Atnaujinti maršrutų ir stotelių duomenys.')
     print()
 
-def challenge():
+def view_trips(challenge):
     print()
 
     try:
         with open(challenge_file, 'r', encoding='utf-8') as file9:
-            file9_csv_reader = csv.reader(file9, delimiter=',')
+            file9_csv_reader = csv.reader(file9, delimiter=';')
             rows = list(file9_csv_reader)
 
-            sorted_rows = sorted(rows, key=lambda row: (row[0].zfill(4), row[1], row[2]))
+            base_rows = sorted(
+                [row[:3] for row in rows],  # Keep only the first 3 elements of each row
+                key=lambda row: (row[0].zfill(4), row[1], row[2])  # Sorting based on the first 3 elements
+            )
+
+            sorted_rows = []
+            for base_row in base_rows:
+                if base_row in sorted_rows:
+                    sorted_rows[sorted_rows.index(base_row)][2] += ' (!)'
+                else:
+                    sorted_rows.append(base_row)
+
+            rows = [row for row in rows if len(row) > 4]
 
     except FileNotFoundError:
         with open(challenge_file, 'w', encoding='utf-8') as file9:
             file9.write("") 
             rows = []
+            sorted_rows = []
 
-            sorted_rows = sorted(rows, key=lambda row: (row[0].zfill(4), row[1], row[2]))
+    if challenge:
+        print(f"  Gar. D. Modelis")
+        for row in sorted_rows:
+            try:
+                print(f"{row[0]:>6} {row[1]:<2} {row[2]}")
+            except:
+                pass
+    else:
+        model_length = 0
+        direction_length = 0
+        for row in rows:
+            if len(row[2]) > model_length:
+                model_length = len(row[2])
+            if len(row[4]) > direction_length:
+                direction_length = len(row[4])
+        
+        print(f"Nr. Marš.{'Kryptis':^{direction_length + 2}}Gar. D.{'Modelis':^{model_length}}")
+        for item in range(len(rows)):
+            number = str(item + 1)
+            number += '.'
+            try:
+                print(f"{number:^4}{rows[item][3]:>4} {rows[item][4]:<{direction_length}} {rows[item][0]:>6} {rows[item][1]:<2} {rows[item][2]:<}")
+            except:
+                pass
     
-    with open(challenge_file, 'w', encoding='utf-8', newline='') as file9:
-        file9_csv_writer = csv.writer(file9, delimiter=',')
-        file9_csv_writer.writerows(sorted_rows)
+    print()
 
-    # Print the sorted rows
-    for row in sorted_rows:
-        try:
-            print(f'{row[0]:>4} {row[1]:<2} {row[2]}')
-        except IndexError:
-            pass
+def add_whole():
+    print()
+    whole_selection = input('Įveskite ilgį/modelį: ')
+    if len(whole_selection) <= 2:
+        whole_selection = whole_selection.lower()
+
+        if whole_selection == ('t' or 'i'):
+            print('  1. Autobusai')
+            print('  2. Troleibusai')
+
+            while True:
+                mode_selection = input('Nr.: ')
+                if mode_selection == '1':            
+                    added_size = whole_selection
+                    added_model = "(autobusai)"
+                    break
+                elif mode_selection == '2':
+                    added_size = whole_selection
+                    added_model = "(troleibusai)"
+                    break
+                else:
+                    error()
+        
+        else:
+            added_size = whole_selection
+            added_model = ""
+
+    else:
+        added_size = ""
+        added_model = whole_selection
+
+    with open(challenge_file, 'a+', encoding='utf-8', newline='') as file15:
+        file15_csv_writer = csv.writer(file15, delimiter=';')
+        file15_csv_writer.writerows([['Visi:', added_size, added_model]])
 
     print()
 
+def add_vehicle_number(vehicle_number):
+
+    model, size = assign_vehicle_model([vehicle_number])
+    model = model[0]
+    size = size[0]
+
+    route = input('Nurodykite maršrutą: ')
+    direction = input('Nurodykite kryptį: ')
+
+    added_vehicle = [vehicle_number, size, model, route, direction]
+
+    with open(challenge_file, 'a+', encoding='utf-8', newline='') as file17:
+        file17_csv_writer = csv.writer(file17, delimiter=';')
+        file17_csv_writer.writerows([added_vehicle])
+
+def remove_trip():
+    print()
+
+    try:
+        with open(challenge_file, 'r+', encoding='utf-8', newline='') as file18:
+            file18_csv_reader = csv.reader(file18, delimiter=';')
+            rows = list(file18_csv_reader)
+
+    except FileNotFoundError:
+        return
+
     while True:
-        challenge_decision = input('Pridėkite: ')
-        
-        if not challenge_decision:
-            print()
-            return
-        
-        try:
-            # Fleet number handling
-            fleet_number = int(challenge_decision)
-            if fleet_number < 555 or fleet_number > 8050:
+        removal_selection = input('Ištrinamo įrašo nr.: ')
+
+        if removal_selection == "":
+            break
+
+        elif removal_selection.isdecimal():
+            try:
+                rows.pop(int(removal_selection) - 1)
+                break
+            except IndexError:
                 error()
-                continue
-            
-            existing_row = next((row for row in rows if row and str(row[0]).isdigit() and int(row[0]) == fleet_number), None)
-            
-            if existing_row:
-                rows.remove(existing_row)
-                print('Ištrinta.')
-            else:
-                model, size = assign_vehicle_model([fleet_number])
-                rows.append([fleet_number, *size, *model])
-            
-        except ValueError:
-            if challenge_decision == '+':
-                inp = input('Įveskite ilgį/modelį: ')
 
-                selection_type = None
+        else:
+            error()
+    
+    with open(challenge_file, 'w', encoding='utf-8', newline='') as file19:
+        file19_csv_writer = csv.writer(file19, delimiter=';')
+        file19_csv_writer.writerows(rows)
+    print()
 
-                if inp=='t' or inp=='i':
-                    print('  1. Autobusai')
-                    print('  2. Troleibusai')
-                    while True:
-                        selection_type = input('Nr.: ')
-                        if selection_type == '1':
-                            selection_type = 'Autobusai'
-                            break
-                        elif selection_type == '2' and inp =='i':
-                            inp = ''
-                            selection_type = 'Škoda 15Tr'
-                            break
-                        elif selection_type == '2' and inp =='t':
-                            selection_type = 'Troleibusai'
-                            break
-                        else:
-                            error()
+def tracking_selection():
+    print()
+    
+    while True:
+        viewing_decision = input('Pasirinkite/pridėkite: ')
+        viewing_decision = viewing_decision.replace(" ","").upper()
 
-                if len(inp)<3:
-                    rows.append(['Visi', inp, selection_type])
-                else:
-                    rows.append(['Visi', '', inp])
-            else:
-                error()
-        
-        # Write updated rows back to the file
-        with open(challenge_file, 'w', newline='', encoding='utf-8') as file15:
-            file15_csv_writer = csv.writer(file15, delimiter=',')
-            file15_csv_writer.writerows(rows)
+        if viewing_decision == ".":
+            view_trips(False)
+        elif viewing_decision == ",":
+            view_trips(True)
+        elif viewing_decision == "+":
+            add_whole()
+        elif viewing_decision == "-":
+            remove_trip()
+        elif viewing_decision.isdecimal() or len(viewing_decision) == 6:
+            add_vehicle_number(viewing_decision)
+        elif viewing_decision == "":
+            break
+        else:
+            error()
+    
+    print()
 
 def analyze_route():
 
@@ -706,7 +801,7 @@ def analyze_route():
                         hours = (int(trip_start) // 60) % 24
                         minutes = int(trip_start) % 60
                         trip_start = f"{hours:02}:{minutes:02}"
-                    except ValueError:
+                    except:
                         pass
 
                     trip_type = row[12]
@@ -718,7 +813,7 @@ def analyze_route():
                     schedule_parts = trip_id.strip().split('-')
                     try:
                         schedule_number = schedule_parts[1].zfill(2)
-                    except IndexError:
+                    except:
                         schedule_number = ' ?'
                     
                     fleet_numbers.append(fleet_number)
@@ -784,7 +879,7 @@ def search_vehicle():
                         hours = (int(trip_start) // 60) % 24
                         minutes = int(trip_start) % 60
                         trip_start = f"{hours:02}:{minutes:02}"
-                    except ValueError:
+                    except:
                         pass
 
                     trip_type = row[12]
@@ -796,7 +891,7 @@ def search_vehicle():
                     schedule_parts = trip_id.strip().split('-')
                     try:
                         schedule_number = schedule_parts[1].zfill(2)
-                    except IndexError:
+                    except:
                         schedule_number = '?'
                     
                     break
@@ -821,6 +916,92 @@ def feedback():
         print(feedback_file.read())
     print()
 
+def add_favorite():
+    print()
+
+    print('Stotelių trumpiniai:')
+    with open(favorites_file, 'r', encoding='utf-8') as file19:
+        file19_csv_reader = csv.reader(file19, delimiter=';')
+        rows = list(file19_csv_reader)
+    
+    for item in range(len(rows)):
+        print(f'  {item + 1}. {rows[item][2]}')
+    print()
+
+    while True:
+        selection = input('Redaguojamas nr.: ')
+        
+        try:
+            if int(selection) <= len(rows):
+                pass
+            else:
+                raise ValueError
+        except:
+            if selection == "":
+                break
+            else:
+                error()
+                continue
+        
+        while True:
+            entered_stop = input('Pridėkite stotelę: ')
+            if entered_stop == "":
+                break
+            
+            else:
+                try:
+                    entered_stop = normalize(entered_stop)
+                    partial_matches = match_entered_stop(entered_stop)
+                except:
+                    error()
+                    continue
+
+                if not partial_matches:
+                    error()
+                    continue
+
+                stop_directions_rows, name = handle_partial_matches(partial_matches)
+
+                if stop_directions_rows is None:
+                    continue
+
+                stop_code = determine_stop_direction(name, stop_directions_rows)
+            
+            if stop_code:
+                rows[int(selection) - 1][1] = stop_code
+
+                print()
+                stop_name = input('Įveskite trumpinio pavadinimą: ')
+                rows[int(selection) - 1][2] = stop_name
+
+                print()
+                break
+
+            else:
+                error()
+        
+    with open(favorites_file, 'w', encoding='utf-8', newline='') as file21:
+        file21_csv_writer = csv.writer(file21, delimiter=';')
+        file21_csv_writer.writerows(rows)
+
+    print()
+
+def get_favorite(selection):
+    stop_code = None
+    stop_name = None
+    
+    with open(favorites_file, 'r', encoding='utf-8') as file19:
+        file19_csv_reader = csv.reader(file19, delimiter=';')
+        rows = list(file19_csv_reader)
+    
+    for row in rows:
+        if row[0] == selection:
+            stop_code = row[1]
+            stop_name = row[2]
+            break
+
+    return stop_code, stop_name
+
 def enter_stop(stop_code):
     while True:
         entered_stop = input('Įveskite: ')
@@ -837,13 +1018,22 @@ def enter_stop(stop_code):
         elif entered_stop == "+":
             update_data()
         elif entered_stop == "-":
-            challenge()
+            tracking_selection()
         elif entered_stop == "?":
             analyze_route()
         elif entered_stop == "!":
             search_vehicle()
         elif entered_stop == "/":
             feedback()
+        elif entered_stop.isdigit():
+            stop_code, stop_name = get_favorite(entered_stop)
+
+            if stop_code:
+                return None, stop_code, stop_name
+            else:
+                error()
+        elif entered_stop == "*":
+            add_favorite()
         else:
             return entered_stop, None, None
 
@@ -892,8 +1082,16 @@ def display_information():
     print()
     
     print('SEKIMAS. Sekite transporto priemones, kuriomis jau esate važiavę:')
-    print('  Norėdami pasiekti, įveskite „-“.')
-    print('  Įvestis: skaičius – užfiksuojamas pasinaudotas garažinis numeris | „+“ – pridedamas visas modelis ar dydis | tuščia eilutė – išeiti iš režimo.')
+    print('  Norėdami pasiekti, įveskite „-“. Įvedę tuščią eilutę išeisite iš režimo. Toliau nurodytos režimo funkcijos, pasiekiamos tam tikrais klavišais.')
+    print('  Peržiūra: „.“ – maršrutų ir transporto priemonių peržiūra | „,“ – surikiuota transporto priemonių peržiūra.')
+    print('  Įvestis: garažinis/valstybinis (tik priemiestinių autobusų) numeris – įvedama transporto priemonė (VVT, Transrevis, Kautra, VRAP, Šalčininkų AP), nuvažiuotas maršrutas ir kryptis.')
+    print('  Įvestis: „+“ – pridedamas visas modelis ar dydis/talpa')
+    print()
+
+    print('TRUMPINIAI. Pridėkite ir naudokitės trumpiniais, norėdami greitai pamatyti pasirinktų stotelių išvykimo laikus:')
+    print('  Norėdami pasiekti trumpinių nustatymą, įveskite „*“. Įvedę tuščią eilutę išeisite iš režimo')
+    print('  Trumpinius galite nustatyti įvedę numerį 1–9. Tada galėsite surasti stotelę bei priskirti trumpiniui pavadinimą.')
+    print('  Paprastame režime įvedę skaičius 1–9 pasieksite savo trumpinius.')
     print()
 
     print('ATSILIEPIMAI. Pamatykite savo praneštą klaidingą informaciją (stotelių kodus).')
@@ -918,7 +1116,7 @@ def execute_program():
             try:
                 entered_stop = normalize(entered_stop)
                 partial_matches = match_entered_stop(entered_stop)
-            except AttributeError:
+            except:
                 error()
                 continue
 
@@ -964,7 +1162,7 @@ def execute_program():
 # Main code
 
 def main():
-    print('STOPS v2.1 TESTING BUILD 07 | https://github.com/Lanxtot/stops | © Lanxtot')   
+    print('STOPS v2.1 TESTING BUILD 08 | https://github.com/Lanxtot/stops | © Lanxtot')   
     print()
 
     os_check()
