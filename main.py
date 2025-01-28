@@ -696,6 +696,10 @@ def view_trips(challenge):
 
 def add_whole():
     print()
+
+    added_size = None
+    added_model = None
+
     whole_selection = input('Įveskite ilgį/modelį: ')
     if len(whole_selection) <= 2:
         whole_selection = whole_selection.lower()
@@ -725,9 +729,10 @@ def add_whole():
         added_size = ""
         added_model = whole_selection
 
-    with open(challenge_file, 'a+', encoding='utf-8', newline='') as file15:
-        file15_csv_writer = csv.writer(file15, delimiter=';')
-        file15_csv_writer.writerows([['Visi:', added_size, added_model]])
+    if added_size or added_model:
+        with open(challenge_file, 'a+', encoding='utf-8', newline='') as file15:
+            file15_csv_writer = csv.writer(file15, delimiter=';')
+            file15_csv_writer.writerows([['Visi:', added_size, added_model]])
 
     print()
 
@@ -1062,12 +1067,62 @@ def get_favorite(selection):
 
     return stop_code, stop_name
 
+def display_instructions():
+    print()
+
+    print('STOTELĖS. Gaukite pasirinktos stotelės artimiausios valandos išvykimo laikus:')
+    print('  Įveskite norimos stotelės pavadinimą arba jo fragmentą.')
+    print('  Norėdami pasirinkti stotelę nurodydami jos kodą, įveskite „=“.')
+    print('  Talpos/dydžio žymėjimas: mk – mikroautobusai | m – mažos talpos | t – standartinės talpos | ti – pailginti viengubi | i – dvigubi.')
+    print('  Maršruto žymėjimas: T – troleibusų maršrutas | * – reisas alternatyvia trasa.')
+    print('  Grafiko žymėjimas: 2p – 2 pam. | 1p – 1 pam. | pt – pertraukiamas | /00 – maršrutas, su kuriuo sujungtas grafikas | /1TP, /2TP – grafiką aptarnaujantis parkas.')
+    print('  Galite toliau įvesti kitos stotelės pavadinimą arba atnaujinti prognozes įvedus tuščią eilutę.')
+    print('  Krypčių pasirinkimų sąraše radę nelogiškų, nesuprantamų ar klaidinančių krypčių, užfiksuokite su / ženklu (jei klaidinga 1: „1/“ ir t.t.).')
+    print()
+    
+    print('MARŠRUTO PERŽIŪRA. Gaukite informaciją apie šiuo metu pasirinktame maršrute kursuojančias transporto priemones:')
+    print('  Norėdami pasiekti, įveskite „?“.')
+    print('  Įveskite norimo peržiūrėti maršruto numerį. Troleibusų maršrutus pasiekite pradėdami numerį „t“ raide. Norėdami išeiti, įveskite tuščią eilutę.')
+    print()
+
+    print('TRANSPORTO PRIEMONĖS PAIEŠKA. Gaukite informaciją, kuriuo maršrutu kursuoja pasirinkta transporto priemonė:')
+    print('  Norėdami pasiekti, įveskite „!“.')
+    print('  Įveskite norimos surasti transporto priemonės garažinį numerį. Norėdami išeiti, įveskite tuščią eilutę.')
+    print()
+    
+    print('SEKIMAS. Sekite transporto priemones, kuriomis jau esate važiavę:')
+    print('  Norėdami pasiekti, įveskite „-“. Įvedę tuščią eilutę išeisite iš režimo. Toliau nurodytos režimo funkcijos, pasiekiamos tam tikrais klavišais.')
+    print('  Peržiūra: „.“ – maršrutų ir transporto priemonių peržiūra | „,“ – surikiuota transporto priemonių peržiūra.')
+    print('  Įvestis: garažinis (miesto ar VRAP)/valstybinis (kitų įmonių) numeris – įvedama transporto priemonė, nuvažiuotas maršrutas ir kryptis.')
+    print('  Įvestis: „+“ – pridedamas visas modelis ar dydis/talpa')
+    print()
+
+    print('TRUMPINIAI. Pridėkite ir naudokitės trumpiniais, norėdami greitai pamatyti pasirinktų stotelių išvykimo laikus:')
+    print('  Norėdami pasiekti trumpinių nustatymą, įveskite „*“. Įvedę tuščią eilutę išeisite iš režimo')
+    print('  Trumpinius galite nustatyti įvedę numerį 1–9. Tada galėsite surasti stotelę bei priskirti trumpiniui pavadinimą.')
+    print('  Paprastame režime įvedę skaičius 1–9 pasieksite savo trumpinius.')
+    print()
+
+    print('ATSILIEPIMAI. Pamatykite savo praneštą klaidingą informaciją (stotelių kodus).')
+    print('  Norėdami pasiekti, įveskite „/“. Išeisite automatiškai.')
+    print()
+
+    print('ATNAUJINIMAS. Naujinkite programos duomenis:')
+    print('  Maršrutų ir stotelių duomenys atnaujinti ',end='')
+    with open(date_file, 'r') as date:
+        print(date.read(),end='')
+    print('.')
+    print('  Norėdami atnaujinti, įveskite „+“.')
+    print()
+
 def enter_stop(stop_code):
     while True:
         entered_stop = input('Įveskite: ')
         
         if stop_code and not entered_stop:
             return None, stop_code, None
+        elif entered_stop == "0":
+            display_instructions()
         elif entered_stop == "=":
             print()
             stop_code = enter_code()
@@ -1121,51 +1176,10 @@ def display_information():
         if os_data_5.read() != '1':
             print('Naudodami programą laikykite mobilųjį įrenginį horizontaliai.')
             print()
-
-    print('STOTELĖS. Gaukite pasirinktos stotelės artimiausios valandos išvykimo laikus:')
-    print('  Įveskite norimos stotelės pavadinimą arba jo fragmentą.')
-    print('  Norėdami pasirinkti stotelę nurodydami jos kodą, įveskite „=“.')
-    print('  Talpos/dydžio žymėjimas: mk – mikroautobusai | m – mažos talpos | t – standartinės talpos | ti – pailginti viengubi | i – dvigubi.')
-    print('  Maršruto žymėjimas: T – troleibusų maršrutas | * – reisas alternatyvia trasa.')
-    print('  Grafiko žymėjimas: 2p – 2 pam. | 1p – 1 pam. | pt – pertraukiamas | /00 – maršrutas, su kuriuo sujungtas grafikas | /1TP, /2TP – grafiką aptarnaujantis parkas.')
-    print('  Galite toliau įvesti kitos stotelės pavadinimą arba atnaujinti prognozes įvedus tuščią eilutę.')
-    print('  Krypčių pasirinkimų sąraše radę nelogiškų, nesuprantamų ar klaidinančių krypčių, užfiksuokite su / ženklu (jei klaidinga 1: „1/“ ir t.t.).')
-    print()
-    
-    print('MARŠRUTO PERŽIŪRA. Gaukite informaciją apie šiuo metu pasirinktame maršrute kursuojančias transporto priemones:')
-    print('  Norėdami pasiekti, įveskite „?“.')
-    print('  Įveskite norimo peržiūrėti maršruto numerį. Troleibusų maršrutus pasiekite pradėdami numerį „t“ raide. Norėdami išeiti, įveskite tuščią eilutę.')
+    print('Programos instrukcijos pasiekiamos GitHub puslapyje arba įvedus skaitmenį „0“.')
     print()
 
-    print('TRANSPORTO PRIEMONĖS PAIEŠKA. Gaukite informaciją, kuriuo maršrutu kursuoja pasirinkta transporto priemonė:')
-    print('  Norėdami pasiekti, įveskite „!“.')
-    print('  Įveskite norimos surasti transporto priemonės garažinį numerį. Norėdami išeiti, įveskite tuščią eilutę.')
-    print()
-    
-    print('SEKIMAS. Sekite transporto priemones, kuriomis jau esate važiavę:')
-    print('  Norėdami pasiekti, įveskite „-“. Įvedę tuščią eilutę išeisite iš režimo. Toliau nurodytos režimo funkcijos, pasiekiamos tam tikrais klavišais.')
-    print('  Peržiūra: „.“ – maršrutų ir transporto priemonių peržiūra | „,“ – surikiuota transporto priemonių peržiūra.')
-    print('  Įvestis: garažinis (miesto ar VRAP)/valstybinis (kitų įmonių) numeris – įvedama transporto priemonė, nuvažiuotas maršrutas ir kryptis.')
-    print('  Įvestis: „+“ – pridedamas visas modelis ar dydis/talpa')
-    print()
 
-    print('TRUMPINIAI. Pridėkite ir naudokitės trumpiniais, norėdami greitai pamatyti pasirinktų stotelių išvykimo laikus:')
-    print('  Norėdami pasiekti trumpinių nustatymą, įveskite „*“. Įvedę tuščią eilutę išeisite iš režimo')
-    print('  Trumpinius galite nustatyti įvedę numerį 1–9. Tada galėsite surasti stotelę bei priskirti trumpiniui pavadinimą.')
-    print('  Paprastame režime įvedę skaičius 1–9 pasieksite savo trumpinius.')
-    print()
-
-    print('ATSILIEPIMAI. Pamatykite savo praneštą klaidingą informaciją (stotelių kodus).')
-    print('  Norėdami pasiekti, įveskite „/“. Išeisite automatiškai.')
-    print()
-
-    print('ATNAUJINIMAS. Naujinkite programos duomenis:')
-    print('  Maršrutų ir stotelių duomenys atnaujinti ',end='')
-    with open(date_file, 'r') as date:
-        print(date.read(),end='')
-    print('.')
-    print('  Norėdami atnaujinti, įveskite „+“.')
-    print()
 
 def execute_program():
     stop_code = None
