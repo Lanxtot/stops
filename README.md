@@ -82,25 +82,25 @@ Norėdami surasti stotelę pagal jos stops.lt kodą, įveskite `**=**`. Tada įv
 
 ### Paieška pagal trumpinį
 
-Jeigu nusistatėte stotelės trumpinį, galite jį pasiekti paprasčiausiai įvesdami trumpinio skaitmenį (`**1**`–`**9**`). Tada bus iškart pateikiami išvykimo laikai.
+Jeigu nusistatėte stotelės trumpinį, galite jį pasiekti paprasčiausiai įvesdami trumpinio skaitmenį (`1`–`9`). Tada bus iškart pateikiami išvykimo laikai.
 
 ## Maršruto paieška
 
-Norėdami pasiekti, įveskite `**?**`. Norėdami išeiti, įveskite tuščią eilutę.
+Norėdami pasiekti, įveskite `?`. Norėdami išeiti, įveskite tuščią eilutę.
 
 * Įvedamas maršruto numeris. Troleibusų maršrutai įvedami priekyje prirašius `T`.
 * Pateikiama informacija. Nurodomas grafiko numeris ir tipas; transporto priemonės talpa, garažinis numeris, modelis; tuo metu užregistruoto reiso kryptis ir išvykimo laikas iš pradinės stotelės. Jei transporto priemonė tuo metu neturi jokio užregistruoto reiso, dalis informacijos nepateikiama.
 
 ## Transporto priemonės paieška
 
-Norėdami pasiekti, įveskite `**!**`. Norėdami išeiti, įveskite tuščią eilutę.
+Norėdami pasiekti, įveskite `!`. Norėdami išeiti, įveskite tuščią eilutę.
 
 * Įvedamas transporto priemonės garažinis numeris (tik skaičiai).
 * Pateikiama informacija. Nurodomas transproto priemonės modelis, talpa; maršruto numeris; grafiko numeris ir tipas; tuo metu užregistruoto reiso kryptis ir išvykimo laikas iš pradinės stotelės. Jei transporto priemonė tuo metu neturi jokio užregistruoto reiso, dalis informacijos nepateikiama.
 
 ## Kelionių sekimas
 
-Norėdami pasiekti, įveskite `**-**`. Norėdami išeiti, įveskite tuščią eilutę.
+Norėdami pasiekti, įveskite `-`. Norėdami išeiti, įveskite tuščią eilutę.
 
 Ši funkcija turi keletą tolesnių pasirinkimų, leidžiančių detaliai sekti savo keliones visuomeniniu transportu bei pasinaudotas transporto priemones.
 
@@ -111,28 +111,28 @@ Norėdami pasiekti, įveskite `**-**`. Norėdami išeiti, įveskite tuščią ei
 
 ### Modelio arba talpos pridėjimas
 
-* Įvedamas simbolis `**+**`.
+* Įvedamas simbolis `+`.
 * Įvedamas talpos trumpinys arba transporto priemonės modelio pavadinimas.
 * Jei talpa aktuali tiek troleibusams, tiek autobusams, prašoma papildomai patikslinti, kuri transporto rūšis turima omenyje.
 
 ### Kelionės ištrynimas
 
-* Įvedamas simbolis `**-**`.
+* Įvedamas simbolis `-`.
 * Įvedamas norimos trinti užregistruotos kelionės numeris (rodomas kelionių peržiūros režime).
 
 ### Kelionių peržiūra
 
-* Įvedamas simbolis `**.**`.
+* Įvedamas simbolis `.`.
 * Pateikiami užregistruotų kelionių maršrutai ir kryptys; transporto priemonių garažiniai/valstybiniai numeriai, talpos, modeliai.
 
 ### Transporto priemonių peržiūra
 
-* Įvedamas simbolis `**,**`.
+* Įvedamas simbolis `,`.
 * Pateikiamas surūšiuotas pasinaudotų transporto priemonių garažinių/valstybinių numerių, talpų, modelių sąrašas, įskaitant atskirai pridėtus modelius ir talpas. Jei transporto priemonė panaudota kelis kartus, vaizduojamas šauktukas.
 
 ## Trumpinių nustatymas
 
-Norėdami pasiekti, įveskite `**\***`. Norėdami išeiti, įveskite tuščią eilutę.
+Norėdami pasiekti, įveskite `*`. Norėdami išeiti, įveskite tuščią eilutę.
 
 * Pasirenkamas skaitmuo, kuriam norima priskirti trumpinio funkciją.
 * Įvedama norima stotelė ir pasirenkama kryptis (analogiškai stotelių paieškos funkcijai).
@@ -140,17 +140,17 @@ Norėdami pasiekti, įveskite `**\***`. Norėdami išeiti, įveskite tuščią e
 
 ## Atsiliepimų peržiūra
 
-Norėdami pasiekti, įveskite `**/**`.
+Norėdami pasiekti, įveskite `/`.
 
 Vaizduojami užfiksuoti netikslias kryptis turinčių stotelių kodai. Šia informacija galima pasinaudoti kuriant pranešimą apie klaidą GitHub sistemoje.
 
 ## Duomenų atnaujinimas
 
-Norėdami atnaujinti duomenis, įveskite `**+**`.
+Norėdami atnaujinti duomenis, įveskite `+`.
 
 ## Instrukcijos
 
-Norėdami pamatyti instrukcija programoje, įveskite skaitmenį `**0**`.
+Norėdami pamatyti instrukcija programoje, įveskite skaitmenį `0`.
 
 # Legenda
 
