@@ -585,7 +585,7 @@ def assign_schedule_type(route_numbers, trip_ids):
             schedule_type += '/2TP'
 
         if route_number.replace('*', '') != trip_id[0].replace('A', '') and trip_id[0]:
-            schedule_type += f'/{trip_id[0].replace('A', '')}'
+            schedule_type += f"/{trip_id[0].replace('A', '')}"
         
         schedule_type_lengths.append(len(schedule_type))
         schedule_types.append(schedule_type)
