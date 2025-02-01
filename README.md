@@ -82,7 +82,7 @@ Bazinė programos funkcija. Norėdami pasiekti, neturite nieko papildomai įvest
 
 ### Paieška pagal kodą
 
-Norėdami surasti stotelę pagal jos stops.lt kodą, įveskite `**=**`. Tada įvedus norimą kodą bus pateikiami išvykimo laikai.
+Norėdami surasti stotelę pagal jos stops.lt kodą, įveskite `=`. Tada įvedus norimą kodą bus pateikiami išvykimo laikai.
 
 ### Paieška pagal trumpinį
 
