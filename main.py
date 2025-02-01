@@ -29,6 +29,9 @@ date_file = 'date.txt'
 def error():
     print('Prašome patikslinti.')
 
+def connection():
+    print('Patikrinkite interneto ryšį.')
+
 def normalize(input_string):
     # Dictionary to map Lithuanian characters to their English equivalents
     char_map = {
@@ -188,8 +191,11 @@ def handle_partial_matches(partial_matches):
     
     # If the values are different, handle accordingly
     unique_values = list(set(partial_matches.values()))  # Get the unique values
-    if len(unique_values) >= 10 or len(unique_values) == 0:
-        error()
+    if len(unique_values) >= 10:
+        print('Susiaurinkite paiešką.')
+        return None, None
+    if len(unique_values) == 0:
+        print('Nėra atitikmenų.')
         return None, None  # Indicating that the user needs to retry (this will trigger restart in main)
     
     # If there are less than 10 unique values, sort them alphabetically and print them
@@ -431,14 +437,16 @@ def process_departures():
 
             # Append trip direction
 
+            trip_direction = trip_direction.replace('&ndash;','-')
+
             with open(os_file, 'r') as os_data_7:
                 if os_data_7.read() == '3':
                     trip_direction = trip_direction.replace('autobusų parkas','AP')
                     trip_direction = trip_direction.replace('Autobusų parkas','AP')
                     trip_direction = trip_direction.replace('troleibusų parkas','TP')
                     trip_direction = trip_direction.replace('Troleibusų parkas','TP')
+                    trip_direction = trip_direction[:7]
 
-            trip_direction = trip_direction.replace('&ndash;','-')
             trip_directions.append(trip_direction)
 
     # Return all prepared lists
@@ -614,13 +622,13 @@ def display_departures(name, departure_times, vehicle_delays, route_numbers, rou
             number_length = len(number)
 
     print(f"Stotelė: {name} | Laikas: {current_time()}")
-    if direction_length > 7:
-        print(f'Išvyksta Nuokr. {"Nr.":>{number_length}} {"Graf.":<{schedule_type_length + 6}} {"Kryptis":^{direction_length}}Dyd. Gar. {"Modelis":^{model_length-2}}')
+    if direction_length > 8:
+        print(f'Išvyksta Nuokr. {"Nr.":>{number_length}} {"Graf.":<{schedule_type_length + 6}} {"Kryptis":^{direction_length - 1}}Dyd. Gar. {"Modelis":^{model_length-2}}')
     else:
-        print(f'Išvyksta Nuokr. {"Nr.":>{number_length}} {"Graf.":<{schedule_type_length + 6}} {"Krpt.":^{direction_length-1}} Dyd. Gar. {"Modelis":^{model_length-2}}')
+        print(f'Išvyksta Nuokr. {"Nr.":>{number_length}} {"Graf.":<{schedule_type_length + 6}} {"Krpt.":^{direction_length - 2}} Dyd. Gar. {"Modelis":^{model_length-2}}')
 
     for departure_time, vehicle_delay, route_number, route_variant, trip_direction, schedule_number, fleet_number, size, model, schedule_type in zip(departure_times, vehicle_delays, route_numbers, route_variants, trip_directions, schedule_numbers, fleet_numbers, sizes, models, schedule_types):
-        print(f'{departure_time:<8} {vehicle_delay:<6} {route_number:>{number_length}}{route_variant}({schedule_number:<2}{"|" if schedule_type else ""}{schedule_type:<{schedule_type_length}}) {trip_direction:<{direction_length}}  {size:>2} {fleet_number:>4} {model:<{model_length}}')
+        print(f'{departure_time:<8} {vehicle_delay:<6} {route_number:>{number_length}}{route_variant}({schedule_number:<2}{"|" if schedule_type else ""}{schedule_type:<{schedule_type_length}}) {trip_direction:<{direction_length}} {size:>2} {fleet_number:>4} {model:<{model_length}}')
 
         item += 1
 
@@ -1126,8 +1134,10 @@ def enter_stop(stop_code):
         
         if stop_code and not entered_stop:
             return None, stop_code, None
+        
         elif entered_stop == "0":
             display_instructions()
+
         elif entered_stop == "=":
             print()
             stop_code = enter_code()
@@ -1135,25 +1145,47 @@ def enter_stop(stop_code):
                 return None, stop_code, stop_code
             else:
                 print()
+
         elif entered_stop == "+":
-            update_data()
+            try:
+                update_data()
+            except requests.exceptions.ConnectionError:
+                connection()
+
         elif entered_stop == "-":
             tracking_selection()
+
         elif entered_stop == "?":
-            analyze_route()
+            try:
+                analyze_route()
+            except requests.exceptions.ConnectionError:
+                connection()
         elif entered_stop == "!":
-            search_vehicle()
+            try:
+                search_vehicle()
+            except requests.exceptions.ConnectionError:
+                connection()
+
         elif entered_stop == "/":
             feedback()
+
         elif entered_stop.isdigit():
-            stop_code, stop_name = get_favorite(entered_stop)
+            try:
+                stop_code, stop_name = get_favorite(entered_stop)
+            except requests.exceptions.ConnectionError:
+                connection()
 
             if stop_code:
                 return None, stop_code, stop_name
             else:
                 error()
+
         elif entered_stop == "*":
-            add_favorite()
+            try:
+                add_favorite()
+            except requests.exceptions.ConnectionError:
+                connection()
+
         else:
             return entered_stop, None, None
 
@@ -1194,12 +1226,15 @@ def execute_program():
             try:
                 entered_stop = normalize(entered_stop)
                 partial_matches = match_entered_stop(entered_stop)
-            except ValueError:
+            except requests.exceptions.ConnectionError:
+                connection()
+                continue
+            except:
                 error()
                 continue
 
             if not partial_matches:
-                error()
+                print('Nėra atitikmenų.')
                 continue
 
             stop_directions_rows, name = handle_partial_matches(partial_matches)
