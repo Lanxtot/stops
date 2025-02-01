@@ -1,96 +1,209 @@
-Code,Direction
-0530,0
-2242,0
-3221,0
-3222,0
-2622,Kirtimų geležinkelio stotis
-2330,link N.Vilnios
-0443,iš stoties
-5231,link N.Vilnios
-5232,link Rudaminos
-5226,link Rudaminos
-5228,link N.Vilnios
-5219,link miesto
-5223,iš miesto
-5224,link miesto
-5221,iš miesto
-4019,iš centro
-4024,link centro
-6007,link miesto
-6008,iš miesto
-1437,link Kalnėnų
-2145,link miesto
-2146,iš miesto
-3914,link Gurelių
-3915,link miesto
-2152,visos kryptys
-2160,link Vandenio g.
-2802a,link miesto (už sankryžos)
-2801,link miesto (prieš sankryžą)
-3917,link Gurelių
-3918,link miesto
-2999,0
-3104,link miesto
-5118,iš A.Panerių
-2711,link miesto
-2376a,0
-1452,iš Paupio
-2821,link miesto
-2105a,0
-2157a,laikina
-0401a,nuo Žirmūnų tilto (laikina)
-0402a,link Žirmūnų tilto (laikina)
-0449a,iš stoties
-0449,0
-2402a,0
-0527a,0
-2123,0
-2106a,0
-3848,laikina
-3306a,0
-3305a,0
-2414e,0
-0245,0
-0245b,iš centro (Vilniaus g.)
-2127a,0
-2119a,0
-1218,iš centro
-2148,iš miesto
-2157,link miesto
-4017,link centro
-4018,iš centro
-6005,link miesto
-6006,iš miesto
-1015,link N.Vilnios
-3526,link miesto
-0715,link Žalgirio g.
-0717,link Konstitucijos pr.
-4910,link miesto
-4911,iš miesto
-5230,link Rudaminos
-5225,link miesto
-4025,iš centro
-4026,link centro
-5223,link miesto
-5224,iš miesto
-0530z,Z stotelė
-0828,0
-3221,0
-3222,0
-5111a,0
-5110a,0
-2221,link Balsių mokyklos
-5147,0
-1127a,0
-1617,iš Oslo g.
-5189,link Oslo g.
-3901,link Gurelių (20 link Ž.Panerių)
-3911,link Lazdynų (62 iš Gurelių)
-2226,link Pagubės
-2241,link miesto
-2901,iš Titnago g.
-1216,link miesto
-3555,panaikinta
-3820,iš centro
-5163,link N.Vilnios
-5227,iš N.Vilnios
+Code;Direction
+0108;link Pedagoginio žiedo
+0112;iš centro
+0231;įlaipinimas
+0236;išlaipinimas
+0245;0
+0245b;iš centro (Vilniaus g.)
+0247;nuo Vokiečių g.
+0320;link Seimo
+0401a;nuo Žirmūnų tilto (laikina)
+0402a;link Žirmūnų tilto (laikina)
+0406;iš stoties
+0436;link S. Batoro g.
+0437;link S. Batoro g.
+0438;link S. Batoro g.
+0439;link S. Batoro g.
+0440;link Pylimo g.
+0443;iš stoties
+0449;0
+0449a;iš stoties
+0449a;link Stoties
+0505;link Savanorių pr.
+0527;link centro
+0527a;0
+0528;iš stoties
+0530;0
+0530z;Z stotelė
+0606;iš centro
+0607;link centro
+0712;iš centro
+0715;link Žalgirio g.
+0717;link Konstitucijos pr.
+0718;link Kernavės g.
+0828;0
+0924;link Ulonų g.
+0925;nuo Ulonų g.
+1015;link N.Vilnios
+1101;link Antakalnio g.
+1102;link Antakalnio g.
+1118;įlaipinimas, troleibusai
+1118a;įlaipinimas, autobusai
+1118c;link Valakampių
+1127a;0
+1203;link Olandų g.
+1207;link Olandų g.
+1209;link Anatakalnio g.
+1210;link Antakalnio g.
+1216;link miesto
+1218;iš centro
+1301;link stoties
+1319;iš centro
+1437;link Kalnėnų
+1452;iš Paupio
+1501;iš centro
+1502;įlaipinimas
+1517;link centro
+1605;link Erfurto g.
+1606;link Karoliniškių
+1607;link Erfurto g.
+1608;link Karoliniškių
+1617;iš Oslo g.
+1631;link Bukčių
+1649;link Bukčių
+1650;link miesto
+1651;link Lazdynų
+1654;link Karoliniškių
+1655;link Karoliniškių
+1656;link Lazdynų
+1657;link Lazdynų
+1661;link Karoliniškių
+1662;link aplinkkelio
+1665;išlaipinimas
+1702;iš Karoliniškių
+1703;link Karoliniškių
+1717;link aplinkkelio
+1809;link Fabijoniškių
+1819;link Akropolio
+1919;link Fabijoniškių
+1920;link Justiniškių
+2001;link Geležinio Vilko g.
+2015;link Šeškinės
+2102;link Molėtų pl.
+2105a;0
+2106a;0
+2119a;0
+2123;0
+2127a;0
+2145;link miesto
+2146;iš miesto
+2148;iš miesto
+2152;visos kryptys
+2157;link miesto
+2157a;laikina
+2160;link Vandenio g.
+2204;link N.Verkių
+2205;iš N.Verkių
+2221;link Balsių mokyklos
+2226;link Pagubės
+2241;link miesto
+2242;link Balsių mokyklos
+2285;link M.Gulbinų
+2323;link S. Batoro g.
+2330;link N.Vilnios
+2376;iš miesto
+2376a;0
+2402a;0
+2414e;0
+2437;link centro
+2622;Kirtimų geležinkelio stotis
+2626;panaikinta
+2641;iš oro uosto
+2649;link oro uosto
+2706;link Eišiškių pl.
+2707;link Salininkų
+2711;link miesto
+2712;link Eišiškių pl.
+2713;link pervažos
+2723;link Miškinių
+2724;link pervažos
+2726;link Baltosios Vokės
+2727;link Juodšilių
+2801;link miesto (prieš sankryžą)
+2802a;link miesto (už sankryžos)
+2811;link B.Vokės
+2821;link miesto
+2901;iš Titnago g.
+2910;nuo Savanorių pr.
+2999;0
+3007;link Grigiškių
+3104;link miesto
+3218;link Justiniškių
+3221;0
+3221;0
+3222;0
+3222;0
+3305a;0
+3306a;0
+3336;link Gineitiškių
+3337;link Pašilaičių
+3502;iš Turniškių
+3542a;link centro
+3555;panaikinta
+3603;link Senosios Pilaitės
+3625;iš miesto
+3627;link Vydūno g.
+3628;link Pilaitės pr.
+3636;link Smalinės
+3637;iš Smalinės
+3641;link Smalinės
+3643;iš Smalinės
+3655;link Salotės
+3660;link Zujūnų
+3662;link Pilaitės
+3663;link Zujūnų
+3664;link Pilaitės
+3814;link L. Baliukevičiaus-Dzūko g.
+3820;iš centro
+3831;link žiedo
+3837;įlaipinimas
+3839;link Pašilaičių
+3840;nuo Ateities g.
+3848;laikina
+3901;link Gurelių (20 link Ž.Panerių)
+3911;link Lazdynų (62 iš Gurelių)
+3914;link Gurelių
+3915;link miesto
+3917;link Gurelių
+3918;link miesto
+4017;link centro
+4018;iš centro
+4019;iš centro
+4024;link centro
+4025;iš centro
+4026;link centro
+4105;iš centro
+4112;link Grigiškių
+4113;link Grigiškių
+4115;link Lentvario
+4316;link Rudaminos
+4910;link miesto
+4911;iš miesto
+5110a;0
+5111a;0
+5118;iš A.Panerių
+5146;link Salininkų
+5147;0
+5149;link Riešės
+5158;įlaipinimas
+5163;link N.Vilnios
+5189;link Oslo g.
+5193;iš Oslo g.
+5207;link D.Riešės
+5219;link miesto
+5221;iš miesto
+5223;iš miesto
+5223;link miesto
+5224;iš miesto
+5224;link miesto
+5225;link miesto
+5226;link Rudaminos
+5227;iš N.Vilnios
+5228;link N.Vilnios
+5230;link Rudaminos
+5231;link N.Vilnios
+5232;link Rudaminos
+6005;link miesto
+6006;iš miesto
+6007;link miesto
+6008;iš miesto

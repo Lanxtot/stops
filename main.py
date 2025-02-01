@@ -1,34 +1,36 @@
+# Imports
+
 import re
 import requests
 import csv
 import os
-from datetime import datetime, timedelta
+from datetime import datetime
 from zipfile import ZipFile
 
+# Files
+
+os_file = 'os.txt'
 stops_file = 'stops_list.csv'
 departures_file = 'departures.csv'
 gps_file = 'gps_data.csv'
-models_file = 'models.csv'
+models_file_1 = 'models.csv'
+models_file_2 = 'models_short.csv'
+regional_models_file = 'models_regional.csv'
 challenge_file = 'challenge.csv'
 ridango_stops_file = 'stops.csv'
 schedule_file = 'schedule_types.csv'
+exceptions_file = 'exceptions.csv'
+favorites_file = 'favorites.csv'
 bugs_file = 'bugs.txt'
 date_file = 'date.txt'
-os_file = 'os.txt'
 
-def current_time():
-    with open(os_file, 'r') as os_data_4:
-        if os_data_4.read() == '3':
-            now = datetime.now()
-            hours = (now.hour + 2) % 24
-            minutes = now.minute
-            seconds = now.second
-            return f'{hours:02} {minutes:02} {seconds:02}'
-        else:
-            return datetime.now().strftime('%H:%M:%S')
+# Mini functions
 
 def error():
     print('Prašome patikslinti.')
+
+def connection():
+    print('Patikrinkite interneto ryšį.')
 
 def normalize(input_string):
     # Dictionary to map Lithuanian characters to their English equivalents
@@ -48,15 +50,58 @@ def normalize(input_string):
     cleaned_string = re.sub(r'[^a-zA-Z]', '', input_string)
     return cleaned_string
 
-def get_gtfs_data(url,selected_file):
+def rip_txt(url,selected_file):
     response = requests.get(url)
     response.encoding = 'utf-8'
 
     with open(selected_file, 'w', encoding='utf-8') as file14:
         file14.write(response.text)
 
+def current_time():
+    with open(os_file, 'r') as os_data_4:
+        if os_data_4.read() == '3':
+            now = datetime.now()
+            hours = (now.hour + 2) % 24
+            minutes = now.minute
+            seconds = now.second
+            return f'{hours:02}:{minutes:02}:{seconds:02}'
+        else:
+            return datetime.now().strftime('%H:%M:%S')
+
+def rip_from_zipfile(gtfs_file):
+    # Define filenames
+    local_zip_filename = "gtfs.zip"
+
+    # Download the GTFS file
+    response = requests.get(gtfs_file)
+    response.raise_for_status()
+
+    # Save the downloaded file locally
+    with open(local_zip_filename, "wb") as f:
+        f.write(response.content)
+
+    # Extract the specified files
+    with ZipFile(local_zip_filename, "r") as zf:
+        for file_name in ["stops.txt"]:
+            if file_name in zf.namelist():
+                zf.extract(file_name, os.getcwd())
+
+                # Rename .txt files to .csv
+                base_name, ext = os.path.splitext(file_name)
+                new_name = f"{base_name}.csv"
+
+                if os.path.exists(new_name):
+                    os.remove(new_name)
+                os.rename(file_name, new_name)
+
+    # Clean up the downloaded zip file
+    if os.path.exists(local_zip_filename):
+        os.remove(local_zip_filename)
+
+# Main features
+
 def match_entered_stop(entered_stop):
-    get_gtfs_data("https://www.stops.lt/vilnius/vilnius/stops.txt", stops_file)
+    rip_txt("https://www.stops.lt/vilnius/vilnius/stops.txt", stops_file)
 
     partial_matches = {}
     last_non_empty_value = None
@@ -142,22 +187,28 @@ def handle_partial_matches(partial_matches):
         stop_name = list(partial_matches.values())[0]  # You can still use the stop_name if you need it
         stop_directions_rows = [row_number for row_number, value in partial_matches.items() if value == stop_name]
         return stop_directions_rows, stop_name  # Return both the list of rows and the selected stop name
-        
+
+    
     # If the values are different, handle accordingly
     unique_values = list(set(partial_matches.values()))  # Get the unique values
     if len(unique_values) >= 10:
-        error()
+        print('Susiaurinkite paiešką.')
+        return None, None
+    if len(unique_values) == 0:
+        print('Nėra atitikmenų.')
         return None, None  # Indicating that the user needs to retry (this will trigger restart in main)
     
     # If there are less than 10 unique values, sort them alphabetically and print them
     unique_values.sort()  # Sorting the unique values alphabetically
     for idx, value in enumerate(unique_values, start=1):
         print(f"  {idx}: {value}")
-    
+
     # Prompt user to select an option
+    selection = input("Nr.: ")
+
     while True:
         try:
-            user_choice = int(input("Nr.: "))  # Get user's choice
+            user_choice = int(selection)  # Get user's choice
             if 1 <= user_choice <= len(unique_values):
                 stop_name = unique_values[user_choice - 1]  # Adjust index for selection
                 # Gather rows that match the selected stop_name
@@ -165,15 +216,17 @@ def handle_partial_matches(partial_matches):
                 return stop_directions_rows, stop_name  # Return both the list of rows and the selected stop name
             else:
                 error()  # Invalid choice, prompt again
-        except ValueError:
-            error()  # Handle non-integer input
+        except:
+            if not selection:
+                return None, None
+            else:
+                error()
 
 def determine_stop_direction(stop_name, stop_directions_rows):
     # Read the exceptions.csv file and create a dictionary with Code and Option
-    exceptions_file = 'exceptions.csv'
     exceptions = {}
     with open(exceptions_file, mode='r', encoding='utf-8') as file2:
-        file2_csv_reader = csv.DictReader(file2)
+        file2_csv_reader = csv.DictReader(file2, delimiter=';')
         for row in file2_csv_reader:
             exceptions[row['Code']] = row['Direction']
 
@@ -246,7 +299,7 @@ def determine_stop_direction(stop_name, stop_directions_rows):
     for idx, (row_number, direction, code_1st) in enumerate(displayed_directions, start=1):
         try:
             direction_8th = direction_8th_column[row_number]  # Get the street name from the 8th column
-        except KeyError:
+        except:
             direction_8th = '?'
         
         # Check for duplicate directions and append street name if needed
@@ -280,7 +333,7 @@ def determine_stop_direction(stop_name, stop_directions_rows):
                 return stop_code
             else:
                 error()  # Invalid choice, prompt again
-        except ValueError:
+        except:
             bug_report=list(user_choice)
             try:
                 bug_report[0]=int(bug_report[0])
@@ -296,7 +349,17 @@ def determine_stop_direction(stop_name, stop_directions_rows):
             except TypeError:
                 error()
             except ValueError:
-                error()
+                if not user_choice:
+                    print()
+                    return None
+                else:
+                    error()
+            except IndexError:
+                if not user_choice:
+                    print()
+                    return None
+                else:
+                    error()
 
 def get_departures(stop_code):
     url = "https://www.stops.lt/vilnius/departures2.php?stopid=" + stop_code
@@ -314,7 +377,7 @@ def get_departures(stop_code):
 
         return empty
 
-def analyze_departures():
+def process_departures():
     route_types = []
     route_numbers = []
     route_variants = []
@@ -345,10 +408,14 @@ def analyze_departures():
             # Process and append route number
             if route_type == 'trol':
                 route_number = f"T{route_number}"
+            if route_number == '&NBSP;':
+                route_number = '86'
+            
             if any(char.isdigit() for char in trip_variant):
                 route_variant = '*'
             else:
                 route_variant = ' '
+            
             route_variants.append(route_variant)
             route_numbers.append(route_number)
 
@@ -369,101 +436,23 @@ def analyze_departures():
             fleet_numbers.append(''.join(filter(str.isdigit, vehicle_block)))
 
             # Append trip direction
+
+            trip_direction = trip_direction.replace('&ndash;','-')
+
+            with open(os_file, 'r') as os_data_7:
+                if os_data_7.read() == '3':
+                    trip_direction = trip_direction.replace('autobusų parkas','AP')
+                    trip_direction = trip_direction.replace('Autobusų parkas','AP')
+                    trip_direction = trip_direction.replace('troleibusų parkas','TP')
+                    trip_direction = trip_direction.replace('Troleibusų parkas','TP')
+                    trip_direction = trip_direction[:6]
+
             trip_directions.append(trip_direction)
 
     # Return all prepared lists
     return route_types, route_numbers, route_variants, departure_times, vehicle_attributes, fleet_numbers, trip_directions
 
-def display_gps_data():
-
-    while True:
-        get_gtfs_data("https://www.stops.lt/vilnius/gps_full.txt", gps_file)
-
-        fleet_numbers = []
-        models = []
-        model_lengths = []
-        sizes = []
-        trip_starts = []
-        trip_directions = []
-        direction_lengths = []
-        schedule_numbers = []
-    
-        print()
-        route_number = input('Nurodykite maršruto numerį: ')
-        route_number = route_number.upper()
-        number = route_number
-
-        if route_number == '':
-            print()
-            break
-        print()
-
-        if 'T' in route_number:
-            route_number = route_number.replace('T','')
-            route_type = 'Troleibusai'
-        else:
-            route_type = 'Autobusai'
-        
-        with open(gps_file, mode='r', encoding='utf-8') as file5:
-            csv_reader_file5 = csv.reader(file5, delimiter=',')
-            rows = list(csv_reader_file5)
-
-            for row in rows:
-                if len(row) < 15:
-                    continue
-
-                if row[0] == route_type and row[1].upper() == route_number:
-                    fleet_number = row[3]
-
-                    trip_start = row[8]
-                    try:
-                        hours = (int(trip_start) // 60) % 24
-                        minutes = int(trip_start) % 60
-                        trip_start = f"{hours:02}:{minutes:02}"
-                    except ValueError:
-                        pass
-
-                    trip_type = row[12]
-                    trip_direction = row[13]
-                    if re.search(r'\d+', trip_type):
-                        trip_direction += '*'
-
-                    trip_id = row[14]
-                    schedule_parts = trip_id.strip().split('-')
-                    try:
-                        schedule_number = schedule_parts[1].zfill(2)
-                    except IndexError:
-                        schedule_number = ' ?'
-                    
-                    fleet_numbers.append(fleet_number)
-                    trip_starts.append(trip_start)
-                    trip_directions.append(trip_direction)
-                    direction_lengths.append(len(trip_direction))
-                    schedule_numbers.append(schedule_number)
-        
-        if fleet_numbers == []:
-            error()
-        else:
-
-            for fleet_number in fleet_numbers:
-                model, size = determine_vehicle_model([fleet_number])
-                models.append(model[0])
-                model_lengths.append(len(model[0]))
-                sizes.append(size[0])
-
-            zipped_data = zip(fleet_numbers, models, sizes, trip_starts, trip_directions, schedule_numbers)
-            sorted_data = sorted(zipped_data, key=lambda x: int(x[5]) if x[5].isdigit() else float('inf'))
-
-            model_length = max(model_lengths)
-            direction_length = max(direction_lengths)
-
-            print(f"Maršrutas: {number} | TP kiekis: {len(fleet_numbers)} | Laikas: {current_time()}")
-            print(f'Gr. D. Nr. {"Modelis":^{model_length}}  {"Kryptis":^{direction_length}} Išv.')
-
-            for fleet_number, model, size, trip_start, trip_direction, schedule_number in sorted_data:
-                print(f'{schedule_number:<3}{size:>2} {fleet_number:>4} {model:<{model_length}}  {trip_direction:<{direction_length}} {trip_start}')
-
-def analyze_gps_data(fleet_numbers):
+def process_realtime_data(fleet_numbers):
     # Prepare lists to store extracted data
     vehicle_delays = []
     trip_ids = []
@@ -493,7 +482,7 @@ def analyze_gps_data(fleet_numbers):
                         delay_seconds = abs(delay_seconds) % 60
                         formatted_delay = f"{'-' if negative_delay == True else ' '}{abs(delay_minutes):02}:{delay_seconds:02}"
                         vehicle_delays.append(formatted_delay)
-                    except ValueError:
+                    except:
                         vehicle_delays.append("00:00")  # Default if conversion fails
 
                     # Extract and append schedule_number from the 15th column
@@ -501,8 +490,8 @@ def analyze_gps_data(fleet_numbers):
                     schedule_parts = trip_id.strip().split('-')
                     try:
                         schedule_number = schedule_parts[1].zfill(2)
-                    except IndexError:
-                        schedule_number = ' ?'
+                    except:
+                        schedule_number = '? '
 
                     trip_ids.append(trip_id)
                     schedule_numbers.append(schedule_number)
@@ -510,39 +499,117 @@ def analyze_gps_data(fleet_numbers):
     # Return the collected lists
     return vehicle_delays, trip_ids, schedule_numbers
 
-def determine_vehicle_model(fleet_numbers):
+def assign_vehicle_model(vehicle_numbers):
     models = []
     sizes = []
 
-    # Read the models_file and store its contents in a list for comparison
+    with open(os_file, 'r') as os_data_6:
+        if os_data_6.read() == '3':
+            models_file = models_file_2
+        else:
+            models_file = models_file_1
+   
     with open(models_file, mode='r', encoding='utf-8') as file8:
         file8_csv_reader = csv.DictReader(file8)
-        rows = list(file8_csv_reader)  # Store all rows in a list
+        rows = list(file8_csv_reader)
+            
+    with open(regional_models_file, 'r') as file16:
+        file16_csv_reader = csv.reader(file16, delimiter=';')
+        regional_rows = list(file16_csv_reader)
+    
+    if vehicle_numbers[0].isdecimal():
 
-    # Iterate over each fleet_number
-    for fleet_number in fleet_numbers:
-        matched_model = None
-        matched_size = None
+        for fleet_number in vehicle_numbers:
+            matched_model = None
+            matched_size = None
 
-        # Iterate over rows in the models file
-        for i, row in enumerate(rows):
-            start_value = int(row['Start'])
-            next_start_value = int(rows[i + 1]['Start']) if i + 1 < len(rows) else float('inf')
+            if int(fleet_number) <= 54:
+                for regional_row in regional_rows:
+                    if fleet_number == regional_row[0]:
+                        matched_model = regional_row[2]
+                        matched_size = regional_row[3]
+                        break
 
-            if start_value <= int(fleet_number) < next_start_value:
-                matched_model = row['Model']
-                matched_size = row['Size']
-                break
+            else:
+                for i, row in enumerate(rows):
+                    start_value = int(row['Start'])
+                    next_start_value = int(rows[i + 1]['Start']) if i + 1 < len(rows) else float('inf')
 
-        # Append the matched model and size to the respective lists
+                    if start_value <= int(fleet_number) < next_start_value:
+                        matched_model = row['Model']
+                        matched_size = row['Size']
+                        break
+
+            models.append(matched_model if matched_model else "Neįvestas modelis")
+            sizes.append(matched_size if matched_size else "?")
+    
+    else:
+        for license_plate in vehicle_numbers:
+            matched_model = None
+            matched_size = None
+
+            for regional_row in regional_rows:
+                if license_plate == regional_row[1]:
+                    matched_model = regional_row[2]
+                    matched_size = regional_row[3]
+                    break
+        
         models.append(matched_model if matched_model else "Neįvestas modelis")
         sizes.append(matched_size if matched_size else "?")
 
     return models, sizes
 
-def display_departures(name, departure_times, vehicle_delays, route_numbers, route_variants, trip_directions, schedule_numbers, fleet_numbers, sizes, models):
+def assign_schedule_type(route_numbers, trip_ids):
+    schedule_types = []
+    schedule_type_lengths = []
+
+    with open(schedule_file, 'r', encoding='utf-8') as file22:
+        file22_csv_reader = csv.reader(file22, delimiter=';')
+        rows = list(file22_csv_reader)
+
+    for route_number, trip_id_combined in zip(route_numbers, trip_ids):
+        if not trip_id_combined:
+            schedule_type_lengths.append(0)
+            schedule_types.append('')
+            continue
+
+        trip_id = trip_id_combined.split('-')
+
+        raw_schedule_type = None
+        raw_note = None
+        schedule_type = None
+
+        for row in rows:
+            if trip_id[0] == row[0] and trip_id[1].replace('0','') == row[2] and trip_id[2] == row[1]:
+                raw_schedule_type = row[3]
+                raw_note = row[4]
+                break
+        
+        if raw_schedule_type == '0':
+            schedule_type = 'pt'
+        elif raw_schedule_type == '1':
+            schedule_type = '1p'
+        else:
+            schedule_type = '2p'
+        
+        with open(os_file, 'r', encoding='utf-8') as os_data_7:
+            if os_data_7.read() != '3':
+                if raw_note == '1':
+                    schedule_type += '/1TP'
+                elif raw_note == '2':
+                    schedule_type += '/2TP'
+
+                if route_number.replace('*', '') != trip_id[0].replace('A', '') and trip_id[0]:
+                    schedule_type += f"/{trip_id[0].replace('A', '')}"
+        
+        schedule_type_lengths.append(len(schedule_type))
+        schedule_types.append(schedule_type)
+        
+    return schedule_types, max(schedule_type_lengths)
+
+def display_departures(name, departure_times, vehicle_delays, route_numbers, route_variants, trip_directions, schedule_numbers, fleet_numbers, sizes, models, schedule_types, schedule_type_length):
     item = 1
-    direction_length = 0
+    direction_length = 6
     model_length = 0
     number_length = 3
 
@@ -554,70 +621,486 @@ def display_departures(name, departure_times, vehicle_delays, route_numbers, rou
             model_length = len(model)
     for number in route_numbers:
         if len(number) > number_length:
-            number_length = len(model)
+            number_length = len(number)
 
     print(f"Stotelė: {name} | Laikas: {current_time()}")
-    if direction_length > 7:
-        print(f'Išvyksta Nuokr. {"Nr.":>{number_length}} Graf. {"Kryptis":^{direction_length}}Dyd. Gar. {"Modelis":^{model_length-2}}')
-    else:
-        print(f'Išvyksta Nuokr. {"Nr.":>{number_length}} Graf. {"Krpt.":^{direction_length-1}} Dyd. Gar. {"Modelis":^{model_length-2}}')
 
-    for departure_time, vehicle_delay, route_number, route_variant, trip_direction, schedule_number, fleet_number, size, model in zip(departure_times, vehicle_delays, route_numbers, route_variants, trip_directions, schedule_numbers, fleet_numbers, sizes, models):
-        print(f'{departure_time:<8} {vehicle_delay:<6} {route_number:>{number_length}}{route_variant}({schedule_number:<2}) {trip_direction:<{direction_length}}  {size:>2} {fleet_number:>4} {model:<{model_length}}')
+    with open(os_file, 'r', encoding='utf-8') as os_data_7:
+        if os_data_7.read() == '3':
+            print(f'Išvyksta Nuokr. {"Nr.":>{number_length}} {"Graf.":<{schedule_type_length + 3}} {"Krpt.":^{direction_length - 2}} Dyd. Gar. Modelis')
+
+            for departure_time, vehicle_delay, route_number, route_variant, trip_direction, schedule_number, fleet_number, size, model, schedule_type in zip(departure_times, vehicle_delays, route_numbers, route_variants, trip_directions, schedule_numbers, fleet_numbers, sizes, models, schedule_types):
+                print(f'{departure_time:<8} {vehicle_delay:<6} {route_number:>{number_length}}{route_variant}({schedule_type:<{schedule_type_length}}) {trip_direction:<{direction_length}} {size:>2} {fleet_number:>4} {model:<{model_length}}')
+
+        else:
+            if direction_length > 8:
+                print(f'Išvyksta Nuokr. {"Nr.":>{number_length}} {"Graf.":<{schedule_type_length + 6}} {"Kryptis":^{direction_length - 1}}Dyd. Gar. {"Modelis":^{model_length-2}}')
+            else:
+                print(f'Išvyksta Nuokr. {"Nr.":>{number_length}} {"Graf.":<{schedule_type_length + 6}} {"Krpt.":^{direction_length - 2}} Dyd. Gar. {"Modelis":^{model_length-2}}')
+
+            for departure_time, vehicle_delay, route_number, route_variant, trip_direction, schedule_number, fleet_number, size, model, schedule_type in zip(departure_times, vehicle_delays, route_numbers, route_variants, trip_directions, schedule_numbers, fleet_numbers, sizes, models, schedule_types):
+                print(f'{departure_time:<8} {vehicle_delay:<6} {route_number:>{number_length}}{route_variant}({schedule_number:<2}{"|" if schedule_type else ""}{schedule_type:<{schedule_type_length}}) {trip_direction:<{direction_length}} {size:>2} {fleet_number:>4} {model:<{model_length}}')
 
         item += 1
 
-def get_and_extract_zip(gtfs_file):
-    """
-    Downloads a GTFS zip file from the given URL, extracts 'stops.txt' and 'stop_times.txt',
-    and renames them to 'stops.csv' and 'stop_times.csv'.
+# Extra features
 
-    Parameters:
-        gtfs_file (str): URL of the GTFS zip file.
+def enter_code():
+    while True:
+        try:
+            code = input('Įveskite kodą: ')
+            if not code:
+                break
+            return code
+        except AttributeError:
+            error()
 
-    Returns:
-        None
-    """
-    # Define filenames
-    local_zip_filename = "gtfs.zip"
+def update_data():
+    rip_txt("https://www.stops.lt/vilnius/vilnius/stops.txt", stops_file)
+    rip_from_zipfile("http://stops.lt/vilnius/ridango/gtfs.zip")
+    with open(date_file, 'w') as date:
+        date.write(datetime.today().strftime('%Y.%m.%d'))
+    print('Atnaujinti maršrutų ir stotelių duomenys.')
+    print()
 
-    # Download the GTFS file
-    response = requests.get(gtfs_file)
-    response.raise_for_status()
+def view_trips(challenge):
+    print()
 
-    # Save the downloaded file locally
-    with open(local_zip_filename, "wb") as f:
-        f.write(response.content)
+    try:
+        with open(challenge_file, 'r', encoding='utf-8') as file9:
+            file9_csv_reader = csv.reader(file9, delimiter=';')
+            rows = list(file9_csv_reader)
 
-    # Extract the specified files
-    with ZipFile(local_zip_filename, "r") as zf:
-        for file_name in ["stops.txt"]:
-            if file_name in zf.namelist():
-                zf.extract(file_name, os.getcwd())
+            base_rows = sorted(
+                [row[:3] for row in rows],  # Keep only the first 3 elements of each row
+                key=lambda row: (row[0].zfill(4), row[1], row[2])  # Sorting based on the first 3 elements
+            )
 
-                # Rename .txt files to .csv
-                base_name, ext = os.path.splitext(file_name)
-                new_name = f"{base_name}.csv"
+            sorted_rows = []
+            for base_row in base_rows:
+                if base_row in sorted_rows:
+                    sorted_rows[sorted_rows.index(base_row)][2] += ' (!)'
+                else:
+                    sorted_rows.append(base_row)
 
-                if os.path.exists(new_name):
-                    os.remove(new_name)
-                os.rename(file_name, new_name)
+            rows = [row for row in rows if len(row) > 4]
 
-    # Clean up the downloaded zip file
-    if os.path.exists(local_zip_filename):
-        os.remove(local_zip_filename)
+    except FileNotFoundError:
+        with open(challenge_file, 'w', encoding='utf-8') as file9:
+            file9.write("") 
+            rows = []
+            sorted_rows = []
 
-def display_information():
-    with open(os_file, 'r') as os_data_5:
-        if os_data_5.read() != '1':
-            print('Naudodami programą laikykite mobilųjį įrenginį horizontaliai.')
+    if challenge:
+        print(f"  Gar. D. Modelis")
+        for row in sorted_rows:
+            try:
+                print(f"{row[0]:>6} {row[1]:<2} {row[2]}")
+            except:
+                pass
+    else:
+        model_length = 0
+        direction_length = 0
+        for row in rows:
+            if len(row[2]) > model_length:
+                model_length = len(row[2])
+            if len(row[4]) > direction_length:
+                direction_length = len(row[4])
+        
+        print(f"Nr. Marš.{'Kryptis':^{direction_length + 2}}Gar. D.{'Modelis':^{model_length}}")
+        for item in range(len(rows)):
+            number = str(item + 1)
+            number += '.'
+            try:
+                print(f"{number:^4}{rows[item][3]:>4} {rows[item][4]:<{direction_length}} {rows[item][0]:>6} {rows[item][1]:<2} {rows[item][2]:<}")
+            except:
+                pass
+    
+    print()
+
+def add_whole():
+    print()
+
+    added_size = None
+    added_model = None
+
+    whole_selection = input('Įveskite ilgį/modelį: ')
+    if len(whole_selection) <= 2:
+        whole_selection = whole_selection.lower()
+
+        if whole_selection == ('t' or 'i'):
+            print('  1. Autobusai')
+            print('  2. Troleibusai')
+
+            while True:
+                mode_selection = input('Nr.: ')
+                if mode_selection == '1':            
+                    added_size = whole_selection
+                    added_model = "(autobusai)"
+                    break
+                elif mode_selection == '2':
+                    added_size = whole_selection
+                    added_model = "(troleibusai)"
+                    break
+                else:
+                    error()
+        
+        else:
+            added_size = whole_selection
+            added_model = ""
+
+    else:
+        added_size = ""
+        added_model = whole_selection
+
+    if added_size or added_model:
+        with open(challenge_file, 'a+', encoding='utf-8', newline='') as file15:
+            file15_csv_writer = csv.writer(file15, delimiter=';')
+            file15_csv_writer.writerows([['Visi:', added_size, added_model]])
+
+    print()
+
+def add_vehicle_number(vehicle_number):
+
+    model, size = assign_vehicle_model([vehicle_number])
+    model = model[0]
+    size = size[0]
+
+    route = input('Nurodykite maršrutą: ')
+    direction = input('Nurodykite kryptį: ')
+
+    added_vehicle = [vehicle_number, size, model, route, direction]
+
+    with open(challenge_file, 'a+', encoding='utf-8', newline='') as file17:
+        file17_csv_writer = csv.writer(file17, delimiter=';')
+        file17_csv_writer.writerows([added_vehicle])
+
+def remove_trip():
+    print()
+
+    try:
+        with open(challenge_file, 'r+', encoding='utf-8', newline='') as file18:
+            file18_csv_reader = csv.reader(file18, delimiter=';')
+            rows = list(file18_csv_reader)
+
+    except FileNotFoundError:
+        return
+
+    while True:
+        removal_selection = input('Ištrinamo įrašo nr.: ')
+
+        if removal_selection == "":
+            break
+
+        elif removal_selection.isdecimal():
+            try:
+                rows.pop(int(removal_selection) - 1)
+                break
+            except IndexError:
+                error()
+
+        else:
+            error()
+    
+    with open(challenge_file, 'w', encoding='utf-8', newline='') as file19:
+        file19_csv_writer = csv.writer(file19, delimiter=';')
+        file19_csv_writer.writerows(rows)
+    print()
+
+def tracking_selection():
+    print()
+    
+    while True:
+        viewing_decision = input('Pasirinkite/pridėkite: ')
+        viewing_decision = viewing_decision.replace(" ","").upper()
+
+        if viewing_decision == ".":
+            view_trips(False)
+        elif viewing_decision == ",":
+            view_trips(True)
+        elif viewing_decision == "+":
+            add_whole()
+        elif viewing_decision == "-":
+            remove_trip()
+        elif viewing_decision.isdecimal() or len(viewing_decision) == 6:
+            add_vehicle_number(viewing_decision)
+        elif viewing_decision == "":
+            break
+        else:
+            error()
+    
+    print()
+
+def analyze_route():
+
+    while True:
+        rip_txt("https://www.stops.lt/vilnius/gps_full.txt", gps_file)
+
+        fleet_numbers = []
+        models = []
+        model_lengths = []
+        sizes = []
+        trip_starts = []
+        trip_ids = []
+        trip_directions = []
+        direction_lengths = []
+        schedule_numbers = []
+    
+        print()
+        route_number = input('Nurodykite maršruto numerį: ')
+        route_number = route_number.upper()
+        route_numbers = []
+        number = route_number
+
+        if not route_number:
             print()
+            break
+        print()
+
+        if 'T' in route_number:
+            route_number = route_number.replace('T','')
+            route_type = 'Troleibusai'
+        else:
+            route_type = 'Autobusai'
+        
+        with open(gps_file, mode='r', encoding='utf-8') as file5:
+            csv_reader_file5 = csv.reader(file5, delimiter=',')
+            rows = list(csv_reader_file5)
+
+            for row in rows:
+                if len(row) < 15:
+                    continue
+
+                if row[0] == route_type and row[1].upper() == route_number:
+                    fleet_number = row[3]
+
+                    trip_start = row[8]
+                    try:
+                        hours = (int(trip_start) // 60) % 24
+                        minutes = int(trip_start) % 60
+                        trip_start = f"{hours:02}:{minutes:02}"
+                    except:
+                        pass
+
+                    trip_type = row[12]
+                    trip_direction = row[13]
+                    if re.search(r'\d+', trip_type):
+                        trip_direction += '*'
+
+                    trip_id = row[14]
+                    schedule_parts = trip_id.strip().split('-')
+                    try:
+                        schedule_number = schedule_parts[1].zfill(2)
+                    except:
+                        schedule_number = '? '
+                    
+                    fleet_numbers.append(fleet_number)
+                    trip_starts.append(trip_start)
+                    trip_ids.append(trip_id)
+                    trip_directions.append(trip_direction)
+                    direction_lengths.append(len(trip_direction))
+                    schedule_numbers.append(schedule_number)
+        
+        if not fleet_numbers:
+            error()
+        else:
+
+            for fleet_number in fleet_numbers:
+                model, size = assign_vehicle_model([fleet_number])
+                models.append(model[0])
+                model_lengths.append(len(model[0]))
+                sizes.append(size[0])
+
+            for i in range(len(trip_ids)):
+                route_numbers.append(number)
+            
+            schedule_types, schedule_type_length = assign_schedule_type(route_numbers, trip_ids)
+            schedule_type_length = max(schedule_type_length, 1)
+
+            zipped_data = zip(fleet_numbers, models, sizes, trip_starts, trip_directions, schedule_numbers, schedule_types)
+            sorted_data = sorted(zipped_data, key=lambda x: int(x[5]) if x[5].isdigit() else float('inf'))
+
+            model_length = max(model_lengths)
+            direction_length = max(direction_lengths)
+
+            print(f"Maršrutas: {number} | TP kiekis: {len(fleet_numbers)} | Laikas: {current_time()}")
+            print(f'{"Graf.":<{schedule_type_length + 4}} Dyd. Nr. {"Modelis":^{model_length}}  {"Kryptis":^{direction_length}} Išv.')
+
+            for fleet_number, model, size, trip_start, trip_direction, schedule_number, schedule_type in sorted_data:
+                print(f'{schedule_number:<2} {"(" if schedule_type else " "}{schedule_type:<{schedule_type_length}}{")" if schedule_type else " "} {size:>2} {fleet_number:>4} {model:<{model_length}}  {trip_direction:<{direction_length}} {trip_start}')
+
+def search_vehicle():
+    while True:
+        rip_txt("https://www.stops.lt/vilnius/gps_full.txt", gps_file)
+
+        route_number = None
+
+        print()
+        fleet_number = input('Nurodykite garažinį numerį: ')
+
+        if not fleet_number:
+            print()
+            break
+        print()
+
+        with open(gps_file, mode='r', encoding='utf-8') as file5:
+            csv_reader_file5 = csv.reader(file5, delimiter=',')
+            rows = list(csv_reader_file5)
+
+        for row in rows:
+            if len(row) < 15:
+                continue
+
+            if row[3] == fleet_number:
+                route_type = row[0]
+                
+                if route_type == 'Troleibusai':
+                    route_number = 'T' + row[1]
+                else:
+                    route_number = row[1]
+                
+                trip_start = row[8]
+                try:
+                    hours = (int(trip_start) // 60) % 24
+                    minutes = int(trip_start) % 60
+                    trip_start = f"{hours:02}:{minutes:02}"
+                except:
+                    pass
+
+                trip_type = row[12]
+                trip_direction = row[13]
+                if re.search(r'\d+', trip_type):
+                    route_number += '*'
+
+                trip_id = row[14]
+                schedule_parts = trip_id.strip().split('-')
+                try:
+                    schedule_number = schedule_parts[1].zfill(2)
+                except:
+                    schedule_number = '?'
+                
+                break
+            
+        if route_number:
+            model, size = assign_vehicle_model([fleet_number])
+            model = model[0]
+            size = size[0]
+
+            schedule_type, ext = assign_schedule_type([route_number], [trip_id])
+            schedule_type = schedule_type[0]
+            schedule_type = schedule_type.replace('2p', '2 pam.').replace('1p', '1 pam.').replace('pt', 'pertr.').replace('/', ', iš ')
+        
+            print(f"TP: {model}, nr. {fleet_number} ({size}) ")
+
+            if trip_start:
+                print(f'Maršrutas: {route_number} ({schedule_number}{": " if schedule_type else ""}{schedule_type}) {trip_direction} | Išvyksta: {trip_start}')
+            else:
+                print(f'Maršrutas: {route_number} ({schedule_number}{": " if schedule_type else ""}{schedule_type}) {trip_direction}')
+
+        else:
+            error()
+
+def feedback():
+    with open(bugs_file, 'a+') as feedback_file:
+        print(feedback_file.read())
+    print()
+
+def add_favorite():
+    print()
+
+    print('Stotelių trumpiniai:')
+    with open(favorites_file, 'r', encoding='utf-8') as file19:
+        file19_csv_reader = csv.reader(file19, delimiter=';')
+        rows = list(file19_csv_reader)
+    
+    for item in range(len(rows)):
+        print(f'  {item + 1}. {rows[item][2]}')
+    print()
+
+    while True:
+        selection = input('Redaguojamas nr.: ')
+        
+        try:
+            if int(selection) <= len(rows):
+                pass
+            else:
+                raise ValueError
+        except:
+            if selection == "":
+                break
+            else:
+                error()
+                continue
+        
+        while True:
+            entered_stop = input('Pridėkite stotelę: ')
+            if entered_stop == "":
+                break
+            
+            else:
+                try:
+                    entered_stop = normalize(entered_stop)
+                    partial_matches = match_entered_stop(entered_stop)
+                except:
+                    error()
+                    continue
+
+                if not partial_matches:
+                    error()
+                    continue
+
+                stop_directions_rows, name = handle_partial_matches(partial_matches)
+
+                if stop_directions_rows is None:
+                    continue
+
+                stop_code = determine_stop_direction(name, stop_directions_rows)
+            
+            if stop_code:
+                rows[int(selection) - 1][1] = stop_code
+
+                print()
+                stop_name = input('Įveskite trumpinio pavadinimą: ')
+                rows[int(selection) - 1][2] = stop_name
+
+                print()
+                break
+
+            else:
+                error()
+        
+    with open(favorites_file, 'w', encoding='utf-8', newline='') as file21:
+        file21_csv_writer = csv.writer(file21, delimiter=';')
+        file21_csv_writer.writerows(rows)
+
+    print()
+
+def get_favorite(selection):
+    stop_code = None
+    stop_name = None
+    
+    with open(favorites_file, 'r', encoding='utf-8') as file19:
+        file19_csv_reader = csv.reader(file19, delimiter=';')
+        rows = list(file19_csv_reader)
+    
+    for row in rows:
+        if row[0] == selection:
+            stop_code = row[1]
+            stop_name = row[2]
+            break
+
+    return stop_code, stop_name
+
+def display_instructions():
+    print()
 
     print('STOTELĖS. Gaukite pasirinktos stotelės artimiausios valandos išvykimo laikus:')
     print('  Įveskite norimos stotelės pavadinimą arba jo fragmentą.')
+    print('  Norėdami pasirinkti stotelę nurodydami jos kodą, įveskite „=“.')
     print('  Talpos/dydžio žymėjimas: mk – mikroautobusai | m – mažos talpos | t – standartinės talpos | ti – pailginti viengubi | i – dvigubi.')
     print('  Maršruto žymėjimas: T – troleibusų maršrutas | * – reisas alternatyvia trasa.')
-    print('  Galite įvesti tuščią eilutę ir atnaujinti prognozes arba kitos stotelės pavadinimą.')
+    print('  Grafiko žymėjimas: 2p – 2 pam. | 1p – 1 pam. | pt – pertraukiamas | /00 – maršrutas, su kuriuo sujungtas grafikas | /1TP, /2TP – grafiką aptarnaujantis parkas.')
+    print('  Galite toliau įvesti kitos stotelės pavadinimą arba atnaujinti prognozes įvedus tuščią eilutę.')
     print('  Krypčių pasirinkimų sąraše radę nelogiškų, nesuprantamų ar klaidinančių krypčių, užfiksuokite su / ženklu (jei klaidinga 1: „1/“ ir t.t.).')
     print()
     
@@ -632,8 +1115,16 @@ def display_information():
     print()
     
     print('SEKIMAS. Sekite transporto priemones, kuriomis jau esate važiavę:')
-    print('  Norėdami pasiekti, įveskite „-“.')
-    print('  Įvestis: skaičius – užfiksuojamas pasinaudotas garažinis numeris | „+“ – pridedamas visas modelis ar dydis | tuščia eilutė – išeiti iš režimo.')
+    print('  Norėdami pasiekti, įveskite „-“. Įvedę tuščią eilutę išeisite iš režimo. Toliau nurodytos režimo funkcijos, pasiekiamos tam tikrais klavišais.')
+    print('  Peržiūra: „.“ – maršrutų ir transporto priemonių peržiūra | „,“ – surikiuota transporto priemonių peržiūra.')
+    print('  Įvestis: garažinis (miesto ar VRAP)/valstybinis (kitų įmonių) numeris – įvedama transporto priemonė, nuvažiuotas maršrutas ir kryptis.')
+    print('  Įvestis: „+“ – pridedamas visas modelis ar dydis/talpa')
+    print()
+
+    print('TRUMPINIAI. Pridėkite ir naudokitės trumpiniais, norėdami greitai pamatyti pasirinktų stotelių išvykimo laikus:')
+    print('  Norėdami pasiekti trumpinių nustatymą, įveskite „*“. Įvedę tuščią eilutę išeisite iš režimo')
+    print('  Trumpinius galite nustatyti įvedę numerį 1–9. Tada galėsite surasti stotelę bei priskirti trumpiniui pavadinimą.')
+    print('  Paprastame režime įvedę skaičius 1–9 pasieksite savo trumpinius.')
     print()
 
     print('ATSILIEPIMAI. Pamatykite savo praneštą klaidingą informaciją (stotelių kodus).')
@@ -648,21 +1139,72 @@ def display_information():
     print('  Norėdami atnaujinti, įveskite „+“.')
     print()
 
-def feedback():
-    with open(bugs_file, 'a+') as feedback_file:
-        print(feedback_file.read())
-    print()
+def enter_stop(stop_code):
+    while True:
+        entered_stop = input('Įveskite: ')
+        
+        if stop_code and not entered_stop:
+            return None, stop_code, None
+        
+        elif entered_stop == "0":
+            display_instructions()
 
-def update_data():
-    get_and_extract_zip("http://stops.lt/vilnius/ridango/gtfs.zip")
-    with open(date_file, 'w') as date:
-        date.write(datetime.today().strftime('%Y.%m.%d'))
-    print('Atnaujinti maršrutų ir stotelių duomenys.')
-    print()
+        elif entered_stop == "=":
+            print()
+            stop_code = enter_code()
+            if stop_code:
+                return None, stop_code, stop_code
+            else:
+                print()
+
+        elif entered_stop == "+":
+            try:
+                update_data()
+            except requests.exceptions.ConnectionError:
+                connection()
+
+        elif entered_stop == "-":
+            tracking_selection()
+
+        elif entered_stop == "?":
+            try:
+                analyze_route()
+            except requests.exceptions.ConnectionError:
+                connection()
+        elif entered_stop == "!":
+            try:
+                search_vehicle()
+            except requests.exceptions.ConnectionError:
+                connection()
+
+        elif entered_stop == "/":
+            feedback()
+
+        elif entered_stop.isdigit():
+            try:
+                stop_code, stop_name = get_favorite(entered_stop)
+            except requests.exceptions.ConnectionError:
+                connection()
+
+            if stop_code:
+                return None, stop_code, stop_name
+            else:
+                error()
+
+        elif entered_stop == "*":
+            try:
+                add_favorite()
+            except requests.exceptions.ConnectionError:
+                connection()
+
+        else:
+            return entered_stop, None, None
+
+# Base functions
 
 def os_check():
     with open(os_file, 'r+') as os_data:
-        if os_data.read() == '':
+        if not os_data.read():
             print('Pasirinkitę savo operacinę sistemą:')
             print('  1. Windows')
             print('  2. Android')
@@ -677,201 +1219,33 @@ def os_check():
             os_data.write(os)
             print()
 
-def main():
-    print('STOPS v2.0 | https://github.com/Lanxtot/stops | © Lanxtot')   
-    print()
-
-    os_check()
-    display_information()
-    execute_program()
-
-def challenge():
-    print()
-
-    try:
-        with open(challenge_file, 'r', encoding='utf-8') as file9:
-            file9_csv_reader = csv.reader(file9, delimiter=',')
-            rows = list(file9_csv_reader)
-
-            sorted_rows = sorted(rows, key=lambda row: (row[0].zfill(4), row[1], row[2]))
-
-    except FileNotFoundError:
-        with open(challenge_file, 'w', encoding='utf-8') as file9:
-            file9.write("") 
-            rows = []
-
-            sorted_rows = sorted(rows, key=lambda row: (row[0].zfill(4), row[1], row[2]))
-    
-    with open(challenge_file, 'w', encoding='utf-8', newline='') as file9:
-        file9_csv_writer = csv.writer(file9, delimiter=',')
-        file9_csv_writer.writerows(sorted_rows)
-
-    # Print the sorted rows
-    for row in sorted_rows:
-        try:
-            print(f'{row[0]:>4} {row[1]:<2} {row[2]}')
-        except IndexError:
-            pass
-
-    print()
-
-    while True:
-        challenge_decision = input('Pridėkite: ')
-        
-        if challenge_decision == '':
+def display_information():
+    with open(os_file, 'r') as os_data_5:
+        if os_data_5.read() != '1':
+            print('Naudodami programą laikykite mobilųjį įrenginį horizontaliai.')
             print()
-            return
-        
-        try:
-            # Fleet number handling
-            fleet_number = int(challenge_decision)
-            if fleet_number < 555 or fleet_number > 8050:
-                error()
-                continue
-            
-            existing_row = next((row for row in rows if row and str(row[0]).isdigit() and int(row[0]) == fleet_number), None)
-            
-            if existing_row:
-                rows.remove(existing_row)
-                print('Ištrinta.')
-            else:
-                model, size = determine_vehicle_model([fleet_number])
-                rows.append([fleet_number, *size, *model])
-            
-        except ValueError:
-            if challenge_decision == '+':
-                inp = input('Įveskite ilgį/modelį: ')
-
-                selection_type = ''
-
-                if inp=='t' or inp=='i':
-                    print('  1. Autobusai')
-                    print('  2. Troleibusai')
-                    while True:
-                        selection_type = input('Nr.: ')
-                        if selection_type == '1':
-                            selection_type = 'Autobusai'
-                            break
-                        elif selection_type == '2' and inp =='i':
-                            inp = ''
-                            selection_type = 'Škoda 15Tr'
-                            break
-                        elif selection_type == '2' and inp =='t':
-                            selection_type = 'Troleibusai'
-                            break
-                        else:
-                            error()
-
-                if len(inp)<3:
-                    rows.append(['Visi', inp, selection_type])
-                else:
-                    rows.append(['Visi', '', inp])
-            else:
-                error()
-        
-        # Write updated rows back to the file
-        with open(challenge_file, 'w', newline='', encoding='utf-8') as file15:
-            file15_csv_writer = csv.writer(file15, delimiter=',')
-            file15_csv_writer.writerows(rows)
-
-def search_gps_data():
-    while True:
-        get_gtfs_data("https://www.stops.lt/vilnius/gps_full.txt", gps_file)
-
-        route_number = None
-
-        print()
-        fleet_number = input('Nurodykite garažinį numerį: ')
-
-        if fleet_number == '':
-            print()
-            break
-        print()
-
-        with open(gps_file, mode='r', encoding='utf-8') as file5:
-            csv_reader_file5 = csv.reader(file5, delimiter=',')
-            rows = list(csv_reader_file5)
-
-            for row in rows:
-                if len(row) < 15:
-                    continue
-
-                if row[3] == fleet_number:
-                    route_type = row[0]
-                    
-                    if route_type == 'Troleibusai':
-                        route_number = 'T' + row[1]
-                    else:
-                        route_number = row[1]
-                  
-                    trip_start = row[8]
-                    try:
-                        hours = (int(trip_start) // 60) % 24
-                        minutes = int(trip_start) % 60
-                        trip_start = f"{hours:02}:{minutes:02}"
-                    except ValueError:
-                        pass
-
-                    trip_type = row[12]
-                    trip_direction = row[13]
-                    if re.search(r'\d+', trip_type):
-                        route_number += '*'
-
-                    trip_id = row[14]
-                    schedule_parts = trip_id.strip().split('-')
-                    try:
-                        schedule_number = schedule_parts[1].zfill(2)
-                    except IndexError:
-                        schedule_number = '?'
-                    
-                    break
-            
-        if route_number:
-            model, size = determine_vehicle_model([fleet_number])
-            model = model[0]
-            size = size[0]
-        
-            print(f"TP: {model}, nr. {fleet_number} ({size}) ")
-
-            if trip_start:
-                print(f'Maršrutas: {route_number} ({schedule_number}) {trip_direction} | Išvyksta: {trip_start}')
-            else:
-                print(f'Maršrutas: {route_number} ({schedule_number}) {trip_direction}')
-
-        else:
-            error()
-
-def enter_stop(stop_code):
-    while True:
-        entered_stop = input('Įveskite: ')
-        
-        if entered_stop == "" and stop_code:
-            return None, stop_code
-        elif entered_stop == "+":
-            update_data()
-        elif entered_stop == "-":
-            challenge()
-        elif entered_stop == "?":
-            display_gps_data()
-        elif entered_stop == "!":
-            search_gps_data()
-        elif entered_stop == "/":
-            feedback()
-        else:
-            return entered_stop, None
+    print('Programos instrukcijos pasiekiamos GitHub puslapyje arba įvedus skaitmenį „0“.')
+    print()
 
 def execute_program():
     stop_code = None
 
     while True:
-        entered_stop, stop_code = enter_stop(stop_code)
+        entered_stop, stop_code, code_as_name = enter_stop(stop_code)
 
-        if not stop_code:    
-            entered_stop = normalize(entered_stop)
-            partial_matches = match_entered_stop(entered_stop)
+        if not stop_code:
+            try:
+                entered_stop = normalize(entered_stop)
+                partial_matches = match_entered_stop(entered_stop)
+            except requests.exceptions.ConnectionError:
+                connection()
+                continue
+            except:
+                error()
+                continue
 
             if not partial_matches:
-                error()
+                print('Nėra atitikmenų.')
                 continue
 
             stop_directions_rows, name = handle_partial_matches(partial_matches)
@@ -881,11 +1255,14 @@ def execute_program():
 
             stop_code = determine_stop_direction(name, stop_directions_rows)
 
+        if code_as_name:
+            name = code_as_name
+
         if stop_code:
             print()
 
             while True:
-                get_gtfs_data("https://www.stops.lt/vilnius/gps_full.txt", gps_file)
+                rip_txt("https://www.stops.lt/vilnius/gps_full.txt", gps_file)
 
                 empty = get_departures(stop_code)
                 if empty:
@@ -894,20 +1271,30 @@ def execute_program():
                     break
 
                 else:
-                    route_types, route_numbers, route_variants, departure_times, vehicle_attributes, fleet_numbers, trip_directions = analyze_departures()
-                    vehicle_delays, trip_ids, schedule_numbers = analyze_gps_data(fleet_numbers)
-                    models, sizes = determine_vehicle_model(fleet_numbers)
+                    route_types, route_numbers, route_variants, departure_times, vehicle_attributes, fleet_numbers, trip_directions = process_departures()
+                    vehicle_delays, trip_ids, schedule_numbers = process_realtime_data(fleet_numbers)
+                    models, sizes = assign_vehicle_model(fleet_numbers)
+                    schedule_types, schedule_type_length = assign_schedule_type(route_numbers, trip_ids)
+
                     display_departures(
                         name, departure_times, vehicle_delays,
                         route_numbers, route_variants, trip_directions, schedule_numbers, fleet_numbers,
-                        sizes, models
+                        sizes, models,
+                        schedule_types, schedule_type_length
                     )
 
                 print()
                 break
 
-        else:
-            continue
+# Main code
+
+def main():
+    print('STOPS v2.1_10 | https://github.com/Lanxtot/stops | © Lanxtot')   
+    print()
+
+    os_check()
+    display_information()
+    execute_program()
 
 if __name__ == "__main__":
     main()
