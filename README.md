@@ -51,15 +51,15 @@ Galima naudotis įsidiegus Linux emuliatorių (pvz. Alpine). Tereikia atsiųsti 
 
 Paprasčiausiai iš naujo atsiųskite kodą. Galite nukopijuoti ir vietoje tuščių įklijuoti savo senuosius `challenge.csv`, `bugs.txt` failus norėdami išsaugoti sekamas transporto priemones ir atsiliepimus.
 
-PASTABA: nekopijuokite duomenų, jei naujinatės į versiją v2.1 ar naujesnę iš ankstesnės, nei v2.1. Duomenų saugojimo formatas pasikeitė ir senasis nebepalaikomas, todėl prašome įvesti duomenis iš naujo
+PASTABA: nekopijuokite duomenų, jei naujinatės į versiją v2.1 ar naujesnę iš ankstesnės, nei v2.1. Duomenų saugojimo formatas pasikeitė ir senasis nebepalaikomas, todėl prašome įvesti duomenis iš naujo.
 
 ## Android ir iOS
 
 Norėdami atnaujinti kodą, atsidarę aplanką su Git (`cd stops`) atlikite šiuos žingsnius:
 
-1. Įveskite `git restore .`. 
+1. Įveskite `git restore .`
 
-   PASTABA: Žingsnis nebūtinas. Taip ištrinsite išsaugotus duomenis (atsiliepimus, sekamas TP), tačiau užtikrinsite mažesnę nesklandumų riziką, nors ir turėsite iš naujo įvesti duomenis
+   PASTABA: Žingsnis nebūtinas. Taip ištrinsite išsaugotus duomenis (atsiliepimus, sekamas TP), tačiau užtikrinsite mažesnę nesklandumų riziką, nors ir turėsite iš naujo įvesti duomenis.
 
 2. Įveskite `git pull origin`
 
