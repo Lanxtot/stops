@@ -15,8 +15,6 @@ Atsisiuntę šią programą galėsite pasirinkti savo operacinę sistemą ir gau
 3. Atsisiųskite programos šaltinio kodą
 4. Paleiskite `main.py` failą
 
-Norėdami atnaujinti, iš naujo parsisiųskite kodą.
-
 ## Android
  
 1. Atsisiųskite F-Droid (ignoruokite klaidinančius perspėjimus apie galimą žalą): <https://f-droid.org/>
@@ -43,21 +41,27 @@ Norėdami atnaujinti, iš naujo parsisiųskite kodą.
 10. Sukurkite Termux:Widget 1x1 valdiklį pasirinkdami `Stops`
 11. Paleiskite `Stops`
 
-Norėdami atnaujinti, Termux bazinėje aplinkoje įveskite:
-* `cd stops`
-* `git restore .`
-* `git pull .`
-
-Pastaba: atnaujinant ištrinami įvesti duomenys (užfiksuoti netikslumai, sekami maršrutai). Prašome išsisaugoti įvestą informaciją kitur, vėliau galėsite pakartotinai ją suvesti.
-
 ## iOS
 
-Galima naudotis įsidiegus Linux emuliatorių. Tereikia atsiųsti failus su Git, atverti atsiųstą aplanką ir paleisti failą `main.py` su Python.
+Galima naudotis įsidiegus Linux emuliatorių (pvz. Alpine). Tereikia atsiųsti failus su Git, atverti atsiųstą aplanką ir paleisti failą `main.py` su Python.
 
-Norėdami atnaujinti, Termux bazinėje aplinkoje įveskite:
-* `cd stops`
-* `git restore .`
-* `git pull .`
+# Atnaujinimo instrukcijos
+
+## Windows
+
+Paprasčiausiai iš naujo atsiųskite kodą. Galite nukopijuoti ir vietoje tuščių įklijuoti savo senuosius `challenge.csv`, `bugs.txt` failus norėdami išsaugoti sekamas transporto priemones ir atsiliepimus.
+
+PASTABA: nekopijuokite duomenų, jei naujinatės į versiją v2.1 ar naujesnę iš ankstesnės, nei v2.1. Duomenų saugojimo formatas pasikeitė ir senasis nebepalaikomas, todėl prašome įvesti duomenis iš naujo
+
+## Android ir iOS
+
+Norėdami atnaujinti kodą, atsidarę aplanką su Git (`cd stops`) atlikite šiuos žingsnius:
+
+1. Įveskite `git restore .`. 
+
+   PASTABA: Žingsnis nebūtinas. Taip ištrinsite išsaugotus duomenis (atsiliepimus, sekamas TP), tačiau užtikrinsite mažesnę nesklandumų riziką, nors ir turėsite iš naujo įvesti duomenis
+
+2. Įveskite `git pull origin`
 
 # Naudojimo instrukcijos
 
