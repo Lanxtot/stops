@@ -627,7 +627,7 @@ def display_departures(name, departure_times, vehicle_delays, route_numbers, rou
 
     with open(os_file, 'r', encoding='utf-8') as os_data_7:
         if os_data_7.read() == '3':
-            print(f'Išvyksta Nuokr. {"Nr.":>{number_length}} {"Graf.":<{schedule_type_length + 3}} {"Krpt.":^{direction_length - 2}} Dyd. Gar. {"Modelis":^{model_length-2}}')
+            print(f'Išvyksta Nuokr. {"Nr.":>{number_length}} {"Graf.":<{schedule_type_length + 3}} {"Krpt.":^{direction_length - 2}} Dyd. Gar. Modelis')
 
             for departure_time, vehicle_delay, route_number, route_variant, trip_direction, schedule_number, fleet_number, size, model, schedule_type in zip(departure_times, vehicle_delays, route_numbers, route_variants, trip_directions, schedule_numbers, fleet_numbers, sizes, models, schedule_types):
                 print(f'{departure_time:<8} {vehicle_delay:<6} {route_number:>{number_length}}{route_variant}({schedule_type:<{schedule_type_length}}) {trip_direction:<{direction_length}} {size:>2} {fleet_number:>4} {model:<{model_length}}')
