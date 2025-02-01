@@ -445,7 +445,7 @@ def process_departures():
                     trip_direction = trip_direction.replace('Autobusų parkas','AP')
                     trip_direction = trip_direction.replace('troleibusų parkas','TP')
                     trip_direction = trip_direction.replace('Troleibusų parkas','TP')
-                    trip_direction = trip_direction[:7]
+                    trip_direction = trip_direction[:6]
 
             trip_directions.append(trip_direction)
 
@@ -592,13 +592,15 @@ def assign_schedule_type(route_numbers, trip_ids):
         else:
             schedule_type = '2p'
         
-        if raw_note == '1':
-            schedule_type += '/1TP'
-        elif raw_note == '2':
-            schedule_type += '/2TP'
+        with open(os_file, 'r', encoding='utf-8') as os_data_7:
+            if os_data_7.read() != '3':
+                if raw_note == '1':
+                    schedule_type += '/1TP'
+                elif raw_note == '2':
+                    schedule_type += '/2TP'
 
-        if route_number.replace('*', '') != trip_id[0].replace('A', '') and trip_id[0]:
-            schedule_type += f"/{trip_id[0].replace('A', '')}"
+                if route_number.replace('*', '') != trip_id[0].replace('A', '') and trip_id[0]:
+                    schedule_type += f"/{trip_id[0].replace('A', '')}"
         
         schedule_type_lengths.append(len(schedule_type))
         schedule_types.append(schedule_type)
@@ -622,13 +624,22 @@ def display_departures(name, departure_times, vehicle_delays, route_numbers, rou
             number_length = len(number)
 
     print(f"Stotelė: {name} | Laikas: {current_time()}")
-    if direction_length > 8:
-        print(f'Išvyksta Nuokr. {"Nr.":>{number_length}} {"Graf.":<{schedule_type_length + 6}} {"Kryptis":^{direction_length - 1}}Dyd. Gar. {"Modelis":^{model_length-2}}')
-    else:
-        print(f'Išvyksta Nuokr. {"Nr.":>{number_length}} {"Graf.":<{schedule_type_length + 6}} {"Krpt.":^{direction_length - 2}} Dyd. Gar. {"Modelis":^{model_length-2}}')
 
-    for departure_time, vehicle_delay, route_number, route_variant, trip_direction, schedule_number, fleet_number, size, model, schedule_type in zip(departure_times, vehicle_delays, route_numbers, route_variants, trip_directions, schedule_numbers, fleet_numbers, sizes, models, schedule_types):
-        print(f'{departure_time:<8} {vehicle_delay:<6} {route_number:>{number_length}}{route_variant}({schedule_number:<2}{"|" if schedule_type else ""}{schedule_type:<{schedule_type_length}}) {trip_direction:<{direction_length}} {size:>2} {fleet_number:>4} {model:<{model_length}}')
+    with open(os_file, 'r', encoding='utf-8') as os_data_7:
+        if os_data_7.read() == '3':
+            print(f'Išvyksta Nuokr. {"Nr.":>{number_length}} {"Graf.":<{schedule_type_length + 3}} {"Krpt.":^{direction_length - 2}} Dyd. Gar. {"Modelis":^{model_length-2}}')
+
+            for departure_time, vehicle_delay, route_number, route_variant, trip_direction, schedule_number, fleet_number, size, model, schedule_type in zip(departure_times, vehicle_delays, route_numbers, route_variants, trip_directions, schedule_numbers, fleet_numbers, sizes, models, schedule_types):
+                print(f'{departure_time:<8} {vehicle_delay:<6} {route_number:>{number_length}}{route_variant}({schedule_type:<{schedule_type_length}}) {trip_direction:<{direction_length}} {size:>2} {fleet_number:>4} {model:<{model_length}}')
+
+        else:
+            if direction_length > 8:
+                print(f'Išvyksta Nuokr. {"Nr.":>{number_length}} {"Graf.":<{schedule_type_length + 6}} {"Kryptis":^{direction_length - 1}}Dyd. Gar. {"Modelis":^{model_length-2}}')
+            else:
+                print(f'Išvyksta Nuokr. {"Nr.":>{number_length}} {"Graf.":<{schedule_type_length + 6}} {"Krpt.":^{direction_length - 2}} Dyd. Gar. {"Modelis":^{model_length-2}}')
+
+            for departure_time, vehicle_delay, route_number, route_variant, trip_direction, schedule_number, fleet_number, size, model, schedule_type in zip(departure_times, vehicle_delays, route_numbers, route_variants, trip_directions, schedule_numbers, fleet_numbers, sizes, models, schedule_types):
+                print(f'{departure_time:<8} {vehicle_delay:<6} {route_number:>{number_length}}{route_variant}({schedule_number:<2}{"|" if schedule_type else ""}{schedule_type:<{schedule_type_length}}) {trip_direction:<{direction_length}} {size:>2} {fleet_number:>4} {model:<{model_length}}')
 
         item += 1
 
