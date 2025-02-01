@@ -402,10 +402,14 @@ def process_departures():
             # Process and append route number
             if route_type == 'trol':
                 route_number = f"T{route_number}"
+            if route_number == '&NBSP;':
+                route_number = '86'
+            
             if any(char.isdigit() for char in trip_variant):
                 route_variant = '*'
             else:
                 route_variant = ' '
+            
             route_variants.append(route_variant)
             route_numbers.append(route_number)
 
@@ -434,6 +438,7 @@ def process_departures():
                     trip_direction = trip_direction.replace('troleibusų parkas','TP')
                     trip_direction = trip_direction.replace('Troleibusų parkas','TP')
 
+            trip_direction = trip_direction.replace('&ndash;','-')
             trip_directions.append(trip_direction)
 
     # Return all prepared lists
@@ -1179,8 +1184,6 @@ def display_information():
     print('Programos instrukcijos pasiekiamos GitHub puslapyje arba įvedus skaitmenį „0“.')
     print()
 
-
-
 def execute_program():
     stop_code = None
 
@@ -1191,7 +1194,7 @@ def execute_program():
             try:
                 entered_stop = normalize(entered_stop)
                 partial_matches = match_entered_stop(entered_stop)
-            except:
+            except ValueError:
                 error()
                 continue
 
@@ -1240,7 +1243,7 @@ def execute_program():
 # Main code
 
 def main():
-    print('STOPS v2.1 TESTING BUILD 09 | https://github.com/Lanxtot/stops | © Lanxtot')   
+    print('STOPS v2.1_10 | https://github.com/Lanxtot/stops | © Lanxtot')   
     print()
 
     os_check()

@@ -37,8 +37,8 @@ Code;Direction
 1015;link N.Vilnios
 1101;link Antakalnio g.
 1102;link Antakalnio g.
-1118;įlaipinimas," troleibusai"
-1118a;įlaipinimas," autobusai"
+1118;įlaipinimas, troleibusai
+1118a;įlaipinimas, autobusai
 1118c;link Valakampių
 1127a;0
 1203;link Olandų g.
@@ -97,7 +97,7 @@ Code;Direction
 2221;link Balsių mokyklos
 2226;link Pagubės
 2241;link miesto
-2242;0
+2242;link Balsių mokyklos
 2285;link M.Gulbinų
 2323;link S. Batoro g.
 2330;link N.Vilnios
@@ -138,7 +138,6 @@ Code;Direction
 3336;link Gineitiškių
 3337;link Pašilaičių
 3502;iš Turniškių
-3526;link miesto
 3542a;link centro
 3555;panaikinta
 3603;link Senosios Pilaitės
