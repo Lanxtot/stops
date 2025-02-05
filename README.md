@@ -1,6 +1,6 @@
 # Aprašymas
 
-STOPS – Python programa, iš oficialių Vilniaus visuomeninio transporto GTFS duomenų pateikianti išvykimo laikus tiksliau nei visur kitur (stops.lt front-end'as, Trafi, Google Maps). Stotelės pasirenkamos aiškiu ir patogiu būdu. Išvykimo laikai prognozuojami stops.lt sistemos, tačiau pateikiami tiksliu HH:MM:SS formatu. Taip pat pateikiama atvykstančios transporto priemonės garažinis numeris, grafiko numeris ir nuokrypis nuo tvarkaraščio. Prieinamos ir kitos naudingos funkcijos, pvz. maršrutu kursuojančių transporto priemonių suvestinė.
+**STOPS** – Python programa, iš oficialių Vilniaus visuomeninio transporto GTFS duomenų pateikianti išvykimo laikus tiksliau nei visur kitur (stops.lt front-end'as, Trafi, Google Maps). Stotelės pasirenkamos aiškiu ir patogiu būdu. Išvykimo laikai prognozuojami stops.lt sistemos, tačiau pateikiami tiksliu HH:MM:SS formatu. Taip pat pateikiama atvykstančios transporto priemonės garažinis numeris, grafiko numeris ir nuokrypis nuo tvarkaraščio. Prieinamos ir kitos naudingos funkcijos, pvz. maršrutu kursuojančių transporto priemonių suvestinė.
 
 Toliau rasite įdiegimo instrukcijas. Jei susidursite su klaidomis įdiegę, turėsite patobulinimo pasiūlymu arba norėsite pagalbos su diegimu ar naudojimusi, parašykite pranešimą problemų skiltyje.
 
@@ -51,15 +51,15 @@ Galima naudotis įsidiegus Linux emuliatorių (pvz. Alpine). Tereikia atsiųsti 
 
 Paprasčiausiai iš naujo atsiųskite kodą. Galite nukopijuoti ir vietoje tuščių įklijuoti savo senuosius `challenge.csv`, `bugs.txt` failus norėdami išsaugoti sekamas transporto priemones ir atsiliepimus.
 
-PASTABA: nekopijuokite duomenų, jei naujinatės į versiją v2.1 ar naujesnę iš ankstesnės, nei v2.1. Duomenų saugojimo formatas pasikeitė ir senasis nebepalaikomas, todėl prašome įvesti duomenis iš naujo
+PASTABA: nekopijuokite duomenų, jei naujinatės į versiją v2.1 ar naujesnę iš ankstesnės, nei v2.1. Duomenų saugojimo formatas pasikeitė ir senasis nebepalaikomas, todėl prašome įvesti duomenis iš naujo.
 
 ## Android ir iOS
 
 Norėdami atnaujinti kodą, atsidarę aplanką su Git (`cd stops`) atlikite šiuos žingsnius:
 
-1. Įveskite `git restore .`. 
+1. Įveskite `git restore .`
 
-   PASTABA: Žingsnis nebūtinas. Taip ištrinsite išsaugotus duomenis (atsiliepimus, sekamas TP), tačiau užtikrinsite mažesnę nesklandumų riziką, nors ir turėsite iš naujo įvesti duomenis
+   PASTABA: Žingsnis nebūtinas. Taip ištrinsite išsaugotus duomenis (atsiliepimus, sekamas TP), tačiau užtikrinsite mažesnę nesklandumų riziką, nors ir turėsite iš naujo įvesti duomenis.
 
 2. Įveskite `git pull origin`
 
@@ -82,7 +82,7 @@ Bazinė programos funkcija. Norėdami pasiekti, neturite nieko papildomai įvest
 
 ### Paieška pagal kodą
 
-Norėdami surasti stotelę pagal jos stops.lt kodą, įveskite `**=**`. Tada įvedus norimą kodą bus pateikiami išvykimo laikai.
+Norėdami surasti stotelę pagal jos stops.lt kodą, įveskite `=`. Tada įvedus norimą kodą bus pateikiami išvykimo laikai.
 
 ### Paieška pagal trumpinį
 
