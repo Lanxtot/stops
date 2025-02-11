@@ -1,4 +1,4 @@
-﻿ID;Direction;Lat;Lng;Stops;Name;Info;Street;Area;City;Pikas2024.7.17;2025.01.31 11:21:38
+﻿ID;Direction;Lat;Lng;Stops;Name;Info;Street;Area;City;Pikas2024.7.17;2025.02.09 23:31:17
 id18505;;0;0;;Name;;
 3906;iš miesto;5464437;2506552;3907,3921;1-asis Lentvaris;;
 0032;;0;0;;AP į parką;;
@@ -9,7 +9,6 @@ id18505;;0;0;;Name;;
 0914b;;5470223;2528355;0705,0704,5185;Broniaus Laurinavičiaus skveras (laikina);;
 2941b;;5460812;2508546;2941a;Dobrovolės st.;laikina;
 2952;;5466814;2516225;2944;Elektrinės laikinoji st.;0;
-6016;;5462572;2506645;6006,3907;Fabriko st.;;
 2953;;5465793;2515483;2927,2925,2929;Gariūnų laikinoji st.;;
 2145;;5475762;2527183;2146a,2145a;Geležinio Vilko st.;;
 2146;;5475848;2527229;2146a,5115;Geležinio Vilko st.;;
@@ -505,7 +504,7 @@ id18564;;5480147;2540430;3549,3562,3546;pagal pareikalavimą;0;
 4024;;5465204;2534980;4019,4026,4017;Airių st.;;Ašmenėlės g. 
 4025;;5465472;2535366;4026,1429;Savičiūnų st.;;Ašmenėlės g.  
 4026;;5465450;2535330;4025,4024;Savičiūnų st.;;Ašmenėlės g.   
-4016;iš miesto;5465460;2533164;4020,4018,1437;Kalnėnai;;Gurių g.
+4016;iš miesto;5465460;2533164;4020,4018,1436;Kalnėnai;;Gurių g.
 4020;link miesto;5465453;2533125;4016,4022a;Kalnėnai;;Gurių g. 
 4022a;iš miesto;5465116;2532470;4021,4020,4357;Pagal pareikalavimą;;
 4021;link miesto;5465117;2532442;4022a,4022;Tautų st.;;
@@ -532,7 +531,7 @@ id18564;;5480147;2540430;3549,3562,3546;pagal pareikalavimą;0;
 1662;link Ungurių žiedo;5468332;2519908;1661,1654;Loretos Asanavičiūtės st.;;Loretos Asanavičiūtės g.         
 4326;iš miesto;5459737;2531626;4325,4323;Kineliai;;Liepkalnio g.;;Kineliai
 4325;link miesto;5459760;2531564;4326,4014,4360;Kineliai;;Liepkalnio g. 
-2608;link centro;5464755;2527318;2607,2602;Dariaus ir Girėno st.;;Dariaus ir Girėno g.;;Kirtimai
+2608;link centro;5464755;2527318;2607,2601;Dariaus ir Girėno st.;;Dariaus ir Girėno g.;;Kirtimai
 2607;iš centro;5464719;2527313;2608,2611;Dariaus ir Girėno st.;;Dariaus ir Girėno g. 
 2603;iš centro;5465129;2527177;2604,2602;Eišiškių plentas;;Dariaus ir Girėno g.  
 2604;link centro;5465148;2527186;2603,1523;Eišiškių plentas;;Dariaus ir Girėno g.   
@@ -543,8 +542,8 @@ id18564;;5480147;2540430;3549,3562,3546;pagal pareikalavimą;0;
 2620;link centro;5463206;2527312;2621,2622,2648;Tiekimo st.;;Dariaus ir Girėno g.        
 2621;iš centro;5463323;2527323;2620,2641,2652;Tiekimo st.;;Dariaus ir Girėno g.         
 2628;link centro;5463435;2525372;2629,2630,2650;Dilgynė;;Eišiškių pl.
-2601;iš centro;5464925;2526784;2602,2606;Eišiškių plentas;;Eišiškių pl. 
-2602;link centro;5464970;2526853;2601,2603,2608;Eišiškių plentas;;Eišiškių pl.  
+2601;iš centro;5464925;2526784;2602,2606,2608;Eišiškių plentas;;Eišiškių pl. 
+2602;link centro;5465041;2526936;2601,2603;Eišiškių plentas;;Eišiškių pl.  
 2614;link centro;5464344;2526321;2615,2610;Hidrogeologijos st.;;Eišiškių pl.   
 2615;iš centro;5464295;2526267;2614,2616,2624;Hidrogeologijos st.;;Eišiškių pl.    
 2606;link centro;5464632;2526573;2605,2601;Metalo st.;;Eišiškių pl.     
@@ -988,7 +987,7 @@ x1147;link N.Vilnios;5469377;2544871;1146,1148;Elektrodepas (A);;Pramonės g.
 1427;įlaipinimas;5465889;2536440;1438,1440;Šumsko kryptis;;Gurių Sodų g.
 1428;link miesto;5466035;2535536;1429,1423;Ašmenėlės st.;;Juodasis kelias
 1429;iš miesto;5466028;2535559;1428,1426,4025;Ašmenėlės st.;;Juodasis kelias 
-1401;link stoties;5466285;2534007;1402,1436,1313;Guriai;;Juodasis kelias  
+1401;link stoties;5466285;2534007;1402,1437;Guriai;;Juodasis kelias  
 1422;iš stoties;5466245;2534243;1402;Guriai;;Juodasis kelias   
 1425;iš miesto;5465986;2535971;1426,1439;Gurių sodai;;Juodasis kelias    
 1426;link miesto;5465997;2535911;1425,1429;Gurių sodai;;Juodasis kelias     
@@ -1001,8 +1000,8 @@ x1147;link N.Vilnios;5469377;2544871;1146,1148;Elektrodepas (A);;Pramonės g.
 1403;link stoties;5466494;2534565;1404,1402;Pavilnio sodai;;Tolimoji g. 
 1404;link N.Vilnios;5466501;2534655;1403,1424,1405;Pavilnio sodai;;Tolimoji g.  
 1421;;5467924;2535934;1430,1411,2313;Žemasis Pavilnys;;Žemoji g.
-1436;link Gurių;5466007;2533748;1437,1401;Pavilnio regioninis parkas;;Gurių g.
-1437;link miesto;5465995;2533723;1436,4016;Pavilnio regioninis parkas;;Gurių g. 
+1436;link Gurių;5466046;2533769;1437,4016;Pavilnio regioninis parkas;;Gurių g.
+1437;link miesto;5466070;2533762;1436,1401,1313;Pavilnio regioninis parkas;;Gurių g. 
 1438;iš miesto;5465897;2536406;1427,1439;Išlaipinimas;;Juodasis kelias
 1439;link miesto;5465934;2536306;1438,1425;Šumsko kryptis;;Juodasis kelias 
 1440;iš miesto;5465884;2536494;1427,5219;Šumsko kryptis;;Juodasis kelias  
@@ -1071,7 +1070,7 @@ x1147;link N.Vilnios;5469377;2544871;1146,1148;Elektrodepas (A);;Pramonės g.
 1309;iš stoties;5466644;2530701;1308,1310;Dunojaus st.;;Ribiškių Didžioji g.
 1308;link stoties;5466661;2530673;1309,1307,1315;Dunojaus st.;;Ribiškių Didžioji g. 
 1312;link stoties;5466648;2532460;1313,1311,1218;Juodasis kelias;;Ribiškių Didžioji g.  
-1313;iš stoties;5466634;2532542;1312,1401;Juodasis kelias;;Ribiškių Didžioji g.   
+1313;iš stoties;5466634;2532542;1312,1437;Juodasis kelias;;Ribiškių Didžioji g.   
 1310;link stoties;5466687;2531260;1311,1309;Ribiškės;;Ribiškių Didžioji g.    
 1311;iš stoties;5466684;2531329;1310,1312,1204;Ribiškės;;Ribiškių Didžioji g.     
 1318;link centro;5467221;2530501;1319;Balstogės st.;;Sukilėlių g.
@@ -1323,7 +1322,10 @@ x1147;link N.Vilnios;5469377;2544871;1146,1148;Elektrodepas (A);;Pramonės g.
 6003;;5462329;2502273;6004,6006,3126;Račkūnai;;
 6004;;5462352;2502211;6003;Račkūnai;;
 4117;link miesto;5470001;2506367;4126,5144a;Valai;;Ąžuolų g.
-6005;;5461951;2506831;6006,6008;Lentvario kryžkelė;;Galvės g.
+6016;link miesto;5462572;2506645;6006,3907;Fabriko st.;;Fabriko g.
+6007;link miesto;5461973;2509049;6008,3105;Dobūklė;;Galvės g.
+6008;iš miesto;5461980;2508953;6007,2941a,6005;Dobūklė;;Galvės g. 
+6005;;5461951;2506831;6006,6008;Lentvario kryžkelė;;Galvės g.  
 6001;;5462830;2494484;6002;Kaimelis;;Vilniaus g.
 6002;;5462858;2494408;6001,6000;Kaimelis;;
 6000;;5463325;2493478;6002;Trakų AS;;Vytauto g.
@@ -1595,8 +1597,6 @@ x1147;link N.Vilnios;5469377;2544871;1146,1148;Elektrodepas (A);;Pramonės g.
 2416;link centro;5464262;2520425;2414e,2437,2417;Ūmėdžių st.;;Titnago g.     
 2418;link centro;5464372;2520184;2417,2901;Valkininkų st.;;Titnago g.      
 2417;iš centro;5464406;2520256;2418,2416;Valkininkų st.;;Titnago g.       
-6007;;5461973;2509049;6008,3105;Dobūklė;;Galvės g.
-6008;;5461980;2508953;6007,2941a,6005;Dobūklė;;Galvės g. 
 2432;link centro;5464709;2523872;2408,2701;Riovonių g.;;Riovonių g.
 2408;link centro;5465453;2522513;2409,2407,2432;Pakalniškių st.;;Savanorių pr.
 2435;iš centro;5463880;2520398;2436,2946;Panerių kalvyno st.;;Savanorių pr. 

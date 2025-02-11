@@ -13,8 +13,7 @@ os_file = 'os.txt'
 stops_file = 'stops_list.csv'
 departures_file = 'departures.csv'
 gps_file = 'gps_data.csv'
-models_file_1 = 'models.csv'
-models_file_2 = 'models_short.csv'
+models_file = 'models.csv'
 regional_models_file = 'models_regional.csv'
 challenge_file = 'challenge.csv'
 ridango_stops_file = 'stops.csv'
@@ -33,20 +32,16 @@ def connection():
     print('Patikrinkite interneto ryšį.')
 
 def normalize(input_string):
-    # Dictionary to map Lithuanian characters to their English equivalents
     char_map = {
         'ą': 'a', 'č': 'c', 'ę': 'e', 'ė': 'e', 'į': 'i', 'š': 's', 'ų': 'u', 'ū': 'u', 'ž': 'z'
     }
 
-    # Capitalize the entire string first
     input_string = input_string.upper()
 
-    # Replace Lithuanian characters with their English equivalents
-    for lith_char, eng_char in char_map.items():
-        input_string = input_string.replace(lith_char.upper(), eng_char.upper())
-        input_string = input_string.replace(lith_char.lower(), eng_char.lower())
+    for lt_char, eng_char in char_map.items():
+        input_string = input_string.replace(lt_char.upper(), eng_char.upper())
+        input_string = input_string.replace(lt_char.lower(), eng_char.lower())
 
-    # Remove non-alphabetical characters (keeping only letters)
     cleaned_string = re.sub(r'[^a-zA-Z]', '', input_string)
     return cleaned_string
 
@@ -440,12 +435,11 @@ def process_departures():
             trip_direction = trip_direction.replace('&ndash;','-')
 
             with open(os_file, 'r') as os_data_7:
-                if os_data_7.read() == '3':
+                if os_data_7.read() != '1':
                     trip_direction = trip_direction.replace('autobusų parkas','AP')
                     trip_direction = trip_direction.replace('Autobusų parkas','AP')
                     trip_direction = trip_direction.replace('troleibusų parkas','TP')
                     trip_direction = trip_direction.replace('Troleibusų parkas','TP')
-                    trip_direction = trip_direction[:6]
 
             trip_directions.append(trip_direction)
 
@@ -463,15 +457,16 @@ def process_realtime_data(fleet_numbers):
         file7_csv_reader = csv.reader(file7, delimiter=',')
         rows = list(file7_csv_reader)
 
-        # Iterate through fleet numbers to find matches
         for fleet_number in fleet_numbers:
+            listed = False
+
             for row in rows:
-                if len(row) < 15:  # Ensure row has at least 15 columns
+                if len(row) < 15:
                     continue
 
-                if row[3].strip() == fleet_number:  # Match fleet number in the 4th column
+                if row[3].strip() == fleet_number:
+                    listed = True
 
-                    # Extract, convert, and append vehicle_delay from the 10th column
                     try:
                         negative_delay = False
                         delay_seconds = int(row[9].strip())
@@ -483,9 +478,8 @@ def process_realtime_data(fleet_numbers):
                         formatted_delay = f"{'-' if negative_delay == True else ' '}{abs(delay_minutes):02}:{delay_seconds:02}"
                         vehicle_delays.append(formatted_delay)
                     except:
-                        vehicle_delays.append("00:00")  # Default if conversion fails
+                        vehicle_delays.append("00:00")
 
-                    # Extract and append schedule_number from the 15th column
                     trip_id = row[14]
                     schedule_parts = trip_id.strip().split('-')
                     try:
@@ -493,21 +487,22 @@ def process_realtime_data(fleet_numbers):
                     except:
                         schedule_number = '? '
 
-                    trip_ids.append(trip_id)
-                    schedule_numbers.append(schedule_number)
+                    break
 
+            if not listed:
+                vehicle_delays.append("00:00")
+                trip_id = ''
+                schedule_number = '? '
+
+            trip_ids.append(trip_id)
+            schedule_numbers.append(schedule_number)
+            
     # Return the collected lists
     return vehicle_delays, trip_ids, schedule_numbers
 
 def assign_vehicle_model(vehicle_numbers):
     models = []
     sizes = []
-
-    with open(os_file, 'r') as os_data_6:
-        if os_data_6.read() == '3':
-            models_file = models_file_2
-        else:
-            models_file = models_file_1
    
     with open(models_file, mode='r', encoding='utf-8') as file8:
         file8_csv_reader = csv.DictReader(file8)
@@ -592,15 +587,13 @@ def assign_schedule_type(route_numbers, trip_ids):
         else:
             schedule_type = '2p'
         
-        with open(os_file, 'r', encoding='utf-8') as os_data_7:
-            if os_data_7.read() != '3':
-                if raw_note == '1':
-                    schedule_type += '/1TP'
-                elif raw_note == '2':
-                    schedule_type += '/2TP'
+        if raw_note == '1':
+            schedule_type += '/1TP'
+        elif raw_note == '2':
+            schedule_type += '/2TP'
 
-                if route_number.replace('*', '') != trip_id[0].replace('A', '') and trip_id[0]:
-                    schedule_type += f"/{trip_id[0].replace('A', '')}"
+        if route_number.replace('*', '') != trip_id[0].replace('A', '') and trip_id[0]:
+            schedule_type += f"/{trip_id[0].replace('A', '')}"
         
         schedule_type_lengths.append(len(schedule_type))
         schedule_types.append(schedule_type)
@@ -608,7 +601,6 @@ def assign_schedule_type(route_numbers, trip_ids):
     return schedule_types, max(schedule_type_lengths)
 
 def display_departures(name, departure_times, vehicle_delays, route_numbers, route_variants, trip_directions, schedule_numbers, fleet_numbers, sizes, models, schedule_types, schedule_type_length):
-    item = 1
     direction_length = 6
     model_length = 0
     number_length = 3
@@ -625,23 +617,14 @@ def display_departures(name, departure_times, vehicle_delays, route_numbers, rou
 
     print(f"Stotelė: {name} | Laikas: {current_time()}")
 
-    with open(os_file, 'r', encoding='utf-8') as os_data_7:
-        if os_data_7.read() == '3':
-            print(f'Išvyksta Nuokr. {"Nr.":>{number_length}} {"Graf.":<{schedule_type_length + 3}} {"Krpt.":^{direction_length - 2}} Dyd. Gar. Modelis')
 
-            for departure_time, vehicle_delay, route_number, route_variant, trip_direction, schedule_number, fleet_number, size, model, schedule_type in zip(departure_times, vehicle_delays, route_numbers, route_variants, trip_directions, schedule_numbers, fleet_numbers, sizes, models, schedule_types):
-                print(f'{departure_time:<8} {vehicle_delay:<6} {route_number:>{number_length}}{route_variant}({schedule_type:<{schedule_type_length}}) {trip_direction:<{direction_length}} {size:>2} {fleet_number:>4} {model:<{model_length}}')
+    if direction_length > 8:
+        print(f'Išvyksta Nuokr. {"Nr.":>{number_length}} {"Graf.":<{schedule_type_length + 6}} {"Kryptis":^{direction_length - 1}}Dyd. Gar. {"Modelis":^{model_length-2}}')
+    else:
+        print(f'Išvyksta Nuokr. {"Nr.":>{number_length}} {"Graf.":<{schedule_type_length + 6}} {"Krpt.":^{direction_length - 2}} Dyd. Gar. {"Modelis":^{model_length-2}}')
 
-        else:
-            if direction_length > 8:
-                print(f'Išvyksta Nuokr. {"Nr.":>{number_length}} {"Graf.":<{schedule_type_length + 6}} {"Kryptis":^{direction_length - 1}}Dyd. Gar. {"Modelis":^{model_length-2}}')
-            else:
-                print(f'Išvyksta Nuokr. {"Nr.":>{number_length}} {"Graf.":<{schedule_type_length + 6}} {"Krpt.":^{direction_length - 2}} Dyd. Gar. {"Modelis":^{model_length-2}}')
-
-            for departure_time, vehicle_delay, route_number, route_variant, trip_direction, schedule_number, fleet_number, size, model, schedule_type in zip(departure_times, vehicle_delays, route_numbers, route_variants, trip_directions, schedule_numbers, fleet_numbers, sizes, models, schedule_types):
-                print(f'{departure_time:<8} {vehicle_delay:<6} {route_number:>{number_length}}{route_variant}({schedule_number:<2}{"|" if schedule_type else ""}{schedule_type:<{schedule_type_length}}) {trip_direction:<{direction_length}} {size:>2} {fleet_number:>4} {model:<{model_length}}')
-
-        item += 1
+    for departure_time, vehicle_delay, route_number, route_variant, trip_direction, schedule_number, fleet_number, size, model, schedule_type in zip(departure_times, vehicle_delays, route_numbers, route_variants, trip_directions, schedule_numbers, fleet_numbers, sizes, models, schedule_types):
+        print(f'{departure_time:<8} {vehicle_delay:<6} {route_number:>{number_length}}{route_variant}({schedule_number:<2}{"|" if schedule_type else ""}{schedule_type:<{schedule_type_length}}) {trip_direction:<{direction_length}} {size:>2} {fleet_number:>4} {model:<{model_length}}')
 
 # Extra features
 
@@ -947,11 +930,21 @@ def search_vehicle():
             csv_reader_file5 = csv.reader(file5, delimiter=',')
             rows = list(csv_reader_file5)
 
-        for row in rows:
-            if len(row) < 15:
-                continue
+        if fleet_number == "0":
+            fleet_numbers = []
+            route_numbers = []
+            trip_starts = []
+            trip_variants = []
+            trip_directions = []
+            schedule_numbers = []
+            trip_ids = []
 
-            if row[3] == fleet_number:
+            for row in rows[1:]:
+                if len(row) < 15:
+                    continue
+
+                number = row[3]
+                
                 route_type = row[0]
                 
                 if route_type == 'Troleibusai':
@@ -966,11 +959,12 @@ def search_vehicle():
                     trip_start = f"{hours:02}:{minutes:02}"
                 except:
                     pass
-
+                
+                trip_variant = ' '
                 trip_type = row[12]
                 trip_direction = row[13]
                 if re.search(r'\d+', trip_type):
-                    route_number += '*'
+                    trip_variant = '*'
 
                 trip_id = row[14]
                 schedule_parts = trip_id.strip().split('-')
@@ -979,26 +973,78 @@ def search_vehicle():
                 except:
                     schedule_number = '?'
                 
-                break
+                fleet_numbers.append(number)
+                route_numbers.append(route_number)
+                trip_starts.append(trip_start)
+                trip_ids.append(trip_id)
+                trip_variants.append(trip_variant)
+                trip_directions.append(trip_direction)
+                schedule_numbers.append(schedule_number)
+
+            models, sizes = assign_vehicle_model(fleet_numbers)
+            model_length = max([len(model) for model in models])
+            direction_length = max([len(direction) for direction in trip_directions])
+
+            schedule_types, ext = assign_schedule_type(route_numbers, trip_ids)
+
+            type_length = max([len(type) for type in schedule_types])
             
-        if route_number:
-            model, size = assign_vehicle_model([fleet_number])
-            model = model[0]
-            size = size[0]
-
-            schedule_type, ext = assign_schedule_type([route_number], [trip_id])
-            schedule_type = schedule_type[0]
-            schedule_type = schedule_type.replace('2p', '2 pam.').replace('1p', '1 pam.').replace('pt', 'pertr.').replace('/', ', iš ')
-        
-            print(f"TP: {model}, nr. {fleet_number} ({size}) ")
-
-            if trip_start:
-                print(f'Maršrutas: {route_number} ({schedule_number}{": " if schedule_type else ""}{schedule_type}) {trip_direction} | Išvyksta: {trip_start}')
-            else:
-                print(f'Maršrutas: {route_number} ({schedule_number}{": " if schedule_type else ""}{schedule_type}) {trip_direction}')
+            for trip_variant, schedule_type, fleet_number, route_number, trip_start, trip_direction, schedule_number, model, size in sorted(zip(trip_variants, schedule_types, fleet_numbers, route_numbers, trip_starts, trip_directions, schedule_numbers, models, sizes), key=lambda x: x[2].zfill(4)):
+                print(f'{fleet_number:>4} {size:<2} {model:<{model_length}}{route_number:>5}{trip_variant}({schedule_number}{"|" if schedule_type else ""}{schedule_type + ")":<{type_length}}{"" if schedule_type else "  "} {trip_direction:<{direction_length}} {trip_start}')
 
         else:
-            error()
+            for row in rows:
+                if len(row) < 15:
+                    continue
+                
+                if row[3] == fleet_number:
+                    route_type = row[0]
+                    
+                    if route_type == 'Troleibusai':
+                        route_number = 'T' + row[1]
+                    else:
+                        route_number = row[1]
+                    
+                    trip_start = row[8]
+                    try:
+                        hours = (int(trip_start) // 60) % 24
+                        minutes = int(trip_start) % 60
+                        trip_start = f"{hours:02}:{minutes:02}"
+                    except:
+                        pass
+
+                    trip_type = row[12]
+                    trip_direction = row[13]
+                    if re.search(r'\d+', trip_type):
+                        route_number += '*'
+
+                    trip_id = row[14]
+                    schedule_parts = trip_id.strip().split('-')
+                    try:
+                        schedule_number = schedule_parts[1].zfill(2)
+                    except:
+                        schedule_number = '?'
+                    
+                    break
+                
+            if route_number:
+                model, size = assign_vehicle_model([fleet_number])
+                model = model[0]
+                size = size[0]
+
+                schedule_type, ext = assign_schedule_type([route_number], [trip_id])
+                schedule_type = schedule_type[0]
+                schedule_type = schedule_type.replace('2p', '2 pam.').replace('1p', '1 pam.').replace('pt', 'pertr.').replace('/', ', iš ')
+
+                print(f"TP: {model}, nr. {fleet_number} ({size}) ")
+
+                if trip_start:
+                    print(f'Maršrutas: {route_number} ({schedule_number}{": " if schedule_type else ""}{schedule_type}) {trip_direction} | Išvyksta: {trip_start}')
+                else:
+                    print(f'Maršrutas: {route_number} ({schedule_number}{": " if schedule_type else ""}{schedule_type}) {trip_direction}')
+
+            else:
+                error()
 
 def feedback():
     with open(bugs_file, 'a+') as feedback_file:
@@ -1289,7 +1335,7 @@ def execute_program():
 # Main code
 
 def main():
-    print('STOPS v2.1_10 | https://github.com/Lanxtot/stops | © Lanxtot')   
+    print('STOPS v2.2_11 TESTING BUILD | https://github.com/Lanxtot/stops | © Lanxtot')   
     print()
 
     os_check()
