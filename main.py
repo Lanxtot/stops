@@ -1360,7 +1360,7 @@ def execute_program():
 # Main code
 
 def main():
-    print('STOPS v2.2_11 TESTING BUILD | https://github.com/Lanxtot/stops | © Lanxtot')   
+    print('STOPS v2.2_12 TESTING BUILD | https://github.com/Lanxtot/stops | © Lanxtot')   
     print()
 
     os_check()
