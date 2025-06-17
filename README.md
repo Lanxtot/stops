@@ -100,6 +100,7 @@ Norėdami pasiekti, įveskite `?`. Norėdami išeiti, įveskite tuščią eilut�
 Norėdami pasiekti, įveskite `!`. Norėdami išeiti, įveskite tuščią eilutę.
 
 * Įvedamas transporto priemonės garažinis numeris (tik skaičiai).
+* Siekiant pamatyti bendrą visų transporto priemonių sąrašą, įvedamas skaitmuo `0`.
 * Pateikiama informacija. Nurodomas transproto priemonės modelis, talpa; maršruto numeris; grafiko numeris ir tipas; tuo metu užregistruoto reiso kryptis ir išvykimo laikas iš pradinės stotelės. Jei transporto priemonė tuo metu neturi jokio užregistruoto reiso, dalis informacijos nepateikiama.
 
 ## Kelionių sekimas
