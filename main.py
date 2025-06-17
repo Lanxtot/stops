@@ -89,6 +89,31 @@ def rip_from_zipfile(gtfs_file):
                     os.remove(new_name)
                 os.rename(file_name, new_name)
 
+    with ZipFile(local_zip_filename, "r") as zf:
+        for file_name in ["stop_times.txt"]:
+            if file_name in zf.namelist():
+                zf.extract(file_name, os.getcwd())
+
+                # Rename .txt files to .csv
+                base_name, ext = os.path.splitext(file_name)
+                new_name = f"{base_name}.csv"
+
+                if os.path.exists(new_name):
+                    os.remove(new_name)
+                os.rename(file_name, new_name)
+
+    with ZipFile(local_zip_filename, "r") as zf:
+        for file_name in ["trips.txt"]:
+            if file_name in zf.namelist():
+                zf.extract(file_name, os.getcwd())
+
+                # Rename .txt files to .csv
+                base_name, ext = os.path.splitext(file_name)
+                new_name = f"{base_name}.csv"
+
+                if os.path.exists(new_name):
+                    os.remove(new_name)
+                os.rename(file_name, new_name)
     # Clean up the downloaded zip file
     if os.path.exists(local_zip_filename):
         os.remove(local_zip_filename)
@@ -990,7 +1015,7 @@ def search_vehicle():
             type_length = max([len(type) for type in schedule_types])
             
             for trip_variant, schedule_type, fleet_number, route_number, trip_start, trip_direction, schedule_number, model, size in sorted(zip(trip_variants, schedule_types, fleet_numbers, route_numbers, trip_starts, trip_directions, schedule_numbers, models, sizes), key=lambda x: x[2].zfill(4)):
-                print(f'{fleet_number:>4} {size:<2} {model:<{model_length}}{route_number:>5}{trip_variant}({schedule_number}{"|" if schedule_type else ""}{schedule_type + ")":<{type_length}}{"" if schedule_type else "  "} {trip_direction:<{direction_length}} {trip_start}')
+                print(f'{fleet_number:>4} {size:<2} {model:<{model_length}}{route_number:>5}{trip_variant:<1}({schedule_number + ("|" if schedule_type else "") + schedule_type + ")":<10} {trip_direction:<{direction_length}} {trip_start}')
 
         else:
             for row in rows:
@@ -1157,7 +1182,7 @@ def display_instructions():
 
     print('TRANSPORTO PRIEMONĖS PAIEŠKA. Gaukite informaciją, kuriuo maršrutu kursuoja pasirinkta transporto priemonė:')
     print('  Norėdami pasiekti, įveskite „!“.')
-    print('  Įveskite norimos surasti transporto priemonės garažinį numerį. Norėdami išeiti, įveskite tuščią eilutę.')
+    print('  Įveskite norimos surasti transporto priemonės garažinį numerį. Norėdami pamatyti visas transporto priemones, įveskite „0“. Norėdami išeiti, įveskite tuščią eilutę.')
     print()
     
     print('SEKIMAS. Sekite transporto priemones, kuriomis jau esate važiavę:')

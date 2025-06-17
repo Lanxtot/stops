@@ -37,6 +37,8 @@ Code;Direction
 1015;link N.Vilnios
 1101;link Antakalnio g.
 1102;link Antakalnio g.
+1113;iš centro
+1114;link centro
 1118;įlaipinimas, troleibusai
 1118a;įlaipinimas, autobusai
 1118c;link Valakampių
@@ -49,7 +51,8 @@ Code;Direction
 1218;iš centro
 1301;link stoties
 1319;iš centro
-1437;link Kalnėnų
+1436;link Juodojo kel.
+1437;link Minsko pl.
 1452;iš Paupio
 1501;iš centro
 1502;įlaipinimas
@@ -137,6 +140,7 @@ Code;Direction
 3306a;0
 3336;link Gineitiškių
 3337;link Pašilaičių
+3339;link Ukmergės g.
 3502;iš Turniškių
 3542a;link centro
 3555;panaikinta
@@ -166,12 +170,10 @@ Code;Direction
 3915;link miesto
 3917;link Gurelių
 3918;link miesto
-4017;link centro
-4018;iš centro
-4019;iš centro
-4024;link centro
-4025;iš centro
-4026;link centro
+4016;link Minsko pl.
+4020;link Gurių
+4021;link Minsko pl.
+4022;link Gurių
 4105;iš centro
 4112;link Grigiškių
 4113;link Grigiškių
